@@ -1,0 +1,30 @@
+uuid: b0f2024a-7184-4fd4-b3f1-a2c5b8125e28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media
+    - media.type.image
+    - media.type.video
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+id: paragraph.adjustable_media_and_content.field_media
+field_name: field_media
+entity_type: paragraph
+bundle: adjustable_media_and_content
+label: 'Foreground Media'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 8fdbff8e-e558-4ace-b660-5791f0fb6dcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_block
+    - field.storage.block_content.field_accredited_info
+id: block_content.social_block.field_accredited_info
+field_name: field_accredited_info
+entity_type: block_content
+bundle: social_block
+label: 'Accredited Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

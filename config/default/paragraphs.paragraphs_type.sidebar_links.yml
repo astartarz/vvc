@@ -1,0 +1,10 @@
+uuid: 6ad49ef1-706b-4dff-a949-1e9e8be0116a
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_links
+label: 'Sidebar Links'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

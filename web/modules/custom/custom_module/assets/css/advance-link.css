@@ -1,0 +1,36 @@
+.advanced-link {
+  display: block;
+  border: none;
+  padding: 1rem 1.5rem;
+  transition: ease all 0.4s;
+}
+
+.al-popup {
+  background: transparent;
+  transition: ease all 0.4s;
+}
+
+.al-popup.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+
+.al-popup.active .al-wrapper {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 80rem;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=advance-link.css.map */

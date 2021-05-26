@@ -1,0 +1,22 @@
+diff --git a/modules/groupmenu_block/src/Plugin/Block/GroupMenuBlock.php b/modules/groupmenu_block/src/Plugin/Block/GroupMenuBlock.php
+index 138867f..08e56be 100644
+--- a/modules/groupmenu_block/src/Plugin/Block/GroupMenuBlock.php
++++ b/modules/groupmenu_block/src/Plugin/Block/GroupMenuBlock.php
+@@ -64,6 +64,9 @@ class GroupMenuBlock extends BlockBase {
+     }
+
+     // Render the menus.
++
++    $active_trail = \Drupal::service('menu.active_trail');
++
+     $build = [];
+     $parameters = new MenuTreeParameters();
+     $parameters->onlyEnabledLinks();
+@@ -72,6 +75,7 @@ class GroupMenuBlock extends BlockBase {
+       ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+     ];
+     foreach ($menus as $menu_name => $menu) {
++      $parameters->setActiveTrail($active_trail->getActiveTrailIds($menu_name));
+       $tree = \Drupal::menuTree()->load($menu_name, $parameters);
+       $tree = \Drupal::menuTree()->transform($tree, $manipulators);
+       $build[] = \Drupal::menuTree()->build($tree);

@@ -1,0 +1,9 @@
+.paragraph--type--image-carousel{
+  position: relative;
+  .paragraph--type--image-carousel-item{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

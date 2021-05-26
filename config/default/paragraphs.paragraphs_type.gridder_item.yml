@@ -1,0 +1,10 @@
+uuid: 44952df3-0b27-440c-a2b6-7c7e7046e228
+langcode: en
+status: true
+dependencies: {  }
+id: gridder_item
+label: 'Gridder Item'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Gridder</em> paragraph.'
+behavior_plugins: {  }

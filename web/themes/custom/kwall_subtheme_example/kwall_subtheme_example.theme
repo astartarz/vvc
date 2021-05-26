@@ -1,0 +1,83 @@
+<?php
+
+/**
+ * @file
+ * KWALL Sub-Theme Example
+ *
+ * Place your custom PHP code in this file.
+ */
+
+/**
+ * Implements template_preprocess_paragraph.
+ */
+function kwall_subtheme_example_preprocess_paragraph(&$variables) {
+  $yo = '';
+  switch ($variables['elements']['#paragraph']->getParagraphType()->id()) {
+
+    case 'quicktabs':
+      $tabHtml = '';
+      if (isset($variables['content']) && isset($variables['content']['field_quicktab'])) {
+        $tabs = $variables['content']['field_quicktab'];
+        foreach ($tabs as $key => $tab) {
+          if (is_numeric($key) && isset($tab['#paragraph'])) {
+            $para = $tab['#paragraph'];
+            if ($para) {
+              if (!$para->get('field_title')->isEmpty()) {
+                $title = $para->get('field_title')->value;
+                if ($key == 0) {
+                  $tabHtml .= '<li class="nav-item"><a class="nav-link active" id="tab-' . $para->id() . '" data-toggle="tab" href="#content-tab-' . $para->id() . '" role="tab">' . $title . '</a></li>';
+                }
+                else {
+                  $tabHtml .= '<li class="nav-item"><a class="nav-link" id="tab-' . $para->id() . '" data-toggle="tab" href="#content-tab-' . $para->id() . '" role="tab">' . $title . '</a></li>';
+                }
+              }
+            }
+          }
+        }
+        if ($tabHtml) {
+          $tabHtml = '<ul class="nav nav-tabs" id="myTab" role="tablist">' . $tabHtml . '</ul>';
+        }
+        $variables['paragraphCustomQuicktabs'] = $tabHtml;
+      }
+      break;
+
+
+  }
+}
+
+
+/**
+ * Implements template_preprocess_html.
+ */
+function kwall_subtheme_example_preprocess_html(&$variables) {
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if($route_name == 'user.login' ||  $route_name == 'user.pass') {
+    $variables['attributes']['class'][] = 'page-user-login';
+  }
+    $current_path = \Drupal::service('path.current')->getPath();
+    $path_alias = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+    $path_alias = ltrim($path_alias, '/');
+    $variables['attributes']['class'][] = 'path-' . \Drupal\Component\Utility\Html::cleanCssIdentifier($path_alias);
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function kwall_subtheme_example_theme_suggestions_page_alter(&$suggestions, $variables, $hook) {
+    /**
+     * 404 template suggestion.
+     */
+    if (!is_null(Drupal::requestStack()->getCurrentRequest()->attributes->get('exception'))) {
+        $status_code = Drupal::requestStack()->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+        switch ($status_code) {
+            case 404: {
+                $suggestions[] = 'page__' . (string) $status_code;
+                break;
+            }
+            default:
+                break;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+<?php
+/**
+ * @file
+ * Theme functions
+ */
+
+// Include all files from the includes directory.
+$includes_path = dirname(__FILE__) . '/includes/*.inc';
+foreach (glob($includes_path) as $filename) {
+  require_once dirname(__FILE__) . '/includes/' . basename($filename);
+}
+
+/**
+ * Implements template_preprocess_html.
+ */
+function vvc_preprocess_html(&$variables) {
+  $node = \Drupal::request()->attributes->get('node');
+  if (isset($node)) {
+    $node_type = $node->bundle();
+    if ($node_type == 'page') {
+      if($node->hasField('field_hero_content')) {
+        $paragraph = $node->field_hero_content->getValue();
+        foreach ($paragraph as $element) {
+          $para = \Drupal\paragraphs\Entity\Paragraph::load($element['target_id']);
+          $para_name = $para->getType();
+          if (isset($para_name) && ($para_name == 'page_banner' || $para_name == 'news_banner' || $para_name == 'hero_slideshow')) {
+            $variables['attributes']['class'][] = 'page-banner';
+          }
+          if (isset($para_name) && ($para_name == 'hero_banner_video_' || $para_name == 'hero_banner')) {
+            $variables['attributes']['class'][] = 'page-banner show-page-title';
+          }
+          if (isset($para_name) && ($para_name == 'hero_slideshow')) {
+            $variables['attributes']['class'][] = 'hide-hero-slideshow-paragraph';
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_paragraph.
+ */
+function vvc_preprocess_paragraph(&$variables) {
+  switch ($variables['elements']['#paragraph']->getParagraphType()->id()) {
+    case 'tabs':
+      $tabHtml = '';
+      if (isset($variables['content'])) {
+        $tabs = $variables['content']['field_tab_paragraphs'];
+        $tabHtml .= '<ul class="nav nav-tabs">';
+        foreach ($tabs as $key => $tab) {
+          if (is_integer($key) && isset($tab['#paragraph'])) {
+            $title = $tab['#paragraph']->get('field_title')
+              ->getValue();
+            if($title) {
+              if ($key == 0) {
+                $tabHtml .= '<li><a class="active"  href="#tabs-' . $tab['#paragraph']->id() . '" data-toggle="tab">' . $title[0]['value']  .  '</a></li>';
+              }else {
+                $tabHtml .= '<li><a  href="#tabs-' . $tab['#paragraph']->id() . '" data-toggle="tab">' . $title[0]['value'] . '</a></li>';
+              }
+            }
+          }
+        }
+        $tabHtml .= '</ul>';
+        $variables['paragraphCustomQuicktabs'] = $tabHtml;
+      }
+      break;
+
+    case 'page_banner':
+    case 'news_banner':
+      $node = \Drupal::request()->attributes->get('node');
+      $node_type = $node->bundle();
+      if ($node_type == 'page') {
+        if($node->hasField('field_hero_content') && !$node->get('field_hero_content')->isEmpty()) {
+          $variables['nodetype'] = $node_type;
+          $variables['nodetitle'] = $node->getTitle();
+        }
+      }
+      break;
+  }
+}

@@ -1,0 +1,23 @@
+uuid: 0cf7ca94-a437-4a8c-9109-966f9a6b9c3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flexible_blocks_display
+    - paragraphs.paragraphs_type.flexible_cta_blocks
+  module:
+    - options
+id: paragraph.flexible_cta_blocks.field_flexible_blocks_display
+field_name: field_flexible_blocks_display
+entity_type: paragraph
+bundle: flexible_cta_blocks
+label: Columns
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '3'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

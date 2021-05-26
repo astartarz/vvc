@@ -1,0 +1,17 @@
+uuid: 0b1b4bae-4008-4e1c-8549-b4505d9bba48
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: sidebar_image
+label: 'x. Sidebar Image (360x271)'
+effects:
+  5e5681c4-20a1-40a4-827f-ce3116ed1e85:
+    uuid: 5e5681c4-20a1-40a4-827f-ce3116ed1e85
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 360
+      height: 271
+      crop_type: focal_point

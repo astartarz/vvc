@@ -1,0 +1,23 @@
+uuid: c9538681-9106-433b-8d85-a7893c5139c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_not_dismissable
+    - node.type.alert
+id: node.alert.field_not_dismissable
+field_name: field_not_dismissable
+entity_type: node
+bundle: alert
+label: 'Not Dismissable'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

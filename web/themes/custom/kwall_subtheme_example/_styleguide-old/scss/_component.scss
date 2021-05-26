@@ -1,0 +1,405 @@
+/**
+ * @file
+ * Component
+ *
+ ****
+ *
+ * Tiles
+ * Alerts
+ * Breadcrumb
+ * Slick Slider Generic
+ * Flex Slider Generic
+ * Pager
+ *
+ ****
+*/
+
+
+
+
+/****
+ *
+ * Tiles
+ *
+ ****/
+//Icon Tile
+.icon-tile {
+	background-color: rgba(255,255,255,0.55);
+	border-radius: 5px;
+	border-top: 6px solid $color-blue-dark;
+	display: inline-block;
+	overflow: hidden;
+	padding: 20px 22px;
+	text-align: center;
+	transition: $transition;
+	width: 100%;
+	.field-name-field-image {
+		border: 2px solid $color-blue-dark;
+		border-radius: 50%;
+		height: 80px;
+		margin: auto;
+		margin-bottom: 30px;
+		padding: 14px;
+		width: 80px;
+	}
+	.field-title {
+		color: $color-blue-light;
+		font-family: $font-family-header;
+		font-size: 1.8rem;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color-blue-dark;
+		text-decoration: none;
+		.field-name-field-image {
+			background-color: $color-yellow;
+			border-color: $color-blue-dark;
+		}
+		.field-title {
+			color: #fff;
+		}
+	}
+	
+	@media #{$mobile} {
+		text-align: left;
+		.field-name-field-image {
+			float: left;
+			height: 40px;
+			margin: 0;
+			margin-right: 15px;
+			padding: 5px;
+			width: 40px;
+			img {
+				height: auto;
+				max-width: 24px;
+			}
+		}
+	}
+} 
+
+//Link Tile
+.link-tile {
+	background-color: #fff;
+	border-radius: 5px;
+	border: 2px solid $color-grey-xlight;
+	border-top: 6px solid $color-blue-dark;
+	color: $color-body;
+	display: flex;
+	font-family: $font-family-header-bold;
+	font-size: 2.2rem;
+	margin-bottom: 20px;
+	padding: 10px 20px 20px 20px;
+	position: relative;
+	transition: $transition;
+	width: 100%;
+	.field-title {
+		flex-grow: 1;
+	}
+	i {
+		color: $color-blue;
+		float: right;
+		font-size: 1.4rem;
+		line-height: 2;
+	}
+	//Border segment
+	&:after {
+		background-color: $color-blue-light;
+		content: "";
+		height: 6px;
+		position: absolute;
+		right: 14px;
+		top: -6px;
+		width: 24px;
+	}
+	
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color-blue-dark;
+		color: #fff;
+		text-decoration: none;
+		i {
+			color: $color-yellow;
+		}
+	}
+}
+//Caption Link Tile
+.caption-link-tile {
+	background-color: $color-grey-xlight;
+	border-radius: 5px;
+	border: 2px solid $color-grey-xlight;
+	border-top: 6px solid $color-blue-dark;
+	color: $color-body;
+	display: inline-block;
+	overflow: hidden;
+	padding: 20px;
+	transition: $transition;
+	width: 100%;
+	.field-title {
+		font-family: $font-family-header-bold;
+		font-size: 2.2rem;
+		margin-bottom: 4px;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color-blue-dark;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+ 
+ 
+ 
+/****
+ *
+ * Alerts
+ *
+ ****/
+.block-kwall-site-alert {
+	width: 100%;
+	.alert {
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		color: $color-body;
+		margin: 0;
+		a {
+			text-decoration: underline;
+				&[title=close] {
+				text-decoration: none;
+			}
+		}
+		&-success {
+			background-color: lighten($color-green , 30%);
+		}
+		&-warning {
+			background-color: lighten($color-orange , 30%);
+		}
+		&-danger {
+			background-color: lighten($color-red , 30%);
+		}
+		.arrow-container {
+			float: left;
+			margin-right: 10px;
+		}
+		.close {
+			font-size: 2rem;
+			opacity: 0.9;
+			text-shadow: none;
+		}
+	}
+}
+
+ 
+ 
+ 
+ 
+/****
+ *
+ * Breadcrumb
+ *
+ ****/
+.breadcrumb {
+	background: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+	text-transform: capitalize;
+	ol {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		margin-bottom: 1.2rem;
+		padding: 0;
+	}
+	li {
+		color: #666;
+		font-family: $font-family-bold;
+		font-size: 1.4rem;
+		padding: 0;
+		&:after {
+			content: "/";
+			padding: 0 1rem;
+		}
+		&:last-child {
+			&:after {
+				content: none;
+			}
+		}
+	}
+	//Inverted breadcrumb
+	&.breadcrumb-inverted {
+		li {
+			color: #fff;
+		}
+		a {
+			color: $color-yellow;
+		}
+	}
+}
+
+
+
+
+/****
+ *
+ * Slick Slider Generic
+ *
+ ****/
+
+.slick-slider,
+.slick--slider {
+	button.slick-arrow.slick-next {
+		right: 0;
+	}
+	
+	.slick-arrow {
+		background: none;
+		border: none;
+		box-shadow: none;
+		font-size: 0;
+		line-height: 0;
+		padding: 0;
+		margin: 2.5px;
+		i {
+			color: $color-body;
+			font-size: 2rem;
+		}
+	}
+}
+
+.slick-dots {
+	padding: 0;
+	position: absolute;
+	bottom: 15px;
+	left: 43%;
+	li {
+		color: #fff;
+		display: inline-block;
+		list-style: none;
+		button {
+			padding: 0;
+			color: $color-style-light-grey;
+			background: none;
+			border: none;
+	
+			i {
+				margin-right: 5px;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+.slide-text {
+	position: relative;
+	
+	h3 {
+		margin-top: 0;
+	}
+}
+
+.slick-slider .slick-dots .slick-active i {
+	color: $color-style-blue;
+}
+
+
+
+
+/****
+ *
+ * Flex Slider Generic
+ *
+ ****/
+.view-content .flexslider {
+	border: 0;
+	margin: 0 auto;
+  .flex-control-nav.flex-control-paging  {
+    box-sizing: border-box;
+    bottom: 10px;
+    text-align: center;
+    z-index: 10;
+  	a:focus,
+  	a:hover,
+  	a.flex-active {
+  		background: $color-blue;
+  	}
+  	li {
+      margin: 0 5px;
+      padding: 0;
+
+  		a {
+  			background: $color-style-light-grey;
+  			&:hover {
+  				background: #fff;
+  			}
+  		}
+  	}
+  }
+
+  .flex-direction-nav {
+  	.flex-nav-prev .flex-prev {
+	  	left: 0;
+	  	opacity: 1 !important;
+	  	}
+	.flex-nav-next .flex-next {
+	  	right: 0;
+	  	opacity: 1 !important;
+	  	}
+	  a {
+	    display: block; 
+	  	background: none;
+	  	padding: 12px 18px;
+	  	margin: 10px;
+	    box-sizing: border-box;
+	    height: 6.3rem;
+	    width: 5.3rem;
+	    font-size: 0;
+	    &:before {
+		    color: #fff;
+	    }
+    }
+  } 
+}
+
+
+
+
+/****
+ *
+ * Pager
+ *
+ ****/
+ul.pager {
+	li {
+		font-size: 1.8rem;
+		> a {
+			background-color: #fff;
+			border: none;
+			border-radius: 6px;
+			color: $color-blue;
+			height: 50px;
+			padding: 12.5px 19.95px;
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: $color-yellow;
+			}
+		} 
+	}
+	.pager-current {
+		a {
+			background-color: $color-blue;
+			color: #fff;
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: $color-blue;
+				color: #fff;
+			} 
+		}
+	}
+}

@@ -1,0 +1,15 @@
+name: Views Node Access Filter
+type: module
+description: Provides a Views filter to list only editable nodes.
+package: Views
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+dependencies:
+  - node
+  - views
+
+# Information added by Drupal.org packaging script on 2020-07-16
+version: '8.x-1.0-beta1'
+project: 'views_node_access_filter'
+datestamp: 1594894499

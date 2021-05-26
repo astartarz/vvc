@@ -1,0 +1,17 @@
+uuid: ae1bd130-6d4e-417e-8a16-d59ecc4fa885
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_banner
+label: 'Hero Banner (1600x560)'
+effects:
+  8c78eb31-259c-4c94-9b2c-d80facfb8271:
+    uuid: 8c78eb31-259c-4c94-9b2c-d80facfb8271
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 560
+      crop_type: focal_point

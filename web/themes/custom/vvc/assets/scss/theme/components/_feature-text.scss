@@ -1,0 +1,17 @@
+/**** Our -mission ****/
+
+.our-mission {
+  background: url("../images/grid-org.svg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 50px 0;
+  @media #{$tablet-min} {
+    padding: 385px 0 110px;
+    margin-top: -275px;
+    position: relative;
+    z-index: 0;
+  }
+  .supertitle {
+    color: $color-black;
+  }
+}

@@ -1,0 +1,19 @@
+uuid: 90ceb66c-f4f5-464a-8934-36b275b73a1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_graduating_class
+    - node.type.story
+id: node.story.field_graduating_class
+field_name: field_graduating_class
+entity_type: node
+bundle: story
+label: 'x. Graduating Class'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

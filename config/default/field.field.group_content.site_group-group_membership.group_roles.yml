@@ -1,0 +1,22 @@
+uuid: 271312dd-9cbf-495e-86df-e9aa8baf30e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.group_roles
+    - group.content_type.site_group-group_membership
+id: group_content.site_group-group_membership.group_roles
+field_name: group_roles
+entity_type: group_content
+bundle: site_group-group_membership
+label: Roles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'group_type:group_role'
+  handler_settings:
+    group_type_id: site_group
+field_type: entity_reference

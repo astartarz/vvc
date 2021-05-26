@@ -1,0 +1,36 @@
+diff --git a/core/modules/menu_link_content/menu_link_content.post_update.php b/core/modules/menu_link_content/menu_link_content.post_update.php
+index 0c0a64388e..1298f43bc1 100644
+--- a/core/modules/menu_link_content/menu_link_content.post_update.php
++++ b/core/modules/menu_link_content/menu_link_content.post_update.php
+@@ -19,6 +19,12 @@ function menu_link_content_post_update_make_menu_link_content_revisionable(&$san
+   $entity_type = $definition_update_manager->getEntityType('menu_link_content');
+   $field_storage_definitions = $last_installed_schema_repository->getLastInstalledFieldStorageDefinitions('menu_link_content');
+ 
++  // Remove revision tables before run update.
++  if (\Drupal::database()->schema()->tableExists('menu_link_content_revision')) {
++    \Drupal::database()->schema()->dropTable('menu_link_content_revision');
++    \Drupal::database()->schema()->dropTable('menu_link_content_field_revision');
++  }
++
+   // Update the entity type definition.
+   $entity_keys = $entity_type->getKeys();
+   $entity_keys['revision'] = 'revision_id';
+diff --git a/core/modules/taxonomy/taxonomy.post_update.php b/core/modules/taxonomy/taxonomy.post_update.php
+index bbeb74f3ff..2a77e7f0be 100644
+--- a/core/modules/taxonomy/taxonomy.post_update.php
++++ b/core/modules/taxonomy/taxonomy.post_update.php
+@@ -168,6 +168,14 @@ function taxonomy_post_update_make_taxonomy_term_revisionable(&$sandbox) {
+   ];
+   $entity_type->set('revision_metadata_keys', $revision_metadata_keys);
+ 
++  // Skip update when entity is already revisionable.
++  if (\Drupal::database()->schema()->tableExists('taxonomy_term_revision')) {
++    \Drupal::database()->schema()->dropTable('taxonomy_term_revision');
++    \Drupal::database()->schema()->dropTable('taxonomy_term_field_revision');
++    \Drupal::database()->schema()->dropTable('taxonomy_term_revision__parent');
++    \Drupal::database()->schema()->dropTable('taxonomy_term_revision__field_safe_name');
++  }
++
+   // Update the field storage definitions and add the new ones required by a
+   // revisionable entity type.
+   $field_storage_definitions['langcode']->setRevisionable(TRUE);

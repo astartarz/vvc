@@ -1,0 +1,19 @@
+uuid: 547f2402-d346-4fb3-b5a1-3cf29edfbd1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.persons_section_refs
+id: paragraph.persons_section_refs.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: persons_section_refs
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

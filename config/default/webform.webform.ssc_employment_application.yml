@@ -1,0 +1,194 @@
+uuid: 2c72efa7-31e2-432f-aa8c-b29850edd894
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: ssc_employment_application
+title: 'SSC Employment Application'
+description: ''
+category: ''
+elements: "container:\n  '#type': container\n  markup:\n    '#type': webform_markup\n    '#markup': '<h2>About You</h2>'\n  student_id_number:\n    '#type': number\n    '#title': 'Student ID Number'\n    '#required': true\n  name:\n    '#type': webform_name\n    '#title': Name\n    '#required': true\n    '#title__access': false\n    '#first__required': true\n    '#middle__title': MI\n    '#middle__required': true\n    '#last__required': true\n    '#suffix__access': false\n    '#degree__access': false\n  mailing_address:\n    '#type': webform_address\n    '#title': 'Mailing Address'\n    '#address__required': true\n    '#address_2__required': true\n    '#city__required': true\n    '#state_province__required': true\n    '#postal_code__required': true\n    '#country__required': true\n    '#required': true\n  phone:\n    '#type': tel\n    '#title': Phone\n    '#required': true\n  email:\n    '#type': webform_email_confirm\n    '#title': Email\n    '#required': true\n  major:\n    '#type': textfield\n    '#title': Major\n    '#required': true\n  graduation_externship_date:\n    '#type': date\n    '#title': 'Graduation/Externship Date'\n    '#required': true\n    '#datepicker': true\n    '#date_date_format': m/d/Y\n  last_term_gpa:\n    '#type': number\n    '#title': 'Last Term GPA'\n    '#required': true\n  cumulative_gpa:\n    '#type': number\n    '#title': 'Cumulative GPA'\n    '#required': true\ncontainer_01:\n  '#type': container\n  markup_04:\n    '#type': webform_markup\n    '#markup': '<h3>Position applied for</h3>'\n  position_applied_for:\n    '#type': webform_select_other\n    '#title': 'Position Applied For'\n    '#title_display': invisible\n    '#options':\n      'Peer Consulting Services ': 'Peer Consulting Services '\n      'Testing Services': 'Testing Services'\n      'Student Success Center Office Aid': 'Student Success Center Office Aid'\n      ' TOP Office Aid': ' TOP Office Aid'\n      'Disability Services Office Aid': 'Disability Services Office Aid'\n    '#required': true\n  have_you_been_awarded_federal_work_study_:\n    '#type': select\n    '#title': 'Have you been awarded Federal Work Study?'\n    '#options': yes_no\n    '#required': true\n  please_explain_your_reason_s_for_applying:\n    '#type': textarea\n    '#title': 'Please explain your reason(s) for applying'\n    '#required': true\n  please_detail_any_applicable_skills_and_experience_that_you_can_:\n    '#type': textarea\n    '#title': 'Please detail any applicable skills and experience that you can bring to the position. '\n    '#required': true\ncontainer_02:\n  '#type': container\n  markup_01:\n    '#type': webform_markup\n    '#markup': |\n      <h2><strong>Work Experience</strong></h2>\n      Please list your work history beginning with your most recent or current position. Include full-time, part-time, intern, and volunteer positions.\n      \n  work_experience:\n    '#type': webform_custom_composite\n    '#title': 'Work Experience'\n    '#element':\n      employer:\n        '#type': textfield\n        '#title': Employer\n      position:\n        '#type': textfield\n        '#title': Position/Title\n      supervisor:\n        '#type': textfield\n        '#title': Supervisor\n      email:\n        '#type': email\n        '#title': Email\n      phone:\n        '#type': tel\n        '#title': Phone\ncontainer_03:\n  '#type': container\n  references:\n    '#type': webform_custom_composite\n    '#title': References\n    '#element':\n      name:\n        '#type': textfield\n        '#title': Name\n      relationship:\n        '#type': textfield\n        '#title': Relationship\n      email:\n        '#type': email\n        '#title': Email\n      phone:\n        '#type': tel\n        '#title': Phone\ncontainer_04:\n  '#type': container\n  markup_02:\n    '#type': webform_markup\n    '#markup': '<h2>Availability</h2>'\n  date_available_to_begin_work:\n    '#type': date\n    '#title': 'Date Available to Begin Work'\n    '#datepicker': true\n    '#date_date_format': m/d/Y\n  markup_03:\n    '#type': webform_markup\n    '#markup': |\n      <h2>Please check boxes below to indicate times you are available to work.</h2>\n      \n      <p>Be aware that Testing Services will sometimes be searching for employees to fill specific times. More availability may increase your opportunity for consideration.</p>\n      \n  below_is_the_availability_for:\n    '#type': select\n    '#title': 'Below is the availability for'\n    '#options':\n      'Fall Term': 'Fall Term'\n      'Winter Term': 'Winter Term'\n      'Spring Term': 'Spring Term'\n      'Summer Term': 'Summer Term'\n    '#required': true\n  please_indicate_your_ideal_number_of_hours_per_week_:\n    '#type': number\n    '#title': 'Please indicate your ideal number of hours per week:'\n    '#required': true\n  8_00_am:\n    '#type': checkboxes\n    '#title': '8:00 AM'\n    '#options': days\n    '#options_display': side_by_side\n  9_00_am:\n    '#type': checkboxes\n    '#title': '9:00 AM'\n    '#options': days\n    '#options_display': side_by_side\n  10_00_am:\n    '#type': checkboxes\n    '#title': '10:00 AM'\n    '#options': days\n    '#options_display': side_by_side\n  11_00_am:\n    '#type': checkboxes\n    '#title': '11:00 AM'\n    '#options': days\n    '#options_display': side_by_side\n  12_00_pm:\n    '#type': checkboxes\n    '#title': '12:00 PM'\n    '#options': days\n    '#options_display': side_by_side\n  1_00_pm:\n    '#type': checkboxes\n    '#title': '1:00 PM'\n    '#options': days\n    '#options_display': side_by_side\n  2_00_pm:\n    '#type': checkboxes\n    '#title': '2:00 PM'\n    '#options': days\n    '#options_display': side_by_side\n  3_00_pm:\n    '#type': checkboxes\n    '#title': '3:00 PM'\n    '#options': days\n    '#options_display': side_by_side\n  4_00_pm:\n    '#type': checkboxes\n    '#title': '4:00 PM'\n    '#options': days\n    '#options_display': side_by_side\n  5_00_pm:\n    '#type': checkboxes\n    '#title': '5:00 PM'\n    '#options': days\n    '#options_display': side_by_side\n  6_00_pm:\n    '#type': checkboxes\n    '#title': '6:00 PM'\n    '#options': days\n    '#options_display': side_by_side\n  7_00_pm:\n    '#type': checkboxes\n    '#title': '7:00 PM'\n    '#options': days\n    '#options_display': side_by_side\n  8_00_pm:\n    '#type': checkboxes\n    '#title': '8:00 PM'\n    '#options': days\n    '#options_display': side_by_side\ncontainer_05:\n  '#type': container\n  attachments:\n    '#type': webform_markup\n    '#markup': '<h2>Attachments</h2>'\n  please_attach_your_unoffical_transcript:\n    '#type': webform_document_file\n    '#title': 'Please attach your unoffical transcript'\n  if_you_have_a_resume_please_attach_it:\n    '#type': webform_document_file\n    '#title': 'If you have a resume, please attach it'\ncontainer_06:\n  '#type': container\n  processed_text:\n    '#type': processed_text\n    '#text': |\n      <h3><strong>Certification</strong></h3>\n      \n      <p>As part of the application processing system we have in place, we may contact those individuals you named as potential references and those whom you listed as past or current supervisors. When we contact a reference, we may ask about your background, education, work experience, character, and/or personality. By voluntarily submitting this application (including supplemental materials) and signing below, you are affirming that you have read, fully understand, and agree to the foregoing statement. You hereby consent to allow Oregon Institute of Technology (“Oregon Tech”), or any of its officers, employees, agents, or designees to check your references by contacting any person deemed to be appropriate by Oregon Tech. Further, you agree to Student Success Center's policy to maintain confidentiality of reference comments and understand that you will not be granted access to review any reference-related application materials or notes. Depending upon the position you are applying for, there may be additional application materials required.</p>\n      \n      <ul>\n      \t<li>I affirm that the information I have provided on this application is accurate and complete.</li>\n      \t<li>I have attached unofficial transcripts from all of my post-secondary education (including Oregon Tech)</li>\n      </ul>\n      \n    '#format': full_html\n  signature:\n    '#type': webform_signature\n    '#title': Signature\n    '#required': true"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

@@ -1,0 +1,29 @@
+uuid: f5e0e596-463e-4811-a579-f080608d37f5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:quick_links:4624044c-ac32-4d65-bfea-1ba1839533e2'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: utility-social-links
+id: utilitysociallinks
+theme: vvc
+region: utility
+weight: -19
+provider: null
+plugin: 'block_content:4624044c-ac32-4d65-bfea-1ba1839533e2'
+settings:
+  id: 'block_content:4624044c-ac32-4d65-bfea-1ba1839533e2'
+  label: 'Utility Social Links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

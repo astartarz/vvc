@@ -1,0 +1,47 @@
+uuid: 399e69db-f7b9-410f-bb6b-8328e734376a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_carousel_item.field_description_txt
+    - field.field.paragraph.image_carousel_item.field_image
+    - paragraphs.paragraphs_type.image_carousel_item
+  module:
+    - fences
+id: paragraph.image_carousel_item.default
+targetEntityType: paragraph
+bundle: image_carousel_item
+mode: default
+content:
+  field_description_txt:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true

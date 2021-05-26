@@ -1,0 +1,76 @@
+.view-external-articles-cards {
+  .view-content {
+    .views-row {
+      @media #{$mobile} {
+        margin-bottom: 20px;
+      }
+      .views-field-nothing {
+        height: 100%;
+
+        .field-content {
+          display: block;
+          height: 100%;
+
+          .article-news-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background-color: white;
+
+            .news {
+              &-img {
+                position: relative;
+                img {
+                  width: 100%;
+                  object-fit: cover;
+                }
+                .news-logo{
+                  position: absolute;
+                  bottom: 0;
+                  background: #fff;
+                  padding: 10px 10px 0 10px;
+                  left: 40px;
+                  img{
+                    width: 162px;
+                    height: auto;
+                    object-fit: cover;
+                  }
+                }
+
+              }
+
+              &-title {
+                padding: 40px 40px 0 40px;
+                margin-bottom: 30px;
+
+                a {
+                  font-family: $font-mont;
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 20px;
+                  line-height: 24px;
+                  letter-spacing: 0.5px;
+                  color: $color-black;
+                  text-decoration: none;
+                  &:hover, &:focus, &:active {
+                    color: $color-red
+                  }
+                }
+              }
+
+              &-detail {
+                margin-top: auto;
+                padding: 0 40px 40px 40px;
+
+                .post-link {
+                  @include post-link;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

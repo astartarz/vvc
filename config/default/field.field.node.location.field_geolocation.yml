@@ -1,0 +1,21 @@
+uuid: fedcaf72-b2cf-4127-8bb5-6754f6edd163
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geolocation
+    - node.type.location
+  module:
+    - geolocation
+id: node.location.field_geolocation
+field_name: field_geolocation
+entity_type: node
+bundle: location
+label: Geolocation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

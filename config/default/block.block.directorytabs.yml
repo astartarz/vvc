@@ -1,0 +1,41 @@
+uuid: 52654247-012a-49d5-a64d-0205a74abf99
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.directory-tabs
+  module:
+    - block_class
+    - menu_block
+    - system
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: directory-tabs
+id: directorytabs
+theme: vvc
+region: content
+weight: -11
+provider: null
+plugin: 'menu_block:directory-tabs'
+settings:
+  id: 'menu_block:directory-tabs'
+  label: 'Directory Tabs'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'directory-tabs:'
+  suggestion: directory_tabs
+  label_type: block
+  label_link: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/directory\r\n/directory/staff\r\n/directory/faculty"
+    negate: false
+    context_mapping: {  }

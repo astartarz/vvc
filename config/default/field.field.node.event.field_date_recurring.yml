@@ -1,0 +1,40 @@
+uuid: e71e24f6-de00-4679-ac53-632869f8fc6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_recurring
+    - node.type.event
+  module:
+    - date_recur
+id: node.event.field_date_recurring
+field_name: field_date_recurring
+entity_type: node
+bundle: event
+label: 'x. Event Date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: now
+    default_end_date_type: relative
+    default_end_date: now
+    default_date_time_zone: America/New_York
+    default_time_zone: America/New_York
+    default_rrule: ''
+default_value_callback: ''
+settings:
+  precreate: P2Y
+  parts:
+    all: true
+    frequencies:
+      SECONDLY: {  }
+      MINUTELY: {  }
+      HOURLY: {  }
+      DAILY: {  }
+      WEEKLY: {  }
+      MONTHLY: {  }
+      YEARLY: {  }
+field_type: date_recur

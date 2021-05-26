@@ -1,0 +1,23 @@
+uuid: 9f46f3ca-d38a-4072-8356-125d76f07593
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_is_student
+    - node.type.person
+id: node.person.field_person_is_student
+field_name: field_person_is_student
+entity_type: node
+bundle: person
+label: 'x. Is student'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: f98108c1-d3b8-4016-b55f-7adec81b9006
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_events_grid_display
+    - paragraphs.paragraphs_type.events_grid
+  module:
+    - options
+id: paragraph.events_grid.field_events_grid_display
+field_name: field_events_grid_display
+entity_type: paragraph
+bundle: events_grid
+label: 'Color Styling'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: white_background
+default_value_callback: ''
+settings: {  }
+field_type: list_string

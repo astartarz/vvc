@@ -1,0 +1,23 @@
+uuid: 8c4bc63d-0336-4696-a6b9-0737659fb59e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flex_image_blocks_display
+    - paragraphs.paragraphs_type.flexible_image_cta_blocks
+  module:
+    - options
+id: paragraph.flexible_image_cta_blocks.field_flex_image_blocks_display
+field_name: field_flex_image_blocks_display
+entity_type: paragraph
+bundle: flexible_image_cta_blocks
+label: Columns
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '3'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,133 @@
+uuid: 12575961-f9a0-420a-8da6-885fb2b71337
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gridder_item.field_body_formatted
+    - field.field.paragraph.gridder_item.field_image
+    - field.field.paragraph.gridder_item.field_link
+    - field.field.paragraph.gridder_item.field_links
+    - field.field.paragraph.gridder_item.field_title
+    - paragraphs.paragraphs_type.gridder_item
+  module:
+    - fences
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_main_gridder_body
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'row gridder-content'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+    group_main_gridder_body:
+      children:
+        - field_image
+        - field_body_formatted
+        - field_links
+        - field_link
+      parent_name: group_row
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: gridder-body
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Main Gridder Body'
+id: paragraph.gridder_item.default
+targetEntityType: paragraph
+bundle: gridder_item
+mode: default
+content:
+  field_body_formatted:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 480
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_links:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,21 @@
+uuid: 5497b954-af25-428e-bd50-dcbca76e40cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expiration_date_alert
+    - node.type.alert
+  module:
+    - datetime
+id: node.alert.field_expiration_date_alert
+field_name: field_expiration_date_alert
+entity_type: node
+bundle: alert
+label: 'Expiration date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

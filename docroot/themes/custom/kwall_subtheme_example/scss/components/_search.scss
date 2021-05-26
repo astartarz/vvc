@@ -1,0 +1,107 @@
+.search-title {
+  margin-top: 25px;
+}
+.path-search {
+  #site-branding {
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
+  }
+}
+.vb-search-form {
+  background: none;
+  padding: 0;
+  margin-bottom: 35px;
+  form {
+    .form--inline {
+      @media #{$tablet-min}{
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .form-type-textfield {
+        @media #{$tablet-min} {
+          flex: 1;
+        }
+        .form-text {
+          background: $color-grey-lt;
+          font-size: 18px;
+        }
+      }
+      .form-actions {
+        @media #{$tablet-min}{
+          width: 16%;
+        }
+        .button {
+          @media #{$tablet-min}{
+            width: 100%;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.vp-site-search {
+  .view-content {
+    .views-row {
+      margin-bottom: 35px;
+      .views-field-title {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      .views-field-body {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+  .pager {
+    margin-bottom: 20px;
+    ul {
+      li {
+        &.pager__item--ellipsis {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Search menu block
+.search-menu-block {
+  display: inline-block;
+  background: none;
+  position: absolute;
+  right: 50px;
+  top: -5px;
+  padding: 0;
+  @media (min-width: $screen-md-min) {
+    right: 0;
+    top: 0;
+  }
+  form {
+    .form-type-textfield {
+      margin: 14px 0;
+      padding: 0;
+      label {
+        display: none;
+      }
+      input {
+        width: 40px;
+        height: 40px;
+        background: url(../images/search-icon.svg) no-repeat 9px center;
+        background-position: right 10px center;
+        border-radius: 10em;
+        cursor: pointer;
+        &:focus {
+          background: $color-grey-lt url(../images/search-icon.svg) no-repeat 9px center;
+          border: solid 1px #ccc;
+          width: 250px;
+          transition: all .5s;
+          background-position: right 10px center;
+        }
+      }
+    }
+    .form-actions {
+      display: none;
+    }
+  }
+}

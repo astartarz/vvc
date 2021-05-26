@@ -1,0 +1,35 @@
+uuid: 9751d250-48e1-44c4-8b43-dfc56d694371
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.interest.field_asides_txt
+    - field.field.node.interest.field_image
+    - field.field.node.interest.field_interest_description_txt
+    - field.field.node.interest.field_links
+    - node.type.interest
+  module:
+    - user
+id: node.interest.teaser
+targetEntityType: node
+bundle: interest
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_asides_txt: true
+  field_image: true
+  field_interest_description_txt: true
+  field_links: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,26 @@
+uuid: fb5649b9-28d0-4b30-a33f-db28c8115ef9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_slideshow.field_boolean
+    - field.field.paragraph.hero_slideshow.field_hero_slides
+    - paragraphs.paragraphs_type.hero_slideshow
+  module:
+    - entity_reference_revisions
+id: paragraph.hero_slideshow.default
+targetEntityType: paragraph
+bundle: hero_slideshow
+mode: default
+content:
+  field_hero_slides:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_boolean: true

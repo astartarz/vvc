@@ -1,0 +1,32 @@
+@import 'vendors/normalize',
+        'vendors/variables',
+        'vendors/functions',
+        'vendors/mixins',
+        'vendors/base';
+
+@import 'components/code-highlight',
+        'components/icons',
+        'components/containers',
+        'components/navigation',
+        'components/buttons',
+        'components/media',
+        'components/inputs',
+        'components/fonts',
+        'components/sidebar',
+        'components/documentation',
+        'components/examples-intro',
+        'components/examples',
+        'components/footer',
+        'components/visual-helper',
+        'components/clipboard';
+
+@import 'vendors/helpers',
+        'vendors/animations';
+
+@import 'components/docsearch/docsearch';
+@import 'components/docsearch/dropdown';
+@import 'components/docsearch/searchbox';
+
+@include searchbox($searchbox-config...);
+@include dropdown($dropdown-config...);
+

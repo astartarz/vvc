@@ -1,0 +1,23 @@
+uuid: 5db9d93e-487a-4d00-90a4-a8b4e68ed6ed
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_feed
+label: 'Homepage Feed'
+enable: false
+limit: 20
+content_type: social_post
+feed: f58b6b08-c865-42fe-a96b-239b38224fa6
+setting:
+  f58b6b08-c865-42fe-a96b-239b38224fa6:
+    network_name: field_network
+    source_identifier: field_network_identifier
+    text: body
+    image: field_post_image
+    user_screen_name: field_user_screen_name
+    user_full_name: field_user_full_name
+    user_url: field_user_url
+    url: field_post_url
+    source_created_at: field_post_date
+    feed_label: field_curator_feed
+    feed_id: field_curator_id

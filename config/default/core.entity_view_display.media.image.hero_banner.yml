@@ -1,0 +1,53 @@
+uuid: feeaaeb6-ce9d-4d53-927e-9f2cd82642ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.hero_banner
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_media_image
+    - image.style.hero_banner
+    - media.type.image
+  module:
+    - fences
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
+id: media.image.hero_banner
+targetEntityType: media
+bundle: image
+mode: hero_banner
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      image_style: hero_banner
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: image
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_categories: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

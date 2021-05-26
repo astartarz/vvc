@@ -1,0 +1,28 @@
+uuid: 045bb867-4022-48b7-a569-81852bf6a931
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_image
+    - media.type.image
+    - node.type.social_post
+id: node.social_post.field_post_image
+field_name: field_post_image
+entity_type: node
+bundle: social_post
+label: 'x. Post image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

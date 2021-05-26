@@ -1,0 +1,10 @@
+uuid: dc8f99bd-0524-48d7-8d9e-84e6bfd5b225
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.scale_width_600px
+label: 'Scale Width: 600px'
+targetEntityType: media
+cache: true

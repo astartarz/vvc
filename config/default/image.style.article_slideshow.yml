@@ -1,0 +1,15 @@
+uuid: 980f854b-6225-48af-b8e0-ff830617baca
+langcode: en
+status: true
+dependencies: {  }
+name: article_slideshow
+label: 'x. Article slideshow (1200x650)'
+effects:
+  34f504d1-3192-4e5e-aac1-72036a670f56:
+    uuid: 34f504d1-3192-4e5e-aac1-72036a670f56
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 650
+      anchor: center-center

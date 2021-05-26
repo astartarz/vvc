@@ -1,0 +1,8 @@
+uuid: 80b0c83d-f503-483a-b167-0dbe05326239
+langcode: en
+status: true
+dependencies: {  }
+id: library-menu
+label: 'x. Library Menu'
+description: 'Menu for Libraries directory'
+locked: false

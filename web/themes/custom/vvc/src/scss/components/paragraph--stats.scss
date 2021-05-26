@@ -1,0 +1,74 @@
+.paragraph--type--statistics {
+  .content-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    .stats-content {
+      flex: 0 0 100%;
+      padding: 40px 15px;
+      @include media-breakpoint-up(md){
+        flex: 0 0 50%;
+        padding: 0 30px 0 150px;
+      }
+      h2{
+        margin-bottom: 20px;
+      }
+      .lead {
+        color: $color-black;
+        font-style: italic;
+        font-weight: 600;
+        margin-bottom: 30px;
+        @include media-breakpoint-up(md){
+          margin-bottom: 60px;
+        }
+      }
+      .field-link {
+        display: flex;
+        a {
+          @include buttonprimary;
+          color: $color-black;
+        }
+      }
+    }
+
+    .stats-content-items {
+      flex: 0 0 100%;
+      background-image: url("../images/stat-back.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 40px 30px;
+      position: relative;
+      @include media-breakpoint-up(md){
+        padding: 120px 30px;
+        flex: 0 0 50%;
+      }
+      .paragraph--type--statistics-item {
+        margin-bottom: 40px;
+        @include media-breakpoint-up(md){
+          margin-bottom: 70px;
+        }
+        .percentage {
+          font-family: $font-mont;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 70px;
+          color: $color-light-red;
+          line-height: 85px;
+        }
+        .lead {
+          color: $color-black;
+          font-style: italic;
+          font-weight: 600;
+          &:before{
+            content: "";
+            border-right: 4px solid $color-light-red;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            height: 27px;
+          }
+        }
+      }
+    }
+  }
+}

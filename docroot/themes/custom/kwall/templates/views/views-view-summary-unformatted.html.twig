@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Default theme implementation for unformatted summary links.
+ *
+ * Available variables:
+ * - rows: The rows contained in this view.
+ *   - url: The URL to this row's content.
+ *   - count: The number of items this summary item represents.
+ *   - separator: A separator between each row.
+ *   - attributes: HTML attributes for a row.
+ *   - active: A flag indicating whether the row is active.
+ * - options: Flags indicating how each row should be displayed. This contains:
+ *   - count: A flag indicating whether the row's 'count' should be displayed.
+ *   - inline: A flag indicating whether the item should be wrapped in an inline
+ *     or block level HTML element.
+ *
+ * @see template_preprocess_views_view_summary_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% for letter in 'a'|upper..'z'|upper %}
+
+  {% set checker = '0' %}
+
+  {% for row in rows  %}
+    {% if ( row.field_name_family_truncated == letter ) or ( row.title_truncated == letter ) %}
+{#   {{dump(row)}} #}
+
+      {% if letter == 'A' %}<span class="alpaha-item"><a href="{{ row.url|replace({'/a':''}) }}">All</a></span>{% endif %}
+
+      {{ options.inline ? '<span class="alpaha-item"' : '<div class="alpaha-item"' }} >
+
+      {% if row.separator -%}
+        {{ row.separator }}
+      {%- endif %}
+
+      <a href="{{ row.url }}"{{ row.attributes.addClass(row.active ? 'is-active')|without('href') }}>{{ row.link }}</a>
+
+      {% if options.count %}
+        ({{ row.count }})
+      {% endif %}
+
+      {{ options.inline ? '</span>' : '</div>' }}
+
+      {% set checker = '1' %}
+
+    {% endif %}
+  {% endfor %}
+  
+  {% if checker == '0' %}
+    <span class="alpaha-item">{{ letter }}</span>
+  {% endif %}
+
+{% endfor %}

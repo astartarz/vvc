@@ -1,0 +1,20 @@
+<input type="search" id="city" class="form-control" placeholder="In which city do you live?" />
+
+<%= javascript_include_tag config[:places_lib_url] %>
+<script>
+(function() {
+  var placesAutocomplete = places({
+    appId: '<%= app_id %>',
+    apiKey: '<%= api_key %>',
+    container: document.querySelector('#city'),
+    templates: {
+      value: function(suggestion) {
+        return suggestion.name;
+      }
+    }
+  }).configure({
+    type: 'city',
+    aroundLatLngViaIP: false,
+  });
+})();
+</script>

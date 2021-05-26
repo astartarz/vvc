@@ -1,0 +1,79 @@
+header {
+  height: 100px;
+  border-bottom: 2px solid #E1E1E1;
+  display: flex;
+  vertical-align: middle;
+  background: #ffffff;
+  z-index: 10;
+  @media #{$tablet-min} {
+    position: sticky;
+    top: 0;
+  }
+  .navbar-expand-lg {
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+
+    .navbar-brand {
+      height: auto;
+      max-width: 142px;
+    }
+
+    /**
+    Tablet CSS
+     */
+    @media screen and (max-width: 991px) and (min-width: 768px) {
+      .navbar-brand {
+        flex: 0 0 20%;
+      }
+      .navbar-collapse {
+        flex: 0 0 80%;
+
+        .navbar-nav {
+          flex-direction: row;
+
+          li {
+            padding: 0 0 0 12px;
+
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .navbar-nav {
+      li {
+        padding: 0 0 0 20px;
+
+        a {
+          color: $color-black;
+          padding: 0;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 14px;
+          line-height: 24px;
+          text-align: center;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-black;
+            text-decoration: underline;
+          }
+        }
+
+        &.active {
+          a {
+            color: $color-black;
+          }
+        }
+      }
+    }
+  }
+}
+
+

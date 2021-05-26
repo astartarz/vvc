@@ -1,0 +1,54 @@
+uuid: 019da7b7-3098-45e1-bacb-e6def5d38263
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_carousel.field_image_carousel_items
+    - paragraphs.paragraphs_type.image_carousel
+  module:
+    - entity_reference_revisions
+    - fences
+    - field_group
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - field_image_carousel_items
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'container image-carousel'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+id: paragraph.image_carousel.default
+targetEntityType: paragraph
+bundle: image_carousel
+mode: default
+content:
+  field_image_carousel_items:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+hidden:
+  search_api_excerpt: true

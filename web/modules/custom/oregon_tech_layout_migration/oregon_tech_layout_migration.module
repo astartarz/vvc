@@ -1,0 +1,403 @@
+<?php
+
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\file\Entity\File;
+use Drupal\layout_builder\Section;
+use Drupal\layout_builder\SectionComponent;
+use Drupal\node\Entity\Node;
+use Drupal\oregon_tech_layout_migration\Access\CustomBlockAccess;
+use Drupal\oregon_tech_layout_migration\MediaMigration;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Implements hook_entity_create().
+ */
+function oregon_tech_layout_migration_node_create(Node $node) {
+  $bundle = $node->bundle();
+  if ($bundle == 'layout_builder' || $node->bundle() == 'program' || $node->bundle() == 'online_program') {
+
+    $legacyPath = $node->get('field_legacy_path')->value;
+    if (!empty($legacyPath)) {
+
+      $legacyPath = ltrim($legacyPath, '/');
+      $html = file_get_contents('https://www.oit.edu/' . $legacyPath);
+      $html = str_replace('http://www.oit.edu', 'https://www.oit.edu', $html);
+      $dom = new \DOMDocument();
+      @$dom->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
+
+      if ($dom->nodeType == 13) {
+        $xml = simplexml_import_dom($dom);
+        $content = $xml->xpath('//div[@id="maincontent"]/div');
+        if (!empty($content)) {
+          $content = $content[0];
+          $nid = $node->uuid();
+          $sections = [];
+
+          $title = $content->xpath('.//h1');
+          if (!empty($title) && !empty($title[0]->__toString())) {
+            $node->set('title', $title[0]->__toString());
+          }
+          else {
+            $title = $content->xpath('.//title');
+            $node->set('title', trim($xml->xpath('//title')[0]->__toString()));
+          }
+
+          foreach ($content as $section) {
+            $components = [];
+            $class = $section->attributes()->{'class'};
+            if ($class instanceof \SimpleXMLElement) {
+
+              $class = $class->__toString();
+              if ($class == 'bCrumb') {
+                continue;
+              }
+
+              if(strpos($class, 'sf_cols') !== FALSE) {
+                $class = $section->div[0]->attributes()->{'class'};
+                if ($class instanceof \SimpleXMLElement) {
+                  $class = $class->__toString();
+                  switch ($class) {
+                    case 'sf_colsOut sf_2cols_1_75':
+                      $columnWidths = ['column_widths' => '75-25'];
+                      $layoutID = 'layout_twocol_section';
+                      break;
+
+                    case 'sf_colsOut sf_2cols_1_67':
+                      $columnWidths = ['column_widths' => '67-33'];
+                      $layoutID = 'layout_twocol_section';
+                      break;
+
+                    case 'sf_colsOut sf_2cols_1_50':
+                      $columnWidths = ['column_widths' => '50-50'];
+                      $layoutID = 'layout_twocol_section';
+                      break;
+
+                    case 'sf_colsOut sf_3cols_1_33':
+                      $columnWidths = ['column_widths' => '33-34-33'];
+                      $layoutID = 'layout_threecol_section';
+                      break;
+
+                    case 'sf_colsOut sf_4cols_1_25':
+                      $columnWidths = ['column_widths' => '25-25-25-25'];
+                      $layoutID = 'layout_fourcol_section';
+                      break;
+                  }
+                  if (!empty($columnWidths)) {
+                    $i = 0;
+                    $cols = ['first', 'second', 'third', 'fourth'];
+                    foreach ($section as $sectionCol) {
+                      $weight = 0;
+                      $sectionItems = $sectionCol->xpath('.//div[@class="sfContentBlock" or @class="sf" or @class="otSidebar" or @class="textAdBig" or @class="NavList" or @class="Contact" or @class="DocList" or @class="FAQList" or @class="FAQList Collapsible" or @class="sfdownloadFileWrp"]');
+                      foreach ($sectionItems as $item) {
+                        $block = oregon_tech_layout_migration_sections($item, $nid);
+                        if (!empty($block)) {
+                          $uuid = \Drupal::service('uuid')->generate();
+                          $component = new SectionComponent($uuid, $cols[$i], $block);
+                          $component->setWeight($weight);
+                          $components[] = $component;
+                          $weight++;
+                        }
+                      }
+                      $i++;
+                    }
+                    $columnWidths['layout_builder_styles_style'] = 'contained_width_section';
+                    $section = new Section($layoutID, $columnWidths, $components);
+                    $sections[] = ['section' => $section];
+                    continue;
+                  }
+                }
+              }
+              else {
+                $block = oregon_tech_layout_migration_sections($section, $nid);
+                if (!empty($block)) {
+                  $uuid = \Drupal::service('uuid')->generate();
+                  $component = new SectionComponent($uuid, 'content', $block);
+                  $components[] = $component;
+                  $section = new Section('layout_onecol', ['layout_builder_styles_style' => 'contained_width_section'], $components);
+                  $sections[] = ['section' => $section];
+                }
+              }
+            }
+          }
+          if (!empty($sections)) {
+            $node->set('layout_builder__layout', $sections);
+          }
+        }
+        $meta = $xml->xpath('//head/meta');
+        if (!empty($meta)) {
+          $metaValues = [];
+          foreach ($meta as $item) {
+            $name = $item->attributes()->{'name'};
+            if ($name instanceof \SimpleXMLElement) {
+              $name = $name->__toString();
+              if ($name == 'description' || $name == 'keywords') {
+                $metaValues[$name] = $item->attributes()->{'content'}->__toString();
+              }
+            }
+          }
+          if (!empty($metaValues)) {
+            $node->set('field_meta_tags', serialize($metaValues));
+          }
+        }
+      }
+    }
+  }
+}
+
+function oregon_tech_layout_migration_sections($section, $nid) {
+
+  $class = $section->attributes()->{'class'};
+  if ($class instanceof \SimpleXMLElement) {
+    $class = $class->__toString();
+
+    $paragraphs = [];
+    $title = '';
+    if (strpos($class, 'sf_cols') !== FALSE) {
+      $block = oregon_tech_layout_migration_block_basic($section, 'sf_cols-' . $nid);
+    }
+    else if (strpos($class, 'sfContentBlock') !== FALSE) {
+      $title = $section->xpath('.//h1');
+      if (empty($title)) {
+        $block = oregon_tech_layout_migration_block_basic($section, 'sfContentBlock-' . $nid);
+      }
+    }
+    else if ($class == 'sf') {
+      $block = oregon_tech_layout_migration_block_basic($section, 'sf-' . $nid);
+    }
+    else if (strpos($class, 'otSidebar') !== FALSE) {
+      $block = oregon_tech_layout_migration_block_basic($section, 'otSidebar-' . $nid);
+    }
+    else if (strpos($class, 'textAdBig') !== FALSE) {
+      $block = oregon_tech_layout_migration_block_basic($section, 'textAdBig-' . $nid);
+    }
+    else if (strpos($class, 'NavList') !== FALSE) {
+
+      $links = [];
+      $titleXML = $section->xpath('./h2');
+      if (!empty($titleXML)) {
+        $title = $titleXML[0]->__toString();
+      }
+      $linksXML = $section->xpath('.//li');
+      if (!empty($linksXML)) {
+        foreach ($linksXML as $listItem) {
+          $link = oregon_tech_layout_migration_sections_link($listItem->a);
+          $fields = [
+            'type' => 'link_list_item',
+            'field_link_list_item_link' => $link,
+            'field_link_help_text' => $listItem->__toString(),
+          ];
+          $links[] = oregon_tech_layout_migration_sections_paragraph_create($fields);
+        }
+        $fields = [
+          'type' => 'link_list',
+          'field_link_list_item' => $links
+        ];
+        $paragraphs[] = oregon_tech_layout_migration_sections_paragraph_create($fields);
+      }
+      if (!empty($paragraphs)) {
+        $block = oregon_tech_layout_migration_block_paragraph($paragraphs, $title, 'NavList-' . $nid);
+      }
+    }
+    else if (strpos($class, 'Contact') !== FALSE) {
+      if (isset($sectiom->h2)) {
+        $title = $section->h2->__toString();
+        unset($section->h2);
+      }
+      $html = $section->asXML();
+      $raw = preg_replace('/[\s]+/', '', strip_tags($html));
+      if (!empty($raw)) {
+        $media = new MediaMigration();
+        $html = $media->assets2Media($html);
+        $fields = [
+          'type' => 'contact',
+          'field_contact_wysiwyg' => [
+            'value' => $html,
+            'format' => 'full_html',
+          ],
+        ];
+        $paragraphs[] = oregon_tech_layout_migration_sections_paragraph_create($fields);
+        $block = oregon_tech_layout_migration_block_paragraph($paragraphs, $title, 'Contact-' . $nid);
+      }
+    }
+    else if (strpos($class, 'DocList') !== FALSE || strpos($class, 'sfdownloadFileWrp') !== FALSE) {
+      $links = [];
+      $titleXML = $section->xpath('./h2');
+      if (!empty($titleXML)) {
+        $title = $titleXML[0]->__toString();
+      }
+      $query = strpos($class, 'DocList') !== FALSE ? './/li' : './div';
+      $linksXML = $section->xpath($query);
+      if (!empty($linksXML)) {
+        foreach ($linksXML as $link) {
+          $links[] = oregon_tech_layout_migration_sections_doc($link);
+        }
+        $fields = [
+          'type' => 'doc_list',
+          'field_doc_list_link' => $links
+        ];
+        $paragraphs[] = oregon_tech_layout_migration_sections_paragraph_create($fields);
+      }
+      if (!empty($paragraphs)) {
+        $block = oregon_tech_layout_migration_block_paragraph($paragraphs, $title, 'DocList-' . $nid);
+      }
+    }
+    else if (strpos($class, 'FAQList') !== FALSE) {
+      $accordion = [];
+      $body = [];
+      $labelXML = $section->xpath('./h3');
+      $contentXML = $section->xpath('./div[@class="Answer"]');
+      $i = 0;
+      foreach ($labelXML as $labelItem) {
+        if (!empty($contentXML[$i])) {
+          $label = strip_tags($labelItem->asXML());
+          $content = $contentXML[$i]->asXML();
+          $fields = [
+            'type' => 'accordion_item',
+            'field_accordion_title' => $label,
+            'field_accordion_body' => [
+              'value' => $content,
+              'format' => 'full_html',
+            ],
+          ];
+          $accordion[] = oregon_tech_layout_migration_sections_paragraph_create($fields);
+        }
+        $i++;
+      }
+      $fields = [
+        'type' => 'accordion',
+        'field_accordion_items' => $accordion
+      ];
+      $paragraphs[] = oregon_tech_layout_migration_sections_paragraph_create($fields);
+      if (!empty($paragraphs)) {
+        $block = oregon_tech_layout_migration_block_paragraph($paragraphs, $title, 'FAQList-' . $nid);
+      }
+    }
+  }
+
+  return !empty($block) ? $block : '';
+}
+
+function oregon_tech_layout_migration_block_basic($section, $info) {
+
+  $html = $section->asXML();
+  $raw = preg_replace('/[\s]+/', '', strip_tags($html, '<img>'));
+  if (!empty($raw)) {
+    $media = new MediaMigration();
+    $html = $media->assets2Media($html);
+    $blockContent = BlockContent::create([
+      'info' => $info,
+      'type' => 'basic',
+      'body' => [
+        'value' => $html,
+        'format' => 'full_html',
+      ],
+      'reusable' => 0
+    ]);
+    $blockContent->save();
+
+    return [
+      'id' => 'inline_block:basic',
+      'block_revision_id' => $blockContent->getRevisionId()
+    ];
+  }
+}
+
+function oregon_tech_layout_migration_block_paragraph($paragraphs, $title, $info) {
+  $blockContent = BlockContent::create([
+    'info' => $info,
+    'type' => 'paragraph_block',
+    'field_block_title' => $title,
+    'field_paragraph' => $paragraphs,
+    'reusable' => 0
+  ]);
+  $blockContent->save();
+
+  return [
+    'id' => 'inline_block:paragraph_block',
+    'block_revision_id' => $blockContent->getRevisionId()
+  ];
+}
+
+function oregon_tech_layout_migration_sections_paragraph_create($fields) {
+  $paragraph = Paragraph::create($fields);
+  $paragraph->save();
+  return [
+    'target_id' => $paragraph->id(),
+    'target_revision_id' => $paragraph->getRevisionId(),
+  ];
+}
+
+function oregon_tech_layout_migration_sections_link($link) {
+  $url = $link->attributes()->{'href'};
+  $label = $link->__toString();
+  if ($url instanceof \SimpleXMLElement) {
+    $url = $url->__toString();
+    $url = trim($url, ' /');
+    if (substr($url, 0, 2) == '//') {
+      $url = 'https:' . $url;
+    }
+    $headers = get_headers($url);
+    if (stripos($headers[0],"200 OK")) {
+      $mediaMigration = new MediaMigration();
+      if ($mediaMigration->isInternalLink($url)) {
+        $media = $mediaMigration->createMedia('document', $url);
+        $fid = $media->field_media_file->target_id;
+        $file = File::load($fid);
+        $url = $file->url();
+      }
+    }
+    if (strpos($url, 'https://www.oit.edu/') !== FALSE) {
+      $url = str_replace('https://www.oit.edu', '', $url);
+    }
+    $linkParts = parse_url($url);
+    if (empty($linkParts['host'])) {
+      if (substr($url, 0, 1) != '/') {
+        $url = '/' . $url;
+      }
+      $url = 'internal:' . $url;
+    }
+  }
+  else {
+    $url = 'route:<nolink>';
+  }
+  return [
+    'title' => $label,
+    'uri' => $url
+  ];
+}
+
+function oregon_tech_layout_migration_sections_doc($doc) {
+  $url = $doc->a->attributes()->{'href'};
+  if ($url instanceof \SimpleXMLElement) {
+    $url = $url->__toString();
+    $label = $doc->a->__toString();
+    unset($doc->a);
+    $description = strip_tags($doc->__toString());
+
+    $url = trim($url, ' /');
+    if (substr($url, 0, 2) == '//') {
+      $url = 'https:' . $url;
+    }
+    $mediaMigration = new MediaMigration();
+    if ($mediaMigration->isInternalLink($url)) {
+      $attributes = [
+        'alt' => $label,
+        'title' => $label,
+        'description' => $description
+      ];
+      $media = $mediaMigration->createMedia('document', $url, $attributes);
+      return ['target_id' => $media->id()];
+    }
+  }
+}
+
+/**
+ * Implements hook_block_access().
+ */
+function oregon_tech_layout_migration_block_content_access(EntityInterface $entity, $operation, AccountInterface $account) {
+  if ($account->hasPermission('administer nodes')) {
+    $entity->setAccessDependency(new CustomBlockAccess());
+  }
+}

@@ -1,0 +1,8 @@
+uuid: 78723406-14da-43e7-837a-9f28fa308f5d
+langcode: en
+status: true
+dependencies: {  }
+id: utility-menu-mobile
+label: 'Utility Menu (Mobile)'
+description: ''
+locked: false

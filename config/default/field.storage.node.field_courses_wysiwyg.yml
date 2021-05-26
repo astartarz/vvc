@@ -1,0 +1,19 @@
+uuid: 73857876-d1a1-4316-932a-8a93d2a84fd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_courses_wysiwyg
+field_name: field_courses_wysiwyg
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,5 @@
+kwall_map.form:
+  title: 'KWALL map settings'
+  description: 'Configure settings for the custom map module.'
+  route_name: kwall_map.form
+  parent: 'system.admin_config_development'

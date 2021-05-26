@@ -1,0 +1,80 @@
+uuid: dfa15bf8-d9d8-4cbc-9020-bca83a868123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_event_grid.field_link
+    - field.field.paragraph.featured_event_grid.field_node_ref
+    - field.field.paragraph.featured_event_grid.field_taxonomy
+    - field.field.paragraph.featured_event_grid.field_title
+    - field.field.paragraph.featured_event_grid.field_title_2
+    - field.field.paragraph.featured_event_grid.field_view_reference
+    - paragraphs.paragraphs_type.featured_event_grid
+  module:
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_listing:
+      children:
+        - field_title_2
+        - field_taxonomy
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Listing
+id: paragraph.featured_event_grid.default
+targetEntityType: paragraph
+bundle: featured_event_grid
+mode: default
+content:
+  field_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_node_ref:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_taxonomy:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title_2:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

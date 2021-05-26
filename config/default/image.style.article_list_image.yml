@@ -1,0 +1,17 @@
+uuid: b17aef88-0c7f-41f0-a968-6935060688cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: article_list_image
+label: 'x. Article List Image (285x160)'
+effects:
+  54684599-cc06-4e6f-89af-c844cf9a7d10:
+    uuid: 54684599-cc06-4e6f-89af-c844cf9a7d10
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 285
+      height: 160
+      crop_type: focal_point

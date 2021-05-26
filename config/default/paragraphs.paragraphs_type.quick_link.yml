@@ -1,0 +1,10 @@
+uuid: 574257c3-e00d-4544-b82c-a0ba08d80c0b
+langcode: en
+status: true
+dependencies: {  }
+id: quick_link
+label: 'Quick Link'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Quick Links</em> custom block type.'
+behavior_plugins: {  }

@@ -1,0 +1,15 @@
+uuid: 06864346-2a80-4937-a8b5-f748cc12125e
+name: 'Victor Valley College'
+mail: info@kwallcompany.com
+slogan: ''
+page:
+  403: ''
+  404: /node/81
+  front: /node/6075
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

@@ -1,0 +1,27 @@
+uuid: 4aad0a50-cc30-4d26-9fbe-672d7afc2364
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webm
+    - paragraphs.paragraphs_type.hero_slide
+  module:
+    - file
+id: paragraph.hero_slide.field_webm
+field_name: field_webm
+entity_type: paragraph
+bundle: hero_slide
+label: webm
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: webm
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

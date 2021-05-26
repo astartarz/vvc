@@ -1,0 +1,25 @@
+uuid: 5933953c-9175-4066-8f15-a3a1a083d181
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.push-navigation-toggle
+  module:
+    - system
+  theme:
+    - kwall
+id: kwall_pushnavigationtoggle_2
+theme: kwall
+region: slide_in_navigation
+weight: -14
+provider: null
+plugin: 'system_menu_block:push-navigation-toggle'
+settings:
+  id: 'system_menu_block:push-navigation-toggle'
+  label: 'Push Navigation Toggle'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

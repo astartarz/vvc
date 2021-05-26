@@ -1,0 +1,21 @@
+uuid: 15d60359-3459-479e-a918-d71d5d075f2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_office
+    - node.type.person
+  module:
+    - text
+id: node.person.field_office
+field_name: field_office
+entity_type: node
+bundle: person
+label: 'x. Office'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

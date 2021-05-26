@@ -1,0 +1,79 @@
+uuid: b98c85a0-5f59-4de7-a71f-1a491eefe16d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.field_after_content
+    - field.field.node.page.field_content_bottom
+    - field.field.node.page.field_hero_content
+    - field.field.node.page.field_hide_page_title
+    - field.field.node.page.field_intro
+    - field.field.node.page.field_legacy_group
+    - field.field.node.page.field_legacy_menu_title
+    - field.field.node.page.field_legacy_path
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_quick_links_ref
+    - field.field.node.page.field_related_department
+    - field.field.node.page.field_section_title
+    - field.field.node.page.field_sidebar_content
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+_core:
+  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  content_moderation_control:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_after_content:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_intro:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_content_bottom: true
+  field_hero_content: true
+  field_hide_page_title: true
+  field_legacy_group: true
+  field_legacy_menu_title: true
+  field_legacy_path: true
+  field_meta_tags: true
+  field_quick_links_ref: true
+  field_related_department: true
+  field_section_title: true
+  field_sidebar_content: true
+  langcode: true
+  search_api_excerpt: true
+  sharethis: true

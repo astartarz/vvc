@@ -1,0 +1,9 @@
+kwall_map:
+  page_title: 'Map Page'
+  source_text: "Some source text?"
+  overlay_path: 'Path/to/overlay.png'
+  sw_lat: '11.1111'
+  sw_lon: '-22.2222'
+  ne_lat: '33.3333'
+  ne_lon: '-44.4444'
+  styles: '[]'

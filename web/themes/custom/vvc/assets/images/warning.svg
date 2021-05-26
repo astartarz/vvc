@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<circle style="fill:#fff9f5;" cx="256" cy="256" r="218"/>
+<g>
+	<path style="fill:#FC640C;" d="M256,0C114.52,0,0,114.5,0,256s114.5,256,256,256s256-114.5,256-256S397.5,0,256,0z M256,496
+		C123.36,496,16,388.66,16,256S123.34,16,256,16s240,107.34,240,240S388.66,496,256,496z"/>
+	<rect x="245" y="366" style="fill:#FC640C;" width="22" height="22"/>
+	<polygon style="fill:#FC640C;" points="246,348 266,348 286,124 226,124 	"/>
+</g>
+</svg>

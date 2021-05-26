@@ -1,0 +1,23 @@
+uuid: 9a006af0-1a9e-4f5c-aa5d-dc958dc488b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_adjustable_height
+    - paragraphs.paragraphs_type.hero_banner
+id: paragraph.hero_banner.field_adjustable_height
+field_name: field_adjustable_height
+entity_type: paragraph
+bundle: hero_banner
+label: 'x. Banner Height'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Tall
+  off_label: Short
+field_type: boolean

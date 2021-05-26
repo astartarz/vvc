@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *
+ * @ingroup templates
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('menu nav menu-level-' ~ menu_level) }}>
+    {% endif %}
+  {% if menu_level > 0 %}
+    <div class="dropdown-menu-list menu-level-{{ menu_level }}">
+    <ul class="menu-list-{{ menu_level }}">
+
+  {% endif %}
+
+    {% for item in items %}
+      {%
+        set item_classes = [
+        item.is_expanded? 'expanded',
+        item.is_expanded and menu_level == 0 ? 'dropdown-item',
+        item.in_active_trail ? 'active',
+      ]
+      %}
+
+      {% if item.is_expanded %}
+      <li{{ item.attributes.addClass(item_classes,'menu__item' ) }}>
+        {% if item.url|render|striptags|trim is empty %}
+          <span class="dropdown-toggle menu__link nolink" tabindex="0">{{ item.title }}</span>
+        {% else  %}
+          {{ link(item.title, item.url|link_attributes({'class' : ['dropdown-toggle menu__link']})) }}
+        {% endif %}
+        <span class="fa fa-angle-down" data-toggle=".{{ 'menu-level-' ~ ( menu_level + 1 ) }}" tabindex="0"></span>
+      {% else %}
+        <li{{ item.attributes.addClass(item_classes,'menu__item') }}>
+        {{ link(item.title, item.url, item.attributes.removeClass( 'menu__item' ), item.attributes.addClass( 'menu__link' ) ) }}
+      {% endif %}
+
+      {% if item.below %}
+        {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav'), menu_level + 1) }}
+      {% endif %}
+
+      </li>
+    {% endfor %}
+  {% if menu_level > 0 %}
+    </ul>
+    </div>
+  {% endif %}
+
+    {% if menu_level == 0 %}
+      </ul>
+    {% endif %}
+
+  {% endif %}
+{% endmacro %}

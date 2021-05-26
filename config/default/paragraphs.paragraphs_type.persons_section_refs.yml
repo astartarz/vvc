@@ -1,0 +1,10 @@
+uuid: 209ab686-ba39-413d-b874-9e850d19d7b0
+langcode: en
+status: true
+dependencies: {  }
+id: persons_section_refs
+label: 'Persons Section (Nodes)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

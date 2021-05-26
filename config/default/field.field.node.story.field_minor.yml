@@ -1,0 +1,19 @@
+uuid: fc7023d4-fabc-456c-9103-f76e2315ada3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_minor
+    - node.type.story
+id: node.story.field_minor
+field_name: field_minor
+entity_type: node
+bundle: story
+label: 'x. Minor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

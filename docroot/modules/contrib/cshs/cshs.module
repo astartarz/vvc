@@ -1,0 +1,120 @@
+<?php
+
+/**
+ * @file
+ * Client-side hierarchical select.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\Core\Render\Element\RenderElement;
+
+const CSHS_DEFAULT_NONE_VALUE = 'All';
+const CSHS_DEFAULT_NONE_LABEL = '- Please select -';
+
+/**
+ * Implements hook_help().
+ *
+ * @internal
+ */
+function cshs_help(string $route_name): ?array {
+  switch ($route_name) {
+    case 'help.page.cshs':
+      return [
+        '#theme' => 'cshs_help',
+      ];
+  }
+
+  return NULL;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * @internal
+ */
+function cshs_theme(array $existing, $type, $theme, $path): array {
+  $info = [];
+
+  $info['cshs_help'] = [
+    'path' => "$path/templates",
+  ];
+
+  $info['cshs_select'] = [
+    'render element' => 'element',
+  ];
+
+  $info['cshs_term_group'] = [
+    'path' => "$path/templates",
+    'variables' => [
+      'title' => '',
+      'terms' => '',
+    ],
+  ];
+
+  return $info;
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @internal
+ * @see \template_preprocess_select()
+ */
+function template_preprocess_cshs_select(array &$variables): void {
+  Element::setAttributes($variables['element'], ['id', 'name', 'size']);
+  RenderElement::setAttributes($variables['element'], ['simpler-select-root']);
+
+  $variables['attributes'] = $variables['element']['#attributes'];
+  $variables['attributes']['class'][] = 'form-element';
+  $variables['attributes']['class'][] = 'form-element--type-select';
+  $variables['options'] = \cshs_form_select_options($variables['element']);
+}
+
+/**
+ * {@inheritdoc}
+ *
+ * @internal
+ * @see \form_select_options()
+ */
+function cshs_form_select_options(array $element): array {
+  $options = [];
+
+  if (!empty($element['#options'])) {
+    $is_value_valid = \array_key_exists('#value', $element);
+    $is_value_array = $is_value_valid && \is_array($element['#value']);
+
+    foreach ($element['#options'] as $value => $data) {
+      $value = (string) $value;
+      $selected = FALSE;
+
+      if ($is_value_valid) {
+        if ($is_value_array) {
+          $selected = \in_array($value, $element['#value']);
+        }
+        else {
+          $selected = $value === (string) $element['#value'];
+        }
+      }
+
+      // The default "All" option coming from Views has $data as a string.
+      if (\is_string($data)) {
+        $data = [
+          'name' => $data,
+          'parent_tid' => 0,
+        ];
+      }
+
+      $options[] = [
+        'value' => $value,
+        'label' => $data['name'],
+        // If widget is used as field widget, so lets see if there is a
+        // root configured. If the parent term is actually the configured
+        // root of this field, set parent to 0.
+        'parent' => isset($element['#parent']) && (string) $data['parent_tid'] === (string) $element['#parent'] ? 0 : $data['parent_tid'],
+        'selected' => $selected,
+      ];
+    }
+  }
+
+  return $options;
+}

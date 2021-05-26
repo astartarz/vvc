@@ -1,0 +1,10 @@
+uuid: 559a4a92-29b5-46fa-a4cf-3690ca1f0b8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.scale_width_450px
+label: 'Scale Width: 450px'
+targetEntityType: media
+cache: true

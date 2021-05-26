@@ -1,0 +1,119 @@
+@mixin adhere {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin object-fit {
+  @include adhere;
+
+  object-fit: cover;
+  font-family: "object-fit: cover;";
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin push-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin clear-center {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@mixin discernible-content {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+// dot pattern
+// anything with a default value is optional
+// when invoked parameters with default value
+// use like $param: 30px
+@mixin dot-pattern(
+  $width,
+  $height,
+  $svg-color,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
+  $pseudo: "after",
+) {
+  &::#{$pseudo} {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: 1;
+    width: $width;
+    height: $height;
+    content: "";
+    background: {
+      image: url("#{$svg-path}/dot-#{$svg-color}.svg");
+    }
+  }
+}
+
+// base transition mixin
+@mixin base-transition(
+  $property: transform,
+  $timing: $ease-default,
+  $duration: $transition-short,
+) {
+  transition: {
+    timing-function: $ease-default;
+    duration: $duration;
+    property: $property;
+  }
+}
+
+// line that animates on
+// hover or active state
+@mixin line-detail(
+  $top: null,
+  $right: null,
+  $left: null,
+  $bottom: null,
+  $width: 100%,
+  $pseudo: "after",
+  $background-color: $orange,
+) {
+  &::after {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    display: block;
+    width: $width;
+    height: 1px;
+    content: "";
+    background-color: $background-color;
+    transform: scaleX(0);
+    transform-origin: left;
+    @include base-transition;
+  }
+
+  &:focus,
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+uuid: 6950452f-5716-4871-a7a7-942270fe3032
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.field.block_content.hero_banner.field_hero_content
+  module:
+    - entity_reference_revisions
+id: block_content.hero_banner.default
+targetEntityType: block_content
+bundle: hero_banner
+mode: default
+content:
+  field_hero_content:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

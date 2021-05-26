@@ -1,0 +1,123 @@
+//#site-branding {
+//  z-index: 10;
+//
+//  &:after {
+//    content: '';
+//    display: block;
+//    clear: both;
+//  }
+//
+//  // Utility navigation styling.
+//  .utility-nav-block {
+//    float: right;
+//    width: 65%;
+//    @media (max-width: $screen-sm-max) {
+//      width: 100%;
+//    }
+//
+//    ul {
+//      float: right;
+//      margin: 0;
+//      padding: 0;
+//
+//      li {
+//        float: left;
+//        position: relative;
+//
+//        &:focus,
+//        &:hover {
+//          // Submenu.
+//          > ul {
+//            float: none;
+//            display: block;
+//            position: absolute;
+//            top: 100%;
+//            left: 0;
+//            width: 160px;
+//            z-index: 10;
+//          }
+//        }
+//
+//        &.menu-item--expanded {
+//          list-style: none;
+//        }
+//      }
+//
+//      // Submenu.
+//      ul {
+//        display: none;
+//        float: none;
+//      }
+//    }
+//  }
+//
+//  // logo styling.
+//  .company-brand {
+//    float: left;
+//    width: 35%;
+//    @media (max-width: $screen-sm-max) {
+//      width: 80%;
+//    }
+//  }
+//
+//  // Mega menu styling.
+//  .block-tb-megamenu {
+//    float: right;
+//    width: 65%;
+//    @media (max-width: $screen-sm-max) {
+//      display: none;
+//    }
+//
+//    .tb-megamenu {
+//      background: transparent;
+//
+//      .level-0 {
+//        float: right;
+//      }
+//
+//      .tb-megamenu-item {
+//        .dropdown-toggle {
+//          &:after {
+//            display: none;
+//          }
+//        }
+//      }
+//
+//      a {
+//        color: initial;
+//        border: none;
+//        font-weight: initial;
+//        padding: initial;
+//      }
+//    }
+//  }
+//
+//  // Hamburger push menu toggle.
+//  .menu--push-navigation-toggle {
+//    float: right;
+//    display: none;
+//    @media (max-width: $screen-sm-max) {
+//      display: inline-block;
+//    }
+//
+//    ul {
+//      float: right;
+//      margin: 0;
+//      padding: 0;
+//      list-style: none;
+//
+//      .push-menu-toggle {
+//        font-size: 0;
+//        line-height: 0;
+//
+//        &:before {
+//          font-size: 16px;
+//          line-height: 1em;
+//          padding: 12px 15px;
+//        }
+//      }
+//    }
+//
+//  }
+//
+//}

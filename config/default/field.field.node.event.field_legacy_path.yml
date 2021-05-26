@@ -1,0 +1,19 @@
+uuid: 6924fa18-9074-4ceb-84ca-10541bddb43e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_path
+    - node.type.event
+id: node.event.field_legacy_path
+field_name: field_legacy_path
+entity_type: node
+bundle: event
+label: 'x. Legacy Path'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

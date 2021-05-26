@@ -1,0 +1,23 @@
+uuid: f6a939d5-3999-4ce7-a2aa-a25f8b88088a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_aside_link
+    - paragraphs.paragraphs_type.academic_tabs
+  module:
+    - link
+id: paragraph.academic_tabs.field_aside_link
+field_name: field_aside_link
+entity_type: paragraph
+bundle: academic_tabs
+label: 'Aside CTA Button'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

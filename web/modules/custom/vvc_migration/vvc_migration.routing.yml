@@ -1,0 +1,7 @@
+vvc_migration.groups_custom_update:
+  path: '/admin/config/development/groups-custom-update'
+  defaults:
+    _form: '\Drupal\vvc_migration\Form\GroupsCustomUpdate'
+    _title: 'Groups custom update'
+  requirements:
+    _permission: 'access administration pages'

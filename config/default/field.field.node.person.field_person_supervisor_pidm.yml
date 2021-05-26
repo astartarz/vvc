@@ -1,0 +1,19 @@
+uuid: a2b244a5-cae1-49c5-8357-e1242f29b0a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_supervisor_pidm
+    - node.type.person
+id: node.person.field_person_supervisor_pidm
+field_name: field_person_supervisor_pidm
+entity_type: node
+bundle: person
+label: 'x. Supervisor PIDM'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

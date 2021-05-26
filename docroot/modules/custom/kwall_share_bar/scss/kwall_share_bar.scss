@@ -1,0 +1,50 @@
+.kwall-share-bar {
+  display: flex;
+
+  > span {
+    margin-right: .5rem;
+  }
+
+  ul.share-list {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  .email,
+  .twitter,
+  .facebook {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin: 0 2px;
+    padding: 2px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    i {
+      &:before {
+        font-size: .8rem;
+      }
+    }
+  }
+
+  .email {
+    background-color: rgb(132, 132, 132);
+  }
+
+  .twitter {
+    background-color: rgb(29, 161, 242);
+  }
+
+  .facebook {
+    background-color: rgb(59, 89, 152);
+  }
+}

@@ -1,0 +1,14 @@
+uuid: 614ce898-7a5e-4127-a1ac-5d64d3ba075e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.directory_publisher
+  module:
+    - user
+id: user_remove_role_action.directory_publisher
+label: 'Remove the Directory Publisher role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: directory_publisher

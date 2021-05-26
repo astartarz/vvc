@@ -1,0 +1,66 @@
+uuid: 09a09a69-8f1a-448c-9b34-150c9066b0d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.events_grid.field_events_grid_display
+    - field.field.paragraph.events_grid.field_link
+    - field.field.paragraph.events_grid.field_taxonomy
+    - field.field.paragraph.events_grid.field_title
+    - field.field.paragraph.events_grid.field_view_reference
+    - paragraphs.paragraphs_type.events_grid
+  module:
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_display:
+      children:
+        - field_events_grid_display
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Display Options'
+id: paragraph.events_grid.default
+targetEntityType: paragraph
+bundle: events_grid
+mode: default
+content:
+  field_events_grid_display:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_taxonomy:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

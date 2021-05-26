@@ -1,0 +1,10 @@
+uuid: cd4d4867-6196-4f64-a13c-d1066f4c6115
+langcode: en
+status: true
+dependencies: {  }
+id: featured_event_grid
+label: 'Featured Event Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

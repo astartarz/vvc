@@ -1,0 +1,33 @@
+uuid: d7eddc0a-60d8-4fd1-ac75-51e8cee629bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.view_search
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - kwall_subtheme_example
+third_party_settings:
+  block_class:
+    classes: vb-search-form
+id: exposedformview_searchpage_1
+theme: kwall_subtheme_example
+region: content
+weight: -6
+provider: null
+plugin: 'views_exposed_filter_block:view_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:view_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

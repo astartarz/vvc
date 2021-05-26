@@ -1,0 +1,19 @@
+uuid: 1419c361-9d3c-4bc0-a4e3-752ed01acf84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+id: paragraph.adjustable_media_and_content.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: adjustable_media_and_content
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,175 @@
+diff --git a/src/Controller/GroupContentMenuController.php b/src/Controller/GroupContentMenuController.php
+index 39331d6..e75b344 100644
+--- a/src/Controller/GroupContentMenuController.php
++++ b/src/Controller/GroupContentMenuController.php
+@@ -2,6 +2,8 @@
+ 
+ namespace Drupal\group_content_menu\Controller;
+ 
++use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
++use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+ use Drupal\Core\Link;
+ use Drupal\Core\Url;
+ use Drupal\group\Entity\Controller\GroupContentController;
+@@ -72,20 +74,23 @@ class GroupContentMenuController extends GroupContentController {
+     }
+ 
+     // Overwrite the label and description for all of the displayed bundles.
+-    $storage_handler = $this->entityTypeManager->getStorage('group_content_menu_type');
+-    foreach ($this->addPageBundles($group, $create_mode) as $plugin_id => $bundle_name) {
+-      if (!empty($build['#bundles'][$bundle_name])) {
+-        $plugin = $group->getGroupType()->getContentPlugin($plugin_id);
+-        $label = $plugin->getLabel();
+-        $bundle_label = $storage_handler->load($plugin->getEntityBundle())->label();
+-        $description = $this->t('Add new menu of type %bundle_label to the group.', ['%bundle_label' => $bundle_label]);
+-        $build['#bundles'][$bundle_name]['label'] = $bundle_label;
+-        $build['#bundles'][$bundle_name]['description'] = $description;
+-        $build['#bundles'][$bundle_name]['add_link'] = Link::createFromRoute($label, 'entity.group_content_menu.add_form', ['group' => $group->id(), 'plugin_id' => $plugin_id]);
++    try {
++      $storage_handler = $this->entityTypeManager->getStorage('group_content_menu_type');
++      foreach ($this->addPageBundles($group, $create_mode) as $plugin_id => $bundle_name) {
++        if (!empty($build['#bundles'][$bundle_name])) {
++          $plugin = $group->getGroupType()->getContentPlugin($plugin_id);
++          $label = $plugin->getLabel();
++          $bundle_label = $storage_handler->load($plugin->getEntityBundle())->label();
++          $description = $this->t('Add new menu of type %bundle_label to the group.', ['%bundle_label' => $bundle_label]);
++          $build['#bundles'][$bundle_name]['label'] = $bundle_label;
++          $build['#bundles'][$bundle_name]['description'] = $description;
++          $build['#bundles'][$bundle_name]['add_link'] = Link::createFromRoute($label, 'entity.group_content_menu.add_form', ['group' => $group->id(), 'plugin_id' => $plugin_id]);
++        }
+       }
++      return $build;
++    } catch (InvalidPluginDefinitionException | PluginNotFoundException $e) {
++      return $build;
+     }
+-
+-    return $build;
+   }
+ 
+   /**
+diff --git a/src/Plugin/Block/GroupMenuBlock.php b/src/Plugin/Block/GroupMenuBlock.php
+index cb51277..599f7e2 100644
+--- a/src/Plugin/Block/GroupMenuBlock.php
++++ b/src/Plugin/Block/GroupMenuBlock.php
+@@ -2,6 +2,9 @@
+ 
+ namespace Drupal\group_content_menu\Plugin\Block;
+ 
++use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
++use Drupal\Component\Plugin\Exception\PluginException;
++use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+ use Drupal\Core\Block\BlockBase;
+ use Drupal\Core\Cache\Cache;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+@@ -155,7 +158,11 @@ class GroupMenuBlock extends BlockBase implements ContainerFactoryPluginInterfac
+    * {@inheritdoc}
+    */
+   public function build() {
+-    $menu_name = $this->getMenuName();
++    try {
++      $menu_name = $this->getMenuName();
++    } catch (PluginException $e) {
++      return [];
++    }
+     $parameters = $this->menuTree->getCurrentRouteMenuTreeParameters($menu_name);
+ 
+     // Adjust the menu tree parameters based on the block's configuration.
+@@ -176,21 +183,29 @@ class GroupMenuBlock extends BlockBase implements ContainerFactoryPluginInterfac
+       ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+     ];
+     $tree = $this->menuTree->transform($tree, $manipulators);
++    // Don't render block if there aren't any links.
++    if (empty($tree)) {
++      return [];
++    }
+     $build = $this->menuTree->build($tree);
+-    $menu_instance = $this->getMenuInstance();
+-    if ($menu_instance instanceof GroupContentMenuInterface) {
+-      $build['#contextual_links']['group_menu'] = [
+-        'route_parameters' => [
+-          'group' => $this->getContext('group')->getContextData()->getValue()->id(),
+-          'group_content_menu' => $menu_instance->id(),
+-        ],
+-      ];
+-
++    try {
++      $menu_instance = $this->getMenuInstance();
++      if ($menu_instance instanceof GroupContentMenuInterface) {
++        $build['#contextual_links']['group_menu'] = [
++          'route_parameters' => [
++            'group' => $this->getContext('group')->getContextData()->getValue()->id(),
++            'group_content_menu' => $menu_instance->id(),
++          ],
++        ];
++      }
++      if ($menu_instance) {
++        $build['#theme'] = 'menu__group_menu';
++      }
++      return $build;
+     }
+-    if ($menu_instance) {
+-      $build['#theme'] = 'menu__group_menu';
++    catch (PluginException $e) {
++      return [];
+     }
+-    return $build;
+   }
+ 
+   /**
+@@ -208,10 +223,15 @@ class GroupMenuBlock extends BlockBase implements ContainerFactoryPluginInterfac
+    */
+   public function getCacheTags() {
+     $tags = parent::getCacheTags();
+-    if ($menu_name = $this->getMenuName()) {
+-      return Cache::mergeTags($tags, [$menu_name]);
++    try {
++      if ($menu_name = $this->getMenuName()) {
++        return Cache::mergeTags($tags, [$menu_name]);
++      }
++      return $tags;
++    }
++    catch(PluginException $e) {
++      return $tags;
+     }
+-    return $tags;
+   }
+ 
+   /**
+@@ -238,9 +258,7 @@ class GroupMenuBlock extends BlockBase implements ContainerFactoryPluginInterfac
+    * @return \Drupal\group_content_menu\GroupContentMenuInterface|null
+    *   The instance of the menu or null if no instance is found.
+    *
+-   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+    * @throws \Drupal\Component\Plugin\Exception\PluginException
+-   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+    */
+   public function getMenuInstance() {
+     $entity = $this->getContext('group')->getContextData()->getValue();
+@@ -257,9 +275,14 @@ class GroupMenuBlock extends BlockBase implements ContainerFactoryPluginInterfac
+       return NULL;
+     }
+ 
+-    $instances = $groupStorage->loadByGroup($entity, $this->getPluginId());
+-    if ($instances) {
+-      return array_pop($instances)->getEntity();
++    try {
++      $instances = $this->entityTypeManager->getStorage('group_content')->loadByGroup($entity, $this->getPluginId());
++      if ($instances) {
++        return array_pop($instances)->getEntity();
++      }
++    }
++    catch (InvalidPluginDefinitionException | PluginNotFoundException $e) {
++      return NULL;
+     }
+     return NULL;
+   }
+@@ -270,9 +293,7 @@ class GroupMenuBlock extends BlockBase implements ContainerFactoryPluginInterfac
+    * @return string
+    *   The name of the menu.
+    *
+-   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+    * @throws \Drupal\Component\Plugin\Exception\PluginException
+-   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+    */
+   public function getMenuName() {
+     if (isset($this->menuName)) {

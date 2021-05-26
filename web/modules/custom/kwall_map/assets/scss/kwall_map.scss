@@ -1,0 +1,9 @@
+.js-info-bubble-close {
+  top: 12px !important;
+  right: 5px !important;
+  width: 10px;
+}
+
+.js-info-bubble-close + div {
+  min-height: 85px !important;
+}

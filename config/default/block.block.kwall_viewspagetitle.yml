@@ -1,0 +1,35 @@
+uuid: 738d0b8a-88e4-415c-bc3d-ae226fa1212e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4031ad91-fcaa-4491-b845-9cb829775d57'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - kwall
+third_party_settings:
+  block_class:
+    classes: views-page-title
+id: kwall_viewspagetitle
+theme: kwall
+region: content_top
+weight: -12
+provider: null
+plugin: 'block_content:4031ad91-fcaa-4491-b845-9cb829775d57'
+settings:
+  id: 'block_content:4031ad91-fcaa-4491-b845-9cb829775d57'
+  label: '[current-page:title]'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events\r\n/news\r\n/user*\r\n/directory\r\n/directory/a\r\n/directory/b\r\n/directory/c\r\n/directory/d\r\n/directory/e\r\n/directory/f\r\n/directory/g\r\n/directory/h\r\n/directory/i\r\n/directory/j\r\n/directory/k\r\n/directory/l\r\n/directory/m\r\n/directory/n\r\n/directory/o\r\n/directory/p\r\n/directory/q\r\n/directory/r\r\n/directory/s\r\n/directory/t\r\n/directory/u\r\n/directory/v\r\n/directory/w\r\n/directory/x\r\n/directory/y\r\n/directory/z"
+    negate: false
+    context_mapping: {  }

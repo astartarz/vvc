@@ -1,0 +1,8 @@
+uuid: de9ae390-e750-4b5d-b55f-98ee4dcb6e71
+langcode: en
+status: true
+dependencies: {  }
+id: directory-tabs
+label: 'Directory Tabs'
+description: ''
+locked: false

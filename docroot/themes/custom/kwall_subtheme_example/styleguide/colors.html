@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<title>KWALL University | Styleguide</title>
+<link rel="shortcut icon" href="favicon.ico" />
+
+<!-- jQuery -->
+<script
+	defer
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous">
+</script>
+<script
+	defer
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous">
+</script>
+
+<!-- Bootstrap JS -->
+<script 
+	defer
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+	crossorigin="anonymous">
+</script>
+
+<!--Flexslider JS-->
+<script 
+	defer
+	src="libraries/flexslider/jquery.flexslider-min.js">
+</script>
+
+<!--Slick JS-->
+<script 
+	defer
+	type="text/javascript" src="libraries/slick/slick/slick.min.js">
+</script>
+
+<!-- Fonts -->
+<script src="https://use.fontawesome.com/38eaee5b57.js"></script>
+
+<!-- Local Files -->
+<link href="css/style.css" rel="stylesheet">
+<script 
+	defer
+	src="js/KWALLU.js">
+</script>
+
+<!-- Highlight JS -->
+<script src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(),
+  $( "#tabs" ).tabs(),
+  $( "#accordion" ).accordion();
+});
+</script>
+</head>
+<body>
+
+<!--NAVIGATION-->
+<nav class="style-navbar navbar navbar-expand-lg fixed-top navbar-light bg-light" role="navigation">
+	<div class="navbar-brand">
+		<a href="index.html"><img alt="Brand" src="images/logo.png"><span>Styleguide</span></a>
+	</div>
+	<a type="button" class="navbar-toggler collapsed btn btn-action" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<span class="navbar-toggler-icon"></span>
+	</a>
+	
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse flex-row-reverse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item"><a class="nav-link"href="layout.html">Layout</a></li>
+			<li class="nav-item active"><a class="nav-link" href="colors.html">Colors</a></li>
+			<li class="nav-item"><a class="nav-link" href="typography.html">Typography</a></li>
+			<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+			<li class="nav-item"><a class="nav-link"href="contentlists.html">Content List</a></li>
+<!-- 	<li class="nav-item"><a class="nav-link" href="components.html">Components</a></li> -->
+		</ul>
+	</div>
+</nav>
+
+<!--STYLEGUIDE CONTENT-->
+<div class="style-wrap">
+	<h1>Colors</h1>
+	<p>A collection of KWALL University's colors. The badges in the lower left indicate if the color is accessible at all sizes for black or white. Hover for more information.</p>
+	<p><i>Large Text is defined as 18.5px <b>and</b> bold or 24px.</i></p>
+	
+	<!--PRIMARY COLORS-->
+	<h2 class="style-header">Primary Colors</h2>
+	<div id="primary-colors">
+		<div class="row">
+  		<div class="col-md bottom color-container">
+      	<div class="color-inner mobile-tap  color-blue color-dark access-white-fail  access-black-pass">
+  				<p class="color-name">blue</p>
+					<p class="color-hex">#005794</p>
+					<span class="color-popup">
+  					<b>fail: </b>Large Text White<br />
+  					<b>fail: </b>Small Text White<br />
+  					<b>pass: </b>Large Text Black<br />
+  					<b>pass: </b>Small Text Black<br />
+					</span>
+				</div>
+			</div><!-- .color-container -->
+  		<div class="col-md bottom color-container">
+      	<div class="color-inner mobile-tap  color-green color-light access-white-fail  access-black-pass">
+  				<p class="color-name">green</p>
+					<p class="color-hex">#A7DBD8</p>
+					<span class="color-popup">
+  					<b>fail: </b>Large Text White<br />
+  					<b>fail: </b>Small Text White<br />
+  					<b>pass: </b>Large Text Black<br />
+  					<b>pass: </b>Small Text Black<br />
+					</span>
+				</div>
+			</div><!-- .color-container -->
+	<!--SECONDARY COLORS-->
+  	</div><!-- .row -->
+	</div><!-- #primary-colors -->
+  
+  <!--SECONDARY COLORS-->
+  <h2 class="style-header">Secondary Colors</h2>
+  <div id="secondary-colors">
+	  <div class="row">
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner mobile-tap  color-red color-dark access-white-pass  access-black-fail">
+	          	<p class="color-name">red</p>
+	          	<p class="color-hex">#BD1B00</p>
+	          	<span class="color-popup">
+			  					<b>pass: </b>Large Text White<br />
+			  					<b>pass: </b>Small Text White<br />
+			  					<b>pass: </b>Large Text Black<br />
+			  					<b>fail: </b>Small Text Black<br />
+			  			</span>
+			 </div>
+	  	</div><!-- .color-container -->
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner mobile-tap  color-orange color-dark access-white-fail  access-black-pass">
+	          	<p class="color-name">orange</p>
+	          	<p class="color-hex">#E84708</p>
+	          	<span class="color-popup">
+			  					<b>pass: </b>Large Text White<br />
+			  					<b>fail: </b>Small Text White<br />
+			  					<b>pass: </b>Large Text Black<br />
+			  					<b>pass: </b>Small Text Black<br />
+			  			</span>
+			 </div>
+	  	</div><!-- .color-container -->
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner mobile-tap  color-yellow color-light access-white-fail  access-black-pass">
+	          	<p class="color-name">yellow</p>
+	          	<p class="color-hex">#FDC300</p>
+	          	<span class="color-popup">
+			  					<b>fail: </b>Large Text White<br />
+			  					<b>fail: </b>Small Text White<br />
+			  					<b>pass: </b>Large Text Black<br />
+			  					<b>pass: </b>Small Text Black<br />
+			  			</span>
+			 </div>
+	  	</div><!-- .color-container -->
+	  </div><!-- .row -->
+	</div><!-- #secondary-colors -->
+	
+	<!--SECONDARY COLORS-->
+  <h2 class="style-header">Neutral Colors</h2>
+  <div id="secondary-colors">
+	  <div class="row">
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner mobile-tap  color-grey-xlt color-light access-white-fail  access-black-pass">
+	          	<p class="color-name">extra light grey</p>
+	          	<p class="color-hex">#f5f5f5</p>
+	          	<span class="color-popup">
+			  					<b>fail: </b>Large Text White<br />
+			  					<b>fail: </b>Small Text White<br />
+			  					<b>pass: </b>Large Text Black<br />
+			  					<b>pass: </b>Small Text Black<br />
+			  			</span>
+			 </div>
+	  	</div><!-- .color-container -->
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner mobile-tap  color-grey-lt color-light access-white-fail  access-black-pass">
+	          	<p class="color-name">light grey</p>
+	          	<p class="color-hex">#eeeeee</p>
+	          	<span class="color-popup">
+			  					<b>fail: </b>Large Text White<br />
+			  					<b>fail: </b>Small Text White<br />
+			  					<b>pass: </b>Large Text Black<br />
+			  					<b>pass: </b>Small Text Black<br />
+			  			</span>
+			 </div>
+	  	</div><!-- .color-container -->
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner mobile-tap  color-grey color-light access-white-fail  access-black-pass">
+	          	<p class="color-name">grey</p>
+	          	<p class="color-hex">#d8d8d8</p>
+	          	<span class="color-popup">
+			  					<b>fail: </b>Large Text White<br />
+			  					<b>fail: </b>Small Text White<br />
+			  					<b>pass: </b>Large Text Black<br />
+			  					<b>pass: </b>Small Text Black<br />
+			  			</span>
+			 </div>
+	  	</div><!-- .color-container -->
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner mobile-tap  color-grey-dk color-dark access-white-fail  access-black-pass">
+	          	<p class="color-name">dark grey</p>
+	          	<p class="color-hex">#959595</p>
+	          	<span class="color-popup">
+			  					<b>fail: </b>Large Text White<br />
+			  					<b>fail: </b>Small Text White<br />
+			  					<b>pass: </b>Large Text Black<br />
+			  					<b>pass: </b>Small Text Black<br />
+			  			</span>
+			 </div>
+	  	</div><!-- .color-container -->
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner mobile-tap  color-black color-dark access-white-pass  access-black-fail">
+	          	<p class="color-name">black</p>
+	          	<p class="color-hex">#282B2C</p>
+	          	<span class="color-popup">
+			  					<b>pass: </b>Large Text White<br />
+			  					<b>pass: </b>Small Text White<br />
+			  					<b>fail: </b>Large Text Black<br />
+			  					<b>fail: </b>Small Text Black<br />
+			  			</span>
+			 </div>
+	  	</div><!-- .color-container -->
+	  </div><!-- .row -->
+	</div><!-- #secondary-colors -->
+	
+	<!-- PATTERNS -->
+	<h2 class="style-header">Background Patterns</h2>
+	<div id="patterns">
+	  <div class="row">	  
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+		     <div class="color-inner mobile-tap  access-white-pass  access-black-fail secondary0">
+		      <a href="assets/images/texture.jpg" download="texture.jpg">Download</a>
+		      </div>
+		    <p>texture1</p>
+	    </div><!-- .color-container -->
+	  	<div class="col-md-2 col-sm-6 bottom color-container">
+		     <div class="color-inner mobile-tap  access-white-fail  access-black-pass secondary0">
+		      <a href="assets/images/pattern.jpg" download="pattern.jpg">Download</a>
+		      </div>
+		    <p>pattern1</p>
+	    </div><!-- .color-container -->
+	    </div><!-- .row -->
+	  </div><!-- #patterns -->
+	
+</div><!-- .style-wrap -->
+	
+<footer class="style-footer">
+	<p>Designed by <a href="http://kwallcompany.com">KWALL</a></p>
+</footer>
+</body>
+</html>
+       

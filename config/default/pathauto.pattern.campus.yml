@@ -1,0 +1,23 @@
+uuid: e54a2539-7535-4dba-a559-0d4ab907fb1b
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: campus
+label: Campus
+type: 'canonical_entities:taxonomy_term'
+pattern: 'campus/[term:name]'
+selection_criteria:
+  5e83fc78-e03a-4127-bae4-e49e1033af6b:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      campus: campus
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 5e83fc78-e03a-4127-bae4-e49e1033af6b
+selection_logic: and
+weight: -5
+relationships: {  }

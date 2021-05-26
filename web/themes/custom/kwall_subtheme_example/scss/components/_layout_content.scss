@@ -1,0 +1,56 @@
+// For: Sitewide
+.layout-hero-content {
+  position: relative;
+
+  .layout-alerts {
+    position: absolute;
+    top:  rem-calc(15, 10);
+    left: 0;
+    right: 0;
+  }
+}
+
+.layout-container {
+  padding-top: 60px;
+  // Left Sidebar
+  .layout-sidebar-left {
+
+  }
+
+  // Right Sidebar
+  .layout-center {
+
+    padding-left: 60px;
+    @media (max-width: $screen-mobile) {
+      padding-left: 10px;
+    }
+  }
+  &.not-found {
+    padding-bottom: 60px;
+    .block-system-breadcrumb-block {
+      display: none;
+    }
+    .block-system-main-block {
+      a {
+        color: #e84708;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.layout-content-bottom {
+  margin-bottom: 60px;
+}
+
+.paragraph--type--accordion .card-header a {
+  &.collapsed:after {
+    content: "\f067";
+  }
+  &:after {
+    content: "\f068";
+  }
+}

@@ -1,0 +1,13 @@
+name: 'Kwall Alert System'
+type: module
+description: 'This module is for rendering alerts'
+package: Other
+# core: 8.x
+dependencies:
+  - block
+  - views
+version: '8.x-1.0'
+core: '8.x'
+
+
+

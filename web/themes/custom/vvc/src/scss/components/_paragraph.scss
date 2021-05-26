@@ -1,0 +1,14 @@
+.paragraph--type--articles-grid {
+  position: relative;
+  .field-link {
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    a {
+      @include buttonprimary;
+      display: inline-block;
+    }
+  }
+}

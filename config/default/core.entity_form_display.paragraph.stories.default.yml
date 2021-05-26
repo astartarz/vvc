@@ -1,0 +1,27 @@
+uuid: 18caed2a-71dd-454b-bff9-ae25b27c9c49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stories.field_story_refs
+    - field.field.paragraph.stories.field_view_reference
+    - paragraphs.paragraphs_type.stories
+id: paragraph.stories.default
+targetEntityType: paragraph
+bundle: stories
+mode: default
+content:
+  field_story_refs:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

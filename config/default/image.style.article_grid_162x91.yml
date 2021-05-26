@@ -1,0 +1,17 @@
+uuid: 0d9d24b2-7170-4ca9-983f-7a776757ac49
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: article_grid_162x91
+label: 'Article Grid(162x91)'
+effects:
+  c0d7f25d-ab89-4324-92ce-f211e2ce6a4b:
+    uuid: c0d7f25d-ab89-4324-92ce-f211e2ce6a4b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 162
+      height: 91
+      crop_type: focal_point

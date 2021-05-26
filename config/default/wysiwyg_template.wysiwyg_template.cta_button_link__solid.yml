@@ -1,0 +1,12 @@
+uuid: 25c457ce-322c-40cc-b1e0-682a56a19813
+langcode: en
+status: true
+dependencies: {  }
+id: cta_button_link__solid
+label: 'CTA Button Link (Solid)'
+description: ''
+body:
+  value: "<p><a class=\"button-solid\" href=\"#dummy\">Solid Button</a></p>\r\n"
+  format: full_html
+weight: null
+node_types: {  }

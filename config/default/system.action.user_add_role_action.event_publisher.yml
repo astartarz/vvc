@@ -1,0 +1,14 @@
+uuid: da351860-1373-4ea5-87f8-69243054768e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.event_publisher
+  module:
+    - user
+id: user_add_role_action.event_publisher
+label: 'Add the Event Publisher role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: event_publisher

@@ -1,0 +1,91 @@
+uuid: a86a1cc2-2e03-47e8-8172-4babcc08d49a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.alert.field_active
+    - field.field.node.alert.field_alert_body
+    - field.field.node.alert.field_alert_level
+    - field.field.node.alert.field_expiration_date_alert
+    - field.field.node.alert.field_link
+    - field.field.node.alert.field_not_dismissable
+    - node.type.alert
+  module:
+    - datetime
+    - link
+    - options
+    - text
+    - user
+id: node.alert.default
+targetEntityType: node
+bundle: alert
+mode: default
+content:
+  field_active:
+    weight: 102
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_alert_body:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_alert_level:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_expiration_date_alert:
+    weight: 107
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_link:
+    weight: 109
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_not_dismissable:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

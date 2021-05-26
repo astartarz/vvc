@@ -1,0 +1,28 @@
+uuid: d87b940a-c438-4284-b12a-1fc4efc22943
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_ca_refs
+    - node.type.certificate_degree
+    - node.type.program
+id: node.program.field_certificate_ca_refs
+field_name: field_certificate_ca_refs
+entity_type: node
+bundle: program
+label: 'Certificates of Achievement (CA)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      certificate_degree: certificate_degree
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

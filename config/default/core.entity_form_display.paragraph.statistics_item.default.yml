@@ -1,0 +1,32 @@
+uuid: d2650777-1077-4f6c-95f5-55899ec407a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistics_item.field_caption
+    - field.field.paragraph.statistics_item.field_statistic_txt
+    - paragraphs.paragraphs_type.statistics_item
+id: paragraph.statistics_item.default
+targetEntityType: paragraph
+bundle: statistics_item
+mode: default
+content:
+  field_caption:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_statistic_txt:
+    weight: 0
+    settings:
+      size: 9
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

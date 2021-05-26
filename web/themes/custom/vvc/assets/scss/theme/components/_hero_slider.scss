@@ -1,0 +1,221 @@
+.hero-slideshow {
+  margin: 0;
+  @media screen and #{$desktop-min} {
+    height: 606px !important;
+  }
+  ul.slides {
+    height: inherit;
+    @media screen and #{$tablet} {
+      height: initial;
+    }
+    li {
+      height: inherit;
+      @media screen and #{$tablet} {
+        height: initial;
+      }
+    }
+  }
+  .hero-slide-wrap {
+    height: inherit !important;
+    &:after {
+     background: rgba(0, 0, 0, .56);
+    }
+    .hero-media-wrap {
+      @media screen and #{$tablet} {
+        height: 350px;
+        .hero-img {
+          height: inherit;
+        }
+      }
+      @media screen and #{$mobile} {
+        height: 240px;
+      }
+      img,
+      video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        overflow: hidden;
+        max-width: none;
+      }
+    }
+    .hero-content-wrap {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;
+      @media screen and #{$tablet} {
+        top: 30%;
+        transform: translateY(-30%);
+      }
+      .col-md-12 {
+        display: flex;
+        align-items: center;
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        flex: inherit;
+        .info-section {
+          color: $white;
+          @media screen and #{$tablet} {
+            text-align: center;
+          }
+          .hero-title {
+            font-family: $font-mont;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 61px;
+          }
+          .hero-subtitle {
+            font-family: $font-mont;
+            font-size: 25px;
+            line-height: 30px;
+          }
+          .hero-content {
+            font-family: $font-mont;
+            font-size: 18px;
+          }
+          .hero-link {
+            a {
+              color: $color-gold;
+              text-decoration: none;
+              &:hover,
+              &:focus {
+                text-decoration: underline;
+              }
+              &:before {
+                content: '';
+                width: 30px;
+                height: 2px;
+                margin-right: 20px;
+                display: inline-block;
+                background: $color-gold;
+                vertical-align: middle;
+                margin-top: -4px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.hide-logo {
+      .hero-content-wrap {
+        .col-md-12 {
+          .logo-section {
+            display: none;
+          }
+        }
+      }
+    }
+    &.show-logo {
+      .hero-content-wrap {
+        .col-md-12 {
+          .logo-section {
+            max-width: 170px;
+            width: 100%;
+            margin-right: 2rem;
+            @media screen and #{$tablet} {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .controls {
+    @media screen and #{$tablet} {
+      position: absolute;
+      bottom: 150px;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      color: $white;
+      .custom-controls-container {
+        text-align: center;
+      }
+    }
+    @media screen and #{$desktop-min} {
+      position: absolute;
+      bottom: 20%;
+      right: 0;
+      z-index: 99;
+      color: $white;
+      display: flex;
+      width: 100%;
+      left: 0;
+      justify-content: flex-end;
+    }
+    svg {
+      width: 15px;
+      height: 15px;
+      margin-top: .5px;
+      display: block;
+      cursor: pointer;
+    }
+    .flex-prev,
+    .flex-next {
+      @media screen and #{$desktop-min} {
+        position: relative;
+        margin-right: 10px;
+      }
+      width: 50px;
+      height: 50px;
+      text-decoration: none;
+      text-align: center;
+      margin-top: -7px;
+      &:after {
+        content: '\f053';
+        font-family: $font-awes;
+        background: $color-red;
+        border: 2px solid $color-light-red;
+        width: 50px;
+        height: 50px;
+        display: block;
+        padding-top: 11px;
+        font-weight: normal;
+      }
+    }
+    .flex-prev {
+      @media screen and #{$desktop-min} {
+        margin-left: 30px;
+      }
+      @media screen and #{$tablet} {
+        left: 15px;
+      }
+    }
+    .flex-next {
+      @media screen and #{$tablet} {
+        right: 15px;
+      }
+      @media screen and #{$desktop-min} {
+        margin-right: 0;
+      }
+      &:after {
+        content: '\f054';
+      }
+    }
+    .flex-control-paging {
+      li {
+        padding: 0;
+        a {
+          width: 15px;
+          height: 15px;
+          background: none;
+          border: 1px solid $white;
+          box-shadow: none;
+          border-radius: 0;
+        }
+        a.flex-active {
+          background: $white;
+        }
+      }
+    }
+  }
+  @media screen and #{$tablet} {
+    .hero-content-mobile {
+      background: $color-black;
+      max-height: 300px;
+      height: 300px;
+    }
+  }
+}

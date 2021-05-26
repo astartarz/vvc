@@ -1,0 +1,20 @@
+uuid: d4d8a232-e23e-4d1e-b08e-016d3eaf0a09
+langcode: en
+status: true
+dependencies:
+  module:
+    - kwall_alert_system
+  theme:
+    - kwall_subtheme_example
+id: alertblock
+theme: kwall_subtheme_example
+region: alerts
+weight: 0
+provider: null
+plugin: alert_block
+settings:
+  id: alert_block
+  label: 'Alert Block'
+  provider: kwall_alert_system
+  label_display: '0'
+visibility: {  }

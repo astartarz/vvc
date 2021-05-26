@@ -1,0 +1,15 @@
+uuid: 7b882a7b-7ba3-4d70-a658-142afa7300bf
+langcode: en
+status: true
+dependencies: {  }
+name: full_body_width
+label: 'x. Full Body Width'
+effects:
+  38c5ab6f-5ad1-4001-a836-0853cdd4bd9c:
+    uuid: 38c5ab6f-5ad1-4001-a836-0853cdd4bd9c
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: false

@@ -1,0 +1,282 @@
+uuid: 18318d9f-eac0-4259-8ee1-aa65985d8758
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraph_block
+    - field.storage.block_content.field_paragraph
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+    - paragraphs.paragraphs_type.contact
+    - paragraphs.paragraphs_type.full_width_image_section
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: block_content.paragraph_block.field_paragraph
+field_name: field_paragraph
+entity_type: block_content
+bundle: paragraph_block
+label: Component
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      adjustable_media_and_content: adjustable_media_and_content
+      full_width_image_section: full_width_image_section
+      contact: contact
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 38
+        enabled: false
+      3_column_cta:
+        weight: 39
+        enabled: false
+      4_column_cta:
+        weight: 40
+        enabled: false
+      accordion:
+        enabled: true
+        weight: 41
+      accordion_item:
+        weight: 42
+        enabled: false
+      adjustable_media_and_content:
+        enabled: true
+        weight: 43
+      apply_gridder:
+        enabled: true
+        weight: 81
+      article_slideshow:
+        weight: 44
+        enabled: false
+      article_slideshow_item:
+        weight: 45
+        enabled: false
+      block_reference:
+        weight: 84
+        enabled: false
+      callout_with_links:
+        weight: 90
+        enabled: false
+      campus_program_options:
+        weight: 77
+        enabled: false
+      career_item:
+        weight: 75
+        enabled: false
+      careers_list:
+        enabled: true
+        weight: 74
+      column_section:
+        weight: 46
+        enabled: false
+      contact:
+        enabled: true
+        weight: 63
+      cta_buttons:
+        enabled: true
+        weight: 47
+      doc_list:
+        enabled: true
+        weight: 61
+      featured_course:
+        weight: 86
+        enabled: false
+      featured_courses_section:
+        enabled: true
+        weight: 87
+      flexible_bg_image_block:
+        weight: 48
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 49
+        enabled: false
+      flexible_cta_block:
+        weight: 50
+        enabled: false
+      flexible_cta_block_item:
+        weight: 81
+        enabled: false
+      flexible_cta_blocks:
+        weight: 51
+        enabled: false
+      flexible_cta_blocks_manual:
+        enabled: true
+        weight: 79
+      flexible_cta_blocks_references:
+        weight: 80
+        enabled: false
+      full_width_image_section:
+        enabled: true
+        weight: 52
+      full_width_stats_bar:
+        enabled: true
+        weight: 61
+      full_width_stories:
+        enabled: true
+        weight: 65
+      full_width_video_carousel:
+        enabled: true
+        weight: 102
+      gridder:
+        weight: 53
+        enabled: false
+      gridder_item:
+        weight: 54
+        enabled: false
+      hero_banner:
+        weight: 55
+        enabled: false
+      hero_slide:
+        weight: 56
+        enabled: false
+      hero_slideshow:
+        weight: 57
+        enabled: false
+      icon_text_alert:
+        enabled: true
+        weight: 90
+      image_callout_with_links_section:
+        weight: 117
+        enabled: false
+      interior_column_section:
+        weight: 58
+        enabled: false
+      interior_media_carousel:
+        weight: 119
+        enabled: false
+      interior_slideshow:
+        enabled: true
+        weight: 59
+      interior_slideshow_slide:
+        weight: 60
+        enabled: false
+      link_list:
+        enabled: true
+        weight: 78
+      link_list_item:
+        weight: 83
+        enabled: false
+      link_with_icon:
+        weight: 97
+        enabled: false
+      links:
+        weight: 70
+        enabled: false
+      oit_directory_page_view:
+        weight: 98
+        enabled: false
+      paragraph_with_title:
+        weight: 99
+        enabled: false
+      person_carousel:
+        enabled: true
+        weight: 61
+      program_options:
+        weight: 110
+        enabled: false
+      quick_link:
+        weight: 62
+        enabled: false
+      quick_link_minimal:
+        weight: 63
+        enabled: false
+      quicklink_bar:
+        enabled: true
+        weight: 66
+      quicklink_bar_item:
+        weight: 67
+        enabled: false
+      quicktab_item:
+        weight: 64
+        enabled: false
+      quicktabs:
+        enabled: true
+        weight: 65
+      quote:
+        weight: 66
+        enabled: false
+      recent_articles:
+        enabled: true
+        weight: 67
+      recent_articles_upcoming_events:
+        weight: 68
+        enabled: false
+      related_programs:
+        weight: 115
+        enabled: false
+      sidebar_image_block:
+        enabled: true
+        weight: 133
+      sidebar_image_block_with_contact:
+        weight: 110
+        enabled: false
+      sidebar_menu:
+        enabled: true
+        weight: 144
+      sidebar_menu_top_level:
+        enabled: true
+        weight: 146
+      single_story:
+        enabled: true
+        weight: 122
+      social_wall:
+        enabled: true
+        weight: 143
+      stats_box:
+        enabled: true
+        weight: 71
+      stats_item:
+        weight: 82
+        enabled: false
+      transfer_guide_course_set:
+        weight: 149
+        enabled: false
+      upcoming_events:
+        enabled: true
+        weight: 69
+      video_carousel_item:
+        weight: 135
+        enabled: false
+      video_embed:
+        enabled: true
+        weight: 70
+      video_tab_carousel:
+        weight: 71
+        enabled: false
+      video_tab_item:
+        weight: 72
+        enabled: false
+      video_transcript_and_description:
+        weight: 117
+        enabled: false
+      views:
+        weight: 73
+        enabled: false
+      virtual_tour:
+        enabled: true
+        weight: 90
+      virtual_tour_item:
+        weight: 91
+        enabled: false
+      webform_reference:
+        enabled: true
+        weight: 103
+      welcome_section:
+        enabled: true
+        weight: 77
+      wysiwyg:
+        enabled: true
+        weight: 74
+      wysiwyg_links:
+        enabled: true
+        weight: 90
+field_type: entity_reference_revisions

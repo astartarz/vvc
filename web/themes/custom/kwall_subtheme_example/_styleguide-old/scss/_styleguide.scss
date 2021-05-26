@@ -1,0 +1,357 @@
+/**
+ * @file
+ * Styleguide
+ *
+ ****
+ *
+ * Styleguide Page Styles
+ * Styleguide Typography
+ * Welcome page
+ * Styleguide Header & Footer
+ * Code Blocks
+ * Icons
+ * Columns
+ *
+ ****
+
+
+
+
+/****
+ *
+ * Styleguide Page Styles
+ *
+ ****/
+.style-wrap {
+	min-width: 300px;
+	max-width: $width-page;
+	margin:auto;
+	padding: 0 2.5rem;
+}
+body {
+	padding-top: 10rem;
+	@media #{$mobile} {
+		padding-top: 5rem;
+	}
+}
+
+//dark background for demonstration purposes
+.style-dark {
+	background-image: $gradient-blue;
+	padding-top: 1rem;
+	.style-header,
+	label {
+		color: #fff;
+	}
+}
+.style-grey {
+	background-image: url(../images/Stone-white-texture.jpg);
+}
+
+//format buttons on forms.html
+#buttons {
+  button {
+	  display: block;
+	  margin-bottom: 10px;
+  }
+  a.button {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+/****
+ *
+ * Styleguide Typography
+ *
+ ****/
+.style-header {
+	clear: both;
+	color: #999;
+	display: inline-block;
+	font-family: $font-family-header;
+	font-size: 1.8rem;
+	letter-spacing: 1px;
+	line-height: 1.2em;
+	margin-bottom: 3rem;
+	margin-top: 9rem;
+	padding: 0px;
+	padding-left: 20px;
+	text-transform: uppercase;
+	text-indent: none;
+	width: 100%;
+	@media #{$mobile} {
+		margin-bottom: 2rem;
+		margin-top: 6rem;
+	}
+}
+div .style-header {
+	padding-left: 0;
+}
+
+.style-caption {
+	color: #999;
+	font-size: 1.6rem;
+	margin-bottom: 3rem;
+	margin-top: -3rem;
+}
+
+.two-letter {
+	float: left;
+	font-size: 8rem;
+	line-height: 58px;
+	margin-right: 1rem;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.body-font-light {
+	font-family: $font-family-light;
+}
+.body-font {
+	font-family: $font-family;
+}
+.body-font-bold {
+	font-family: $font-family-bold;
+}
+.header-font {
+	font-family: $font-family-header;
+}
+.header-font-bold {
+	font-family: $font-family-header-bold;
+}
+.header-font-condensed {
+	font-family: $font-family-condensed;
+}
+
+.style-regular {
+	font-weight: normal;
+	font-style: normal;
+}
+
+.style-bold {
+	font-weight: 700;
+}
+
+.style-italic {
+	font-style: italic;
+}
+
+span.inline-label {
+	float: left;
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+
+
+
+/****
+ *
+ * Welcome page
+ *
+ ****/
+#welcome {
+	text-align: center;
+	margin: 0 auto 5rem auto;
+	max-width: 60rem;
+	h1 {
+  	color: $color-blue;
+  }
+
+  hr {
+  	width: 15rem;
+  }
+
+  p {
+  	color: #8c8c8c;
+  }
+}
+
+/* Invision */
+#links {
+	text-align: center;
+	h3 {
+		color: $color-style-dark-grey;
+	}
+	ul {
+		padding: 0;
+	}
+	li {
+		list-style: none;
+		a {
+			color: $color-blue;
+		}
+	}
+	> div {
+		background: $color-style-light-grey;
+	}
+}
+
+
+
+
+/****
+ *
+ * Styleguide Header & Footer
+ *
+ ****/
+.style-navbar .navbar-nav > li > a.active {
+	border-bottom: 2px solid $color-blue;
+	@media #{$mobile} {
+		background-color: $color-blue;
+		color: #fff;
+	}
+}
+
+@media #{$mobile} {
+	.style-navbar .navbar-collapse {
+		box-shadow: 0 8px 10px rgba(0,0,0,0.3);
+	}
+}
+
+.style-navbar .navbar-brand {
+	a {
+		color: #333;
+		span:before {
+			content: "|";
+			font-size: 2rem;
+			margin: 0 1rem;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	
+	img {
+		display: inline-block;
+		margin-right: 10px;
+		margin-top: -15px;
+		max-width: 40px;
+		vertical-align: middle;
+	}
+}
+
+.style-navbar a {
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.style-footer {
+	border-top: 1px solid $color-style-light-grey;
+	clear: both;
+	font-size: 1.2rem;
+	margin-top: 5rem;
+	padding: 2rem 2% 1rem;
+	text-transform: uppercase;
+}
+
+
+
+
+/****
+ *
+ * Code Blocks
+ *
+ ****/
+pre {
+	background: #f9fafc;
+	border-color: #e0e6ed;
+	border-radius: 2px;
+	font-size: 1.2rem;
+	margin: 1rem 0 3rem 0;
+}
+
+.hljs {
+	background: none;
+	padding: 0;
+}
+
+.description {
+	color: #777;
+	font-size: 1.2rem;
+	line-height: 18px;
+}
+
+
+
+
+/****
+ *
+ * icons
+ *
+ ****/
+#icons p {
+	font-size: 1rem;
+  vertical-align: middle;
+
+  .fa {
+  	font-size: 2rem;
+  	vertical-align: middle;
+  }
+}
+
+
+
+
+/****
+ *
+ * columns
+ *
+ ****/
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+//Grid Settings
+.col-lg,
+.col-md,
+.col-sm,
+.col-xs {
+	&-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
+		padding-left: 10px;
+		padding-right: 10px;
+	} 
+}
+
+.row {
+    margin-right: -10px;
+    margin-left: -10px;
+}

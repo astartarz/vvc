@@ -1,0 +1,17 @@
+uuid: b51b79c9-71e3-4aec-9294-5bb1bba7a166
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: profile_image
+label: 'x. Profile Image (282x411)'
+effects:
+  41196a88-99aa-43ae-935d-40bb02834e9b:
+    uuid: 41196a88-99aa-43ae-935d-40bb02834e9b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 282
+      height: 411
+      crop_type: focal_point

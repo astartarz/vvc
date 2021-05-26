@@ -1,0 +1,23 @@
+uuid: 506d27cf-66e4-4092-af2b-5aed010acae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.external_article
+  module:
+    - link
+id: node.external_article.field_link
+field_name: field_link
+entity_type: node
+bundle: external_article
+label: 'News Source URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

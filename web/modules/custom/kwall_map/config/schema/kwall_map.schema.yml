@@ -1,0 +1,30 @@
+kwall_map.settings:
+  type: config_object
+  label: 'KWALL map settings'
+  mapping:
+    marker_icon_path:
+      type: string
+      label: 'Path to marker icon'
+    overlay_path:
+      type: string
+      label: 'Path to marker icon'
+    style:
+      type: string
+      label: 'JSON encoded style'
+    kwallmap:
+      type: mapping
+      mapping:
+        page_title:
+          type: text
+          label: 'KWALL map page title:'
+        source_text:
+          type: text
+          label: 'Source text for KWALL map module:'
+    settings:
+      type: kwall_map.settings
+      label: 'KWALL map settings'
+block.settings.kwall_map_block:
+  type: block_settings
+  label: 'A map block'
+  mapping:
+    kwallmap_block_settings:

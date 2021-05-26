@@ -1,0 +1,15 @@
+uuid: 19b4738c-e342-498e-afb4-5e78dde16179
+langcode: en
+status: true
+dependencies: {  }
+name: inline_media_300w
+label: 'x. Inline Media: 300w'
+effects:
+  b7bb8357-b331-4da5-9803-449c917e6be9:
+    uuid: b7bb8357-b331-4da5-9803-449c917e6be9
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false

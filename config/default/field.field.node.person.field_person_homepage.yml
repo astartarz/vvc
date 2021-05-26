@@ -1,0 +1,19 @@
+uuid: 2d11fde2-6fec-470e-9cc1-9fa382981733
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_homepage
+    - node.type.person
+id: node.person.field_person_homepage
+field_name: field_person_homepage
+entity_type: node
+bundle: person
+label: 'x. Homepage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

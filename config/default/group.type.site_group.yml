@@ -1,0 +1,11 @@
+uuid: d35aaa2d-981d-4257-be38-b760a4ec42eb
+langcode: en
+status: true
+dependencies: {  }
+id: site_group
+label: 'Site Group'
+description: ''
+creator_membership: false
+creator_wizard: false
+creator_roles:
+  - site_group-group_admin

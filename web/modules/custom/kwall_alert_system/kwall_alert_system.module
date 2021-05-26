@@ -1,0 +1,40 @@
+<?php
+
+/**
+ *
+ * Implements hook_page_attachments().
+ */
+function kwall_alert_system_page_attachments(array &$page) {
+//    $page['#attached']['library'][] = 'kwall_alert_system/dismissed-cookie';
+}
+
+/**
+ *
+ * Implements hook_views_pre_render().
+ */
+function kwall_alert_system_views_pre_render(\Drupal\views\ViewExecutable $view) {
+    if ($view->id() == "alerts") {
+        $dismissed = array();
+        foreach($view->result as $value){
+            $dismissed['key' . $value->_entity->get('nid')->value] = $value->_entity->get('nid')->value;
+        }
+        $view->element['#attached']['drupalSettings'] = array(
+                'kwall_alert_system' => array(
+                    'dismissedCookie' => $dismissed,
+                )
+        );
+    }
+}
+
+/**
+ *
+ * Implements hook_ajax_render_alter().
+ */
+function kwall_alert_system_ajax_render_alter(array &$data) {
+    foreach ($data as $key => $command) {
+        if ($command['command'] == 'viewsScrollTop') {
+            unset($data[$key]);
+            break;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+uuid: 2ed05c14-ce51-48b8-9ac1-ad7ee7101cad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.interest.field_interest_icon
+    - taxonomy.vocabulary.interest
+  module:
+    - fontawesome
+    - path
+    - text
+id: taxonomy_term.interest.default
+targetEntityType: taxonomy_term
+bundle: interest
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_interest_icon:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: fontawesome_icon_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+hidden: {  }

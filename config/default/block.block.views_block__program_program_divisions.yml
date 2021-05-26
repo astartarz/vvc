@@ -1,0 +1,33 @@
+uuid: 7b305d01-fd62-44b3-aaba-ee7bd38b09bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.program
+  module:
+    - node
+    - views
+  theme:
+    - vvc
+id: views_block__program_program_divisions
+theme: vvc
+region: content
+weight: -18
+provider: null
+plugin: 'views_block:program-program_divisions'
+settings:
+  id: 'views_block:program-program_divisions'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      program: program
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

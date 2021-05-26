@@ -1,0 +1,28 @@
+uuid: 73db665d-50ae-4ff1-95c4-b6630e61e440
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mega_menu_block
+    - field.storage.block_content.field_media
+    - media.type.image
+id: block_content.mega_menu_block.field_media
+field_name: field_media
+entity_type: block_content
+bundle: mega_menu_block
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

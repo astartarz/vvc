@@ -1,0 +1,30 @@
+uuid: a2c4acc4-d59a-48f3-9d87-ec2fc13ce730
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.articles_list
+  module:
+    - system
+    - views
+  theme:
+    - vvc
+id: articles_list_block
+theme: vvc
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:articles_list-block'
+settings:
+  id: 'views_block:articles_list-block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/6256\r\n/node/6257"
+    negate: false
+    context_mapping: {  }

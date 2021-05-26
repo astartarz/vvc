@@ -1,0 +1,196 @@
+uuid: 8828cbca-0017-4b40-b584-107622abeb57
+langcode: en
+status: false
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_after_content
+    - field.storage.node.field_content_bottom
+    - field.storage.node.field_email
+    - search_api.server.database_search
+    - core.entity_view_mode.node.search_result
+  module:
+    - node
+    - search_api
+id: database_search_index
+name: 'Database Search Index'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_after_content:
+    label: 'After Content'
+    datasource_id: 'entity:node'
+    property_path: field_after_content
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_after_content
+  field_content_bottom:
+    label: 'Content Bottom'
+    datasource_id: 'entity:node'
+    property_path: field_content_bottom
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_content_bottom
+  field_email:
+    label: Email
+    datasource_id: 'entity:node'
+    property_path: field_email
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_email
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          article: search_result
+          event: search_result
+          location: search_result
+          page: search_result
+          person: search_result
+  rendered_item_1:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode: {  }
+  status:
+    label: null
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  uid:
+    label: null
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - webform
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  ignorecase:
+    all_fields: true
+    fields:
+      - body
+      - field_after_content
+      - field_content_bottom
+      - field_email
+      - rendered_item
+      - rendered_item_1
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  tokenizer:
+    all_fields: false
+    fields:
+      - body
+      - field_after_content
+      - field_content_bottom
+      - field_email
+      - rendered_item
+      - rendered_item_1
+      - title
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  transliteration:
+    all_fields: false
+    fields:
+      - body
+      - field_after_content
+      - field_content_bottom
+      - field_email
+      - rendered_item
+      - rendered_item_1
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  type_boost:
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          article: !!float 0
+          event: !!float 0
+          location: !!float 0
+          page: !!float 0
+          person: !!float 0
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: database_search

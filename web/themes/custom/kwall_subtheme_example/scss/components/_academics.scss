@@ -1,0 +1,142 @@
+.view-academics {
+
+  // Academics MENU
+  .menu--academics-menu {
+    ul.menu {
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0 -5px;
+
+      li {
+        display: flex;
+        list-style: none;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        transition: .5s;
+        width: 22.5%;
+        padding: 0 5px;
+        min-height: 80px;
+
+        &:first-child {
+          width: 10%;
+        }
+
+        a {
+          background: $color-grey-lt;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: background 500ms;
+          font-weight: 600;
+          color: $color-body;
+          text-decoration: none;
+          &.is-active {
+            background: $color-blue;
+            color: $color-white;
+          }
+        }
+
+        &:hover {
+          a {
+            background: $color-blue;
+            color: $color-white;
+          }
+        }
+        @media (max-width: $screen-mobile) {
+          width: 100%;
+          padding: 5px 0;
+          &:first-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // Academics Filters
+  .view-academic-filter-taxonomy-terms {
+    .view-content {
+      display: flex;
+      flex-flow: row wrap;
+      margin-left: -10px;
+      margin-right: -10px;
+
+      .filter-toggle {
+        color: $color-blue;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        display: inline-flex;
+        i.fa {
+          margin: 5px 8px 0 0;
+        }
+      }
+    }
+    .view-footer {
+      margin-top: 30px;
+      border-top: 2px solid $color-grey-lt;
+      padding-top: 18px;
+      text-align: center;
+      .isotope-reset {
+        color: $color-blue;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // Academics Content
+  > .view-content {
+    margin: 40px -10px 30px -10px;
+    display: flex;
+    flex-flow: row wrap;
+    .course {
+      background: #f2f2f2;
+      display: block;
+      height: 100%;
+      text-decoration: none;
+      &-media {
+        position: relative;
+        img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      &-tags {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        span {
+          background-color: rgba(255, 255, 255, 0.7);
+          font-size: 13px;
+          padding: 5px 10px;
+          color: $color-blue;
+          font-weight: 600;
+          transition: 0.2s all;
+          width: auto;
+        }
+      }
+      &-description {
+        padding: 18px 22px;
+        min-height: 100px;
+        .course-type {
+          margin-bottom: 12px;
+          a {
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+          }
+        }
+        .course-title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+

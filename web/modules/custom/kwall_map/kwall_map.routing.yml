@@ -1,0 +1,7 @@
+kwall_map.form:
+  path: '/admin/config/development/kwall_map'
+  defaults:
+    _form: 'Drupal\kwall_map\Form\KWALLMapForm'
+    _title: 'KWALL map form settings'
+  requirements:
+    _permission: 'administer site configuration'

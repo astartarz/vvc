@@ -1,0 +1,51 @@
+uuid: d6a77117-1d88-41a5-bc2b-60894ab2669c
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.sidebar-menu
+  module:
+    - block_class
+    - menu_block
+    - node
+    - system
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: 'sidebar-menu-block .d-block d-md-none'
+id: sidebarmenu
+theme: vvc
+region: content
+weight: -15
+provider: null
+plugin: 'menu_block:sidebar-menu'
+settings:
+  id: 'menu_block:sidebar-menu'
+  label: 'Section Menu'
+  provider: menu_block
+  label_display: visible
+  follow: true
+  follow_parent: active
+  level: 1
+  depth: 2
+  expand: true
+  parent: 'sidebar-menu:'
+  suggestion: sidebar_menu
+  label_type: block
+  label_link: false
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      event: event
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

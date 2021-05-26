@@ -1,0 +1,23 @@
+uuid: 78e483e6-76d6-4717-b698-d911f6a89d8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_on_home_page
+    - node.type.event
+id: node.event.field_display_on_home_page
+field_name: field_display_on_home_page
+entity_type: node
+bundle: event
+label: 'x. Display on Home Page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

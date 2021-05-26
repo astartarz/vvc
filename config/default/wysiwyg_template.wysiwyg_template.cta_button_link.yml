@@ -1,0 +1,12 @@
+uuid: d2a23df1-a5ed-426e-936d-c2b7eb7eaa93
+langcode: en
+status: true
+dependencies: {  }
+id: cta_button_link
+label: 'CTA Button Link'
+description: ''
+body:
+  value: "<p><a class=\"button\" href=\"#dummy\">Button</a></p>\r\n"
+  format: full_html
+weight: null
+node_types: {  }

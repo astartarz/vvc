@@ -1,0 +1,29 @@
+uuid: a3b83e9b-64d4-4873-9990-6cf6e2ff4fc4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vvc
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: vvc_local_tasks
+theme: vvc
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/directory\r\n/directory/staff\r\n/directory/faculty"
+    negate: true
+    context_mapping: {  }

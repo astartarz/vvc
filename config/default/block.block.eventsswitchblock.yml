@@ -1,0 +1,26 @@
+uuid: 66b54be9-0445-46ef-ab0d-3264d296aad0
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_module
+    - system
+  theme:
+    - kwall_subtheme_example
+id: eventsswitchblock
+theme: kwall_subtheme_example
+region: content_top
+weight: -16
+provider: null
+plugin: events_switch_block
+settings:
+  id: events_switch_block
+  label: 'Events Switch Block'
+  provider: custom_module
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events\r\n/events-calendar"
+    negate: false
+    context_mapping: {  }

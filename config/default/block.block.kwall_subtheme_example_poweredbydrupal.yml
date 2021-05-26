@@ -1,0 +1,20 @@
+uuid: a0744972-8869-4578-ad5e-827f77449d6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kwall_subtheme_example
+id: kwall_subtheme_example_poweredbydrupal
+theme: kwall_subtheme_example
+region: footer_copyright
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

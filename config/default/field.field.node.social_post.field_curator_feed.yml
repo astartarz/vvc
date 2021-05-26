@@ -1,0 +1,19 @@
+uuid: 96fa15ad-db4d-474e-88bb-2fa8c5607b27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_curator_feed
+    - node.type.social_post
+id: node.social_post.field_curator_feed
+field_name: field_curator_feed
+entity_type: node
+bundle: social_post
+label: 'x. Curator Feed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

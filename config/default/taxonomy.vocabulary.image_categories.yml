@@ -1,0 +1,8 @@
+uuid: 1343ab3c-daa4-4506-b9d9-eaa2c65ff260
+langcode: en
+status: true
+dependencies: {  }
+name: 'Image Categories'
+vid: image_categories
+description: ''
+weight: 0

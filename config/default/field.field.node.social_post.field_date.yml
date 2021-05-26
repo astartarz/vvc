@@ -1,0 +1,21 @@
+uuid: 5dafdfa9-ceaf-41d6-91bd-0f0530abf6bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.social_post
+  module:
+    - datetime
+id: node.social_post.field_date
+field_name: field_date
+entity_type: node
+bundle: social_post
+label: 'Publish Date'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

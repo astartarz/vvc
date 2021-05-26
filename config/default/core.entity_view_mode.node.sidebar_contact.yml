@@ -1,0 +1,10 @@
+uuid: 5bc2d6eb-de75-4f0d-a05c-4ff4393c29f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sidebar_contact
+label: 'Sidebar Contact'
+targetEntityType: node
+cache: true

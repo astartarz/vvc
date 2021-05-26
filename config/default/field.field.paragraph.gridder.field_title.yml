@@ -1,0 +1,19 @@
+uuid: 93e1c956-395e-48a4-8b1e-c6313b5e5272
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.gridder
+id: paragraph.gridder.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: gridder
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

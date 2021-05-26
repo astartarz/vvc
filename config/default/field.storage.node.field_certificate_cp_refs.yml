@@ -1,0 +1,19 @@
+uuid: 7831d81e-b1a6-477d-8ea4-315092ae7305
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_certificate_cp_refs
+field_name: field_certificate_cp_refs
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

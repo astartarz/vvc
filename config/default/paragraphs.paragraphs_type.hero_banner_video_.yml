@@ -1,0 +1,10 @@
+uuid: 208750f6-1ba1-480f-b069-4bf3cae825f6
+langcode: en
+status: true
+dependencies: {  }
+id: hero_banner_video_
+label: 'Hero Banner (Video)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

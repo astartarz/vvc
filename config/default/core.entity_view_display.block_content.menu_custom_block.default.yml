@@ -1,0 +1,114 @@
+uuid: 3e5e4387-077c-495c-b6a5-e3b0bd897ca3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.menu_custom_block
+    - field.field.block_content.menu_custom_block.body
+    - field.field.block_content.menu_custom_block.field_image
+    - field.field.block_content.menu_custom_block.field_link
+    - field.field.block_content.menu_custom_block.field_title
+  module:
+    - fences
+    - field_group
+    - link
+    - svg_image
+    - text
+third_party_settings:
+  field_group:
+    group_content_wrap:
+      children:
+        - field_title
+        - body
+        - field_link
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: content-wrap
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Content Wrap'
+id: block_content.menu_custom_block.default
+targetEntityType: block_content
+bundle: menu_custom_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: menu-caption
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: image
+    region: content
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: menu-link
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: menu-title
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: 5a5d15d6-2fd6-475c-b620-ea2cab3f5944
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - vvc
+id: vvc_contentbottom
+theme: vvc
+region: content_bottom
+weight: -8
+provider: null
+plugin: 'entity_field:node:field_content_bottom'
+settings:
+  id: 'entity_field:node:field_content_bottom'
+  label: 'Content Bottom'
+  provider: ctools_block
+  label_display: '0'
+  formatter:
+    label: hidden
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: default
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+@mixin container-style() {
+  max-width: $width-page;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+@mixin button-text($color, $hover-color) {
+  display: inline-block;
+  font-size: rem-calc(14);
+  font-family: $font-helvetica;
+  font-weight: 700;
+  line-height: rem-calc(17);
+  color: $color;
+  transition: $transition-short color ease;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    text-decoration: underline;
+  }
+}
+
+@mixin section_title {
+  font-size: 4rem;
+  line-height: 5.2rem;
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  @media (max-width: $screen-tablet-max) {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  @media #{$mobile} {
+    text-align: center;
+  }
+}
+
+@mixin link_orange() {
+  color: $color-orange;
+  font-size: 1.4rem;
+  line-height: 1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@mixin read_more_link($color: $color-white, $hover-color: $color-orange) {
+  @include button-text($color, $hover-color);
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+@mixin grid_black_shadow() {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+1,1+100 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0); /* IE6-9 */
+    z-index: 9;
+  }
+}
+
+@mixin grid_absolute_text($color: $color-white, $padding: 2rem) {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $padding;
+  z-index: 5;
+  color: $color;
+}
+
+@mixin exposedForm($bg: $color-grey-bg) {
+  background: $bg;
+  padding: 2rem 2.5rem 3rem;
+  margin-bottom: 3rem;
+  .views-exposed-form {
+    padding: 0;
+
+    .form--inline {
+      @media #{$tablet-min} {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+      }
+
+      .form {
+        &-item {
+          padding: 0;
+          margin: 0 0 2rem;
+          @media #{$tablet-min} {
+            margin-bottom: 0;
+            padding-right: 2rem;
+          }
+
+          &.form-type-select {
+            select {
+              height: 5rem;
+            }
+          }
+        }
+
+        &-actions {
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          width: auto;
+          @media #{$tablet-min} {
+            position: relative;
+            display: inline-flex;
+            margin: 2.5rem 0 0;
+            max-height: 50px;
+            float: right;
+            input[data-drupal-selector*="edit-submit"] {
+              padding: 1.15rem 4rem;
+              max-height: 50px;
+            }
+
+            input[data-drupal-selector="edit-reset"] {
+              background: none;
+              order: -1;
+              border: none;
+              color: $color-blue;
+              margin: 0;
+              display: none;
+              padding: 0 2rem 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.form-values-exist {
+      .form--inline {
+        .form-actions {
+          input[data-drupal-selector="edit-reset"] {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin slide_controls() {
+  .custom-controls-container {
+    display: none;
+  }
+
+  a.flex-prev, a.flex-next {
+    color: $color-grey-900;
+    text-shadow: none;
+    top: 30%;
+    @media (min-width: $screen-md-min) {
+      bottom: -15px;
+      top: auto;
+      left: 59.2%;
+    }
+  }
+  a.flex-next {
+    @media (min-width: $screen-md-min) {
+      left: calc(59.2% + 50px);
+      right: auto;
+    }
+  }
+}
+
+
+@mixin button() {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background-color: $color-blue;
+  border: 2px solid $color-blue;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 10.5px 50px;
+  &:hover,
+  &:focus,
+  &:active {
+    background: none;
+    color: $color-blue;
+  }
+}
+
+@mixin button_orange() {
+  @include button();
+  background-color: $color-orange;
+  border: 2px solid $color-orange;
+  color: #fff;
+  &:hover,
+  &:focus,
+  &:active {
+    background: none;
+    color: $color-orange;
+  }
+}
+
+@mixin button_inverted() {
+  @include button();
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: $color-blue;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-blue;
+    color: #fff;
+  }
+}
+
+@mixin button_hollow() {
+  @include button();
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #fff;
+    color: $color-blue;
+  }
+}

@@ -1,0 +1,155 @@
+/**
+ * @file
+ * Elements
+ *
+ ****
+ *
+ * Typography
+ * Lists 
+ *
+ ****
+*/
+
+
+
+
+/****
+ *
+ * Typography
+ *
+ ****/
+html {
+	font-size: 62.5%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: $font-family;
+	font-size: 1.8rem;
+	line-height: 1.444;
+	color: $color-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color-header;
+	font-family: $font-family-header-bold;
+	letter-spacing: 0;
+}
+
+h1 {
+	font-size: $font-h1;
+	line-height: $font-h1-line-height;
+}
+
+h2 {
+	font-size: $font-h2;
+	line-height: $font-h2-line-height;
+}
+
+h3 {
+	font-size: $font-h3;
+	line-height: $font-h3-line-height;
+}
+
+h4 {
+	font-size: $font-h4;
+	line-height: $font-h4-line-height;
+}
+
+h5 {
+	font-size: $font-h5;
+	line-height: $font-h5-line-height;
+}
+
+h6 {
+	font-size: $font-h6;
+	line-height: $font-h6-line-height;
+}
+
+.lead {
+	font-size: 2rem;
+}
+
+a {
+	color: $color-blue-dark;
+	&:visited {
+  	text-decoration: none;
+  	background-color: auto;
+  }
+}
+
+.more-link {
+	color: $color-blue;
+	font-family: $font-family-bold;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	&:after {
+		content: "\f138";
+		font-family: $font-awesome-4;
+		margin-left: 1rem;
+	}
+}
+
+hr {
+	border-color: #9B9B9B;
+}
+
+blockquote {
+	border-left: none;
+	border-top: 6px solid $color-blue;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow-light;
+	font-family: $font-family-light;
+	font-style: italic;
+	font-size: 2rem;
+	line-height: 1.4;
+	overflow: hidden;
+	padding: 2rem 2.4rem;
+	&:before {
+		color: $color-blue;
+		content: "“";
+		float: left;
+		font-family: 'Lucida Grande';
+		font-size: 10rem;
+		line-height: 1;
+		margin-right: 3rem;
+	}
+}
+
+
+
+/****
+ *
+ * Lists
+ *
+ ****/
+ul li,
+ol li {
+	line-height: 1.444;
+}
+
+ul {
+  list-style-image: url('../images/bullet.png');
+
+  ul {
+    list-style-image: url('../images/bullet-level-2.png');
+
+    ul {
+	    list-style-image: url('../images/bullet-level-3.png');
+
+      ul {
+  	    list-style-image: url('../images/bullet-level-4.png');
+      }
+    }
+  }
+}
+
+ol li {
+	padding-left: 15px;
+}

@@ -1,0 +1,19 @@
+***************
+*** 98,105 ****
+     * {@inheritdoc}
+     */
+    public function getTargetFieldExtensions(array $targetFieldSettings) {
+-     $extensions = explode(' ', $targetFieldSettings['file_extensions']);
+-     return array_map('trim', $extensions);
+    }
+  
+    /**
+--- 98,105 ----
+     * {@inheritdoc}
+     */
+    public function getTargetFieldExtensions(array $targetFieldSettings) {
++     $extensions = isset($targetFieldSettings['file_extensions']) ? $targetFieldSettings['file_extensions'] : '';
++     return array_map('trim', explode(' ', $extensions));
+    }
+  
+    /**

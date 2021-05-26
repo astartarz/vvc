@@ -1,0 +1,18 @@
+uuid: cddb5052-b357-4e47-b647-28d1499e56a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_grid.field_view_reference
+    - field.field.paragraph.social_grid.field_view_reference_2
+    - paragraphs.paragraphs_type.social_grid
+id: paragraph.social_grid.default
+targetEntityType: paragraph
+bundle: social_grid
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_view_reference: true
+  field_view_reference_2: true
+  status: true

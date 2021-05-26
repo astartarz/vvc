@@ -1,0 +1,154 @@
+uuid: f9ee0e72-ca59-46ec-971a-0530bed7b3b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_after_content
+    - node.type.article
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.article.field_after_content
+field_name: field_after_content
+entity_type: node
+bundle: article
+label: 'x. Interior Paragraphs'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      academic_tabs:
+        weight: 43
+        enabled: false
+      accordion:
+        weight: 99
+        enabled: false
+      accordion_item:
+        weight: 100
+        enabled: false
+      adjustable_media_and_content:
+        weight: 101
+        enabled: false
+      articles_grid:
+        weight: 47
+        enabled: false
+      contact:
+        weight: 111
+        enabled: false
+      events_grid:
+        weight: 49
+        enabled: false
+      external_articles_grid:
+        weight: 50
+        enabled: false
+      featured_event_grid:
+        weight: 51
+        enabled: false
+      featured_external_articles:
+        weight: 52
+        enabled: false
+      flexible_cta_block:
+        weight: 119
+        enabled: false
+      flexible_cta_blocks:
+        weight: 120
+        enabled: false
+      flexible_image_cta_block:
+        weight: 55
+        enabled: false
+      flexible_image_cta_blocks:
+        weight: 56
+        enabled: false
+      full_width_image_section:
+        weight: 124
+        enabled: false
+      gridder:
+        weight: 128
+        enabled: false
+      gridder_item:
+        weight: 129
+        enabled: false
+      hero_banner:
+        weight: 130
+        enabled: false
+      hero_banner_video_:
+        weight: 61
+        enabled: false
+      hero_slide:
+        weight: 131
+        enabled: false
+      hero_slideshow:
+        weight: 132
+        enabled: false
+      image_carousel:
+        weight: 135
+        enabled: false
+      image_carousel_item:
+        weight: 136
+        enabled: false
+      info_block:
+        weight: 66
+        enabled: false
+      info_block_item:
+        weight: 67
+        enabled: false
+      news_banner:
+        weight: 68
+        enabled: false
+      page_banner:
+        weight: 69
+        enabled: false
+      persons_section_refs:
+        weight: 70
+        enabled: false
+      persons_section_taxonomy:
+        weight: 71
+        enabled: false
+      quick_link:
+        weight: 153
+        enabled: false
+      quote:
+        weight: 155
+        enabled: false
+      sidebar_contacts:
+        weight: 74
+        enabled: false
+      sidebar_links:
+        weight: 161
+        enabled: false
+      sidebar_social:
+        weight: 164
+        enabled: false
+      social_grid:
+        weight: 77
+        enabled: false
+      statistics:
+        weight: 167
+        enabled: false
+      statistics_item:
+        weight: 168
+        enabled: false
+      stories:
+        weight: 171
+        enabled: false
+      tab:
+        weight: 172
+        enabled: false
+      tabs:
+        weight: 173
+        enabled: false
+      views:
+        weight: 181
+        enabled: false
+      wysiwyg:
+        enabled: true
+        weight: 95
+field_type: entity_reference_revisions

@@ -1,0 +1,58 @@
+uuid: 488be001-5b57-4225-88be-868fe844f17e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.persons_section_taxonomy.field_taxonomy
+    - field.field.paragraph.persons_section_taxonomy.field_title
+    - field.field.paragraph.persons_section_taxonomy.field_view_reference
+    - paragraphs.paragraphs_type.persons_section_taxonomy
+  module:
+    - fences
+    - viewsreference
+id: paragraph.persons_section_taxonomy.default
+targetEntityType: paragraph
+bundle: persons_section_taxonomy
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_view_reference:
+    weight: 1
+    label: hidden
+    settings:
+      plugin_types:
+        block: block
+        default: 0
+        page: 0
+        rest_export: 0
+        attachment: 0
+        entity_browser: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: viewsreference_formatter
+    region: content
+hidden:
+  field_taxonomy: true
+  search_api_excerpt: true

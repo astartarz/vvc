@@ -1,0 +1,21 @@
+uuid: d277263a-e658-4307-9789-4c8bf6ba834e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: giving_form_script
+label: 'Giving Form Script'
+code: "window.bboxInit = function () {\n   bbox.showForm('78515212-f7b8-4b63-a26e-a1120f91929d');\n};\n(function () {\n   var e = document.createElement('script'); e.async = true;\n   e.src = 'https://bbox.blackbaudhosting.com/webforms/bbox-min.js';\n   document.getElementsByTagName('head')[0].appendChild(e);\n} ());"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /development/oregon-tech-foundation/give-to-oregon-tech
+    negate: false
+contexts: {  }
+header: false
+preprocess: false
+jquery: false
+noscript: ''
+noscriptRegion: {  }

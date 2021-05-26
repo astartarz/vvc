@@ -1,0 +1,10 @@
+uuid: 4c6fbc35-cc2b-439d-8a03-da6aa9c9d56e
+langcode: en
+status: true
+dependencies: {  }
+id: tab
+label: Tab
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Tabs Section</em> paragraph.'
+behavior_plugins: {  }

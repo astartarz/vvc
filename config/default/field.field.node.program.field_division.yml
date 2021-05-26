@@ -1,0 +1,29 @@
+uuid: 096a6e55-890d-4a4f-ba71-c4eda75abd35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_division
+    - node.type.program
+    - taxonomy.vocabulary.divisions
+id: node.program.field_division
+field_name: field_division
+entity_type: node
+bundle: program
+label: Division
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      divisions: divisions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

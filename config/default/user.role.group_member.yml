@@ -1,0 +1,26 @@
+uuid: 615bea49-7c76-47de-8102-80b8d8db4762
+langcode: en
+status: true
+dependencies: {  }
+id: group_member
+label: 'x. Group Member'
+weight: -1
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access group overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'configure editable landing_page node layout overrides'
+  - 'configure editable layout_builder node layout overrides'
+  - 'configure editable online_program node layout overrides'
+  - 'configure editable program node layout overrides'
+  - 'create and edit custom blocks'
+  - 'create media'
+  - 'delete media'
+  - 'update any media'
+  - 'update media'
+  - 'use menu link attributes'
+  - 'use text format full_html'
+  - 'view all media revisions'
+  - 'view the administration theme'

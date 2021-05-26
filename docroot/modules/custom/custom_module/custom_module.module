@@ -1,0 +1,403 @@
+<?php
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\node\NodeInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\editor\Entity\Editor;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\block\Entity\Block;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function custom_module_preprocess_html(&$vars) {
+  $excluded_paths = [
+    '/imce',
+  ];
+
+  $current_path = \Drupal::service('path.current')->getPath();
+
+  if (!in_array($current_path, $excluded_paths)) {
+    $current_user = \Drupal::currentUser();
+    $roles = $current_user->getRoles();
+    // Add user roles as classes to body tag.
+    $vars['attributes']['class'] = $roles;
+  }
+}
+
+/**
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path
+ *   Which path of the site we're using to display help
+ * @param arg
+ *   Array that holds the current path as returned from arg() function
+ */
+function custom_module_help($path, $arg) {
+  switch ($path) {
+    case "help.page.custom_module":
+      return '' . t("Nothing to show for now.") . '';
+
+      break;
+  }
+}
+
+/**
+ * Implements hook__page_attachments()
+ */
+
+function custom_module_page_attachments(array &$attachments) {
+  // Get current route.
+  $route = \Drupal::routeMatch()->getRouteName();
+  // check route set in custom_module.routing.yml file
+  if ($route == 'custom_module.content') {
+    $attachments['#attached']['library'][] = 'custom_module/global-styling';
+    $attachments['#attached']['library'][] = 'custom_module/global-scripts';
+  }
+
+  $attachments['#attached']['library'][] = 'custom_module/advance-link';
+}
+
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function custom_module_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  if (!empty($fields['field_end_date'])) {
+    $fields['field_end_date']->addConstraint('StartEndDateChecking');
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_views_view_field.
+ */
+function kwall_preprocess_views_view_field(&$vars) {
+  if ($vars['view']->storage->id() == 'academics') {
+
+    if ($vars['field']->options['id'] == 'term_node_tid_1') {
+      $content = '';
+      $icons = explode(',', $vars['field']->last_render);
+      foreach ($icons as $k => $v) {
+        $term = Term::load($v);
+        if (isset($term->field_font_awesome_icon->value)) {
+          $content .= '<i class="' . $term->field_font_awesome_icon->value . '"></i>';
+        }
+      }
+      $vars['output'] = t($content);
+      $vars['field']->last_render = $vars['output'];
+    }
+
+  }
+}
+
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function custom_module_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  // Apply custom arguments to the views.
+
+  // View display in column content paragraph.
+  if ($view->id() == 'article_view' && $display_id == 'block_2') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      if ($node->hasField('field_content_bottom')) {
+        $paragraphs = $node->get('field_content_bottom')->getValue();
+        if (!empty($paragraphs)) {
+          foreach ($paragraphs as $paragraph) {
+
+            if (!empty(kwall_get_article_selected_taxonomy($paragraph['target_id']))) {
+              $args[] = kwall_get_article_selected_taxonomy($paragraph['target_id']);
+            }
+
+          }
+        }
+      }
+    }
+  }
+  // View display in column content paragraph.
+  if ($view->id() == 'event_view' && $display_id == 'block_1') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      if ($node->hasField('field_content_bottom')) {
+        $paragraphs = $node->get('field_content_bottom')->getValue();
+        if (!empty($paragraphs)) {
+          foreach ($paragraphs as $paragraph) {
+
+            if (!empty(kwall_get_news_selected_taxonomy($paragraph['target_id']))) {
+              $args[] = kwall_get_news_selected_taxonomy($paragraph['target_id']);
+              break;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+
+  if ($view->id() == 'article_view' && $display_id == 'block_3') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      if ($node->hasField('field_content_bottom')) {
+        $paragraphs = $node->get('field_content_bottom')->getValue();
+        if (!empty($paragraphs)) {
+          foreach ($paragraphs as $paragraph) {
+            $single = Paragraph::load($paragraph['target_id']);
+
+            if ($single->getType() == 'recent_articles_upcoming_events') {
+              $category = $single->get('field_article_category')
+                ->getValue();
+              if (!empty($category)) {
+                $args[] = $category[0]['target_id'];
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  if ($view->id() == 'event_view' && $display_id == 'block_2') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      if ($node->hasField('field_content_bottom')) {
+        $paragraphs = $node->get('field_content_bottom')->getValue();
+        if (!empty($paragraphs)) {
+          foreach ($paragraphs as $paragraph) {
+
+            $single = Paragraph::load($paragraph['target_id']);
+
+            if ($single->getType() == 'recent_articles_upcoming_events') {
+              $category = $single->get('field_event_category')
+                ->getValue();
+              if (!empty($category)) {
+                $args[] = $category[0]['target_id'];
+              }
+              break;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/**
+ * @param $pid
+ *
+ * @return string
+ */
+function kwall_get_article_selected_taxonomy($pid) {
+  $connection = \Drupal::database();
+  $cat = '';
+  $result = $connection->query("SELECT paragraphs_item_revision_field_data.id AS paragraphs_item_revision_field_data_id, paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.field_article_category_target_id AS paragraphs_item_field_data_paragraph_revision__field_column_, paragraph_revision__field_article_category.field_article_category_target_id AS paragraph_revision__field_article_category_field_article_cat, MIN(paragraphs_item_revision_field_data.revision_id) AS revision_id, MIN(paragraphs_item_field_data_paragraph_revision__field_column_section.id) AS paragraphs_item_field_data_paragraph_revision__field_column__1
+FROM
+{paragraphs_item_revision_field_data} paragraphs_item_revision_field_data
+LEFT JOIN {paragraph_revision__field_column_section} paragraph_revision__field_column_section ON paragraphs_item_revision_field_data.revision_id = paragraph_revision__field_column_section.revision_id AND paragraph_revision__field_column_section.deleted = '0'
+LEFT JOIN {paragraphs_item_field_data} paragraphs_item_field_data_paragraph_revision__field_column_section ON paragraph_revision__field_column_section.field_column_section_target_revision_id = paragraphs_item_field_data_paragraph_revision__field_column_section.revision_id
+LEFT JOIN {paragraph__field_article_category} paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category ON paragraphs_item_field_data_paragraph_revision__field_column_section.id = paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.entity_id AND paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.deleted = '0'
+LEFT JOIN {paragraph_revision__field_article_category} paragraph_revision__field_article_category ON paragraphs_item_revision_field_data.revision_id = paragraph_revision__field_article_category.revision_id AND paragraph_revision__field_article_category.deleted = '0'
+WHERE ((paragraphs_item_revision_field_data.id = '" . $pid . "')) AND ((paragraphs_item_revision_field_data.status = '1') AND (paragraphs_item_field_data_paragraph_revision__field_column_section__paragraph__field_article_category.field_article_category_target_id IS NOT NULL))
+GROUP BY paragraphs_item_revision_field_data_id, paragraphs_item_field_data_paragraph_revision__field_column_, paragraph_revision__field_article_category_field_article_cat");
+  foreach ($result as $id) {
+    if (isset($id->paragraphs_item_field_data_paragraph_revision__field_column_)) {
+      $cat .= $id->paragraphs_item_field_data_paragraph_revision__field_column_;
+    }
+  }
+  return $cat;
+}
+
+/**
+ * @param $pid
+ *
+ * @return string
+ */
+function kwall_get_news_selected_taxonomy($pid) {
+  $connection = \Drupal::database();
+  $cat = '';
+  $result = $connection->query("SELECT paragraphs_item_field_data.id AS id, paragraphs_item_field_data_paragraph__field_column_section.id AS paragraphs_item_field_data_paragraph__field_column_section_i, taxonomy_term_field_data_paragraph__field_event_category.tid AS taxonomy_term_field_data_paragraph__field_event_category_tid
+FROM
+{paragraphs_item_field_data} paragraphs_item_field_data
+LEFT JOIN {paragraph__field_column_section} paragraph__field_column_section ON paragraphs_item_field_data.id = paragraph__field_column_section.entity_id AND paragraph__field_column_section.deleted = '0'
+LEFT JOIN {paragraphs_item_field_data} paragraphs_item_field_data_paragraph__field_column_section ON paragraph__field_column_section.field_column_section_target_revision_id = paragraphs_item_field_data_paragraph__field_column_section.revision_id
+LEFT JOIN {paragraph__field_event_category} paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category ON paragraphs_item_field_data_paragraph__field_column_section.id = paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category.entity_id AND paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category.deleted = '0'
+LEFT JOIN {taxonomy_term_field_data} taxonomy_term_field_data_paragraph__field_event_category ON paragraphs_item_field_data_paragraph__field_column_section__paragraph__field_event_category.field_event_category_target_id = taxonomy_term_field_data_paragraph__field_event_category.tid
+WHERE ((paragraphs_item_field_data.id = '" . $pid . "')) AND ((paragraphs_item_field_data.status = '1') AND (paragraphs_item_field_data.type IN ('column_section')) AND (paragraphs_item_field_data_paragraph__field_column_section.type IN ('upcoming_events')))");
+  foreach ($result as $id) {
+    if (isset($id->taxonomy_term_field_data_paragraph__field_event_category_tid)) {
+      $cat .= $id->taxonomy_term_field_data_paragraph__field_event_category_tid;
+    }
+  }
+  return $cat;
+}
+
+function custom_module_entity_extra_field_info() {
+  $extra_field = [];
+
+  $extra_field['node']['event']['display']['extra_date_field'] = [
+    'label' => t('Event Date (Custom Extra Field)'),
+    'description' => t('Event Date we need for different place'),
+    'weight' => 100,
+    'visible' => TRUE,
+  ];
+  $extra_field['node']['event']['display']['event_time'] = [
+    'label' => t('Event Time (Custom Event Time Field)'),
+    'description' => t('Custom Event Time Field.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  ];
+
+  return $extra_field;
+
+}
+
+function custom_module_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  /* if ($view_mode == 'full' && $entity->getType() == 'event') {
+    if ($display->getComponent('extra_date_field')) {
+
+      $date = $entity->get('field_start_date')->value;
+
+      $timestamp = strtotime($date);
+
+      $date_month = \Drupal::service('date.formatter')
+        ->format($timestamp, 'custom', 'M', date_default_timezone_get());
+
+      $date_day = \Drupal::service('date.formatter')
+        ->format($timestamp, 'custom', 'j', date_default_timezone_get());
+
+      $build['extra_date_field'] = [
+        '#type' => 'markup',
+        '#markup' => '<div class="date"> <span class="date-month">' . $date_month . '</span> <span class="date-day">' . $date_day . '</span> </div>',
+      ];
+    }
+
+    if ($display->getComponent('event_time')) {
+      if ($entity->get('field_all_day_event')->value != 0) {
+        $build['event_time'] = [
+          '#type' => 'markup',
+          '#markup' => '<div class="time"><div class="label">Time:</div>' . 'ALL DAY' . '</div>',
+        ];
+      }
+      else {
+
+        date_default_timezone_set("America/Los_Angeles");
+
+        //Start time
+        $start_time = strtotime($entity->get('field_start_date')->value);
+        $start_time = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($start_time);
+
+        $start_time = $start_time->format('g:ia');
+
+        //End time
+        $end_time = strtotime($entity->get('field_end_date')->value);
+        $end_time = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($end_time);
+
+        $end_time = $end_time->format('g:ia');
+
+
+        $build['event_time'] = [
+          '#type' => 'markup',
+          '#markup' => '<div class="time"><div class="label">Time:</div>' . $start_time . ' - ' . $end_time . '</div>',
+        ];
+      }
+    }
+  } */
+}
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ * implement hook_form_formid_alter
+ */
+
+// Add Class if we have values in Exposed form
+function custom_module_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $view = $form_state->getStorage('view');
+  if ($view) {
+    $inputs = $form_state->getUserInput();
+    if ($inputs) {
+      $flag = FALSE;
+      foreach ($inputs as $key => $input) {
+        if (isset($form[$key]) && isset($form[$key]['#default_value']) && $form[$key]['#default_value'] != $input) {
+          $flag = TRUE;
+          break;
+        }
+      }
+      if ($flag) {
+        $form['#attributes']['class'][] = 'form-values-exist';
+      }
+    }
+    // Check if View Ajax Enabled then make sure its reload current page
+    if($view['view']->id() == 'faqs' && $view['view']->current_display == 'default' && $view['view']->ajaxEnabled()) {
+      $currPathAlias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/87');
+      $form['#action'] = $currPathAlias;
+    }
+  }
+
+  // Change label on view exposed form academics
+  $view = $view['view'];
+  $view_id = $view->id();
+  if ($view_id == 'academics') {
+    if($form['#form_id'] == 'views_exposed_form') {
+      $form['degrees']['#options']['All'] = t('All Degrees');
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if ($node instanceof \Drupal\node\NodeInterface) {
+        $type = $node->getType();
+        if($type == 'home_page') {
+          $form['#info']['filter-field_academic_interest_target_id']['label'] = 'Search';
+          $form['interest']['#options']['All'] = t('By Topic');
+        }
+      }
+    }
+
+    if (isset($form['actions']['reset']) && isset($form['actions']['submit'])) {
+      $submit_id = $form['actions']['submit']['#id'];
+      $form['actions']['reset']['#attributes']['data-reset'] = 'reset-button';
+      $form['actions']['reset']['#attributes']['onclick'] = 'javascript:jQuery(this.form).clearForm();jQuery("#' . $submit_id . '").trigger("click");return false;';
+    }
+  }
+  if ($form['#id'] == 'views-exposed-form-events-calendar-block-1') {
+    $form['field_event_category_target_id']['#summary_attributes'] = [];
+    $form['Category']['#summary_attributes'] = [];
+  }
+}
+
+
+function custom_module_views_query_alter(Drupal\views\ViewExecutable $view, Drupal\views\Plugin\views\query\Sql $query) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  $url = Url::fromUserInput($current_path);
+  if ($current_path == '/academics/degrees' && $url->getRouteName() == 'view.academics.page_1') {
+    foreach ($query->where as &$condition_group) {
+      foreach ($condition_group['conditions'] as $key => &$condition) {
+        if ($condition['field'] == 'node__field_academic_interest.field_academic_interest_target_id = :node__field_academic_interest_field_academic_interest_target_id') {
+          unset($condition_group['conditions'][$key]);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_aggregator_item_variables_alter().
+ */
+function custom_module_aggregator_item_variables_alter(array &$variables) {
+  $item = $variables['elements']['#aggregator_item'];
+
+  if ($item->hasField('timestamp')) {
+    $variables['timestamp'] = $item->get('timestamp')->getString();
+  }
+}

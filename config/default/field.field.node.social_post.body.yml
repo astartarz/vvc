@@ -1,0 +1,23 @@
+uuid: 4d3b0a2e-a7cb-4bae-8e0b-d65dc91e76d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.social_post
+  module:
+    - text
+id: node.social_post.body
+field_name: body
+entity_type: node
+bundle: social_post
+label: 'Post Body'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

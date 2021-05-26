@@ -1,0 +1,93 @@
+uuid: d96b20ea-1646-4732-9ec0-08d541373c53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gridder_item.field_body_formatted
+    - field.field.paragraph.gridder_item.field_image
+    - field.field.paragraph.gridder_item.field_link
+    - field.field.paragraph.gridder_item.field_links
+    - field.field.paragraph.gridder_item.field_title
+    - paragraphs.paragraphs_type.gridder_item
+  module:
+    - field_group
+    - link
+    - link_attributes
+    - media_library
+    - media_library_edit
+    - text
+third_party_settings:
+  field_group:
+    group_links:
+      children:
+        - field_links
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Links List'
+id: paragraph.gridder_item.default
+targetEntityType: paragraph
+bundle: gridder_item
+mode: default
+content:
+  field_body_formatted:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  field_links:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,8 @@
+uuid: 1935fcb3-1c02-4140-b969-fc6aa0b2c344
+langcode: en
+status: true
+dependencies: {  }
+id: global-navigation
+label: 'x. Global Sidebar Navigation'
+description: 'Menu containing most site pages to populate sidebar menus'
+locked: false

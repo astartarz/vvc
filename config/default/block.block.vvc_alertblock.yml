@@ -1,0 +1,20 @@
+uuid: 8e7a2a2c-f064-4568-bbb1-b92c28f32eb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - kwall_alert_system
+  theme:
+    - vvc
+id: vvc_alertblock
+theme: vvc
+region: alerts
+weight: 0
+provider: null
+plugin: alert_block
+settings:
+  id: alert_block
+  label: 'Alert Block'
+  provider: kwall_alert_system
+  label_display: '0'
+visibility: {  }

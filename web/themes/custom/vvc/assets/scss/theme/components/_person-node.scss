@@ -1,0 +1,146 @@
+.page-node-person {
+  .person-description {
+    font-family: $font-open;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    .field--name-field-teaser-description {
+      margin-bottom: 30px;
+    }
+  }
+  .field--name-field-person-types {
+
+  }
+  .person-details-wrapper {
+    position: relative;
+    margin-bottom: 50px;
+    &:after {
+      background: $color-light-red;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: calc(100% - 10px);
+      height: 100%;
+    }
+    .person-details-content {
+      height: 100%;
+      padding: 30px;
+      background-color: $white;
+      margin-left: 10px;
+      border: 2px solid $color-extra-light-gray;
+      position: relative;
+      z-index: 1;
+    }
+    .col-md-12 {
+      margin-bottom: 15px;
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin: 0 0 5px 0;
+    }
+    .person-type {
+      display: inline-block;
+      font-family: $font-open;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .person-department {
+      display: inline-block;
+      background: $color-red;
+      padding: 5px 8px;
+      font-family: $font-mont;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $white;
+      vertical-align: middle;
+    }
+    .field--name-field-phone,
+    .field--name-field-email {
+      a {
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-red;
+        &:before {
+          font-family: $font-awes;
+          margin-right: 5px;
+          content: '\f095';
+        }
+        &:hover,
+        &:focus {
+          color: $color-light-red;
+        }
+      }
+    }
+    .field--name-field-email {
+      a {
+        &:before {
+          content: '\f0e0';
+        }
+      }
+    }
+  }
+  .block-views-blockperson-profile-image-profile-image {
+    margin-bottom: 30px;
+    @media screen and #{$desktop-min} {
+      float: right;
+      margin-top: -123px;
+    }
+    .person-image {
+      border-left: 10px solid $color-extra-light-gray;
+      border-bottom: 10px solid $color-extra-light-gray;
+      border-top: 5px solid $color-extra-light-gray;
+
+      &:before {
+        content: '';
+        height: 15px;
+        width: 100%;
+        background: white;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      &:after {
+        content: '';
+        height: 10px;
+        width: 15px;
+        background: white;
+        display: block;
+        position: absolute;
+        right: 0;
+      }
+
+      img {
+        position: relative;
+        z-index: 2;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+  #block-vvc-content {
+    @media screen and #{$desktop-min} {
+      clear: both;
+    }
+  }
+  .region-content {
+    position: relative;
+  }
+  #block-vvc-page-title,
+  #block-vvc-breadcrumbs {
+    width: 80%;
+    margin-right: 2%;
+  }
+}

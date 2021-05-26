@@ -1,0 +1,19 @@
+uuid: 7bd160ca-768b-4211-9085-24ab8806a154
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_interest_description_txt
+    - node.type.interest
+id: node.interest.field_interest_description_txt
+field_name: field_interest_description_txt
+entity_type: node
+bundle: interest
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,39 @@
+uuid: 203895f1-fc53-4f9e-9590-90ec788973c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_degree
+field_name: field_degree
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: field_degree_aa_refs
+      label: 'Associate in Arts Degrees (AA)'
+    -
+      value: field_degree_aat_refs
+      label: 'Associate Degrees for Transfer (AA-T)'
+    -
+      value: field_degree_as_refs
+      label: 'Associate in Science Degrees (AS)'
+    -
+      value: field_degree_ast_refs
+      label: 'Associate Degrees for Transfer (AS-T)'
+    -
+      value: field_certificate_ca_refs
+      label: 'Certificates of Achievement (CA)'
+    -
+      value: field_certificate_cp_refs
+      label: 'Certificates of Achievement (CP)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

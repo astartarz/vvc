@@ -1,0 +1,85 @@
+.node--type-person {
+  .person--name {
+    font-size: 52px;
+  }
+
+  .person--contact {
+    margin-bottom: 35px;
+    .label {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    .person--tel, .person--email, .person--website {
+      .field__item {
+        color: $color-orange;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 24px;
+
+        &::before {
+          font-family: $font-awesome;
+          font-size: 18px;
+          padding-right: 5px;
+        }
+      }
+    }
+
+    .person--tel {
+      .field__item {
+        &::before {
+          content: "\f095";
+        }
+      }
+    }
+
+    .person--email {
+      .field__item {
+        &::before {
+          content: "\f0e0";
+        }
+      }
+    }
+
+    .person--website {
+      .field__item {
+        &::before {
+          content: "\f0ac";
+        }
+      }
+    }
+  }
+
+  .field--name-field-media {
+    margin-top: 25px;
+    @media #{$tablet-min}{
+      margin-top: 0;
+    }
+
+    img {
+      @media #{$tablet-min}{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .field--name-field-position {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    margin-bottom: 25px;
+  }
+
+  .field--name-field-office2, .field--name-field-education, .field--name-field-academic-interests, .field--name-field-about, .field--name-field-bio, .field--name-field-selected-publications {
+    margin-bottom: 30px;
+    .field__label {
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 3.2rem;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+  }
+}

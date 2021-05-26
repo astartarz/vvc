@@ -1,0 +1,17 @@
+uuid: 88ee758b-5a57-4b76-9657-609560c1968a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: full_width_image
+label: 'x. Full Width Image (1400x550)'
+effects:
+  7b86b251-9956-437b-bf93-ee12206a9683:
+    uuid: 7b86b251-9956-437b-bf93-ee12206a9683
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1400
+      height: 550
+      crop_type: focal_point

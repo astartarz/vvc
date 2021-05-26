@@ -1,0 +1,8 @@
+uuid: a81566bb-e8df-480d-b92f-4306eeb3963d
+langcode: en
+status: true
+dependencies: {  }
+id: campus-life-menu
+label: 'x. Campus Life Menu'
+description: 'Test menu for use in designed pages'
+locked: false

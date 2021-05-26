@@ -1,0 +1,23 @@
+uuid: 1c1c4ca5-9d5c-4d11-960c-e61b8d3ee03b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_boolean
+    - paragraphs.paragraphs_type.hero_slideshow
+id: paragraph.hero_slideshow.field_boolean
+field_name: field_boolean
+entity_type: paragraph
+bundle: hero_slideshow
+label: Autoplay
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

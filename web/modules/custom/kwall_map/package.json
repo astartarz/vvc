@@ -1,0 +1,20 @@
+{
+  "name": "kwall",
+  "version": "1.0.1",
+  "author": "Ruslan Piskarov",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^9.0.1",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp.spritesmith": "^6.7.0"
+  },
+  "description": "<!-- @file Instructions for subtheming using the CDN Starterkit. --> <!-- @defgroup sub_theming_cdn --> <!-- @ingroup sub_theming --> # CDN Starterkit",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
+}

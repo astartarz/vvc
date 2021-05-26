@@ -1,0 +1,23 @@
+uuid: 18d3b5f4-3161-4183-a325-a9deb8dd4eb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - node.type.external_article
+id: node.external_article.field_featured
+field_name: field_featured
+entity_type: node
+bundle: external_article
+label: 'Show in Featured External News'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

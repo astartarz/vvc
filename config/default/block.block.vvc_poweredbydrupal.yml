@@ -1,0 +1,20 @@
+uuid: 8d0804c3-d0f9-4765-8492-1158c3c48c6d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - vvc
+id: vvc_poweredbydrupal
+theme: vvc
+region: alerts
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

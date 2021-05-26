@@ -1,0 +1,5 @@
+oregon_tech_layout_migration.update_urls:
+  title: 'Update aliases'
+  route_name: oregon_tech_layout_migration.update_urls
+  parent: system.admin_config_development
+  weight: 99

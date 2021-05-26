@@ -1,0 +1,85 @@
+uuid: ea22b45f-8f6a-4f9e-9a8c-8f6f2543af4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_items
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion.field_accordion_items
+field_name: field_accordion_items
+entity_type: paragraph
+bundle: accordion
+label: 'Accordion Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion_item: accordion_item
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 20
+        enabled: false
+      3_column_cta:
+        weight: 21
+        enabled: false
+      4_column_cta:
+        weight: 22
+        enabled: false
+      accordion:
+        weight: 23
+        enabled: false
+      accordion_item:
+        enabled: true
+        weight: 24
+      adjustable_media_and_content:
+        weight: 25
+        enabled: false
+      column_section:
+        weight: 26
+        enabled: false
+      full_width_image_section:
+        weight: 27
+        enabled: false
+      hero_banner:
+        weight: 28
+        enabled: false
+      hero_slide:
+        weight: 29
+        enabled: false
+      hero_slideshow:
+        weight: 30
+        enabled: false
+      interior_column_section:
+        weight: 31
+        enabled: false
+      interior_slideshow:
+        weight: 32
+        enabled: false
+      interior_slideshow_slide:
+        weight: 33
+        enabled: false
+      quick_link:
+        weight: 34
+        enabled: false
+      recent_articles:
+        weight: 35
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 36
+        enabled: false
+      upcoming_events:
+        weight: 37
+        enabled: false
+      wysiwyg:
+        weight: 38
+        enabled: false
+field_type: entity_reference_revisions

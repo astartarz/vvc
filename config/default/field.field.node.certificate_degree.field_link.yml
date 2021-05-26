@@ -1,0 +1,23 @@
+uuid: 59abe7df-b68b-4ae0-a6ed-0f703c8cccea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.certificate_degree
+  module:
+    - link
+id: node.certificate_degree.field_link
+field_name: field_link
+entity_type: node
+bundle: certificate_degree
+label: 'External URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

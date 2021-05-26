@@ -1,0 +1,174 @@
+uuid: 3636c993-5e24-45a0-bad0-38ea7cbf30cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.adjustable_media_and_content.field_background_image
+    - field.field.paragraph.adjustable_media_and_content.field_body_formatted
+    - field.field.paragraph.adjustable_media_and_content.field_body_unformatted
+    - field.field.paragraph.adjustable_media_and_content.field_display
+    - field.field.paragraph.adjustable_media_and_content.field_links
+    - field.field.paragraph.adjustable_media_and_content.field_media
+    - field.field.paragraph.adjustable_media_and_content.field_title
+    - field.field.paragraph.adjustable_media_and_content.field_transcript_description
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+  module:
+    - entity_reference_revisions
+    - fences
+    - field_group
+    - link
+    - options
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - group_row
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: container-fluid
+      label: Container
+      region: content
+    group_row:
+      children:
+        - group_media_content
+        - group_content_wrap
+      parent_name: group_container
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+      region: content
+    group_media_content:
+      children:
+        - field_media
+      parent_name: group_row
+      weight: 20
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-lg-7 media-wrap'
+      label: 'Media Content'
+      region: content
+    group_content_wrap:
+      children:
+        - field_title
+        - field_body_unformatted
+        - field_links
+        - field_transcript_description
+      parent_name: group_row
+      weight: 21
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-lg-5 content-wrap'
+      label: 'Content Wrap'
+      region: content
+id: paragraph.adjustable_media_and_content.default
+targetEntityType: paragraph
+bundle: adjustable_media_and_content
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_body_unformatted:
+    weight: 30
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_display:
+    type: list_key
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_links:
+    weight: 31
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    weight: 24
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 28
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_transcript_description:
+    type: entity_reference_revisions_entity_view
+    weight: 32
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_body_formatted: true
+  search_api_excerpt: true

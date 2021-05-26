@@ -1,0 +1,24 @@
+// transitions
+$transition-short: 0.2s;
+$transition-medium: 0.4s;
+$transition-long: 0.6s;
+
+$color-white: #fff;
+$color-grey-bg: #f0f0f0;
+$color-grey-900: #696666;
+
+$border-color: #a5a5a5;
+$color-blue: #015794;
+$gray-darker: #4a4a4a;
+$gray-light: #eee;
+$color-gray-xdark: #666;
+
+// Defining values
+$screen-mobile: 767px;
+$screen-sm-min: 768px;                // @media (max-width: $screen-xs-max) { ... }
+$screen-xs-max: ($screen-sm-min - 1); // @media (min-width: $screen-sm-min) { ... }
+$screen-tablet-max: 991px;
+$screen-md-min: 992px;                // @media (max-width: $screen-sm-max) { ... }
+$screen-sm-max: ($screen-md-min - 1); // @media (min-width: $screen-md-min) { ... }
+$screen-lg-min: 1200px;               // @media (max-width: $screen-md-max) { ... }
+$screen-md-max: ($screen-lg-min - 1); // @media (min-width: $screen-lg-min) { ... }

@@ -1,0 +1,30 @@
+// stylelint-disable
+/*------------------------------------ STYLES -----------------------------------*/
+
+// Standard (Base)
+.list-base {
+  padding-left: $space-large;
+  margin-top: $space-large;
+
+  li {
+    @include text-style-1;
+    position: relative;
+    padding-left: $space-medium;
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      display: block;
+      width: 8px;
+      height: 8px;
+      content: "";
+      background-color: $black;
+      border-radius: 50%;
+    }
+  }
+
+  li + li {
+    margin-top: $space-medium;
+  }
+}

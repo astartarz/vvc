@@ -1,0 +1,11 @@
+uuid: 4e680cc2-2040-4c14-ae35-2adbb8e85f23
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quick_links
+id: block_content.quick_links
+target_entity_type_id: block_content
+target_bundle: quick_links
+default_langcode: site_default
+language_alterable: false

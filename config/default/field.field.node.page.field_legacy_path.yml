@@ -1,0 +1,19 @@
+uuid: 6e6c47e2-3eb7-41e5-9e6a-58814f321ba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_path
+    - node.type.page
+id: node.page.field_legacy_path
+field_name: field_legacy_path
+entity_type: node
+bundle: page
+label: 'Legacy Path'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

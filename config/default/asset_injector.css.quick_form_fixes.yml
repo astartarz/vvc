@@ -1,0 +1,11 @@
+uuid: cf01da42-a453-442e-a3f8-28a405839489
+langcode: en
+status: true
+dependencies: {  }
+id: quick_form_fixes
+label: 'Quick form fixes'
+code: "#layout-builder-modal .js-media-library-item a {\r\n  font-size: 0;\r\n}"
+media: all
+preprocess: true
+conditions: {  }
+conditions_require_all: true

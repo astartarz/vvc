@@ -1,0 +1,102 @@
+uuid: 6ac81b2a-5101-47e8-9599-1484fc5e0139
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.adjustable_media_and_content.field_background_image
+    - field.field.paragraph.adjustable_media_and_content.field_body_formatted
+    - field.field.paragraph.adjustable_media_and_content.field_body_unformatted
+    - field.field.paragraph.adjustable_media_and_content.field_display
+    - field.field.paragraph.adjustable_media_and_content.field_links
+    - field.field.paragraph.adjustable_media_and_content.field_media
+    - field.field.paragraph.adjustable_media_and_content.field_title
+    - field.field.paragraph.adjustable_media_and_content.field_transcript_description
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+  module:
+    - field_group
+    - link_attributes
+    - media_library
+    - media_library_edit
+third_party_settings:
+  field_group:
+    group_display_options:
+      children:
+        - field_display
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Display Options'
+id: paragraph.adjustable_media_and_content.default
+targetEntityType: paragraph
+bundle: adjustable_media_and_content
+mode: default
+content:
+  field_background_image:
+    type: media_library_widget
+    weight: 4
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  field_body_unformatted:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_display:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_links:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  field_media:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types:
+        - image
+        - remote_video
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_body_formatted: true
+  field_transcript_description: true
+  status: true
+  uid: true

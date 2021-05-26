@@ -1,0 +1,41 @@
+.field--name-field-quick-links-items {
+  background-image: url("src/images/red-back.jpg");
+  background-repeat: no-repeat;
+  padding: 50px 0;
+  @media #{$mobile} {
+    padding: 40px 0;
+  }
+  .field__label {
+    display: none;
+  }
+  .content-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .field__item {
+      @media #{$mobile} {
+        flex: 0 0 50%;
+        margin-bottom: 30px;
+      }
+      .paragraph--type--quick-link {
+        text-align: center;
+
+        .fontawesome-icons {
+          margin-bottom: 10px;
+
+          svg {
+            font-size: 50px;
+            line-height: 57px;
+            text-align: center;
+            color: $white;
+          }
+        }
+
+        > a {
+          @include label;
+          color: $white;
+        }
+      }
+    }
+  }
+}

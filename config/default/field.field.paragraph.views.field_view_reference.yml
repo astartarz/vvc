@@ -1,0 +1,86 @@
+uuid: bd823963-6e57-4239-a9a2-eacd5b162ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference
+    - paragraphs.paragraphs_type.views
+  module:
+    - viewsreference
+id: paragraph.views.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+bundle: views
+label: 'View Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    default: default
+    block: block
+    page: 0
+    rest_export: 0
+    attachment: 0
+    entity_browser: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    academics: 0
+    academic_filter_taxonomy_terms: 0
+    alerts: 0
+    article_view: 0
+    block_content: 0
+    carousels: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_events: 0
+    content_finder: 0
+    content_news: 0
+    content_recent: 0
+    content_social: 0
+    directory: 0
+    events_calendar: 0
+    event_view: 0
+    faculty_carousel: 0
+    featured_event_grid: 0
+    feeds_feed: 0
+    files: 0
+    file_entity_browser: 0
+    frontpage: 0
+    group_members: 0
+    group_nodes: 0
+    hero_banner: 0
+    locations: 0
+    map_view: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    moderated_content: 0
+    page_banner: 0
+    person_dashboard: 0
+    redirect: 0
+    scheduler_scheduled_content: 0
+    social_wall: 0
+    story_cards: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    view_search: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    pager: 0
+    argument: 0
+    limit: 0
+    offset: 0
+    title: 0
+field_type: viewsreference

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<title>Barstow Community College | Styleguide</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="https://fontastic.s3.amazonaws.com/4tEacyM6HcjKSoAvFtbG4c/icons.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/solarized-light.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<script src="https://use.fontawesome.com/38eaee5b57.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+	$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(),
+  $( "#tabs" ).tabs(),
+  $( "#accordion" ).accordion();
+});
+</script>
+
+<link href="css/style.css" rel="stylesheet">
+
+</head>
+</head>
+<body>
+
+
+<!--NAVIGATION-->
+<nav class="style-navbar navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="index.html"><img alt="Brand" src="images/logo.png"><span>Styleguide</span></a>
+          </div>
+            <a type="button" class="navbar-toggle collapsed btn btn-action" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="colors.html">Colors</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a class="active" href="forms.html">Forms</a></li>
+                <li><a href="contentlists.html">Content List</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="wysiwyg.html">wysiwyg</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--STYLEGUIDE CONTENT-->
+<div class="style-wrap">
+<h1>Forms</h1>
+<!--FORMS-->
+<form id="webform-client-form-25" class="webform-client-form webform-client-form-25" accept-charset="UTF-8" method="post" action="/test-webform" enctype="multipart/form-data">
+
+    <h2 class="style-header">Forms</h2>
+    <div class="row">
+    	<!-- FIRST NAME -->
+        <div class="col-md-6 form-item webform-component webform-component-textfield webform-component--name">
+            <label for="edit-submitted-name">Name</label> <input id="edit-submitted-name" class="form-text jquery_placeholder-processed" type="text" maxlength="128" value="" name="submitted[name]" placeholder="Name">
+        </div>
+        
+		<!-- LAST NAME -->
+        <div class="col-md-6 form-item webform-component webform-component-textfield webform-component--last-name">
+            <label for="edit-submitted-last-name">Last Name</label> <input id="edit-submitted-last-name" class="form-text" type="text" maxlength="128" value="" name="submitted[last_name]">
+        </div>
+        
+		<!-- TEXT AREA -->
+        <div class="col-md-12 form-item webform-component webform-component-textarea webform-component--message">
+            <label for="edit-submitted-message">Message</label>
+
+            <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea">
+                <textarea id="edit-submitted-message" class="form-textarea" rows="5" cols="60" name="submitted[message]"></textarea>
+                <div class="grippie"></div>
+            </div>
+        </div>
+        
+		<!-- SELECT LIST -->
+        <div class="col-md-8 form-item webform-component webform-component-select">
+		  <label for="edit-submitted-text-fields-how-did-you-hear-about-us">Select List</label>
+		  <select required="required" id="edit-submitted-text-fields" name="submitted[text_fields][how_did_you_hear_about_us]" class="form-select required">
+		  <option value="" selected="selected">- Select -</option>
+		  <option value="1">option 1</option>
+		  <option value="2">option 2</option>	  
+		  </select>
+		</div>
+		
+        <!-- RADIOS -->
+        <div class="col-md-6 form-item webform-component webform-component-radios webform-component--newsletter-sign-up">
+            <label for="edit-submitted-newsletter-sign-up">Radios</label>
+
+            <div id="edit-submitted-newsletter-sign-up" class="form-radios">
+                <div class="form-item form-type-radio form-item-submitted-newsletter-sign-up">
+                    <input id="edit-submitted-newsletter-sign-up-1" class="form-radio" type="radio" value="1" name="submitted[newsletter_sign_up]"> <label class="option" for="edit-submitted-newsletter-sign-up-1">yes</label>
+                </div>
+
+                <div class="form-item form-type-radio form-item-submitted-newsletter-sign-up">
+                    <input id="edit-submitted-newsletter-sign-up-2" class="form-radio" type="radio" value="2" name="submitted[newsletter_sign_up]"> <label class="option" for="edit-submitted-newsletter-sign-up-2">no</label>
+                </div>
+            </div>
+        </div>
+        
+		<!-- CHECK BOXES -->
+        <div class="col-md-6 form-item webform-component webform-component-checkboxes webform-component--occupation">
+            <label for="edit-submitted-occupation">Checkboxes</label>
+
+            <div id="edit-submitted-occupation" class="form-checkboxes">
+                <div class="form-item form-type-checkbox form-item-submitted-occupation-1">
+                    <input id="edit-submitted-occupation-1" class="form-checkbox" type="checkbox" value="1" name="submitted[occupation][1]"> <label class="option" for="edit-submitted-occupation-1">Student</label>
+                </div>
+
+                <div class="form-item form-type-checkbox form-item-submitted-occupation-2">
+                    <input id="edit-submitted-occupation-2" class="form-checkbox" type="checkbox" value="2" name="submitted[occupation][2]"> <label class="option" for="edit-submitted-occupation-2">Teacher</label>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" name="details[sid]"> <input type="hidden" value="1" name="details[page_num]"> <input type="hidden" value="1" name="details[page_count]"> <input type="hidden" value="0" name="details[finished]"> <input type="hidden" value="form-AbGQ3RT4-yGFILw5MmDA5PUjVv47X4YRQmKG524ebEc" name="form_build_id"> <input type="hidden" value="5gq3d6aJPJdV2VZF6sOm7hZDpmcaNrQAlnhkLCV2XMA" name="form_token"> <input type="hidden" value="webform_client_form_25" name="form_id">
+
+        <div class="col-md-6 form-actions">
+            <input class="col-md-3 webform-submit button-primary form-submit" type="submit" value="Submit" name="op">
+        </div>
+    </div>
+</form>
+
+<!-- BUTTONS -->
+<div id="buttons">
+	<h2 class="style-header">Button Sizes</h2>
+		<div class="row">
+			<!-- DEFAULT -->
+			<div class="column col-md-4">
+				<label>Default</label><br>
+				<p class="style-caption">60px height</p>
+				<a class="button" href="#">Submit</a><br/>
+				<!-- CODE -->
+		<pre><code class="hljs html"><<span>a class="button"</span>>...<<span>/a</span>></code></pre>
+			</div><!-- .column -->
+			<!-- SMALL -->
+			<div class="column col-md-4">
+				<label>Small</label><br>
+				<p class="style-caption">50px height</p>
+				<a class="button button-small" href="#">Submit</a><br/>
+				<!-- CODE -->
+		<pre><code class="hljs html"><<span>a class="button button-small"</span>>...<<span>/a</span>></code></pre>
+			</div><!-- .column -->
+		</div><!-- .row -->
+	
+	<h2 class="style-header">Button Colors</h2>
+	<div class="row">
+		<!-- DEFAULT -->
+		<div class="column col-md-4">
+			<label>Default</label><br>
+			<a class="button" href="#">Submit</a><br/>
+			<!-- CODE -->
+	<pre><code class="hljs html"><<span>a class="button"</span>>...<<span>/a</span>></code></pre>
+		</div><!-- .column -->
+		<!-- YELLOW -->
+		<div class="column col-md-4">
+			<label>Gold</label><br>
+			<a class="button button-gold" href="#">Submit</a><br/>
+			<!-- CODE -->
+	<pre><code class="hljs html"><<span>a class="button button-gold"</span>>...<<span>/a</span>></code></pre>
+		</div><!-- .column -->
+		<!-- HOLLOW BLUE -->
+		<div class="column col-md-4">
+			<label>Hollow Blue</label><br>
+			<a class="button button-hollow-blue" href="#">alternate Button</a><br/>
+			<!-- CODE -->
+	<pre><code class="hljs html"><<span>a class="button button-hollow-blue"</span>>...<<span>/a</span>></code></pre>
+		</div><!-- .column -->
+		<!-- HOLLOW GOLD -->
+		<div class="style-dark column col-md-4">
+			<label>Hollow Gold</label><br>
+			<a class="button button-hollow-gold" href="#">Submit</a><br/>
+			<!-- CODE -->
+	<pre><code class="hljs html"><<span>a class="button button-hollow-gold"</span>>...<<span>/a</span>></code></pre>
+		</div><!-- .column -->
+		<!-- HOLLOW WHITE -->
+		<div class="style-dark column col-md-4">
+			<label>Hollow White</label><br>
+			<a class="button button-hollow-white" href="#">Submit</a><br/>
+			<!-- CODE -->
+	<pre><code class="hljs html"><<span>a class="button button-hollow-white"</span>>...<<span>/a</span>></code></pre>
+		</div><!-- .column -->
+	</div>
+</div><!-- #buttons -->
+
+</div>
+<footer class="style-footer">
+	<p>Designed by <a href="http://kwallcompany.com">KWALL</a></p>
+</footer>
+</body>
+</html>

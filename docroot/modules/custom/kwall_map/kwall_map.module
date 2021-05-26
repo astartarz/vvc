@@ -1,0 +1,73 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kwall_map_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.kwall_map':
+      return t('
+        <h2>Lorem ipsum generator for Drupal.</h2>
+        <h3>Instructions</h3>
+        <p>Lorem ipsum dolor sit amet... <strong>Just kidding!</strong></p>
+        <p>Unpack in the <em>modules</em> folder (currently in the root of your Drupal 8 installation) and enable in <strong>/admin/modules</strong>.</p>
+        <p>Then, visit <strong>/admin/config/development/loremipsum</strong> and enter your own set of phrases to build random-generated text (or go with the default Lorem ipsum).</p>
+        <p>Last, visit <strong>www.example.com/loremipsum/generate/P/S</strong> where:</p>
+        <ul>
+          <li><em>P</em> is the number of <em>paragraphs</em></li>
+          <li><em>S</em> is the maximum number of <em>sentences</em></li>
+        </ul>
+        <p>There is also a generator block in which you can choose how many paragraphs and
+phrases and it\'ll do the rest.</p>
+        <p>If you need, there\'s also a specific <em>generate lorem ipsum</em> permission.</p>
+        <h3>Attention</h3>
+        <p>Most bugs have been ironed out, holes covered, features added. But this module is a work in progress. Please report bugs and suggestions, ok?</p>
+      ');
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function kwall_map_theme($existing, $type, $theme, $path) {
+  $variables = array(
+    'kwall_map' => array(
+      'variables' => array(
+        'source_text' => NULL,
+      ),
+      'template' => 'kwall_map',
+    ),
+  );
+  return $variables;
+}
+
+
+function kwall_map_page_attachments(array &$variables) {
+  $config = \Drupal::config('kwall_map.settings');
+  $variables['#attached']['drupalSettings']['kwall_map']['style'] = $config->get('style');
+  $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = array(
+                                                                      'overlay_0' => $config->get('overlay_path_0'),
+                                                                      'swLat_0' => $config->get('sw_lat_0'),
+                                                                      'swLon_0' => $config->get('sw_lon_0'),
+                                                                      'neLat_0' => $config->get('ne_lat_0'),
+                                                                      'neLon_0' => $config->get('ne_lon_0')
+                                                                    );
+  /* $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = array(
+                                                                      'overlay_1' => $config->get('overlay_path_1'),
+                                                                      'swLat_1' => $config->get('sw_lat_1'),
+                                                                      'swLon_1' => $config->get('sw_lon_1'),
+                                                                      'neLat_1' => $config->get('ne_lat_1'),
+                                                                      'neLon_1' => $config->get('ne_lon_1')
+                                                                    );
+  $variables['#attached']['drupalSettings']['kwall_map']['locations'][] = array(
+                                                                      'overlay_2' => $config->get('overlay_path_2'),
+                                                                      'swLat_2' => $config->get('sw_lat_2'),
+                                                                      'swLon_2' => $config->get('sw_lon_2'),
+                                                                      'neLat_2' => $config->get('ne_lat_2'),
+                                                                      'neLon_2' => $config->get('ne_lon_2')
+                                                                    ); */
+  $variables['#attached']['library'][] = 'kwall_map/kwall_map';
+}

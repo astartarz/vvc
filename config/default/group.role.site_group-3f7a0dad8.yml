@@ -1,0 +1,17 @@
+uuid: 54d51a46-3355-48d5-8e0e-8a9bede3a869
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_group
+  enforced:
+    config:
+      - user.role.nursing
+id: site_group-3f7a0dad8
+label: Nursing
+weight: -4
+internal: true
+audience: outsider
+group_type: site_group
+permissions_ui: false
+permissions: {  }

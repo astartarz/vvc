@@ -1,0 +1,10 @@
+uuid: f9c51604-2d70-4c46-a59c-a6d07c5f379d
+langcode: en
+status: true
+dependencies: {  }
+id: nursing
+label: Nursing
+weight: -2
+is_admin: null
+permissions:
+  - 'use text format code'

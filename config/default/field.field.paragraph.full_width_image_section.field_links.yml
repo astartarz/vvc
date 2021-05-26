@@ -1,0 +1,23 @@
+uuid: 8d90d9ce-65f4-4da2-9c0f-ea91971624be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_links
+    - paragraphs.paragraphs_type.full_width_image_section
+  module:
+    - link
+id: paragraph.full_width_image_section.field_links
+field_name: field_links
+entity_type: paragraph
+bundle: full_width_image_section
+label: Links
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

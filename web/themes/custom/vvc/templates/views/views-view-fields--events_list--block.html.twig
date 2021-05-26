@@ -1,0 +1,57 @@
+{% set view_node = fields.view_node.content|render|striptags|trim %}
+
+{% set event_date = fields.field_date_range.content|render|striptags|replace({"\n":""})|trim|split(' - ') %}
+{% set image = fields.field_teaser_image.content|render|striptags('<img>')|trim %}
+
+{% set event_start_date = event_date[0] %}
+{% set event_start_month = event_start_date|date('M') %}
+{% set event_start_day_number = event_start_date|date('jS') %}
+
+{% set event_end_date = event_date[1] %}
+{% if event_end_date is not null %}
+  {% set event_end_month = event_end_date|date('M') %}
+  {% set event_end_day_number = event_end_date|date('jS') %}
+{% endif %}
+
+{% set all_day_event = fields.field_all_day_event.content|render|striptags|replace({"\n":""})|trim %}
+
+{% if all_day_event == 'On' %}
+  {% set event_time = "All day"|t %}
+{% else %}
+  {% set event_start_time = event_start_date|date('g:i a') %}
+  {% set event_time = event_start_time %}
+
+  {% set event_end_time = event_end_date|date('g:i a') %}
+  {% if event_end_date is not null %}
+    {% set event_time = event_start_time ~ ' - ' ~ event_end_time %}
+  {% endif %}
+{% endif %}
+
+<div class="event-wrapper">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="event-title">
+        <a href="{{ view_node }}">{{ fields.title.content }}</a>
+      </div>
+      <div class="event-date">
+        <div class="event-month">
+          {% if event_end_day_number is not null and event_end_date|date('Y-m-d') > event_start_date|date('Y-m-d') %}
+            {% if event_end_date|date('M') == event_start_date|date('M') %}
+              {{ event_start_date|date('F') }}, {{ event_start_day_number }} - {{ event_end_day_number }}, {{ event_start_date|date('Y') }}
+            {% else %}
+              {{ event_start_date|date('F jS, Y') }} - {{ event_end_date|date('F jS, Y') }}
+            {% endif %}
+          {% else %}
+            {{ event_start_date|date('F jS, Y') }}
+          {% endif %}
+        </div>
+        <div class="event-time"> | {{ event_time }} </div>
+      </div>
+    </div>
+    {% if image is not empty %}
+      <div class="col-md-3">
+        <div class="event-image"><a href="{{ view_node }}" tabindex="-1">{{ fields.field_teaser_image.content }}</a></div>
+      </div>
+    {% endif %}
+  </div>
+</div>

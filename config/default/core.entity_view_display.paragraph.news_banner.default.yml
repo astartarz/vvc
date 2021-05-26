@@ -1,0 +1,77 @@
+uuid: 7201bee3-a767-46b4-9994-5b872c329f83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_banner.field_articles_banner_nodes
+    - field.field.paragraph.news_banner.field_taxonomy
+    - field.field.paragraph.news_banner.field_title
+    - field.field.paragraph.news_banner.field_view_reference
+    - field.field.paragraph.news_banner.field_view_reference_2
+    - paragraphs.paragraphs_type.news_banner
+  module:
+    - fences
+    - viewsreference
+id: paragraph.news_banner.default
+targetEntityType: paragraph
+bundle: news_banner
+mode: default
+content:
+  field_articles_banner_nodes:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: news_articles_banner
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_view_reference_2:
+    weight: 2
+    label: hidden
+    settings:
+      plugin_types:
+        block: block
+        default: 0
+        page: 0
+        rest_export: 0
+        attachment: 0
+        entity_browser: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: viewsreference_formatter
+    region: content
+hidden:
+  field_taxonomy: true
+  field_view_reference: true
+  search_api_excerpt: true

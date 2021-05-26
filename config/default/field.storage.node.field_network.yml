@@ -1,0 +1,21 @@
+uuid: ba8b0513-d21c-4ce6-882d-921e41cd88d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_network
+field_name: field_network
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<title>Barstow Community College | Styleguide</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="https://fontastic.s3.amazonaws.com/4tEacyM6HcjKSoAvFtbG4c/icons.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://use.fontawesome.com/38eaee5b57.js"></script>
+
+<link href="css/solarized-light.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+	$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(),
+  $( "#tabs" ).tabs(),
+  $( "#accordion" ).accordion();
+});
+</script>
+
+<link href="css/style.css" rel="stylesheet">
+<!--flexslider-->
+<script src="libraries/flexslider/jquery.flexslider-min.js"></script>
+<script src="scripts/barstow.js"></script>
+<link href="libraries/flexslider/flexslider.css" rel="stylesheet">
+</head>
+<body>
+<!--Slick-->
+<script type="text/javascript" src="libraries/slick/slick/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="libraries/slick/slick/slick.css"/>
+
+
+</head>
+<body>
+
+<!--NAVIGATION-->
+<nav class="style-navbar navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="index.html"><img alt="Brand" src="images/logo.png"><span>Styleguide</span></a>
+          </div>
+            <a type="button" class="navbar-toggle collapsed btn btn-action" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="colors.html">Colors</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a class="active" href="contentlists.html">Content List</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="wysiwyg.html">wysiwyg</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--STYLEGUIDE CONTENT-->
+<div class="style-wrap">
+<h1>Content Lists</h1>
+<!--Content Listings-->
+<div id="content-lists">
+	<!--Listings with image-->
+  <h2 class="style-header">News Listing - With Image</h2>
+	<div class="listing listing-view news-listing">
+  	<div class="views-row">
+  		<div class="field-name-field-image"><a href="#"><img src="https://dummyimage.com/277x171/CCC/777.png"></a></div>
+  		<div class="list-text-wrapper">
+  			<div class="views-field-title"><a href="#">Lorem ipsum dolor sit amet consectur adipiscing elit orem ipsum dolor</a></div>
+  			<div class="field-type-date">May 25, 2019</div>
+  			<div class="field-type-author">By: Authors Name</div>
+  			<div class="field-name-field-body">Donec feugiat sollicitudin dolor, sit amet congue urna pulvinar a. Suspendisse sed neque augue.</div>
+        <div class="views-field-view-node">
+  			  <a class="more-link" href="#">Read More</a>
+        </div>
+  		</div>
+  	</div>
+	</div><!-- .listing-view -->
+	
+	<!--Listings without image-->
+	<h2 class="style-header">News Listing - No Image</h2>
+	<div class="listing listing-view news-listing">
+  	<div class="views-row">
+  		<div class="list-text-wrapper">
+  			<div class="views-field-title"><a href="#">Lorem ipsum dolor sit amet consectur adipiscing elit orem ipsum dolor</a></div>
+  			<div class="field-type-date">May 25, 2019</div>
+  			<div class="field-type-author">By: Authors Name</div>
+  			<div class="field-name-field-body">Donec feugiat sollicitudin dolor, sit amet congue urna pulvinar a. Suspendisse sed neque augue.</div>
+        <div class="views-field-view-node">
+  			  <a class="more-link" href="#">Read More</a>
+        </div>
+  		</div>
+  	</div>
+	</div><!-- .listing-view -->
+	
+	<!--Event Listing-->
+	<h2 class="style-header">Event Listing - With Image</h2>
+	<div class="listing listing-view event-listing">
+  	<div class="views-row">
+    	<div class="date-image-wrapper">
+  		  <div class="field-name-field-image"><a href="#"><img src="https://dummyimage.com/277x171/CCC/777.png"></a></div>
+  		  <div class="date">
+				  <p><span class="day">25</span><span class="month">MAY</span></p>
+			  </div>
+    	</div><!-- .date-image-wrapper -->
+  		<div class="list-text-wrapper">
+  			<div class="views-field-title"><a href="#">Duis neque urna, auctor ut lacinia vitae, facilisis a justo. Sed varius tempor dictum.</a></div>
+  			<div class="field-type-date">May 25, 2019</div>
+  			<div class="field-type-time">2:00pm - 3:00pm</div>
+  			<div class="field-name-field-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget lectus ligula. Nulla ligula nulla, dictum quis augue non, vulputate molestie nisi.</div>
+        <div class="views-field-view-node">
+  			  <a class="more-link" href="#">Read More</a>
+        </div>
+  		</div>
+  	</div><!-- .views-row -->
+	</div><!-- .listing-view -->
+	
+	<!--Event Listing-->
+	<h2 class="style-header">Event Listing - No Image</h2>
+	<div class="listing listing-view event-listing">
+  	<div class="views-row">
+    	<div class="date-image-wrapper">
+  		  <div class="date">
+				  <p><span class="day">25</span><span class="month">MAY</span></p>
+			  </div>
+    	</div><!-- .date-image-wrapper -->
+  		<div class="list-text-wrapper">
+  			<div class="views-field-title"><a href="#">Duis neque urna, auctor ut lacinia vitae, facilisis a justo. Sed varius tempor dictum.</a></div>
+  			<div class="field-type-date">May 25, 2019</div>
+  			<div class="field-type-time">2:00pm - 3:00pm</div>
+  			<div class="field-name-field-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget lectus ligula. Nulla ligula nulla, dictum quis augue non, vulputate molestie nisi.</div>
+        <div class="views-field-view-node">
+  			  <a class="more-link" href="#">Read More</a>
+        </div>
+  		</div>
+  	</div><!-- .views-row -->
+	</div><!-- .listing-view -->
+	
+	<!--Compact Event Listing-->
+	<h2 class="style-header">Event Listing - Small</h2>
+	<div class="listing listing-view event-listing">
+		<div class="col-md-4">
+		  <a href="#" class="views-row">
+		  	<div class="date">
+			  	<p><span class="day">25</span><span class="month">MAY</span></p>
+				</div>
+	  		<div class="list-text-wrapper">
+	  			<div class="views-field-title">Duis neque urna, auctor ut lacinia vitae</div>
+	  			<div class="views-field-view-node">
+	  			  <div class="more-link" href="#">Read More</div>
+	        </div>
+	  		</div>
+	  	</a><!-- .views-row -->
+		</div>
+	</div><!-- .listing-view -->
+	
+	</div><!-- .listing-view -->
+</div><!-- .style-wrap -->
+
+	<!--Person Listing Grid-->
+	<h2 class="style-header">Person Listing - Grid</h2>
+	<div class="listing listing-view directory-listing-grid style-grey clearfix">
+		<div class="style-wrap">
+			<div class="row">
+				<div class="col-md-5ths col-sm-4">
+				  <a href="#" class="views-row">
+						<div class="field-name-field-image">
+							<img src="https://dummyimage.com/230x263/CCC/777.png"></div>
+			  		<div class="list-text-wrapper">
+			  			<div class="views-field-title">First Lastname</div>
+			  			<div class="views-field-role">Job Title</div>
+			  			<div class="views-field-department">Department</div>
+			  		</div>
+			  	</a><!-- .views-row -->
+				</div>
+				<div class="col-md-5ths col-sm-4">
+				  <a href="#" class="views-row">
+						<div class="field-name-field-image">
+							<img src="https://dummyimage.com/230x263/CCC/777.png"></div>
+			  		<div class="list-text-wrapper">
+			  			<div class="views-field-title">First Lastname</div>
+			  			<div class="views-field-role">Job Title</div>
+			  			<div class="views-field-department">Department</div>
+			  		</div>
+			  	</a><!-- .views-row -->
+				</div>
+				<div class="col-md-5ths col-sm-4">
+				  <a href="#" class="views-row">
+						<div class="field-name-field-image">
+							<img src="https://dummyimage.com/230x263/CCC/777.png"></div>
+			  		<div class="list-text-wrapper">
+			  			<div class="views-field-title">First Lastname</div>
+			  			<div class="views-field-role">Job Title</div>
+			  			<div class="views-field-department">Department</div>
+			  		</div>
+			  	</a><!-- .views-row -->
+				</div>
+				<div class="col-md-5ths col-sm-4">
+				  <a href="#" class="views-row">
+						<div class="field-name-field-image">
+							<img src="https://dummyimage.com/230x263/CCC/777.png"></div>
+			  		<div class="list-text-wrapper">
+			  			<div class="views-field-title">First Lastname</div>
+			  			<div class="views-field-role">Job Title</div>
+			  			<div class="views-field-department">Department</div>
+			  		</div>
+			  	</a><!-- .views-row -->
+				</div>
+				<div class="col-md-5ths col-sm-4">
+				  <a href="#" class="views-row">
+						<div class="field-name-field-image">
+							<img src="https://dummyimage.com/230x263/CCC/777.png"></div>
+			  		<div class="list-text-wrapper">
+			  			<div class="views-field-title">First Lastname</div>
+			  			<div class="views-field-role">Job Title</div>
+			  			<div class="views-field-department">Department</div>
+			  		</div>
+			  	</a><!-- .views-row -->
+				</div>
+			</div><!-- .row -->
+		</div><!-- .style-wrap -->
+	</div><!-- .listing-view -->
+
+<div class="style-wrap">
+	<!--Person Listing Directory-->
+	<h2 class="style-header">Faculty & Staff Listings</h2>
+	<div class="listing listing-view directory-listing">
+		<div class="col-md-6">
+			<a class="views-row" href="#">
+	    	<div class="field-name-field-image"><img src="https://dummyimage.com/160x160/CCC/777.png"></div>
+	  		<div class="list-info-wrapper">
+	  			<div class="views-field-title">John Smith</div>
+	  			<div class="field-role">Job Title</div>
+	  			<div class="field-department">Department</div>
+	  			<hr>
+	  			<div class="field-phone"><i class="fas fa-phone"></i>(555) 555-5555 x555</div>
+	  			<div class="field-email"><i class="fas fa-envelope"></i>email-address@barstow.edu</div>
+	  			<div class="field-location"><i class="fas fa-map-marker-alt"></i>Main Campus</div>
+	  		</div>
+	  		<div class="list-text-wrapper">
+	  			<div class="field-name-field-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec felis lacinia, accumsan mi at, mollis erat. Donec at neque sed nisi euismod suscipit a sodales metus. Phasellus sit amet erat sagittis.</div>
+	  			<div class="views-field-view-node more-link">
+  			  	Read More
+					</div>
+	  		</div>
+	  	</a><!-- .views-row -->
+		</div>
+	</div><!-- .listing-view -->
+	<div class="listing listing-view directory-listing">
+		<div class="col-md-6">
+			<a class="views-row" href="#">
+	    	<div class="field-name-field-image"><img src="https://dummyimage.com/160x160/CCC/777.png"></div>
+	  		<div class="list-info-wrapper">
+	  			<div class="views-field-title">Jane Smith</div>
+	  			<div class="field-role">Job Title</div>
+	  			<div class="field-department">Department</div>
+	  			<hr>
+	  			<div class="field-phone"><i class="fas fa-phone"></i>(555) 555-5555 x555</div>
+	  			<div class="field-email"><i class="fas fa-envelope"></i>email-address@barstow.edu</div>
+	  			<div class="field-location"><i class="fas fa-map-marker-alt"></i>Main Campus</div>
+	  		</div>
+	  		<div class="list-text-wrapper">
+	  			<div class="field-name-field-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec felis lacinia, accumsan mi at, mollis erat. Donec at neque sed nisi euismod suscipit a sodales metus. Phasellus sit amet erat sagittis.</div>
+	  			<div class="views-field-view-node more-link">
+  			  	Read More
+					</div>
+	  		</div>
+	  	</a><!-- .views-row -->
+		</div>
+	</div><!-- .listing-view -->
+</div><!-- .style-wrap -->
+
+<footer class="style-footer">
+	<p>Designed by <a href="http://kwallcompany.com">KWALL</a></p>
+</footer>
+</body>
+</html>

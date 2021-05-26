@@ -1,0 +1,199 @@
+uuid: 5036db46-ebbb-4236-981e-e3edc004668a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistics.field_description_txt
+    - field.field.paragraph.statistics.field_link
+    - field.field.paragraph.statistics.field_statistics_items
+    - field.field.paragraph.statistics.field_title
+    - paragraphs.paragraphs_type.statistics
+  module:
+    - entity_reference_revisions
+    - fences
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_content_wrapper:
+      children:
+        - group_stats_content
+        - group_stats_content_items
+      parent_name: group_container
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: content-wrapper
+      label: Wrapper
+    group_stats_content:
+      children:
+        - group_content
+      parent_name: group_content_wrapper
+      weight: 6
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: stats-content
+      label: Stats
+    group_stats_content_items:
+      children:
+        - group_content_1
+      parent_name: group_content_wrapper
+      weight: 7
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: stats-content-items
+      label: 'Stats items'
+    group_content:
+      children:
+        - field_title
+        - field_description_txt
+        - field_link
+      parent_name: group_stats_content
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
+    group_content_1:
+      children:
+        - field_statistics_items
+      parent_name: group_stats_content_items
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
+    group_container:
+      children:
+        - group_content_wrapper
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+id: paragraph.statistics.default
+targetEntityType: paragraph
+bundle: statistics
+mode: default
+content:
+  field_description_txt:
+    weight: 22
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: lead
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_link:
+    weight: 23
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: field-link
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_statistics_items:
+    type: entity_reference_revisions_entity_view
+    weight: 21
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+  field_title:
+    weight: 21
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

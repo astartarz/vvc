@@ -1,0 +1,8 @@
+uuid: d5782eba-e5bd-45b2-a0a5-1c8b195293c6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Certificate/Degree Type'
+vid: certificate_degree_type
+description: ''
+weight: 0

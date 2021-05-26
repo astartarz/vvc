@@ -1,0 +1,27 @@
+uuid: 70afe78f-873f-41d4-8d7f-0b05d25d0455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mp4
+    - paragraphs.paragraphs_type.hero_slide
+  module:
+    - file
+id: paragraph.hero_slide.field_mp4
+field_name: field_mp4
+entity_type: paragraph
+bundle: hero_slide
+label: mp4
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: mp4
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

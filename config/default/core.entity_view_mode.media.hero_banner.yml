@@ -1,0 +1,10 @@
+uuid: 31f9c96c-a7e0-4b06-bfe2-5c675755d1cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.hero_banner
+label: 'Hero Banner (1600x560)'
+targetEntityType: media
+cache: true

@@ -1,0 +1,10 @@
+uuid: f416161c-7452-4612-9cf5-abc34ea7d0b8
+langcode: en
+status: true
+dependencies: {  }
+id: flexible_image_cta_block
+label: 'Flexible CTA Block with Image'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Flexible CTA Blocks with Images</em> paragraph>'
+behavior_plugins: {  }

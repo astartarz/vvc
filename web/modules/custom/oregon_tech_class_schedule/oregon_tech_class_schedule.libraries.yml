@@ -1,0 +1,10 @@
+class-schedule:
+  version: 1.x
+  css:
+    theme:
+      assets/css/class-schedule.css: {}
+  js:
+    assets/js/class-schedule.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

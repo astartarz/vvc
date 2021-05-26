@@ -1,0 +1,136 @@
+<?php
+
+/**
+ * @file
+ * KWALL theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+use Symfony\Cmf\Component\Routing\RouteObjectInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function kwall_preprocess_block__viewspagetitle(&$variables) {
+  $variables['#cache']['contexts'][] = 'url.path';
+  $variables['#cache']['contexts'][] = 'url.query_args';
+}
+
+/**
+ * Implements hook_preprocess_html.
+ */
+function kwall_preprocess_html(&$vars) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface) {
+    $vars['attributes']['class'][] = 'page-node-' . $node->getType();
+    $vars['attributes']['class'][] = 'page-node-' . $node->id();
+  }
+  else {
+    $vars['attributes']['class'][] = 'page-no-node';
+  }
+}
+
+/**
+ * Implements THEME_preprocess_page_title().
+ */
+function kwall_preprocess_page_title(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (isset($node->field_hide_page_title->value)) {
+    if ($node->field_hide_page_title->value == '1') {
+      $variables['title'] = '';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ */
+function kwall_preprocess_breadcrumb(&$variables) {
+  // We are creating a variable for the Current Page Title, to allow us to print
+  // it after the breadcrumbs loop has run.
+  $request = \Drupal::request();
+  if ($route = $request->attributes->get(RouteObjectInterface::ROUTE_OBJECT)) {
+    // Search page titles aren't resolved using the title_resolver service - it
+    // will always return 'Search' instead of 'Search for [term]', which would
+    // give us a breadcrumb of Home >> Search >> Search.
+    // @see https://www.drupal.org/project/drupal/issues/2359901
+    // @see https://www.drupal.org/project/drupal/issues/2403359
+    if (($entity = $request->attributes->get('entity')) && $entity->getEntityTypeId() === 'search_page') {
+      $variables['current_page_title'] = $entity->getPlugin()->suggestedTitle();
+    }
+    else {
+      // Check if Directory or Calendar view page.
+      $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+
+      // Calendar breadcrumbs.
+      if ($title == NULL) {
+        $url = explode('/', \Drupal::service('path.current')->getPath());
+        $data = end($url);
+        // Calendar landing display.
+        if ($data == 'day'|| $data == 'week' || $data == 'month' || $data == 'year') {
+          // Calendar starting date breadcrumb display.
+          $variables['current_page_title'] = ucwords($data);
+        }
+        else {
+          // Year.
+          if (strlen($data) == 4) {
+            $variables['current_page_title'] = $data;
+          }
+          // Month ||  Week Check.
+          if (strlen($data) == 6) {
+            // Week.
+            if ($url[count($url) - 2] == 'week') {
+              $week = getWeekOfDate($data);
+              $variables['current_page_title'] = 'Week of ' . $week;
+            }
+            else {
+              // Month.
+              $date = DateTime::createFromFormat('Ym', $data);
+              $variables['current_page_title'] = $date->format('F, Y');
+            }
+          }
+          // Day.
+          if (strlen($data) == 8) {
+            $date = date_create($data);
+            $variables['current_page_title'] = date_format($date, 'l, F j, Y');
+          }
+
+        }
+      }
+      // Directory breadcrumbs.
+      elseif (is_string($title) && strtolower($title) == 'directory') {
+        $url = explode('/', \Drupal::service('path.current')->getPath());
+        $data = end($url);
+        if (preg_match('/^[a-z]$/', $data)) {
+          // Directory filtering by.
+          $variables['current_page_title'] = ucwords($data);
+        }
+        else {
+          $variables['current_page_title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
+        }
+      }
+      // Fallback to page title.
+      else {
+        $variables['current_page_title'] = $title;
+      }
+
+    }
+  }
+  // Since we are printing the 'Current Page Title', add the URL cache context.
+  // If we don't, then we might end up with something like
+  // "Home > Articles" on the Recipes page, which should read "Home > Recipes".
+  $variables['#cache']['contexts'][] = 'url';
+}
+
+/**
+ *
+ */
+function getWeekOfDate($date) {
+  $year = substr($date, 0, 4);
+  $week = substr($date, 4, 2);
+  $dto = new DateTime();
+  $dto->setISODate($year, $week);
+  return $dto->format('F j, Y');
+}

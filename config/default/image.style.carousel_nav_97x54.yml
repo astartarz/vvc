@@ -1,0 +1,17 @@
+uuid: 592d1168-3425-4537-a8bc-fd068b5fdc71
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: carousel_nav_97x54
+label: 'Carousel Nav(97x54)'
+effects:
+  7b438105-4f97-4adb-ac42-4e1a8f39e9b9:
+    uuid: 7b438105-4f97-4adb-ac42-4e1a8f39e9b9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 97
+      height: 54
+      crop_type: focal_point

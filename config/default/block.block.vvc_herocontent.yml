@@ -1,0 +1,35 @@
+uuid: c2c1ada1-2554-4acc-8ef3-d0f2d7880eb0
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools_block
+    - system
+  theme:
+    - vvc
+id: vvc_herocontent
+theme: vvc
+region: hero
+weight: -12
+provider: null
+plugin: 'entity_field:node:field_hero_content'
+settings:
+  id: 'entity_field:node:field_hero_content'
+  label: 'Hero Content'
+  provider: ctools_block
+  label_display: '0'
+  formatter:
+    label: hidden
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: default
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

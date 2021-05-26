@@ -1,0 +1,11 @@
+uuid: 6751a5ea-575b-404a-956e-ea914ee97b3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.certificate_degree_type
+id: taxonomy_term.certificate_degree_type
+target_entity_type_id: taxonomy_term
+target_bundle: certificate_degree_type
+default_langcode: site_default
+language_alterable: false

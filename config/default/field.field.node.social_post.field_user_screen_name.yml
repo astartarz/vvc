@@ -1,0 +1,19 @@
+uuid: 6356e072-7104-48c5-a726-9133f101d37d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_screen_name
+    - node.type.social_post
+id: node.social_post.field_user_screen_name
+field_name: field_user_screen_name
+entity_type: node
+bundle: social_post
+label: 'x. Social user screen name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

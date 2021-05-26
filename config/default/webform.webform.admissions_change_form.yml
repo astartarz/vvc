@@ -1,0 +1,194 @@
+uuid: 0b782029-b281-4705-9499-b703dd8c2061
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: admissions_change_form
+title: 'Admissions Change Form'
+description: ''
+category: ''
+elements: "container_01:\n  '#type': container\n  processed_text:\n    '#type': processed_text\n    '#text': \"<p>Do you want to change your major or campus? Submit changes using this form. Please allow 2-3 business days for us to update your student record.</p>\\n\\n<p><strong>Who should use this form?</strong></p>\\n\\n<ul>\\n\\t<li>Students who have not yet registered for classes.</li>\\n\\t<li>Students attending the Klamath Falls or Wilsonville campuses</li>\\n</ul>\\n\\n<p><strong>Who should not use this form?</strong></p>\\n\\n<ul>\\n\\t<li>Distance Education students. Why? Distance Education has program specific applications and requirements. Please contact them at&nbsp;<a href=\\\"mailto:de@oit.edu\\\">de@oit.edu</a>&nbsp;to make any changes.</li>\\n\\t<li>Students who want to change their term. If you want to change your start term please go to&nbsp;<a href=\\\"http://www.oit.edu/apply\\\">http://www.oit.edu/apply</a>, use the same Login ID and PIN you used before to create a new application. If you have forgotten your login and pin please send your full name and birth date to&nbsp;<a href=\\\"mailto:oit@oit.edu\\\">oit@oit.edu</a>.</li>\\n\\t<li>Students who have already registered for classes. Why? You’ll need to contact the&nbsp;<a href=\\\"http://www.oit.edu/registrar\\\">Registrar’s Office</a>&nbsp;to change terms so you can drop classes (and avoid being charged for them). If you change your major, you’ll want to be sure you’re registered for courses that apply to your new degree plan.</li>\\n</ul>\\n\"\n    '#format': full_html\ncontainer:\n  '#type': container\n  '#states':\n    required:\n      -\n        ':input[name=\"home_phone\"]':\n          filled: true\n      - or\n      -\n        ':input[name=\"work_phone\"]':\n          filled: true\n      - or\n      -\n        ':input[name=\"cell_phone\"]':\n          filled: true\n  markup:\n    '#type': webform_markup\n    '#markup': '<h2>Students Information</h2>'\n  student_name:\n    '#type': webform_name\n    '#title': 'Student Name'\n    '#required': true\n    '#title__access': false\n    '#middle__title': MI\n    '#suffix__title': 'Previous Last Name'\n    '#degree__access': false\n  date_of_birth:\n    '#type': date\n    '#title': 'Date of Birth'\n    '#required': true\n    '#datepicker': true\n    '#date_date_format': m/d/Y\n  student_address:\n    '#type': webform_address\n    '#title': 'Student Address'\n    '#required': true\n    '#country__access': false\n  home_phone:\n    '#type': tel\n    '#title': 'Home Phone'\n  work_phone:\n    '#type': tel\n    '#title': 'Work Phone'\n  cell_phone:\n    '#type': tel\n    '#title': 'Cell Phone'\ncontainer_02:\n  '#type': container\n  id_number:\n    '#type': number\n    '#title': 'Oregon Institute of Technology ID Number (918XXXXXX):'\n    '#description': 'Don&rsquo;t know your student ID number? Contact&nbsp;<a href=\"mailto:oit@oit.edu\">Admissions</a>&nbsp;(541-885-1150).'\n    '#placeholder': '918'\n    '#required': true\n    '#max': 918999999\ncontainer_03:\n  '#type': container\n  markup_02:\n    '#type': webform_markup\n    '#markup': '<h2>Major Change</h2>'\n  previous_major:\n    '#type': select\n    '#title': 'Previous Major'\n    '#options':\n      'No Change': 'No Change'\n      'Biology - Health Sciences': 'Biology - Health Sciences'\n      'Civil Engineering': 'Civil Engineering'\n      'Communication Studies': 'Communication Studies'\n      'Computer Engineering Technology': 'Computer Engineering Technology'\n      'Dental Hygiene': 'Dental Hygiene'\n      'Electrical Engineering': 'Electrical Engineering'\n      'Electronics Engineering Technology': 'Electronics Engineering Technology'\n      'Embedded Systems Engineering Technology': 'Embedded Systems Engineering Technology'\n      'Emergency Medical Services Management': 'Emergency Medical Services Management'\n      'Environmental Sciences': 'Environmental Sciences'\n      'General Studies': 'General Studies'\n      Geomatics: Geomatics\n      'Health Care Management - Administration': 'Health Care Management - Administration'\n      'Health Care Management - Clinical Option ': 'Health Care Management - Clinical Option '\n      'Information Technology': 'Information Technology'\n      'IT Accounting Option': 'IT Accounting Option'\n      'IT Applications Development Opt': 'IT Applications Development Opt'\n      'IT Business/Systems Analysis Opt': 'IT Business/Systems Analysis Opt'\n      'IT Health Informatics Opt ': 'IT Health Informatics Opt '\n      'Management Information Technology': 'Management Information Technology'\n      Management/Accounting: Management/Accounting\n      'Management/Entrepreneurship and Small Business': 'Management/Entrepreneurship and Small Business'\n      Management/Marketing: Management/Marketing\n      'Manufacturing Engineering Technology': 'Manufacturing Engineering Technology'\n      'Math (Applied Math)': 'Math (Applied Math)'\n      'Mechanical Engineering': 'Mechanical Engineering'\n      'Mechanical Engineering Technology': 'Mechanical Engineering Technology'\n      'Operations Management ': 'Operations Management '\n      'Population Health Management': 'Population Health Management'\n      'Pre-Dental Hygiene ': 'Pre-Dental Hygiene '\n      'Pre-Medical Imaging Technology': 'Pre-Medical Imaging Technology'\n      'Pre-Medical Laboratory Science': 'Pre-Medical Laboratory Science'\n      Pre-Nursing: Pre-Nursing\n      Pre-Paramedic: Pre-Paramedic\n      'Pre-Respiratory Care ': 'Pre-Respiratory Care '\n      'Psychology (Applied Psychology)': 'Psychology (Applied Psychology)'\n      'Renewable Energy Engineering': 'Renewable Energy Engineering'\n      'Software Engineering Technology': 'Software Engineering Technology'\n      'Technology and Management': 'Technology and Management'\n  new_major:\n    '#type': select\n    '#title': 'New Major'\n    '#options':\n      'No Change': 'No Change'\n      'Biology - Health Sciences': 'Biology - Health Sciences'\n      'Civil Engineering': 'Civil Engineering'\n      'Communication Studies': 'Communication Studies'\n      'Computer Engineering Technology': 'Computer Engineering Technology'\n      'Dental Hygiene': 'Dental Hygiene'\n      'Electrical Engineering': 'Electrical Engineering'\n      'Electronics Engineering Technology': 'Electronics Engineering Technology'\n      'Embedded Systems Engineering Technology': 'Embedded Systems Engineering Technology'\n      'Emergency Medical Services Management': 'Emergency Medical Services Management'\n      'Environmental Sciences': 'Environmental Sciences'\n      'General Studies': 'General Studies'\n      Geomatics: Geomatics\n      'Health Care Management - Administration': 'Health Care Management - Administration'\n      'Health Care Management - Clinical Option ': 'Health Care Management - Clinical Option '\n      'Information Technology': 'Information Technology'\n      'IT Accounting Option': 'IT Accounting Option'\n      'IT Applications Development Opt': 'IT Applications Development Opt'\n      'IT Business/Systems Analysis Opt': 'IT Business/Systems Analysis Opt'\n      'IT Health Informatics Opt ': 'IT Health Informatics Opt '\n      'Management Information Technology': 'Management Information Technology'\n      Management/Accounting: Management/Accounting\n      'Management/Entrepreneurship and Small Business': 'Management/Entrepreneurship and Small Business'\n      Management/Marketing: Management/Marketing\n      'Manufacturing Engineering Technology': 'Manufacturing Engineering Technology'\n      'Math (Applied Math)': 'Math (Applied Math)'\n      'Mechanical Engineering': 'Mechanical Engineering'\n      'Mechanical Engineering Technology': 'Mechanical Engineering Technology'\n      'Operations Management ': 'Operations Management '\n      'Population Health Management': 'Population Health Management'\n      'Pre-Dental Hygiene ': 'Pre-Dental Hygiene '\n      'Pre-Medical Imaging Technology': 'Pre-Medical Imaging Technology'\n      'Pre-Medical Laboratory Science': 'Pre-Medical Laboratory Science'\n      Pre-Nursing: Pre-Nursing\n      Pre-Paramedic: Pre-Paramedic\n      'Pre-Respiratory Care ': 'Pre-Respiratory Care '\n      'Psychology (Applied Psychology)': 'Psychology (Applied Psychology)'\n      'Renewable Energy Engineering': 'Renewable Energy Engineering'\n      'Software Engineering Technology': 'Software Engineering Technology'\n      'Technology and Management': 'Technology and Management'\ncontainer_04:\n  '#type': container\n  markup_03:\n    '#type': webform_markup\n    '#markup': '<h2>Campus Change</h2>'\n  previous_campus:\n    '#type': select\n    '#title': 'Previous Campus'\n    '#options':\n      'Klamath Falls': 'Klamath Falls'\n      WIlsonville: WIlsonville\n  new_campus:\n    '#type': select\n    '#title': 'New Campus'\n    '#options':\n      'Klamath Falls': 'Klamath Falls'\n      WIlsonville: WIlsonville\ncontainer_05:\n  '#type': container\n  markup_04:\n    '#type': webform_markup\n    '#markup': \"<strong>Certification</strong>\\n<p>By submitting this form, I certify that all information on this form has been completed to the best of my knowledge, and this action will represent my signature.</p>\\n\\n<p>Questions? We&#39;re happy to answer at Oregon Tech Admissions. 541-885-1150 Toll Free 1-800-422-2017&nbsp;<a href=\\\"mailto:oit@oit.edu\\\">oit@oit.edu</a></p>\"\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

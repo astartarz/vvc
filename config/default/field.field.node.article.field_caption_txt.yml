@@ -1,0 +1,19 @@
+uuid: 694981a3-3e64-4a55-8109-13b4ae180c91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_caption_txt
+    - node.type.article
+id: node.article.field_caption_txt
+field_name: field_caption_txt
+entity_type: node
+bundle: article
+label: 'Teaser Caption'
+description: 'Used in <em>News & Events Hero</em>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

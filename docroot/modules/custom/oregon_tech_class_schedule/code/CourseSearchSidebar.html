@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://oregontechstatic.azureedge.net/css/otwebsite/klamath/defaultstyles.min.css?v=9" />
+<style>
+    .group::after{
+        display:table;
+        clear:both;
+        content: "";
+    }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="uxSubject" class="control-label">Subject</label>
+                <select id="uxSubject" class="form-control">
+                    <option value="">All Non-Online Courses</option>
+                    <option value="Online">All Online Courses</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="uxLevel" class="control-label">Level</label>
+                <select id="uxLevel" class="form-control">
+                    <option value="">All</option>
+                    <option value="100|199">100-199</option>
+                    <option value="200|299">200-299</option>
+                    <option value="300|399">300-399</option>
+                    <option value="400|499">400-499</option>
+                    <option value="500|999">>499</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="uxTerm" class="control-label">Term</label>
+                <select id="uxTerm" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label for="uxCampus" class="control-label">Campus</label>
+                <select id="uxCampus" class="form-control">
+                    <option value="Chemeketa">Chemeketa</option>
+                    <option selected="selected" value="Klamath">Klamath Falls</option>
+                    <option value="Online">Online</option>
+                    <option value="Portland-Metro">Portland-Metro</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="0">-All Campuses-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="uxCost" class="control-label">Cost of Materials</label>
+                <select id="uxCost" class="form-control">
+                    <option value="A">Show All</option>
+                    <option value="0">No Cost</option>
+                    <option value="50">Low or No Cost ($50 or less)</option>
+                </select>
+            </div>
+            <div class="form-group" id="uxDays">
+                <label for="Days" class="control-label">Days Taught</label>
+                <div>
+                    <label><input type="checkbox" id="uxMonday" value="M" />Mon</label>&nbsp;
+                    <label><input type="checkbox" id="uxTuesday" value="T" />Tue</label>&nbsp;
+                    <label><input type="checkbox" id="uxWednesday" value="W" />Wed</label>&nbsp;
+                    <label><input type="checkbox" id="uxThursday" value="R" />Thu</label>&nbsp;
+                    <label><input type="checkbox" id="uxFriday" value="F" />Fri</label>
+
+                </div>
+                <p>NOTE: Courses will be listed whose meeting days contain any of the selected days</p>
+            </div>
+            <div class="form-group">
+                <label for="Times" class="control-label">Start Time Between</label>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <select id="uxStartTime" class="form-control">
+                            <option value="">All</option>
+                            <option value="0700">7AM</option>
+                            <option value="0800">8AM</option>
+                            <option value="0900">9AM</option>
+                            <option value="1000">10AM</option>
+                            <option value="1100">11AM</option>
+                            <option value="1200">12PM</option>
+                            <option value="1300">1PM</option>
+                            <option value="1400">2PM</option>
+                            <option value="1500">3PM</option>
+                            <option value="1600">4PM</option>
+                            <option value="1700">5PM</option>
+                            <option value="1800">6PM</option>
+                            <option value="1900">7PM</option>
+                            <option value="2000">8PM</option>
+                            <option value="2100">9PM</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">and</div>
+                    <div class="col-sm-5">
+                        <select id="uxEndTime" class="form-control">
+                            <option value="">All</option>
+                            <option value="0700">7AM</option>
+                            <option value="0800">8AM</option>
+                            <option value="0900">9AM</option>
+                            <option value="1000">10AM</option>
+                            <option value="1100">11AM</option>
+                            <option value="1200">12PM</option>
+                            <option value="1300">1PM</option>
+                            <option value="1400">2PM</option>
+                            <option value="1500">3PM</option>
+                            <option value="1600">4PM</option>
+                            <option value="1700">5PM</option>
+                            <option value="1800">6PM</option>
+                            <option value="1900">7PM</option>
+                            <option value="2000">8PM</option>
+                            <option value="2100">9PM</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="form-group">
+
+
+            </div>
+            <button class="btn btn-primary" id="uxSearchCourses">Search</button>
+        </div>
+        <div class="col-sm-9">
+            <div id="Courses">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+
+
+
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+
+    $(function(){
+        $("#uxSearchCourses").click(function(){
+            let term = $("#uxTerm").val();
+            var params = {
+                subject: $("#uxSubject").val(),
+                level: $("#uxLevel").val(),
+                campus: $("#uxCampus").val(),
+                materialCost: $("#uxCost").val(),
+                startTime: $("#uxStartTime").val(),
+                endTime: $("#uxEndTime").val(),
+                days: $.map($("#uxDays :checked"),function (box){ return $(box).val();}).join(",")
+
+            };
+            var esc = encodeURIComponent;
+            var query = Object.keys(params)
+                .map(k => {return (params[k].length > 0 ? esc(k) + '=' + esc(params[k]) : "" );})
+                .join('&');
+            $("#Courses").html('');
+            console.log(`https://app-otfacts.azurewebsites.net/api/courses/${term}?${query}`);
+            $.get(`https://app-otfacts.azurewebsites.net/api/courses/${term}?${query}`, "json").done(parseCourseData).fail(function(data){});
+        });
+        //Fill dynamic fields
+        $.get("https://app-otfacts.azurewebsites.net/api/courses/subjects").done(function(data){
+            data.forEach((item) => {
+                $("#uxSubject").append(`<option value="${item.prefix}">${item.name}</option>`)
+            });
+        });
+        $.get("https://app-otfacts.azurewebsites.net/api/terms").done(function(data){
+            data.forEach((item) => {
+                $("#uxTerm").append(`<option ${(item.default == "true" ? "selected=\"selected\"" : "")} value="${item.id}">${item.description}</option>`);
+            });
+        });
+
+    });
+    function parseCourseData(data){
+
+        const distinct = (value, index, self) =>{
+            return self.indexOf(value) === index;
+        }
+        //get the list of unique course subject/number pairs
+        var results = "";
+        let courseDivisions = [];
+        data.forEach((item) =>{
+            courseDivisions.push (`${item.subjectCode}${item.courseNumber}`)
+        });
+        courseDivisions = courseDivisions.filter(distinct);
+        courseDivisions.forEach((item) =>{
+            let filteredList = data.filter((value, index) =>{
+                return (item == `${value.subjectCode}${value.courseNumber}`);
+            });
+
+            $('#Courses').append(`<div class="CourseCell">${item}</div>`);
+            let coursePermutations = [];
+            filteredList.forEach((item) =>{
+                coursePermutations.push(item.title);
+            });
+            coursePermutations = coursePermutations.filter(distinct);
+            coursePermutations.forEach((item) => {
+                let filteredSubList = data.filter((value, index) => {
+                    return (item == `${value.title}`);
+                });
+                $("#Courses").append(`<div class="CourseName group">
+                        <div class="CourseNameCell">${item}</div>
+                        <div class="CourseViewDescCell"><a href="javascript:void(0);" onclick="alert('view description');">View Description</a></div>
+                    </div>`);
+                let table = $(`<table class="CourseTable footable"><thead>
+<tr class="CourseHeadingRow">
+<th class="footable-visible footable-first-column">CRN</th><th class="footable-visible">Sec.</th><th data-hide="phone,tablet" class="footable-visible">Credits</th><th class="footable-visible">Days</th><th class="footable-visible">Time</th><th data-hide="phone,tablet" class="footable-visible">Location</th><th data-hide="phone,tablet" class="footable-visible">Instructor</th><th class="footable-visible">Status</th><th data-hide="phone,tablet" class="footable-visible footable-last-column">Textbook</th></tr>
+</thead><tbody></tbody></table>`);
+                filteredSubList.forEach((item) => {
+                    var days = "";
+                    var times = "";
+                    var locations = "";
+                    var first = false;
+                    item.schedule.forEach((scheduleItem) => {
+                        if(!first){
+                            first = true;
+                        }
+                        else{
+                            days += "<br />";
+                            times += "<br />";
+                            locations += "<br />";
+                        }
+                        days += scheduleItem.days;
+                        times += `${scheduleItem.startTime}-${scheduleItem.endTime}`;
+                        locations += scheduleItem.location;
+
+                    });
+                    let courseRow = `<tr>
+                        <td>${item.crn}</td>
+                        <td>${item.section}</td>
+                        <td>${item.creditHours}</td>
+                        <td>${days}</td>
+                        <td>${times}</td>
+                        <td>${locations}</td>
+                        <td>${item.instructor}</td>
+                        <td>${item.status} (${item.seatsTaken}/${item.seatsCapacity})</td>
+                        <td></td>
+                        </tr>`;
+                    table.find("tbody").append(courseRow)
+
+
+                });
+                $('#Courses').append(table)
+                //results += table.html();
+            });
+
+
+
+        });
+
+    }
+</script>
+</body>
+</html>

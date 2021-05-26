@@ -1,0 +1,22 @@
+uuid: 9f44d4e9-08dc-4760-a6cd-185dd873798a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kwall_subtheme_example
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: kwall_subtheme_example_local_tasks
+theme: kwall_subtheme_example
+region: content
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

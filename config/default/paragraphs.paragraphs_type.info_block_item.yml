@@ -1,0 +1,10 @@
+uuid: aee98754-9b18-4d2e-ab82-1f42e9cb9bcb
+langcode: en
+status: true
+dependencies: {  }
+id: info_block_item
+label: 'Info Block Item'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Info Block</em> paragraph.'
+behavior_plugins: {  }

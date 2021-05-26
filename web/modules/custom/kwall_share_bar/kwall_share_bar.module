@@ -1,0 +1,41 @@
+<?php
+/**
+ * @file
+ * Kwall Share Bar module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kwall_share_bar_help($route_name, RouteMatchInterface $route_match) {
+  $output = '';
+
+  switch ($route_name) {
+    // Main module help for the kwall_share_bar module.
+    case 'help.page.kwall_share_bar':
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Kwall Share Bar module provides a widget for share links to popular providers from.') . '</p>';
+
+    default:
+  }
+
+  return $output;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function kwall_share_bar_theme() {
+  return [
+    'kwall_share_bar_block' => [
+      'variables' => [
+        'providers' => NULL,
+        'url' => NULL,
+        'title' => NULL,
+      ],
+      'template' => 'kwall-share-bar-block',
+    ],
+  ];
+}

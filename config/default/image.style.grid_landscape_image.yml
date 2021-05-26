@@ -1,0 +1,17 @@
+uuid: 1d57e8b3-1ddc-4494-ae9f-6e35e7bbd33e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: grid_landscape_image
+label: 'x. Grid Landscape Image (576x324)'
+effects:
+  2670d3cd-fe46-49e7-962a-f774500c9d17:
+    uuid: 2670d3cd-fe46-49e7-962a-f774500c9d17
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 576
+      height: 324
+      crop_type: focal_point

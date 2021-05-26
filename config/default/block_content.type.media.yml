@@ -1,0 +1,8 @@
+uuid: 5440238e-bc5e-4884-876e-06d928786d46
+langcode: en
+status: true
+dependencies: {  }
+id: media
+label: 'x. Media Block'
+revision: 1
+description: 'Image or Remote Video'

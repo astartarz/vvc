@@ -1,0 +1,49 @@
+uuid: fe781c42-c98e-4d74-ac89-7fc72701e147
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_carousel
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_media_image
+    - image.style.hero_slide_image
+    - media.type.image
+  module:
+    - fences
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
+id: media.image.media_carousel
+targetEntityType: media
+bundle: image
+mode: media_carousel
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      image_style: hero_slide_image
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_categories: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,26 @@
+uuid: 3f493a4e-5aef-473f-ab4c-e2bc178749a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_module
+    - system
+  theme:
+    - vvc
+id: vvc_eventsswitchblock
+theme: vvc
+region: content_top
+weight: -20
+provider: null
+plugin: events_switch_block
+settings:
+  id: events_switch_block
+  label: 'Events Switch Block'
+  provider: custom_module
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events\r\n/events-calendar"
+    negate: false
+    context_mapping: {  }

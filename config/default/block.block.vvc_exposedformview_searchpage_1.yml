@@ -1,0 +1,33 @@
+uuid: ab113946-c547-442f-bfeb-8d7e151e79d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.view_search
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: vb-search-form
+id: vvc_exposedformview_searchpage_1
+theme: vvc
+region: content
+weight: -12
+provider: null
+plugin: 'views_exposed_filter_block:view_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:view_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

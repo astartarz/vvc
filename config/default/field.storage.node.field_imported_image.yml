@@ -1,0 +1,20 @@
+uuid: 5ce7a562-facb-47c2-9b25-6fdc64b674b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_imported_image
+field_name: field_imported_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

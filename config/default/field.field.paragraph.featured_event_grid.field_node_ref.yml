@@ -1,0 +1,28 @@
+uuid: f23c1ce7-6d0e-4239-9689-22ca139f2e13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_ref
+    - node.type.event
+    - paragraphs.paragraphs_type.featured_event_grid
+id: paragraph.featured_event_grid.field_node_ref
+field_name: field_node_ref
+entity_type: paragraph
+bundle: featured_event_grid
+label: 'Featured Event Node'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

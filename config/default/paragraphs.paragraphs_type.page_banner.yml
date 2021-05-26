@@ -1,0 +1,10 @@
+uuid: e1e88a7a-47bd-44af-ac63-0b35e848e2ad
+langcode: en
+status: true
+dependencies: {  }
+id: page_banner
+label: 'Interior Page Banner'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

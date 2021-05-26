@@ -1,0 +1,12 @@
+uuid: ece76160-2dc4-415d-b471-8f36547cf41b
+langcode: en
+status: true
+dependencies: {  }
+id: styled_intro_text
+label: 'Styled Intro Text'
+description: 'Slightly larger and italicized text '
+body:
+  value: "<p><em class=\"text-muted h4\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</em></p>\r\n"
+  format: full_html
+weight: null
+node_types: {  }

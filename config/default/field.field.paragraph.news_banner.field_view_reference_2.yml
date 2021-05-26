@@ -1,0 +1,100 @@
+uuid: 2a28abb9-c7f5-45bf-bea9-0a39dcb09f9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference_2
+    - paragraphs.paragraphs_type.news_banner
+    - views.view.articles_banner_list
+  module:
+    - viewsreference
+id: paragraph.news_banner.field_view_reference_2
+field_name: field_view_reference_2
+entity_type: paragraph
+bundle: news_banner
+label: 'View Reference (List)'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    display_id: list_block
+    data: 'a:5:{s:5:"pager";N;s:8:"argument";N;s:5:"limit";N;s:6:"offset";N;s:5:"title";N;}'
+    target_uuid: 6ea5d6f3-a33f-4707-909e-fdf24327d78d
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    rest_export: 0
+    attachment: 0
+    entity_browser: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    articles_banner_list: articles_banner_list
+    academics: 0
+    academic_filter_taxonomy_terms: 0
+    alerts: 0
+    articles_banner: 0
+    articles_banner_carousel: 0
+    articles_grid: 0
+    article_view: 0
+    block_content: 0
+    carousels: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_events: 0
+    content_finder: 0
+    content_recent: 0
+    content_social: 0
+    directory: 0
+    events_calendar: 0
+    events_grid: 0
+    event_view: 0
+    external_articles_cards: 0
+    external_articles_grid: 0
+    faculty_carousel: 0
+    featured_event_grid: 0
+    feeds_feed: 0
+    files: 0
+    file_entity_browser: 0
+    frontpage: 0
+    group_members: 0
+    group_nodes: 0
+    hero_banner: 0
+    locations: 0
+    map_view: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    moderated_content: 0
+    page_banner: 0
+    persons_listing: 0
+    persons_section: 0
+    person_dashboard: 0
+    quick_links: 0
+    redirect: 0
+    scheduler_scheduled_content: 0
+    social_wall: 0
+    story_cards: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    view_search: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    pager: 0
+    limit: 0
+    offset: 0
+    title: 0
+field_type: viewsreference

@@ -1,0 +1,22 @@
+uuid: e3f91880-4223-498e-b9f4-12f00d9f19d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: online_program
+label: 'Online Program'
+type: 'canonical_entities:node'
+pattern: 'online/degrees/[node:title]'
+selection_criteria:
+  47586327-026f-4062-b08d-48685c5d5610:
+    id: node_type
+    bundles:
+      online_program: online_program
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 47586327-026f-4062-b08d-48685c5d5610
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,84 @@
+uuid: a565fcda-0e0a-41a2-9cea-f99db0eaa33a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.story.body
+    - field.field.node.story.field_caption_txt
+    - field.field.node.story.field_description_txt
+    - field.field.node.story.field_featured
+    - field.field.node.story.field_graduating_class
+    - field.field.node.story.field_hometown
+    - field.field.node.story.field_job_title
+    - field.field.node.story.field_link
+    - field.field.node.story.field_media
+    - field.field.node.story.field_meta_tags
+    - field.field.node.story.field_minor
+    - field.field.node.story.field_program
+    - field.field.node.story.field_remote_video
+    - field.field.node.story.field_sidebar_content
+    - field.field.node.story.field_story_featured_image
+    - field.field.node.story.field_story_image
+    - field.field.node.story.field_story_quote
+    - field.field.node.story.field_story_type
+    - field.field.node.story.field_sub_text
+    - field.field.node.story.field_teaser_image
+    - field.field.node.story.field_teaser_video
+    - field.field.node.story.field_video
+    - node.type.story
+  module:
+    - text
+    - user
+id: node.story.teaser
+targetEntityType: node
+bundle: story
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_caption_txt: true
+  field_description_txt: true
+  field_featured: true
+  field_graduating_class: true
+  field_hometown: true
+  field_job_title: true
+  field_link: true
+  field_media: true
+  field_meta_tags: true
+  field_minor: true
+  field_program: true
+  field_remote_video: true
+  field_sidebar_content: true
+  field_story_featured_image: true
+  field_story_image: true
+  field_story_quote: true
+  field_story_type: true
+  field_sub_text: true
+  field_teaser_image: true
+  field_teaser_video: true
+  field_video: true
+  langcode: true
+  search_api_excerpt: true

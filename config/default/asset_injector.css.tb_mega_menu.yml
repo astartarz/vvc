@@ -1,0 +1,22 @@
+uuid: fa5bc6ff-dc23-45fc-a625-f8711c36ea17
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: tb_mega_menu
+label: 'TB Mega Menu'
+code: ".tb-megamenu .navbar .nav > li, .tb-megamenu .navbar .nav > li > a {\r\n  display: inline-block;\r\n  position: initial;\r\n}\r\n.tb-megamenu .mega.open > .mega-dropdown-menu, .tb-megamenu .mega.dropdown-submenu:hover > .mega-dropdown-menu {\r\n  width: 1000px !important;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 60px;\r\n}"
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: '/admin/structure/tb-megamenu/*'
+    negate: false
+  current_theme:
+    id: current_theme
+    theme:
+      seven: seven
+    negate: false
+conditions_require_all: true

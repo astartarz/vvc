@@ -1,0 +1,77 @@
+@function map-get-or-key($map, $key) {
+  @if map-has-key($map, $key) or map-has-key($map, -$key) {
+    @if $key != 'auto' and type-of($key) == 'number' and $key < 0 {
+      @return 0 - map-get($map, -$key);
+    } @else {
+      @return map-get($map, $key);
+    }
+  } @else if type-of($key) == 'string' {
+    @return unquote($key);
+  } @else {
+    @return $key;
+  }
+}
+
+@function bsize($key) {
+  @return map-get-or-key($spacers, $key);
+}
+
+@mixin custom-m($space) {
+  margin: bsize($space) !important;
+}
+
+@mixin custom-mt($space) {
+  margin-top: bsize($space) !important;
+}
+
+@mixin custom-mb($space) {
+  margin-bottom: bsize($space) !important;
+}
+
+@mixin custom-ml($space) {
+  margin-left: bsize($space) !important;
+}
+
+@mixin custom-mr($space) {
+  margin-right: bsize($space) !important;
+}
+
+@mixin custom-p($space) {
+  padding: bsize($space) !important;
+}
+
+@mixin custom-pt($space) {
+  padding-top: bsize($space) !important;
+}
+
+@mixin custom-pb($space) {
+  padding-bottom: bsize($space) !important;
+}
+
+@mixin custom-pl($space) {
+  padding-left: bsize($space) !important;
+}
+
+@mixin custom-pr($space) {
+  padding-right: bsize($space) !important;
+}
+
+@mixin custom-mx($space) {
+  @include custom-ml($space);
+  @include custom-mr($space);
+}
+
+@mixin custom-my($space) {
+  @include custom-mt($space);
+  @include custom-mb($space);
+}
+
+@mixin custom-px($space) {
+  @include custom-pl($space);
+  @include custom-pr($space);
+}
+
+@mixin custom-py($space) {
+  @include custom-pt($space);
+  @include custom-pb($space);
+}

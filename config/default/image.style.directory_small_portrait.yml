@@ -1,0 +1,17 @@
+uuid: 6a398640-86ff-4bcc-b50f-c9acc7605169
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: directory_small_portrait
+label: 'x. Directory Small Portrait'
+effects:
+  d30e5857-6a23-4bf5-8e41-197d62e4ae07:
+    uuid: d30e5857-6a23-4bf5-8e41-197d62e4ae07
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 78
+      height: 114
+      crop_type: focal_point

@@ -1,0 +1,29 @@
+uuid: 8c3f0249-7105-4da1-8018-a276cfcd06dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taxonomy
+    - paragraphs.paragraphs_type.news_banner
+    - taxonomy.vocabulary.article_categories
+id: paragraph.news_banner.field_taxonomy
+field_name: field_taxonomy
+entity_type: paragraph
+bundle: news_banner
+label: Taxonomy
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      article_categories: article_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

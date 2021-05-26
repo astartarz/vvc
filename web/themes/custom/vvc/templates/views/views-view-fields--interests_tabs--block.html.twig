@@ -1,0 +1,30 @@
+{% set image = fields.field_image.content|render|striptags('<img>')|trim %}
+{% set aside_text = fields.field_asides_txt.content|render|striptags('<ul>')|trim %}
+
+<div class="tab-image-wrapper">
+  {{ fields.field_image.content }}
+</div>
+<div class="tab-content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="tab-description">
+          {{ fields.field_interest_description_txt.content }}
+        </div>
+        <div class="tab-links">
+          {{ fields.field_links.content }}
+        </div>
+      </div>
+      <div class="col-md-3">
+        {% if aside_text is not empty %}
+          <div class="aside-text-wrapper">
+            <div class="aside-text-content">
+              <h3>{{ 'Career Facts'|t }}</h3>
+              {{ fields.field_asides_txt.content }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

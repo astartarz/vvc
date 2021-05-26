@@ -1,0 +1,29 @@
+uuid: 5cd6fafb-fafd-44e2-8d89-065c51c7c9c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_degree_type
+    - node.type.certificate_degree
+    - taxonomy.vocabulary.certificate_degree_type
+id: node.certificate_degree.field_certificate_degree_type
+field_name: field_certificate_degree_type
+entity_type: node
+bundle: certificate_degree
+label: 'Certificate/Degree Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      certificate_degree_type: certificate_degree_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

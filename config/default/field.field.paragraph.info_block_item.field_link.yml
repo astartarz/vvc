@@ -1,0 +1,23 @@
+uuid: 2b9baa76-dd8e-4475-a781-6754a5db4f7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.info_block_item
+  module:
+    - link
+id: paragraph.info_block_item.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: info_block_item
+label: 'Thumbnail Link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

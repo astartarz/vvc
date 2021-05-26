@@ -1,0 +1,17 @@
+uuid: 08dffd07-5669-4251-a33f-c330a4379a14
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: mega_menu_thumbnail
+label: 'x. Mega Menu Thumbnail (240x135)'
+effects:
+  766d6da0-9df5-44b3-a14c-3fb65c23426c:
+    uuid: 766d6da0-9df5-44b3-a14c-3fb65c23426c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 240
+      height: 135
+      crop_type: focal_point

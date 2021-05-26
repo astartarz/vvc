@@ -1,0 +1,8 @@
+uuid: 52532339-870c-4c5f-8fcd-9d3905bcb3d4
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph_block
+label: 'x. Site Custom Block'
+revision: 1
+description: ''

@@ -1,0 +1,15 @@
+uuid: 578fa935-c0ea-401f-a076-a367673f5522
+langcode: en
+status: true
+dependencies: {  }
+name: course_image_778x440
+label: 'x. Course Image (778x440)'
+effects:
+  7e51e03d-e082-4091-b69a-6ab6b7a98e38:
+    uuid: 7e51e03d-e082-4091-b69a-6ab6b7a98e38
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 778
+      height: 440
+      anchor: center-center

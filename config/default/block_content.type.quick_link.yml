@@ -1,0 +1,8 @@
+uuid: baa56a05-06a5-45b1-878c-190db1edbacb
+langcode: en
+status: true
+dependencies: {  }
+id: quick_link
+label: 'x. Quick Links'
+revision: 1
+description: 'Use <em>Quick Links</em> for section based quick links.'

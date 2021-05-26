@@ -1,0 +1,36 @@
+uuid: b6e8b592-8be4-426b-8828-742421a5265d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.external_articles_grid.field_link
+    - field.field.paragraph.external_articles_grid.field_title
+    - field.field.paragraph.external_articles_grid.field_view_reference
+    - paragraphs.paragraphs_type.external_articles_grid
+  module:
+    - link
+id: paragraph.external_articles_grid.default
+targetEntityType: paragraph
+bundle: external_articles_grid
+mode: default
+content:
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

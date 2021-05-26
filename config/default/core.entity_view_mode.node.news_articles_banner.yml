@@ -1,0 +1,10 @@
+uuid: 3cf7b1d6-1820-412a-a2bf-d7e4e474d819
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.news_articles_banner
+label: 'News Articles Banner'
+targetEntityType: node
+cache: true

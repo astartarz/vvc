@@ -1,0 +1,19 @@
+uuid: 692fe25e-b237-45d8-9a05-7f6111233296
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.news_banner
+id: paragraph.news_banner.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: news_banner
+label: 'List Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

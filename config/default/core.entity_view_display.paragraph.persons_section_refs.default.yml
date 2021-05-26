@@ -1,0 +1,73 @@
+uuid: 5ccf3737-8165-47e7-bbb1-486105864338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.persons_section_refs.field_node_refs
+    - field.field.paragraph.persons_section_refs.field_title
+    - field.field.paragraph.persons_section_refs.field_view_reference
+    - paragraphs.paragraphs_type.persons_section_refs
+  module:
+    - fences
+    - viewsreference
+id: paragraph.persons_section_refs.default
+targetEntityType: paragraph
+bundle: persons_section_refs
+mode: default
+content:
+  field_node_refs:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: person_section
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_view_reference:
+    weight: 2
+    label: hidden
+    settings:
+      plugin_types:
+        block: block
+        default: 0
+        page: 0
+        rest_export: 0
+        attachment: 0
+        entity_browser: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: viewsreference_formatter
+    region: content
+hidden:
+  search_api_excerpt: true

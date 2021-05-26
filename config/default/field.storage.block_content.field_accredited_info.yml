@@ -1,0 +1,19 @@
+uuid: b9a59e72-f4ed-4558-8a6c-b7e7b1ac648f
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_accredited_info
+field_name: field_accredited_info
+entity_type: block_content
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

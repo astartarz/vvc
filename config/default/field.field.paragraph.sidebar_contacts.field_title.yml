@@ -1,0 +1,19 @@
+uuid: 3c7ad112-ae04-4f8d-a933-5a67973a0274
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.sidebar_contacts
+id: paragraph.sidebar_contacts.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: sidebar_contacts
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

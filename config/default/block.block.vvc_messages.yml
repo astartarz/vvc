@@ -1,0 +1,22 @@
+uuid: 7118a23f-34b2-4ec2-a1f1-9d27325dda7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vvc
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: vvc_messages
+theme: vvc
+region: content_top
+weight: -19
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

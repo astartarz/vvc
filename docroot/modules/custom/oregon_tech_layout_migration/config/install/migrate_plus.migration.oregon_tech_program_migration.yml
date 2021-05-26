@@ -1,0 +1,37 @@
+id: oregon_tech_program_migration
+label: Program
+migration_group: default
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - CSV
+source:
+  plugin: csv
+  path: 'modules/custom/oregon_tech_layout_migration/asserts/csv/programs.csv'
+  ids: [url]
+process:
+  type:
+    plugin: default_value
+    default_value: program
+  status:
+    plugin: default_value
+    default_value: 1
+  moderation_state:
+    plugin: default_value
+    default_value: published
+  title:
+    plugin: default_value
+    default_value: "404 Not Found"
+  field_legacy_path:
+    plugin: str_replace
+    source: url
+    search: 'https://www.oit.edu'
+    replace: ''
+destination:
+  plugin: 'entity:node'
+dependencies:
+  enforced:
+    module:
+      - oregon_tech_layout_migration
+migration_dependencies: {  }

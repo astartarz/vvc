@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Enable Content Moderation workflow transistions to be used by group members.
+ */
+
+/**
+ * Implements hook_group_content_info_alter().
+ */
+function gcontent_moderation_group_content_info_alter(&$info) {
+  if (\Drupal::moduleHandler()->moduleExists('gnode')) {
+    foreach ($info as $id => &$plugin) {
+      if ($plugin['id'] === "group_node") {
+        $plugin['handlers']['permission_provider'] = 'Drupal\gcontent_moderation\Plugin\GroupNodeModerationPermissionProvider';
+      }
+    }
+  }
+}

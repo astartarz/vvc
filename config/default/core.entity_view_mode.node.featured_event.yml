@@ -1,0 +1,10 @@
+uuid: ab901c39-30db-46a4-8f62-b7c0f52bf98e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.featured_event
+label: 'Featured event'
+targetEntityType: node
+cache: true

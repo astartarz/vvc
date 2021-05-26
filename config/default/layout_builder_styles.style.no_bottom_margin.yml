@@ -1,0 +1,10 @@
+uuid: 4bf6110a-273f-49d2-8fa3-8fec871d4ced
+langcode: en
+status: true
+dependencies: {  }
+id: no_bottom_margin
+label: 'No Bottom Margin'
+classes: no-bottom-margin
+type: component
+weight: 4
+block_restrictions: {  }

@@ -1,0 +1,21 @@
+uuid: b7f3f878-d9a5-4039-81d3-47d7624cc5b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_date
+    - node.type.social_post
+  module:
+    - datetime
+id: node.social_post.field_post_date
+field_name: field_post_date
+entity_type: node
+bundle: social_post
+label: 'x. Post Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,27 @@
+uuid: 1f595b86-311e-4718-bf6b-d58716280be0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_events_grid_display
+field_name: field_events_grid_display
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: white_background
+      label: 'White Background'
+    -
+      value: red_background
+      label: 'Red Background'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

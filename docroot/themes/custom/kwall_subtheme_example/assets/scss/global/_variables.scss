@@ -1,0 +1,57 @@
+// stylelint-disable
+
+// Nuetrals
+$black: #242628;
+$white: #fff;
+$gray: #f8f8f8;
+$gray-dark: #f1f1f1;
+$gray-darker: #4a4a4a;
+$gray-light: #eee;
+
+// used in header
+// menu and the-footer
+// and accordion
+$gray-hover-state: #9b9b9b;
+// used in the accordion
+// and on the learn more ctas
+$orange-hover-state: #dc4f12;
+// used in both accordions
+$gray-accordion: #d8d8d8;
+// only used in the nav and
+// the accoridon
+$nav-button-hover: #757575;
+
+// Hues
+$orange: #e85c16;
+$tangerine: #fa9d1a;
+$emerald: #00ab67;
+$navy: #00263e;
+$cyan: #08BAD8;
+$pink: #f696a1;
+$beige: #faf6ed;
+
+//fonts
+$font-memphis: Memphis, sans-serif;
+$font-brandongrotesque: BrandonGrotesque, sans-serif;
+$font-brandontext: BrandonText, sans-serif;
+
+// transitions
+$transition-short: 0.2s;
+$transition-medium: 0.4s;
+$transition-long: 0.6s;
+
+$ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+$ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+
+// Spacing
+$space-small: 10px;
+$space-medium: 20px;
+$space-large: 40px;
+$space-xlarge: 60px;
+$space-xxlarge: 90px;
+
+// Paths
+$svg-path: "../assets/svgs";
+$font-path: "../assets/fonts";
+

@@ -1,0 +1,10 @@
+uuid: 77d2250a-7616-48fe-8a45-711423a50a50
+langcode: en
+status: true
+dependencies: {  }
+id: bottom_hexagon_background
+label: 'Bottom Hexagon Background'
+classes: bottom-hex-bg
+type: section
+weight: 0
+block_restrictions: {  }

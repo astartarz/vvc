@@ -1,0 +1,39 @@
+uuid: d22e4a1c-3ee2-45c6-8897-27a144447324
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.alert.field_active
+    - field.field.node.alert.field_alert_body
+    - field.field.node.alert.field_alert_level
+    - field.field.node.alert.field_expiration_date_alert
+    - field.field.node.alert.field_link
+    - field.field.node.alert.field_not_dismissable
+    - node.type.alert
+  module:
+    - user
+id: node.alert.teaser
+targetEntityType: node
+bundle: alert
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_active: true
+  field_alert_body: true
+  field_alert_level: true
+  field_expiration_date_alert: true
+  field_link: true
+  field_not_dismissable: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,30 @@
+uuid: fe1618f7-dafa-4248-aefa-dbea1ce34188
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_social_network
+field_name: field_social_network
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: facebook
+      label: Facebook
+    -
+      value: instagram
+      label: Instagram
+    -
+      value: twitter
+      label: Twitter
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

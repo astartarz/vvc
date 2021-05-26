@@ -1,0 +1,8 @@
+uuid: b9e34a28-3f27-4765-9a8f-939eb912ed48
+langcode: en
+status: true
+dependencies: {  }
+id: social_block
+label: 'Social Block'
+revision: 1
+description: 'For Social Icons in Utility Nav and Footer'

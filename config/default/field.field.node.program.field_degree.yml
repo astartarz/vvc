@@ -1,0 +1,21 @@
+uuid: 7575d4f2-de6b-49c7-b681-267115045c6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degree
+    - node.type.program
+  module:
+    - options
+id: node.program.field_degree
+field_name: field_degree
+entity_type: node
+bundle: program
+label: Degree
+description: 'The field for internal use only.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

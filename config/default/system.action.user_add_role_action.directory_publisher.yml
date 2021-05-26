@@ -1,0 +1,14 @@
+uuid: 39fca6d4-f0dd-4712-8034-f96a5d6c4bca
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.directory_publisher
+  module:
+    - user
+id: user_add_role_action.directory_publisher
+label: 'Add the Directory Publisher role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: directory_publisher

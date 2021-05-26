@@ -1,0 +1,23 @@
+uuid: 251f5ce2-1d51-44d5-b13e-b78ae7e51986
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_hidden
+    - node.type.person
+id: node.person.field_person_hidden
+field_name: field_person_hidden
+entity_type: node
+bundle: person
+label: 'x. Hidden'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

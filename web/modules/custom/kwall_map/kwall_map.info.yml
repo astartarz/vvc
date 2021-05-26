@@ -1,0 +1,9 @@
+name: KWALL Custom Map Module
+description: Creates a custom map block and view page
+package: KWALL
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:views

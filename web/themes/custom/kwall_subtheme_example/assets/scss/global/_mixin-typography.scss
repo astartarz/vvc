@@ -1,0 +1,105 @@
+@mixin heading-style-1 {
+  font-family: $font-brandongrotesque;
+  font-size: rem-calc(44px);
+  font-weight: 700;
+  line-height: (52 / 44);
+  text-transform: uppercase;
+
+  @include breakpoint(large) {
+    font-size: rem-calc(60px);
+    line-height: (72 / 60);
+  }
+}
+
+@mixin heading-style-2 {
+  font-family: $font-brandongrotesque;
+  font-size: rem-calc(36px);
+  font-weight: 700;
+  line-height: (44 / 36);
+  text-transform: uppercase;
+
+  @include breakpoint(large) {
+    font-size: rem-calc(46px);
+    line-height: (46 / 46);
+  }
+}
+
+@mixin heading-style-3 {
+  font-family: $font-brandongrotesque;
+  font-size: rem-calc(24px);
+  font-weight: 700;
+  line-height: (28 / 24);
+
+  @include breakpoint(large) {
+    font-size: rem-calc(36px);
+    line-height: (40 / 36);
+  }
+}
+
+@mixin heading-style-4 {
+  font-family: $font-brandongrotesque;
+  font-size: rem-calc(24px);
+  font-weight: 700;
+  line-height: (28 / 24);
+}
+
+@mixin heading-style-5 {
+  font-family: $font-memphis;
+  font-size: rem-calc(24px);
+  font-weight: 500;
+  line-height: (22 / 18);
+  text-transform: uppercase;
+  letter-spacing: rem-calc(3px);
+}
+
+@mixin heading-style-6 {
+  font-family: $font-memphis;
+  font-size: rem-calc(14px);
+  font-weight: 500;
+  line-height: (20 / 14);
+  text-transform: uppercase;
+  letter-spacing: rem-calc(2px);
+}
+
+@mixin heading-style-7 {
+  font-family: $font-brandongrotesque;
+  font-size: rem-calc(12px);
+  font-weight: 700;
+  line-height: (20 / 12);
+  text-transform: uppercase;
+  letter-spacing: rem-calc(2px);
+}
+
+@mixin text-style-1 {
+  font-family: $font-brandontext;
+  font-size: rem-calc(18px);
+  font-weight: 500;
+  line-height: (24 / 18);
+}
+
+@mixin text-style-2 {
+  font-family: $font-brandongrotesque;
+  font-size: rem-calc(20pt);
+  font-weight: 500;
+  line-height: (24 / 18);
+
+  @include breakpoint(large) {
+    font-size: rem-calc(24px);
+    line-height: (30 / 24);
+  }
+}
+@mixin text-style-3 {
+  font-family: $font-brandontext;
+  font-size: rem-calc(16px);
+  font-weight: 500;
+  line-height: (24 / 18);
+}
+
+@mixin button-text-style-1 {
+  font-family: $font-brandongrotesque;
+  font-size: rem-calc(14px);
+  font-weight: 700;
+  line-height: (17 / 14);
+  text-transform: uppercase;
+  letter-spacing: rem-calc(1.5px);
+}

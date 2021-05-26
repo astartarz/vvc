@@ -1,0 +1,10 @@
+uuid: 44985ffb-8fa7-497d-8ddf-8e181654740c
+langcode: en
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Sidebar Contacts</em> paragraph.'
+behavior_plugins: {  }

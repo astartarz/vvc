@@ -1,0 +1,23 @@
+uuid: 5b688c57-6dcf-49f2-a460-f0349e92f290
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_is_staff
+    - node.type.person
+id: node.person.field_person_is_staff
+field_name: field_person_is_staff
+entity_type: node
+bundle: person
+label: 'x. Is staff'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

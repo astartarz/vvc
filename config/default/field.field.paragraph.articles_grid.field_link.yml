@@ -1,0 +1,23 @@
+uuid: 91720d22-cc2e-4f20-909d-149715cff8fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.articles_grid
+  module:
+    - link
+id: paragraph.articles_grid.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: articles_grid
+label: '"View More" Button'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

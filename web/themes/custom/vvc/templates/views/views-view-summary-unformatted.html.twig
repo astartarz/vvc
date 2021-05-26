@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Default theme implementation for unformatted summary links.
+ *
+ * Available variables:
+ * - rows: The rows contained in this view.
+ *   - url: The URL to this row's content.
+ *   - count: The number of items this summary item represents.
+ *   - separator: A separator between each row.
+ *   - attributes: HTML attributes for a row.
+ *   - active: A flag indicating whether the row is active.
+ * - options: Flags indicating how each row should be displayed. This contains:
+ *   - count: A flag indicating whether the row's 'count' should be displayed.
+ *   - inline: A flag indicating whether the item should be wrapped in an inline
+ *     or block level HTML element.
+ *
+ * @see template_preprocess_views_view_summary_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{#
+/**
+ * @file
+ * Theme override for unformatted summary links.
+ *
+ * Available variables:
+ * - rows: The rows contained in this view.
+ *   - url: The URL to this row's content.
+ *   - count: The number of items this summary item represents.
+ *   - separator: A separator between each row.
+ *   - attributes: HTML attributes for a row.
+ *   - active: A flag indicating whether the row is active.
+ * - options: Flags indicating how each row should be displayed. This contains:
+ *   - count: A flag indicating whether the row's 'count' should be displayed.
+ *   - inline: A flag indicating whether the item should be wrapped in an inline
+ *     or block level HTML element.
+ *
+ * @see template_preprocess_views_view_summary_unformatted()
+ */
+#}
+
+{% set current_path = path('<current>') %}
+
+{% set letters = range ('A', 'Z') %}
+{% set existing_letters = [] %}
+{% for row in rows %}
+  {% set existing_letters =
+    existing_letters|merge({
+    (row.link): { 'item': row }
+  })
+  %}
+{% endfor %}
+
+{{ '<span' }} class="views-summary views-summary-unformatted">
+<a href="{{ current_path }}" class="reset-all">{{ 'All'|t }}</a>
+{{ '</span>' }}
+
+{% for letter in letters  %}
+  {{ '<span' }} class="views-summary views-summary-unformatted">
+    {% if letter in existing_letters|keys %}
+      <a href="{{ current_path }}?last-name={{ existing_letters[letter]['item'].link }}"{{ existing_letters[letter]['item'].attributes.addClass(existing_letters[letter]['item'].active ? 'is-active')|without('href') }}>{{ existing_letters[letter]['item'].link }}</a>
+    {% else %}
+      <a href="#" class="no-itmes">{{ letter }}</a>
+    {% endif %}
+  {{ '</span>' }}
+{% endfor %}
+

@@ -1,0 +1,338 @@
+/**
+ * @file
+ * Styleguide
+ *
+ ****
+ *
+ * Styleguide Page Styles
+ * Demo Grid
+ * Styleguide Typography
+ * Welcome page
+ * Styleguide Header & Footer
+ * Code Blocks
+ * Grid
+ *
+ ****
+
+
+
+
+/****
+ *
+ * Styleguide Page Styles
+ *
+ ****/
+.style-wrap {
+	min-width: 300px;
+	max-width: $width-page;
+	margin: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+
+
+
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	word-wrap: normal;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+
+/****
+ *
+ * Demo Grid
+ *
+ ****/
+.layout-container {
+	overflow: hidden;
+	min-height: 200px;
+	position: relative;
+	
+	.demo-grid {
+		width: 100%;
+	}
+	.grid-inner {
+		height: 100%;
+		left: 0;
+		margin: auto;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+	.demo-item {
+		background-color: transparentize($color-blue , 0.8);
+		height: 100%;
+		min-height: 200px;
+		padding-top: 10px;
+		text-align: center;
+		@media #{$mobile} {
+			min-height: 50px;
+		}
+	}
+	.row {
+		height: 100%;
+	}
+	.demo-col {
+		height: 100%;
+		margin-bottom: 5px;
+	}
+}
+ 
+ 
+ 
+ 
+/****
+ *
+ * Styleguide Typography
+ *
+ ****/
+.style-header {
+	clear: both;
+	color: #999;
+	display: inline-block;
+	font-family: $font-helvetica;
+	font-size: 1.8rem;
+	letter-spacing: 1px;
+	line-height: 1.2em;
+	margin-bottom: 20px;
+	margin-top: 90px;
+	padding: 0px;
+	padding-left: 20px;
+	text-transform: uppercase;
+	text-indent: none;
+	width: 100%;
+	@media #{$mobile} {
+		margin-bottom: 20px;
+		margin-top: 60px;
+	}
+}
+div .style-header {
+	padding-left: 0;
+}
+
+.style-caption {
+	color: #999;
+	font-size: 1.6rem;
+	margin-bottom: 30px;
+	margin-top: -30px;
+}
+
+.two-letter {
+	font-size: 80px;
+	line-height: 58px;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.body-font {
+	font-family: $font-helvetica;
+	font-style: regular;
+	font-weight: normal;
+}
+.header-font {
+	font-family: $font-helvetica;
+	font-style: regular;
+	font-weight: bold;
+}
+
+.regular {
+	font-weight: normal;
+	font-style: normal;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.italic {
+	font-style: italic;
+}
+
+span.inline-label {
+	float: left;
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+
+
+
+/****
+ *
+ * Welcome page
+ *
+ ****/
+#welcome {
+	text-align: center;
+	margin: 0 auto 5rem auto;
+	max-width: 600px;
+  p {
+  	color: #8c8c8c;
+  }
+  img {
+  	margin-bottom: 20px;
+  	max-width: 200px;
+  }
+}
+
+/* Invision */
+#links {
+	background-color: $color-style-light-grey;
+	padding: 40px 0;
+	text-align: center;
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	h3 {
+		margin-bottom: 20px;
+	}
+	.button {
+		margin-bottom: 10px;
+		width: 100%;
+	}
+}
+
+
+
+
+/****
+ *
+ * Styleguide Header & Footer
+ *
+ ****/
+.style-navbar {
+	font-size: 1.4rem;
+	.btn {
+		appearance: none;
+		-webkit-appearance: none;
+	}
+	a {
+		text-decoration: none;
+	}
+	.navbar-brand {
+		font-size: 1.6rem;
+		span {
+			&:before {
+				content: "|";
+				padding-right: 20px;
+			}
+		}
+	}
+	img {
+		margin-right: 20px;
+		margin-left: 20px;
+		max-width: 90px;
+		vertical-align: bottom;
+	}
+	.navbar-nav .nav-item .nav-link {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.style-footer {
+	border-top: 1px solid $color-style-light-grey;
+	clear: both;
+	font-size: 1.2rem;
+	margin-top: 5rem;
+	padding: 2rem 2% 1rem;
+	text-transform: uppercase;
+}
+
+
+
+
+/****
+ *
+ * Code Blocks
+ *
+ ****/
+pre {
+	background: #f9fafc;
+	border-color: #e0e6ed;
+	border-radius: 2px;
+	font-size: 1.2rem;
+	font-weight: normal;
+	margin: 1rem 0 3rem 0;
+	position: relative;
+	&.scss {
+		&:after {
+			background: $color-style-light-grey;
+			color: $color-body;
+			content: "SCSS";
+			font-size: 1rem;
+			padding: 0 1px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	&.html {
+		&:after {
+			background: $color-style-light-grey;
+			color: $color-body;
+			content: "HTML";
+			font-size: 1rem;
+			padding: 0 1px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}
+
+.hljs {
+	background: none;
+	padding: 10px;
+}
+
+.description {
+	color: #777;
+	font-size: 1.2rem;
+	line-height: 1.6;
+}
+
+
+
+
+/****
+ *
+ * Grid
+ *
+ ****/
+
+.col-xl,
+.col-lg,
+.col-md,
+.col-sm,
+.col-xs,
+.col {
+	&-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	padding-left: 10px;
+	padding-right: 10px; 
+}
+
+.row {
+	margin-right: -10px;
+	margin-left: -10px;
+}
+

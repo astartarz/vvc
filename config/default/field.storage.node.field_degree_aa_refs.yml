@@ -1,0 +1,19 @@
+uuid: c3f80c5e-f72a-469e-8956-694e148f3dec
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_degree_aa_refs
+field_name: field_degree_aa_refs
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

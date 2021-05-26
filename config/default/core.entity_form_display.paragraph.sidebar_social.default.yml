@@ -1,0 +1,34 @@
+uuid: e68db273-eb0a-4d9d-bb7c-2646bc4081de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_social.field_links
+    - field.field.paragraph.sidebar_social.field_title
+    - paragraphs.paragraphs_type.sidebar_social
+  module:
+    - link
+id: paragraph.sidebar_social.default
+targetEntityType: paragraph
+bundle: sidebar_social
+mode: default
+content:
+  field_links:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

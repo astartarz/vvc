@@ -1,0 +1,21 @@
+uuid: 92ea8542-9100-4142-8561-ebdf787754c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_title
+    - node.type.location
+id: node.location.field_section_title
+field_name: field_section_title
+entity_type: node
+bundle: location
+label: 'x. Section Title'
+description: 'This will be displayed in the "<em>Hero Banner Section</em>" if "<em>Hero Slider</em>" is not in use. '
+required: false
+translatable: true
+default_value:
+  -
+    value: Locations
+default_value_callback: ''
+settings: {  }
+field_type: string

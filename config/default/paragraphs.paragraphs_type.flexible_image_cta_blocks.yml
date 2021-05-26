@@ -1,0 +1,10 @@
+uuid: 60ff95f8-d797-4147-92ee-ff9215b573d7
+langcode: en
+status: true
+dependencies: {  }
+id: flexible_image_cta_blocks
+label: 'Flexible CTA Blocks with Images'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

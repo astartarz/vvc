@@ -1,0 +1,15 @@
+uuid: cc760f7c-8050-4603-8369-479c209ab582
+langcode: en
+status: true
+dependencies: {  }
+name: interior_slideshow_slide
+label: 'x. Interior Slideshow Slide (854x480)'
+effects:
+  a82a7357-0665-435c-af96-732341e27954:
+    uuid: a82a7357-0665-435c-af96-732341e27954
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 854
+      height: 480
+      anchor: center-center

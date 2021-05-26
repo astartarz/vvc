@@ -1,0 +1,16 @@
+diff --git a/src/GroupMenuConfigOverrides.php b/src/GroupMenuConfigOverrides.php
+index f4a9eeb..73481c3 100644
+--- a/src/GroupMenuConfigOverrides.php
++++ b/src/GroupMenuConfigOverrides.php
+@@ -211,7 +211,11 @@ protected function getUserGroupMenuIdsByGroupTypes(array $group_types) {
+     foreach ($group_contents as $group_content) {
+       /** @var \Drupal\group\Entity\GroupContentInterface $group_content */
+       if ($group_content->getGroup()->hasPermission("update $plugin_id entity", $this->currentUser)) {
+-        $this->userGroupMenuIds[$this->currentUser->id()][$group_types_cid][] = $group_content->getEntity()->id();
++        if ($group_content->getEntity() == null) { 
++          continue;
++        } else {
++          $this->userGroupMenuIds[$this->currentUser->id()][$group_types_cid][] = $group_content->getEntity()->id();
++        }
+       }
+     }

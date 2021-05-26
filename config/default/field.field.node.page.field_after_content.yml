@@ -1,0 +1,171 @@
+uuid: af6e255a-5e93-45bc-96f5-15e4c08cb6ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_after_content
+    - node.type.page
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.embed_code
+    - paragraphs.paragraphs_type.image_carousel
+    - paragraphs.paragraphs_type.persons_section_refs
+    - paragraphs.paragraphs_type.persons_section_taxonomy
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.views
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.page.field_after_content
+field_name: field_after_content
+entity_type: node
+bundle: page
+label: 'Interior Paragraphs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      embed_code: embed_code
+      image_carousel: image_carousel
+      persons_section_refs: persons_section_refs
+      persons_section_taxonomy: persons_section_taxonomy
+      quote: quote
+      views: views
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      academic_tabs:
+        weight: -60
+        enabled: false
+      accordion:
+        enabled: true
+        weight: -87
+      accordion_item:
+        weight: -75
+        enabled: false
+      adjustable_media_and_content:
+        weight: -74
+        enabled: false
+      articles_grid:
+        weight: -57
+        enabled: false
+      contact:
+        weight: -67
+        enabled: false
+      embed_code:
+        enabled: true
+        weight: -86
+      events_grid:
+        weight: -56
+        enabled: false
+      external_articles_grid:
+        weight: -47
+        enabled: false
+      featured_event_grid:
+        weight: -55
+        enabled: false
+      featured_external_articles:
+        weight: -46
+        enabled: false
+      flexible_cta_block:
+        weight: -71
+        enabled: false
+      flexible_cta_blocks:
+        weight: -70
+        enabled: false
+      flexible_image_cta_block:
+        weight: -54
+        enabled: false
+      flexible_image_cta_blocks:
+        weight: -53
+        enabled: false
+      full_width_image_section:
+        weight: -77
+        enabled: false
+      gridder:
+        weight: -69
+        enabled: false
+      gridder_item:
+        weight: -68
+        enabled: false
+      hero_banner:
+        weight: -73
+        enabled: false
+      hero_banner_video_:
+        weight: -52
+        enabled: false
+      hero_slide:
+        weight: -78
+        enabled: false
+      hero_slideshow:
+        weight: -72
+        enabled: false
+      image_carousel:
+        enabled: true
+        weight: -85
+      image_carousel_item:
+        weight: -79
+        enabled: false
+      info_block:
+        weight: -51
+        enabled: false
+      info_block_item:
+        weight: -50
+        enabled: false
+      news_banner:
+        weight: -45
+        enabled: false
+      page_banner:
+        weight: -66
+        enabled: false
+      persons_section_refs:
+        enabled: true
+        weight: -84
+      persons_section_taxonomy:
+        enabled: true
+        weight: -83
+      quick_link:
+        weight: -76
+        enabled: false
+      quote:
+        enabled: true
+        weight: -82
+      sidebar_contacts:
+        weight: -65
+        enabled: false
+      sidebar_links:
+        weight: -63
+        enabled: false
+      sidebar_social:
+        weight: -62
+        enabled: false
+      social_grid:
+        weight: -64
+        enabled: false
+      statistics:
+        weight: -49
+        enabled: false
+      statistics_item:
+        weight: -48
+        enabled: false
+      stories:
+        weight: -61
+        enabled: false
+      tab:
+        weight: -59
+        enabled: false
+      tabs:
+        weight: -58
+        enabled: false
+      views:
+        enabled: true
+        weight: -81
+      wysiwyg:
+        enabled: true
+        weight: -80
+field_type: entity_reference_revisions

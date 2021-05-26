@@ -1,0 +1,29 @@
+uuid: 0eb293af-b3d0-493e-9817-909d4ec565bb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_block:76e08c09-eacc-42fc-85c3-9a02bf1e4d71'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - kwall_subtheme_example
+third_party_settings:
+  block_class:
+    classes: footer-social-links
+id: footersociallinks
+theme: kwall_subtheme_example
+region: footer
+weight: -12
+provider: null
+plugin: 'block_content:76e08c09-eacc-42fc-85c3-9a02bf1e4d71'
+settings:
+  id: 'block_content:76e08c09-eacc-42fc-85c3-9a02bf1e4d71'
+  label: 'Footer social links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: b3f69aa4-4849-4a7c-9bec-2b1ef68500ac
+langcode: en
+status: true
+dependencies: {  }
+id: technology-side-menu
+label: 'Technology Side Menu'
+description: 'Tech side menu '
+locked: false

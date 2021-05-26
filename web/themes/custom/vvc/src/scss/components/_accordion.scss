@@ -1,0 +1,75 @@
+.paragraph--type--accordion {
+  .card {
+    border: none;
+    margin-bottom: 4px;
+
+    .card-header {
+      background: transparent;
+      border: none;
+      padding: 0;
+
+
+      a {
+        @include buttontext;
+        color: $color-black;
+        border-radius: 0;
+        border: 2px solid $color-extra-light-gray;
+        padding: 18px 20px;
+        display: flex;
+        @include media-breakpoint-up(md) {
+          padding: 20px 30px;
+        }
+
+        &:not(.collapsed){
+          border-bottom: 10px solid $color-light-red;
+          border-left: 10px solid $color-light-red;
+          color: $color-light-red;
+          padding-left: 20px;
+          padding-right: 20px;
+          &:before{
+            content: '';
+            height: 20px;
+            width: 10px;
+            background: $white;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-right: 2px solid $color-extra-light-gray;
+          }
+          &:after{
+            content: "";
+            background: $white;
+            position: absolute;
+            right: 0;
+            top: 61px;
+            width: 10px;
+            height: 14px;
+            border-top: 2px solid $color-extra-light-gray;
+
+            @include media-breakpoint-up(md){
+             top: 64px;
+            }
+          }
+          svg{
+            right: 20px;
+            transform: rotate(180deg);
+          }
+        }
+
+        svg {
+          position: absolute;
+          right: 30px;
+          transition: .3s;
+        }
+      }
+    }
+    .card{
+      p{
+        @include body;
+        color: $color-dark-gray;
+
+      }
+    }
+  }
+}

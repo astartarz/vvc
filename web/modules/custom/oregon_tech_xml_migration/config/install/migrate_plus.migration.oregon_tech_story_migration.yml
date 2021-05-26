@@ -1,0 +1,87 @@
+id: oregon_tech_story_migration
+label: Story
+migration_group: default
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  urls: 'modules/custom/oregon_tech_xml_migration/asserts/xml/StudentProfileExport.xml'
+  data_parser_plugin: xml
+  item_selector: /ArrayOfStudentProfile/StudentProfile
+  fields:
+    - name: url
+      label: URL
+      selector: Url
+    - name: first_name
+      label: 'First Name'
+      selector: FirstName
+    - name: last_name
+      label: 'Last Name'
+      selector: LastName
+    - name: year
+      label: 'Graduation Year'
+      selector: GraduationYear
+    - name: hometown
+      label: Hometown
+      selector: Hometown
+    - name: thumb
+      label: 'Thumbnail Image URL'
+      selector: ThumbnailImageURL
+    - name: image
+      label: 'Full Size Image URL'
+      selector: FullSizeImageURL
+    - name: type
+      label: 'Profile Type'
+      selector: ProfileType
+    - name: teaser
+      label: 'Teaser Text'
+      selector: TeaserText
+    - name: body
+      label: Biography
+      selector: Biography
+    - name: categories
+      label: Categories
+      selector: Categories
+  ids:
+    url:
+      type: string
+process:
+  type:
+    plugin: default_value
+    default_value: story
+  status:
+    plugin: default_value
+    default_value: 1
+  title:
+    plugin: title
+    source:
+      - first_name
+      - last_name
+  field_graduating_class: year
+  field_hometown: hometown
+  field_story_image:
+    plugin: media
+    source: image
+  field_story_type:
+    plugin: term
+    source: type
+  field_story_quote: teaser
+  body:
+    plugin: textarea
+    source: body
+  field_story_category:
+    plugin: term
+    source: categories
+  field_campus:
+    plugin: term
+    source: categories
+  field_program: url
+  field_legacy_path:
+    plugin: legacy_path
+    source: url
+destination:
+  plugin: 'entity:node'
+dependencies:
+  enforced:
+    module:
+      - oregon_tech_xml_migration
+migration_dependencies: {  }

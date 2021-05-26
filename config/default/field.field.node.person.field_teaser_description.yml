@@ -1,0 +1,19 @@
+uuid: 03838953-bace-467b-a4dd-8db495aa7667
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_description
+    - node.type.person
+id: node.person.field_teaser_description
+field_name: field_teaser_description
+entity_type: node
+bundle: person
+label: 'Teaser Text'
+description: 'Used in <em>Person Section</em> paragraph.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

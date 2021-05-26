@@ -1,0 +1,17 @@
+uuid: 40d99fbc-6614-4136-9c43-8cfe6c5bf321
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: horizontal_styling
+label: 'x. Horizontal Styling (600x400)'
+effects:
+  25923e24-b20e-4ab5-b96b-e5d5fb618f2e:
+    uuid: 25923e24-b20e-4ab5-b96b-e5d5fb618f2e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      crop_type: focal_point

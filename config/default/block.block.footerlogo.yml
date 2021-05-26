@@ -1,0 +1,29 @@
+uuid: c9b55ba2-0baa-404e-aeff-d122d31d561f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7806ecac-9fd8-490b-bf4f-a303c8ed553a'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - kwall_subtheme_example
+third_party_settings:
+  block_class:
+    classes: footer-logo
+id: footerlogo
+theme: kwall_subtheme_example
+region: footer
+weight: -14
+provider: null
+plugin: 'block_content:7806ecac-9fd8-490b-bf4f-a303c8ed553a'
+settings:
+  id: 'block_content:7806ecac-9fd8-490b-bf4f-a303c8ed553a'
+  label: 'Footer logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,15 @@
+uuid: 5af16c8e-f365-400d-b4c6-957de0f16098
+langcode: en
+status: true
+dependencies: {  }
+name: inline_media_450w
+label: 'x. Inline Media: 450w'
+effects:
+  91fa399f-c923-4318-aba0-54adb0e27975:
+    uuid: 91fa399f-c923-4318-aba0-54adb0e27975
+    id: image_scale
+    weight: 1
+    data:
+      width: 450
+      height: null
+      upscale: false

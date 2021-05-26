@@ -1,0 +1,21 @@
+uuid: 1c23492c-ef62-4dac-9997-237663ae1c7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_group
+    - group_content_menu.group_content_menu_type.site_group_menu
+  module:
+    - group_content_menu
+id: group_content_type_ade867f73c90b
+label: 'Site Group: Group menu (Site Group Menu)'
+description: 'Adds <em class="placeholder">Site Group Menu</em> menu items to groups.'
+group_type: site_group
+content_plugin: 'group_content_menu:site_group_menu'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false
+  auto_create_group_menu: true
+  auto_create_home_link: false
+  auto_create_home_link_title: Home

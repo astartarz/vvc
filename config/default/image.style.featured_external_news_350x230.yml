@@ -1,0 +1,17 @@
+uuid: 6d4c2b4a-a71e-4741-92f9-1f426e47e2ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: featured_external_news_350x230
+label: 'Featured External News (350x230)'
+effects:
+  1c25592e-bb5a-4b97-bca6-cd54ec8812c7:
+    uuid: 1c25592e-bb5a-4b97-bca6-cd54ec8812c7
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 230
+      crop_type: focal_point

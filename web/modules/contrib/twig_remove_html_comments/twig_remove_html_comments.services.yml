@@ -1,0 +1,5 @@
+services:
+  twig_remove_html_comments.remove_html_comments:
+    class: Drupal\twig_remove_html_comments\TwigExtension\RemoveHtmlComments
+    tags:
+      - { name: twig.extension }

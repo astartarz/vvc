@@ -1,0 +1,10 @@
+uuid: 2c4ec7ff-4978-4d53-a76f-2763d80d4d35
+langcode: en
+status: true
+dependencies: {  }
+id: group_menu
+label: 'Group Menu'
+classes: "block-menu\r\nnavigation"
+type: component
+weight: 3
+block_restrictions: {  }

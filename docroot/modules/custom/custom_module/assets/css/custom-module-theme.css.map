@@ -1,0 +1,1 @@
+{"version":3,"file":"custom-module-theme.css","sources":["custom-module-theme.scss"],"sourcesContent":["#page {\n\tbackground: #333333 !important;\n}"],"names":[],"mappings":"AAAA,AAAA,KAAK,CAAC;EACL,UAAU,EAAE,kBAAkB;CAC9B","sourceRoot":"/source/"}

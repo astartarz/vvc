@@ -1,0 +1,86 @@
+.paragraph--type--info-block {
+  .thumbnail-links {
+    display: flex;
+    flex-flow: row wrap;
+
+    .paragraph--type--info-block-item {
+      position: relative;
+      flex: 0 0 33.33%;
+      margin-bottom: 30px;
+      @media #{$mobile} {
+        flex: 0 0 100%;
+      }
+
+      .content-wrapper {
+        display: flex;
+        // flex-flow: row wrap;
+        align-items: center;
+
+        .image-content {
+          margin-right: 10px;
+
+          .field--name-field-media-image {
+            img {
+              width: 60px;
+              height: 60px;
+              border-radius: 100%;
+            }
+          }
+        }
+
+        .link-content {
+          a {
+            font-family: $font-mont;
+            color: $color-black;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 1.45px;
+
+            &:hover {
+              color: $color-red;
+            }
+          }
+        }
+      }
+      .field-caption {
+        display: none;
+        &.active {
+          @include media-breakpoint-up(md) {
+            display: block;
+          }
+          width: 400px;
+          position: absolute;
+          background: white;
+          margin: 0;
+          padding: 20px;
+          border: 3px solid rgba(225, 224, 225, 0.9);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+          text-align: left;
+          transform: translate(-50%, 0);
+          z-index: 9;
+          margin-left: 50%;
+          bottom: 90px;
+          font-size: 15px;
+          line-height: 21px;
+          font-family: $font-open;
+          &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 29px solid white;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -29px;
+            filter: drop-shadow(0px 4px 0px rgba(225, 224, 225, 0.9));
+          }
+        }
+      }
+    }
+  }
+}

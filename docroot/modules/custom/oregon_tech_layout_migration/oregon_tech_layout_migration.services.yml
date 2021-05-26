@@ -1,0 +1,5 @@
+services:
+  oregon_tech_layout_migrations.redirect:
+    class: Drupal\oregon_tech_layout_migration\EventSubscriber\RedirectSubscriber
+    tags:
+      - { name: event_subscriber }

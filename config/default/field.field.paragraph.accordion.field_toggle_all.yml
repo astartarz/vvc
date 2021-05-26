@@ -1,0 +1,23 @@
+uuid: e74aee88-5c17-4cef-8ab8-f7cbd8def4e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_toggle_all
+    - paragraphs.paragraphs_type.accordion
+id: paragraph.accordion.field_toggle_all
+field_name: field_toggle_all
+entity_type: paragraph
+bundle: accordion
+label: 'Toggle All'
+description: 'Add ability to toggle all accordion items open/close'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,35 @@
+uuid: a1d437d7-eb4f-470b-87a5-7d18122fc093
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - kwall_subtheme_example
+third_party_settings:
+  block_class:
+    classes: footer-menu
+id: kwall_subtheme_example_footer
+theme: kwall_subtheme_example
+region: footer
+weight: -13
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: 'Footer Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'footer:'
+  suggestion: footer
+  label_type: block
+  label_link: false
+visibility: {  }

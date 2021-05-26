@@ -1,0 +1,17 @@
+uuid: 1c012b59-7be8-436c-81d4-dee370e0b200
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: article_news_banner_685x385
+label: 'Article News Banner (685x385)'
+effects:
+  e933622b-d35c-4607-aa64-398049ae62b3:
+    uuid: e933622b-d35c-4607-aa64-398049ae62b3
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 685
+      height: 385
+      crop_type: focal_point

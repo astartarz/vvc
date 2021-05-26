@@ -1,0 +1,46 @@
+name: kwall
+type: theme
+description: 'A custom theme built by KWALL using Bootstrap 4, Font Awesome 4, Flexslider , Slick slider, Scrollmagic, Isotope, NPM, Gulp, SCSS(source files need to be compiled).'
+core: 8.x
+logo: 'assets/images/logo.png'
+
+libraries:
+  - kwall/default
+  - kwall/bootstrap
+  - kwall/flexslider
+  - kwall/slickslider
+  - kwall/fontawesome
+  - kwall/scrollmagic
+  - kwall/isotope
+  - kwall/gridder
+
+base theme: classy
+
+regions:
+  alerts: 'Alerts'
+  header: 'Header'
+  slide_in_navigation: 'Slide In Navigation'
+  hero: 'Hero'
+  content_top: 'Content Top'
+  content: 'Content'
+  sidebar_left: 'Sidebar left'
+  sidebar_right: 'Sidebar right'
+  content_bottom: 'Content Bottom'
+  footer: 'Footer'
+  footer_copyright: 'Copyright'
+
+features:
+  - favicon
+  - logo
+
+libraries-override:
+  tb_megamenu/form.font-awesome: false
+  tb_megamenu/theme.tb_megamenu:
+    css:
+      theme:
+        https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css: false
+
+ckeditor_stylesheets:
+  - //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
+  - //maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css
+  - assets/css/styles.css

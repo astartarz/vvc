@@ -1,0 +1,11 @@
+uuid: 43241b78-8f12-4042-9a7c-84641d4e96e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.interest
+id: node.interest
+target_entity_type_id: node
+target_bundle: interest
+default_langcode: site_default
+language_alterable: false

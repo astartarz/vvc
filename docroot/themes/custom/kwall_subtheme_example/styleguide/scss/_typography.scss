@@ -1,0 +1,144 @@
+/**
+ * @file
+ * Elements
+ *
+ ****
+ *
+ * Typography
+ * Lists 
+ *
+ ****
+*/
+
+
+
+
+/****
+ *
+ * Typography
+ *
+ ****/
+html {
+	font-size: 62.5%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: $font-helvetica;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	color: $color-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color-header;
+	font-family: $font-helvetica;
+	letter-spacing: 0;
+}
+
+h1 {
+	font-family: $font-helvetica;
+	font-size: $font-h1;
+	font-weight: bold;
+	line-height: 1.2;
+}
+h2 {
+	font-family: $font-helvetica;
+	font-size: $font-h2;
+	font-weight: bold;
+	line-height: 1.2;
+}
+h3 {
+	font-family: $font-helvetica;
+	font-size: $font-h3;
+	font-weight: bold;
+	line-height: 1.2;
+}
+h4 {
+	font-family: $font-helvetica;
+	font-size: $font-h4;
+	font-weight: bold;
+	line-height: 1.2;
+}
+h5 {
+	font-family: $font-helvetica;
+	font-size: $font-h5;
+	font-weight: bold;
+	line-height: 1;
+}
+h6 {
+	font-family: $font-helvetica;
+	font-size: $font-h6;
+	font-weight: bold;
+	line-height: 1;
+}
+
+.lead {
+	font-family: $font-helvetica;
+	font-size: 2.2rem;
+	line-height: 1.6;
+}
+
+a {
+	color: $color-blue;
+	text-decoration: underline;
+	&:visited {
+		color: $color-blue;
+  	background-color: auto;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+  	color: $color-black;
+  	text-decoration: none;
+  }
+}
+
+.more-link a,
+.post-link a {
+		color: $color-orange;
+		font-weight: bold;
+}
+
+hr {
+	border-color: $color-blue;
+}
+
+
+
+
+/****
+ *
+ * Lists
+ *
+ ****/
+ul li,
+ol li {
+	line-height: 1.6;
+}
+
+ul {
+  list-style-image: url('../images/bullet.png');
+
+  ul {
+    list-style-image: url('../images/bullet-level-2.png');
+
+    ul {
+	    list-style-image: url('../images/bullet-level-3.png');
+
+      ul {
+  	    list-style-image: url('../images/bullet-level-4.png');
+      }
+    }
+  }
+}
+
+ol li {
+	padding-left: 15px;
+}

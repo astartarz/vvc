@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<title>Barstow Community College | Styleguide</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="https://fontastic.s3.amazonaws.com/4tEacyM6HcjKSoAvFtbG4c/icons.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://use.fontawesome.com/38eaee5b57.js"></script>
+
+<link href="css/solarized-light.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+	$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(),
+  $( "#tabs" ).tabs(),
+  $( "#accordion" ).accordion();
+});
+</script>
+
+<link href="css/style.css" rel="stylesheet">
+<script src="scripts/barstow.js"></script>
+
+</head>
+<body>
+
+<!--NAVIGATION-->
+<nav class="style-navbar navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="index.html"><img alt="Brand" src="images/logo.png"><span>Styleguide</span></a>
+          </div>
+            <a type="button" class="navbar-toggle collapsed btn btn-action" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="active" href="colors.html">Colors</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="contentlists.html">Content List</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="wysiwyg.html">wysiwyg</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--STYLEGUIDE CONTENT-->
+<div class="style-wrap">
+<h1>Colors</h1>
+<p>A collection of Barstow Community College's colors. The badges in the lower left indicate if the color is accessible at all sizes for black or white. Hover for more information.</p>
+<p><i>Large Text is defined as 18.5px <b>and</b> bold or 24px.</i></p>
+<!--COLORS-->
+<div id="colors">
+  <h2 class="style-header">Primary Colors</h2>
+  <div class="row">
+  	<div class="col-md-4 col-sm-6 bottom color-container">
+      	<div class="color-inner primary1 color-dark access-white-pass mobile-tap access-black-fail">
+  			<p class="color-name">Dark Blue</p>
+  			<p class="color-value">#1A2D57</p>
+  			<span class="color-popup">
+  					<b class="style-pass">pass: </b>Large Text White<br />
+  					<b class="style-pass">pass: </b>Small Text White<br />
+  					<b class="style-fail">fail: </b>Large Text Black<br />
+  					<b class="style-fail">fail: </b>Small Text Black<br />
+  			</span>
+		 </div>
+  	</div>
+  	<div class="col-md-4 col-sm-6 bottom color-container">
+      	<div class="color-inner primary2 color-dark access-white-pass mobile-tap access-black-fail">
+  			<p class="color-name">Blue</p>
+  			<p class="color-value">#1E3F84</p>
+  			<span class="color-popup">
+  					<b class="style-pass">pass: </b>Large Text White<br />
+  					<b class="style-pass">pass: </b>Small Text White<br />
+  					<b class="style-fail">fail: </b>Large Text Black<br />
+  					<b class="style-fail">fail: </b>Small Text Black<br />
+  			</span>
+		 </div>
+  	</div>
+  	<div class="col-md-4 col-sm-6 bottom color-container">
+      	<div class="color-inner primary3 color-light access-white-fail mobile-tap access-black-pass">
+  			<p class="color-name">Gold</p>
+  			<p class="color-value">#FFDF00</p>
+  			<span class="color-popup">
+  					<b class="style-fail">fail: </b>Large Text White<br />
+  					<b class="style-fail">fail: </b>Small Text White<br />
+  					<b class="style-pass">pass: </b>Large Text Black<br />
+  					<b class="style-pass">pass: </b>Small Text Black<br />
+  			</span>
+		 </div>
+  	</div>
+	<!--SECONDARY COLORS-->
+  </div><!-- .row -->
+  
+  <h2 class="style-header">Secondary Colors</h2>
+  <div class="row">
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+      	<div class="color-inner secondary1 color-dark access-white-pass mobile-tap access-black-fail">
+          	<p class="color-name">Light Blue</p>
+          	<p class="color-value">#4670C9</p>
+          	<span class="color-popup">
+		  					<b class="style-pass">pass: </b>Large Text White<br />
+		  					<b class="style-pass">pass: </b>Small Text White<br />
+		  					<b class="style-pass">pass: </b>Large Text Black<br />
+		  					<b class="style-fail">fail: </b>Small Text Black<br />
+		  			</span>
+		 </div>
+  	</div>
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+      	<div class="color-inner secondary2 color-light access-white-fail mobile-tap access-black-pass">
+          	<p class="color-name">Extra Light Blue</p>
+          	<p class="color-value">#85A5E9</p>
+          	<span class="color-popup">
+		  					<b class="style-fail">fail: </b>Large Text White<br />
+		  					<b class="style-fail">fail: </b>Small Text White<br />
+		  					<b class="style-pass">pass: </b>Large Text Black<br />
+		  					<b class="style-pass">pass: </b>Small Text Black<br />
+		  			</span>
+		 </div>
+  	</div>
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+      	<div class="color-inner secondary3 color-light access-white-fail mobile-tap access-black-pass">
+          	<p class="color-name">Red</p>
+          	<p class="color-value">#E83E3E</p>
+          	<span class="color-popup">
+		  					<b class="style-pass">pass: </b>Large Text White<br />
+		  					<b class="style-fail">fail: </b>Small Text White<br />
+		  					<b class="style-pass">pass: </b>Large Text Black<br />
+		  					<b class="style-pass">pass: </b>Small Text Black<br />
+		  			</span>
+		 </div>
+  	</div>
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+      	<div class="color-inner secondary4 color-light access-white-fail mobile-tap access-black-pass">
+          	<p class="color-name">Orange</p>
+          	<p class="color-value">#E89B3E</p>
+          	<span class="color-popup">
+		  					<b class="style-fail">fail: </b>Large Text White<br />
+		  					<b class="style-fail">fail: </b>Small Text White<br />
+		  					<b class="style-pass">pass: </b>Large Text Black<br />
+		  					<b class="style-pass">pass: </b>Small Text Black<br />
+		  			</span>
+		 </div>
+  	</div>
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+      	<div class="color-inner secondary5 color-light access-white-fail mobile-tap access-black-pass">
+          	<p class="color-name">Aqua</p>
+          	<p class="color-value">#0CCEC3</p>
+          	<span class="color-popup">
+		  					<b class="style-fail">fail: </b>Large Text White<br />
+		  					<b class="style-fail">fail: </b>Small Text White<br />
+		  					<b class="style-pass">pass: </b>Large Text Black<br />
+		  					<b class="style-pass">pass: </b>Small Text Black<br />
+		  			</span>
+		 </div>
+  	</div>
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+      	<div class="color-inner secondary6 color-light access-white-fail mobile-tap access-black-pass">
+          	<p class="color-name">Green</p>
+          	<p class="color-value">#44C472</p>
+          	<span class="color-popup">
+		  					<b class="style-fail">fail: </b>Large Text White<br />
+		  					<b class="style-fail">fail: </b>Small Text White<br />
+		  					<b class="style-pass">pass: </b>Large Text Black<br />
+		  					<b class="style-pass">pass: </b>Small Text Black<br />
+		  			</span>
+		 </div>
+  	</div>
+  </div><!-- .row -->
+  
+  <h2 class="style-header">Neutral Colors</h2>
+  <div class="row">
+	  <div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner primary4 color-dark access-white-pass mobile-tap access-black-fail">
+	  			<p class="color-name">black</p>
+	  			<p class="color-value">#222</p>
+	  			<span class="color-popup">
+	  					<b class="style-pass">pass: </b>Large Text White<br />
+	  					<b class="style-pass">pass: </b>Small Text White<br />
+	  					<b class="style-fail">fail: </b>Large Text Black<br />
+	  					<b class="style-fail">fail: </b>Small Text Black<br />
+	  			</span>
+			 </div>
+  	</div>
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner neutral1 color-light access-white-fail mobile-tap access-black-pass">
+	  			<p class="color-name">Medium Grey</p>
+	  			<p class="color-value">#CCCCCC</p>
+	  			<span class="color-popup">
+	  					<b class="style-fail">fail: </b>Large Text White<br />
+	  					<b class="style-fail">fail: </b>Small Text White<br />
+	  					<b class="style-pass">pass: </b>Large Text Black<br />
+	  					<b class="style-pass">pass: </b>Small Text Black<br />
+	  			</span>
+			 </div>
+  	</div>
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner neutral2 color-light access-white-fail mobile-tap access-black-pass">
+	  			<p class="color-name">Grey</p>
+	  			<p class="color-value">#D2D2D2</p>
+	  			<span class="color-popup">
+	  					<b class="style-fail">fail: </b>Large Text White<br />
+	  					<b class="style-fail">fail: </b>Small Text White<br />
+	  					<b class="style-pass">pass: </b>Large Text Black<br />
+	  					<b class="style-pass">pass: </b>Small Text Black<br />
+	  			</span>
+			 </div>
+  	</div>
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner neutral3 color-light access-white-fail mobile-tap access-black-pass">
+	  			<p class="color-name">Light Grey</p>
+	  			<p class="color-value">#E0E0E0</p>
+	  			<span class="color-popup">
+	  					<b class="style-fail">fail: </b>Large Text White<br />
+	  					<b class="style-fail">fail: </b>Small Text White<br />
+	  					<b class="style-pass">pass: </b>Large Text Black<br />
+	  					<b class="style-pass">pass: </b>Small Text Black<br />
+	  			</span>
+			 </div>
+  	</div>
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+	      	<div class="color-inner neutral4 color-light access-white-fail mobile-tap access-black-pass">
+	  			<p class="color-name">Extra Light Grey</p>
+	  			<p class="color-value">#EEEEED</p>
+	  			<span class="color-popup">
+	  					<b class="style-fail">fail: </b>Large Text White<br />
+	  					<b class="style-fail">fail: </b>Small Text White<br />
+	  					<b class="style-pass">pass: </b>Large Text Black<br />
+	  					<b class="style-pass">pass: </b>Small Text Black<br />
+	  			</span>
+			 </div>
+  	</div>
+  	
+  </div><!-- .row -->
+  
+</div>
+<!-- END COLOR -->
+
+<div id="patterns">
+  <h2 class="style-header">Background Patterns</h2>
+  <div class="row">	  
+  	<div class="col-md-2 col-sm-6 bottom color-container">
+	     <div class="color-inner pattern-01 access-white-fail  access-black-pass secondary0">
+	      <a href="images/Stone-white-texture.jpg" download="Stone-white-texture.jpg">Download</a>
+	      </div>
+	    <p>Stone Texture</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<footer class="style-footer">
+	<p>Designed by <a href="http://kwallcompany.com">KWALL</a></p>
+</footer>
+</body>
+</html>       

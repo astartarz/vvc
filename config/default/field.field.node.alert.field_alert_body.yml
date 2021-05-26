@@ -1,0 +1,46 @@
+uuid: a1e5d7e0-9aa0-45d1-af8f-11b32eb3a4be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_body
+    - node.type.alert
+  module:
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: '0'
+    basic_html: '0'
+    raw_html: '0'
+    restricted_html: '0'
+    plain_text: '0'
+  better_formats:
+    allowed_formats_toggle: 0
+    allowed_formats:
+      full_html: full_html
+      basic_html: basic_html
+      raw_html: raw_html
+      restricted_html: restricted_html
+    default_order_toggle: 0
+    default_order_wrapper:
+      formats:
+        full_html:
+          weight: '-10'
+        basic_html:
+          weight: '-9'
+        raw_html:
+          weight: '-8'
+        restricted_html:
+          weight: '-7'
+id: node.alert.field_alert_body
+field_name: field_alert_body
+entity_type: node
+bundle: alert
+label: Body
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

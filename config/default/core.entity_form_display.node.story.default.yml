@@ -1,0 +1,209 @@
+uuid: ea65b899-c3c7-4583-bd34-94c4296b10c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.story.body
+    - field.field.node.story.field_caption_txt
+    - field.field.node.story.field_description_txt
+    - field.field.node.story.field_featured
+    - field.field.node.story.field_graduating_class
+    - field.field.node.story.field_hometown
+    - field.field.node.story.field_job_title
+    - field.field.node.story.field_link
+    - field.field.node.story.field_media
+    - field.field.node.story.field_meta_tags
+    - field.field.node.story.field_minor
+    - field.field.node.story.field_program
+    - field.field.node.story.field_remote_video
+    - field.field.node.story.field_sidebar_content
+    - field.field.node.story.field_story_featured_image
+    - field.field.node.story.field_story_image
+    - field.field.node.story.field_story_quote
+    - field.field.node.story.field_story_type
+    - field.field.node.story.field_sub_text
+    - field.field.node.story.field_teaser_image
+    - field.field.node.story.field_teaser_video
+    - field.field.node.story.field_video
+    - node.type.story
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - field_group
+    - media_library
+    - media_library_edit
+    - metatag
+    - path
+    - scheduler
+third_party_settings:
+  field_group:
+    group_sidebar_content:
+      children:
+        - field_sidebar_content
+      parent_name: ''
+      weight: 34
+      format_type: details
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Sidebar Content'
+    group_information:
+      children:
+        - title
+        - field_caption_txt
+        - field_description_txt
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Basic Information'
+id: node.story.default
+targetEntityType: node
+bundle: story
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_caption_txt:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_description_txt:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_meta_tags:
+    weight: 10
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_teaser_image:
+    type: media_library_widget
+    weight: 11
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  field_teaser_video:
+    type: media_library_widget
+    weight: 12
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  field_video:
+    type: media_library_widget
+    weight: 13
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 8
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_featured: true
+  field_graduating_class: true
+  field_hometown: true
+  field_job_title: true
+  field_link: true
+  field_media: true
+  field_minor: true
+  field_program: true
+  field_remote_video: true
+  field_sidebar_content: true
+  field_story_featured_image: true
+  field_story_image: true
+  field_story_quote: true
+  field_story_type: true
+  field_sub_text: true
+  promote: true
+  sticky: true

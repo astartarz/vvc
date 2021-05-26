@@ -1,0 +1,28 @@
+uuid: 36d06e89-f608-4325-9dc2-db208ac4c81a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program
+    - node.type.program
+    - node.type.story
+id: node.story.field_program
+field_name: field_program
+entity_type: node
+bundle: story
+label: 'x. Program'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

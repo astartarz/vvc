@@ -1,0 +1,22 @@
+uuid: 799f02aa-a24a-4b60-8af9-1245d870a8e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kwall_subtheme_example
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: kwall_subtheme_example_messages
+theme: kwall_subtheme_example
+region: content_top
+weight: -15
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

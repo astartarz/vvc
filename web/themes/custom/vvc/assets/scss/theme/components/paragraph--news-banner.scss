@@ -1,0 +1,307 @@
+.paragraph--type--news-banner {
+  position: relative;
+  background-image: url("../images/pattren-gray.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.0001) 0%, #03182F 73.76%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    width: 100%;
+    height: 190px;
+  }
+
+  .heading-wrapper {
+    padding: 30px 0;
+
+    .page-title {
+      h1 {
+        color: $white;
+        text-align: center;
+
+        &:after {
+          content: '';
+          border-bottom: 2px solid $color-light-red;
+          width: 188px;
+          display: block;
+          margin: 0 auto;
+          padding-top: 15px;
+        }
+      }
+    }
+
+    nav.breadcrumb {
+      justify-content: center;
+
+      li {
+        color: $white;
+
+        &:before {
+          color: $white;
+        }
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .articles-carousel {
+    position: relative;
+    @media #{$desktop-min} {
+      padding-left: 0;
+    }
+
+    .news-wrap {
+      position: relative;
+
+      .news {
+        &-image {
+          position: relative;
+
+          .field--name-field-teaser-image {
+            &:before {
+              content: '';
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              z-index: 1;
+              background: #000000;
+              mix-blend-mode: normal;
+              opacity: 0.56;
+              @media #{$tablet} {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                background: linear-gradient(360deg, rgba(0, 0, 0, 0.0001) 0%, #03182F 73.76%);
+                opacity: 0.9;
+                transform: matrix(1, 0, 0, -1, 0, 0);
+                width: 100%;
+                height: 80px;
+              }
+            }
+
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        &-content {
+          width: 100%;
+          padding: 20px 0;
+          @media #{$desktop-min} {
+            position: absolute;
+            z-index: 2;
+            bottom: 90px;
+            right: 40px;
+            width: 466px;
+            padding: 0;
+          }
+
+          .news {
+            &-title {
+              margin-bottom: 5px;
+
+              a {
+                @include article-title;
+                color: $white;
+                text-decoration: none;
+              }
+            }
+
+            &-desc {
+              @include smalltext;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .slick-slider {
+      margin-bottom: 0;
+    }
+
+    .slick-dots {
+      bottom: 21px;
+      right: 160px;
+      text-align: right;
+      @media #{$tablet}{
+        top: 342px;
+        bottom: 0;
+        right: 15%;
+        text-align: center;
+        width: calc(100% - 30%);
+        z-index: 2;
+      }
+
+      li {
+        width: 15px;
+        height: 15px;
+        button {
+          width: 15px;
+          height: 15px;
+          &:before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            border: 2px solid $white;
+            box-sizing: border-box;
+            opacity: 1;
+          }
+
+          &[aria-selected="true"] {
+            &:before {
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .custom-controls {
+      .btnPlay {
+        &:before {
+          content: "\f04c";
+          font-family: $font-awes;
+          width: 15px;
+          height: 15px;
+          display: block;
+          cursor: pointer;
+          color: $white;
+          position: absolute;
+          right: 280px;
+          bottom: 26px;
+          @media #{$tablet}{
+            top: 349px;
+            bottom: 0;
+            left: 0;
+            right: 124px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            z-index: 3;
+          }
+        }
+        &.pause {
+          &:before {
+            content: "\f04b";
+          }
+        }
+      }
+    }
+
+    .slide-arrows {
+      display: flex;
+      max-width: 115px;
+      width: 100%;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 5%;
+      right: 35px;
+      z-index: 1;
+      @media #{$tablet}{
+        max-width: 100%;
+        top: 320px;
+        bottom: 0;
+        right: 0;
+      }
+
+      a {
+        display: block;
+
+        img {
+          max-width: 70px;
+          max-height: 70px;
+          padding: 14.5px 18px;
+          background: #891a0f;
+          border: 2px solid red;
+        }
+
+        &:hover, &:focus {
+          img {
+            background: transparent;
+            border-color: #fff;
+          }
+        }
+      }
+
+      .slick-arrow {
+        cursor: pointer;
+
+        &.slide-prev {
+          @media #{$tablet} {
+            margin-left: 15px;
+          }
+        }
+
+        &.slide-next {
+          @media #{$tablet} {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .article-list {
+    @media #{$desktop-min} {
+      padding-right: 0;
+    }
+
+    h2 {
+      @include headline-3;
+      margin-bottom: 20px;
+      margin-top: 0;
+      color: $white;
+    }
+
+    .viewsreference--view-title {
+      display: none;
+    }
+
+    .view-articles-banner-list {
+      .view-content {
+        .views-row {
+          margin-bottom: 20px;
+
+          .views-field-title {
+            margin-bottom: 10px;
+
+            a {
+              @include article-title;
+              color: $white;
+              text-decoration: none;
+              &:hover, &:focus, &:active {
+                color: $color-gold;
+              }
+            }
+          }
+
+          .post-link {
+            &:before {
+              background-color: $color-gold;
+            }
+
+            &:hover {
+              &:before {
+                background-color: $color-gold;
+              }
+            }
+
+            a {
+              color: $color-gold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

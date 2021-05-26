@@ -1,0 +1,19 @@
+uuid: c38d6a8f-fb24-4260-b1f7-0ea86049fd26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.hero_slide
+id: paragraph.hero_slide.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: hero_slide
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 22f68039-742d-495f-9349-81ef083b557a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.certificate_degree
+id: node.certificate_degree
+target_entity_type_id: node
+target_bundle: certificate_degree
+default_langcode: site_default
+language_alterable: false

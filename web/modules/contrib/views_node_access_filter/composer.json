@@ -1,0 +1,9 @@
+{
+  "name": "drupal/views_node_access_filter",
+  "type": "drupal-module",
+  "description": "Views filter to only show the nodes that the current user is allowed to edit",
+  "license": "GPL-2.0-or-later",
+  "require-dev": {
+    "vijaycs85/drupal-quality-checker": "^1.3"
+  }
+}

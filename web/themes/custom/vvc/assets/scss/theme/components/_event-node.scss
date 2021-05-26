@@ -1,0 +1,44 @@
+.page-node-event {
+  .view-id-featured_image {
+    margin-bottom: 25px;
+    img {
+      height: auto;
+    }
+  }
+  .date-wrapper {
+    margin-bottom: 20px;
+
+    .event-date-wrap {
+      font-family: $font-open;
+      font-size: 18px;
+      line-height: 26px;
+      color: $color-black;
+      margin-bottom: 5px;
+      @media screen and #{$mobile} {
+        font-size: 16px;
+      }
+
+      &:before {
+        content: '\f133';
+        font-family: $font-awes;
+        color: $color-red;
+        display: inline-block;
+      }
+    }
+  }
+  .field--name-field-categories  {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    .field__item {
+      margin-left: 5px;
+      margin-bottom: 5px;
+      background: $color-red;
+      padding: 2px 8px;
+      color: $white;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: $font-mont;
+    }
+  }
+}

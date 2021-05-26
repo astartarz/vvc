@@ -1,0 +1,137 @@
+/**
+ * $file
+ * Variables
+ *
+ ****
+ *
+ * Page Widths
+ * Fonts
+ * Colors
+ *
+ ****
+*/
+
+
+
+
+/****
+ *
+ * Page Widths
+ *
+ ****/
+$width-page: 1200px;
+
+$mobile: '(max-width: 767px)';
+$tablet-min: '(min-width: 768px)';
+$desktop-min: "(min-width: 960px)";
+//#{$mobile}
+//#{$tablet-min}
+//#{$desktop-min}
+
+
+/****
+ *
+ * Fonts
+ *
+ ****/
+$font-awesome: 'Font Awesome 5 Free';
+$font-awesome-brands: 'Font Awesome 5 Brands';
+
+$font-helvetica: 'helvetica',  Arial, sans-serif;
+
+$font-h1: 5rem;
+$font-h2: 4rem;
+$font-h3: 3.6rem;
+$font-h4: 3rem;
+$font-h5: 2rem;
+$font-h6: 1.6rem;
+
+/****
+ *
+ * Colors
+ *
+ ****/
+
+$color-header: #333;
+$color-body: #333;
+
+$color-blue: #005794;
+$color-green: #A7DBD8;
+
+$color-red: #BD1B00;
+$color-orange: #E84708;
+$color-yellow: #FDC300;
+
+$color-grey-xlt: #f5f5f5;
+$color-grey-lt: #eeeeee;
+$color-grey: #d8d8d8;
+$color-grey-dk: #959595;
+$color-black: #282B2C;
+
+//Styleguide Colors
+$color-style-blue: #00a3bf;
+$color-style-dark-grey: #a7a7a7;
+$color-style-grey: #CCC;
+$color-style-light-grey: #F4F5F5;
+$color-style-green: #B6BD00;
+$color-style-red: #CF0A2C;
+
+
+// stylelint-disable
+
+// Nuetrals
+$black: #242628;
+$white: #fff;
+$gray: #f8f8f8;
+$gray-dark: #f1f1f1;
+$gray-darker: #4a4a4a;
+$gray-light: #eee;
+
+// used in header
+// menu and the-footer
+// and accordion
+$gray-hover-state: #9b9b9b;
+// used in the accordion
+// and on the learn more ctas
+$orange-hover-state: #dc4f12;
+// used in both accordions
+$gray-accordion: #d8d8d8;
+// only used in the nav and
+// the accoridon
+$nav-button-hover: #757575;
+
+// Hues
+$orange: #e85c16;
+$tangerine: #fa9d1a;
+$emerald: #00ab67;
+$navy: #00263e;
+$cyan: #08BAD8;
+$pink: #f696a1;
+$beige: #faf6ed;
+
+//fonts
+$font-memphis: Memphis, sans-serif;
+$font-brandongrotesque: BrandonGrotesque, sans-serif;
+$font-brandontext: BrandonText, sans-serif;
+
+// transitions
+$transition-short: 0.2s;
+$transition-medium: 0.4s;
+$transition-long: 0.6s;
+
+$ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+$ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+
+// Spacing
+$space-small: 10px;
+$space-medium: 20px;
+$space-large: 40px;
+$space-xlarge: 60px;
+$space-xxlarge: 90px;
+
+// Paths
+$svg-path: "../assets/svgs";
+$font-path: "../assets/fonts";
+
+

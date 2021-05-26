@@ -1,0 +1,55 @@
+uuid: 9b2b2f87-7457-4054-87b6-c82f7c453bf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.location.body
+    - field.field.node.location.field_address
+    - field.field.node.location.field_exclude_campus_map
+    - field.field.node.location.field_geolocation
+    - field.field.node.location.field_hero_content
+    - field.field.node.location.field_link
+    - field.field.node.location.field_links
+    - field.field.node.location.field_media
+    - field.field.node.location.field_meta_tags
+    - field.field.node.location.field_section_title
+    - node.type.location
+  module:
+    - text
+    - user
+id: node.location.teaser
+targetEntityType: node
+bundle: location
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_address: true
+  field_exclude_campus_map: true
+  field_geolocation: true
+  field_hero_content: true
+  field_link: true
+  field_links: true
+  field_media: true
+  field_meta_tags: true
+  field_section_title: true
+  langcode: true
+  search_api_excerpt: true

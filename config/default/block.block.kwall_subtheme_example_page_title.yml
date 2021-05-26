@@ -1,0 +1,27 @@
+uuid: 04fd4932-8306-4029-bbee-e9ff1513ef44
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kwall_subtheme_example
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: kwall_subtheme_example_page_title
+theme: kwall_subtheme_example
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/events\r\n/news\r\n/academics\r\n/academics/graduate\r\n/academics/undergraduate\r\n/academics/certificate\r\n/directory\r\n/directory/a\r\n/directory/b\r\n/directory/c\r\n/directory/d\r\n/directory/e\r\n/directory/f\r\n/directory/g\r\n/directory/h\r\n/directory/i\r\n/directory/j\r\n/directory/k\r\n/directory/l\r\n/directory/m\r\n/directory/n\r\n/directory/o\r\n/directory/p\r\n/directory/q\r\n/directory/r\r\n/directory/s\r\n/directory/t\r\n/directory/u\r\n/directory/v\r\n/directory/w\r\n/directory/x\r\n/directory/y\r\n/directory/z"
+    negate: true
+    context_mapping: {  }

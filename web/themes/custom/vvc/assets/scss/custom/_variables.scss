@@ -1,0 +1,51 @@
+/**
+ * $file
+ * Variables
+ *
+ ****
+ *
+ * Page Widths
+ * Fonts
+ * Colors
+ *
+ ****
+*/
+
+
+/**** Page Widths ****/
+$width-page: 1200px;
+
+$iphone: '(max-width:567px)';
+$iphone-min: '(min-width:568px)';
+$mobile: '(max-width: 767px)';
+$tablet-min: '(min-width: 768px)';
+$tablet: '(max-width: 991px)';
+$desktop-min: "(min-width: 992px)";
+$desktop-i: "(min-width: 1200px)";
+$desktop: "(max-width: 1300px)";
+$desktop-wide: "(min-width: 1400px)";
+
+/**** Fonts ****/
+$font-awes: 'FontAwesome';
+$font-mont: 'Montserrat', sans-serif;
+$font-open: 'Open Sans', sans-serif;
+
+
+/***** Colors ****/
+$color-black: #03182F;
+$color-dark-gray: #1E3650;
+$color-grey: #4B5A6A;
+$color-light-gray: #B4BCC4;
+$color-extra-light-gray: #E7EAEE;
+$color-red: #891A0F;
+$color-light-red: #D0210F;
+$color-gold: #FFC107;
+
+$white: #ffffff;
+$black: #000000;
+
+// Paths
+//$svg-path: "../svgs";
+$image-path: "../images";
+$font-path: "../fonts";
+

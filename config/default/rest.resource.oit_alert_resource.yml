@@ -1,0 +1,18 @@
+uuid: c9f7db6e-873a-491a-9f06-e0be8e34f095
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - kwall_alert_system
+    - serialization
+id: oit_alert_resource
+plugin_id: oit_alert_resource
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth

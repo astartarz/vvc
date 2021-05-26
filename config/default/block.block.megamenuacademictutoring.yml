@@ -1,0 +1,25 @@
+uuid: 24fea228-443c-4521-978d-89a36c914ed0
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:menu_custom_block:aff86ce3-4265-4324-90ab-42dd5effcf03'
+  module:
+    - block_content
+  theme:
+    - vvc
+id: megamenuacademictutoring
+theme: vvc
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:aff86ce3-4265-4324-90ab-42dd5effcf03'
+settings:
+  id: 'block_content:aff86ce3-4265-4324-90ab-42dd5effcf03'
+  label: 'Mega Menu Academic Tutoring'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,17 @@
+uuid: 1b93f699-f67e-4fca-b872-dbe12bdc3e73
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: person_profile_image
+label: 'x. Person Profile Image (175x225)'
+effects:
+  511375a8-f470-4a2c-acd4-5e8836febaab:
+    uuid: 511375a8-f470-4a2c-acd4-5e8836febaab
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 175
+      height: 225
+      crop_type: focal_point

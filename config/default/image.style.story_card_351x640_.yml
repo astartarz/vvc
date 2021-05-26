@@ -1,0 +1,17 @@
+uuid: 3c009e1e-5636-4a4e-8f65-4fef2cbfedc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: story_card_351x640_
+label: 'Story Card(351X640)'
+effects:
+  ee74c73a-c5a8-4fee-9f1b-53fb8466576c:
+    uuid: ee74c73a-c5a8-4fee-9f1b-53fb8466576c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 351
+      height: 640
+      crop_type: focal_point

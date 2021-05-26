@@ -1,0 +1,21 @@
+uuid: a1623a94-6acc-475c-90b9-69560104b4db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_interest_icon
+    - taxonomy.vocabulary.interest
+  module:
+    - fontawesome
+id: taxonomy_term.interest.field_interest_icon
+field_name: field_interest_icon
+entity_type: taxonomy_term
+bundle: interest
+label: 'Interest Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

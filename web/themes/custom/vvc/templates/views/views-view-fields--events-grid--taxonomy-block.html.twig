@@ -1,0 +1,77 @@
+{% set event_date = fields.field_date_range.content|render|striptags|replace({"\n":""})|trim|split(' - ') %}
+
+{% set event_start_date = event_date[0] %}
+{% set event_start_month = event_start_date|date('M') %}
+{% set event_start_day = event_start_date|date('d') %}
+{% set event_start_day_number = event_start_date|date('j') %}
+{% set event_start_full_month = event_start_date|date('F') %}
+{% set event_start_year = event_start_date|date('Y') %}
+
+{% set event_start_time = event_date[1] %}
+{% set event_start_time = event_start_time|date('g:i a') %}
+
+{% set event_end_date = event_date[2] %}
+{% if event_end_date is not null %}
+  {% set event_end_month = event_end_date|date('M') %}
+  {% set event_end_day = event_end_date|date('d') %}
+  {% set event_end_day_number = event_end_date|date('j') %}
+  {% set event_end_full_month = event_end_date|date('F') %}
+  {% set event_end_year = event_end_date|date('Y') %}
+{% endif %}
+
+{% set event_end_time = event_date[3] %}
+{% set event_end_time = event_end_time|date('g:i a') %}
+
+{% set all_day_event = fields.field_all_day_event.content|render|striptags|replace({"\n":""})|trim %}
+
+<div class="event-wrap">
+  <div class="date-wrap">
+    <div class="date">
+      {% if event_end_date is not null and event_end_date|date('Y-m-d') >= event_start_date|date('Y-m-d') %}
+        <div class="date-day">{{ event_end_day }}</div>
+        <div class="date-month">{{ event_end_month }}</div>
+      {% else %}
+        <div class="date-day">{{ event_start_day }}</div>
+        <div class="date-month">{{ event_start_month }}</div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="content-wrap">
+    <div class="title">{{ fields.title.content }}</div>
+    <div class="event-date">
+      {% if event_end_date is not null and event_end_date|date('Y-m-d') > event_start_date|date('Y-m-d') and all_day_event == "On" %}
+        <div class="time">
+          {{ event_start_full_month }} {{ event_start_day_number }}, {{ event_start_year }}
+          - {{ event_end_full_month }} {{ event_end_day_number }}, {{ event_end_year }} | {{ "All Day"|t }}
+        </div>
+      {% elseif event_end_date is not null and event_end_date|date('Y-m-d') > event_start_date|date('Y-m-d') and all_day_event == "Off" %}
+        <div class="time">
+          {{ event_start_full_month }} {{ event_start_day_number }}, {{ event_start_year }}
+          - {{ event_end_full_month }} {{ event_end_day_number }}, {{ event_end_year }} | {{ event_start_time }}
+          - {{ event_end_time }}
+        </div>
+      {% elseif event_end_date is not null and event_end_date|date('Y-m-d') == event_start_date|date('Y-m-d') and all_day_event == "On" %}
+        <div class="time">
+          {{ event_start_full_month }} {{ event_start_day_number }}, {{ event_start_year }} | {{ "All Day"|t }}
+        </div>
+      {% elseif event_end_date is not null and event_end_date|date('Y-m-d') == event_start_date|date('Y-m-d') and all_day_event == "Off" and event_start_time != event_end_time %}
+        <div class="time">
+          {{ event_start_full_month }} {{ event_start_day_number }}, {{ event_start_year }} | {{ event_start_time }}
+          - {{ event_end_time }}
+        </div>
+      {% elseif event_end_date is not null and event_end_date|date('Y-m-d') == event_start_date|date('Y-m-d') and all_day_event == "Off" and event_start_time == event_end_time %}
+        <div class="time">
+          {{ event_start_full_month }} {{ event_start_day_number }}, {{ event_start_year }} | {{ event_start_time }}
+        </div>
+      {% elseif event_start_date is not empty and event_end_date is null and all_day_event == "On" %}
+        <div class="time">
+          {{ event_start_full_month }} {{ event_start_day_number }}, {{ event_start_year }} | {{ "All Day"|t }}
+        </div>
+      {% elseif event_start_date is not empty and event_end_date is null and all_day_event == "Off" %}
+        <div class="time">
+          {{ event_start_full_month }} {{ event_start_day_number }}, {{ event_start_year }} | {{ event_start_time }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

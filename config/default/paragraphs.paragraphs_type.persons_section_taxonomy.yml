@@ -1,0 +1,10 @@
+uuid: 77599790-f08e-49e6-820a-0f4733ce4c40
+langcode: en
+status: true
+dependencies: {  }
+id: persons_section_taxonomy
+label: 'Persons Section (Taxonomy)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

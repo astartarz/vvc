@@ -1,0 +1,118 @@
+uuid: cbb310df-52e5-45ab-90be-de459412c796
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gridder_items
+    - paragraphs.paragraphs_type.gridder
+    - paragraphs.paragraphs_type.gridder_item
+  module:
+    - entity_reference_revisions
+id: paragraph.gridder.field_gridder_items
+field_name: field_gridder_items
+entity_type: paragraph
+bundle: gridder
+label: 'Gridder Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      gridder_item: gridder_item
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 31
+        enabled: false
+      3_column_cta:
+        weight: 32
+        enabled: false
+      4_column_cta:
+        weight: 33
+        enabled: false
+      accordion:
+        weight: 34
+        enabled: false
+      accordion_item:
+        weight: 35
+        enabled: false
+      adjustable_media_and_content:
+        weight: 36
+        enabled: false
+      column_section:
+        weight: 37
+        enabled: false
+      flexible_bg_image_block:
+        weight: 38
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 39
+        enabled: false
+      flexible_cta_block:
+        weight: 40
+        enabled: false
+      flexible_cta_blocks:
+        weight: 41
+        enabled: false
+      full_width_image_section:
+        weight: 42
+        enabled: false
+      gridder:
+        weight: 43
+        enabled: false
+      gridder_item:
+        enabled: true
+        weight: 44
+      hero_banner:
+        weight: 45
+        enabled: false
+      hero_slide:
+        weight: 46
+        enabled: false
+      hero_slideshow:
+        weight: 47
+        enabled: false
+      interior_column_section:
+        weight: 48
+        enabled: false
+      interior_slideshow:
+        weight: 49
+        enabled: false
+      interior_slideshow_slide:
+        weight: 50
+        enabled: false
+      person_carousel:
+        weight: 51
+        enabled: false
+      quick_link:
+        weight: 52
+        enabled: false
+      quick_link_minimal:
+        weight: 53
+        enabled: false
+      recent_articles:
+        weight: 54
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 55
+        enabled: false
+      upcoming_events:
+        weight: 56
+        enabled: false
+      video_embed:
+        weight: 57
+        enabled: false
+      video_tab_carousel:
+        weight: 58
+        enabled: false
+      video_tab_item:
+        weight: 59
+        enabled: false
+      wysiwyg:
+        weight: 60
+        enabled: false
+field_type: entity_reference_revisions

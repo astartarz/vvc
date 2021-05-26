@@ -1,0 +1,20 @@
+uuid: 71cc5c42-2808-4d24-bdcf-ab7b5bb04107
+langcode: en
+status: true
+dependencies:
+  module:
+    - tb_megamenu
+  theme:
+    - kwall
+id: mainnavigation_4
+theme: kwall
+region: header
+weight: -12
+provider: null
+plugin: 'tb_megamenu_menu_block:main'
+settings:
+  id: 'tb_megamenu_menu_block:main'
+  label: 'Main navigation'
+  provider: tb_megamenu
+  label_display: '0'
+visibility: {  }

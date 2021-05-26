@@ -1,0 +1,42 @@
+uuid: 23e7d91d-779e-431c-a003-a659fdd9cf0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.file.field_media_file
+    - media.type.file
+  module:
+    - file
+_core:
+  default_config_hash: nJ_pAVLU1NRMcrKA5fWh2CgKJ805y9T77jH8KS97rkY
+id: media.file.default
+targetEntityType: media
+bundle: file
+mode: default
+content:
+  field_media_file:
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    weight: 0
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  replace_file:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  moderation_state: true
+  name: true
+  path: true
+  status: true
+  uid: true

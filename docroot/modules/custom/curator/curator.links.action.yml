@@ -1,0 +1,5 @@
+entity.curator.add_form:
+  route_name: 'entity.curator.add_form'
+  title: 'Add curator feed'
+  appears_on:
+    - entity.curator.collection

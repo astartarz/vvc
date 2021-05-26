@@ -1,0 +1,109 @@
+uuid: c457a645-bb33-4a93-a412-243084642688
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.events_grid.field_events_grid_display
+    - field.field.paragraph.events_grid.field_link
+    - field.field.paragraph.events_grid.field_taxonomy
+    - field.field.paragraph.events_grid.field_title
+    - field.field.paragraph.events_grid.field_view_reference
+    - paragraphs.paragraphs_type.events_grid
+  module:
+    - fences
+    - link
+    - options
+    - viewsreference
+id: paragraph.events_grid.default
+targetEntityType: paragraph
+bundle: events_grid
+mode: default
+content:
+  field_events_grid_display:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: list_key
+    region: content
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_taxonomy:
+    weight: 4
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_view_reference:
+    weight: 2
+    label: hidden
+    settings:
+      plugin_types:
+        default: default
+        block: block
+        page: 0
+        rest_export: 0
+        attachment: 0
+        entity_browser: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: viewsreference_formatter
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,188 @@
+.page-node-type-article {
+  .layout-container {
+    padding-top: 20px;
+  }
+  .layout-container .layout-center {
+    padding-left: 0;
+    padding-right: 0;
+    @media (max-width: 1220px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .layout-content-bottom {
+    margin-bottom: 0;
+    .region-content-bottom {
+      background: #f5f5f5;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      @media (max-width: 1220px) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      h2 {
+        margin-bottom: 15px;
+        @media (max-width: $screen-mobile) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  h1.page-title {
+    margin-bottom: 40px;
+  }
+  .block-page-title-block, .block-system-breadcrumb-block, .author-info, .field--name-field-intro1, .field--name-field-intro2,
+  .field--name-field-media, .field--name-body, .field--name-field-article-taxonomies, .article-slideshow-description  {
+    max-width: 895px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .field--name-field-intro1 {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    margin-bottom: 15px;
+  }
+  .field--name-field-intro2 {
+    margin-bottom: 15px;
+  }
+  .author-info {
+    border-bottom: 2px solid $color-style-grey;
+    padding-bottom: 20px;
+    margin: 20px auto;
+
+    .post-author {
+      font-size: 16px;
+      margin-top: 6px;
+    }
+
+    .post-social {
+      display: inline-flex;
+      margin-top: 15px;
+      @media #{$tablet-min}{
+        float: right;
+        margin-top: 0;
+      }
+
+      .label {
+        margin-right: 10px;
+        margin-top: 6px;
+      }
+
+      .sharethis-wrapper {
+        .stLarge {
+          background-repeat: no-repeat;
+          background-position: initial;
+          opacity: initial;
+        }
+
+        .st_facebook_large {
+          .stLarge {
+            background-image: url(../images/facebook.png) !important;
+          }
+        }
+
+        .st_twitter_large {
+          .stLarge {
+            background-image: url(../images/twitter.png) !important;
+
+          }
+        }
+
+        .st_email_large {
+          .stLarge {
+            background-image: url(../images/email.png) !important;
+          }
+        }
+
+        .st_pinterest_large {
+          .stLarge {
+            background-image: url(../images/pinterest.png) !important;
+          }
+        }
+
+        .st_sharethis_large, .st_plusone_large, .st_fblike_large {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .field--name-field-media {
+    img {
+      width: 100%;
+      @media #{$tablet-min}{
+        object-fit: cover;
+      }
+    }
+  }
+
+  .field--name-field-article-taxonomies {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 50px auto;
+
+    .field__label {
+      margin-right: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: $color-body;
+      padding: 5px 15px 5px 0;
+    }
+
+    .field__item {
+      padding: 5px 15px;
+      background: $color-grey-lt;
+      margin-right: 10px;
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        color: $color-orange;
+      }
+    }
+  }
+  .paragraph--type--quote {
+    background: #f5f5f5;
+    padding: 15px 30px 25px 30px;
+    position: relative;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    blockquote {
+      font-style: italic;
+      color: #696666;
+      font-size: 2.6rem;
+      line-height: 3.6rem;
+      padding-left: 50px;
+      padding-top: 10px;
+      margin-bottom: 20px;
+      &::before {
+        content: "“";
+        font-size: 10rem;
+        line-height: 11.4rem;
+        color: #e84708;
+        font-family: Georgia;
+        position: absolute;
+        left: 20px;
+        top: 0;
+      }
+      &::after {
+        content: "”";
+        font-size: 2.6rem;
+        line-height: 3.6rem;
+      }
+    }
+    .field--name-field-quote-author {
+      padding-left: 50px;
+    }
+    .field--name-field-quote-details {
+      line-height: 3rem;
+      color: #595959;
+      font-weight: 100;
+      padding-left: 50px;
+    }
+  }
+}
+
+
+

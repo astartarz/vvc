@@ -1,0 +1,119 @@
+uuid: e2213849-4151-4c96-877d-c6600e40e629
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.story.body
+    - field.field.node.story.field_caption_txt
+    - field.field.node.story.field_description_txt
+    - field.field.node.story.field_featured
+    - field.field.node.story.field_graduating_class
+    - field.field.node.story.field_hometown
+    - field.field.node.story.field_job_title
+    - field.field.node.story.field_link
+    - field.field.node.story.field_media
+    - field.field.node.story.field_meta_tags
+    - field.field.node.story.field_minor
+    - field.field.node.story.field_program
+    - field.field.node.story.field_remote_video
+    - field.field.node.story.field_sidebar_content
+    - field.field.node.story.field_story_featured_image
+    - field.field.node.story.field_story_image
+    - field.field.node.story.field_story_quote
+    - field.field.node.story.field_story_type
+    - field.field.node.story.field_sub_text
+    - field.field.node.story.field_teaser_image
+    - field.field.node.story.field_teaser_video
+    - field.field.node.story.field_video
+    - node.type.story
+  module:
+    - text
+    - user
+id: node.story.default
+targetEntityType: node
+bundle: story
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_caption_txt:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_description_txt:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_teaser_image:
+    type: entity_reference_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_teaser_video:
+    type: entity_reference_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_featured: true
+  field_graduating_class: true
+  field_hometown: true
+  field_job_title: true
+  field_link: true
+  field_media: true
+  field_meta_tags: true
+  field_minor: true
+  field_program: true
+  field_remote_video: true
+  field_sidebar_content: true
+  field_story_featured_image: true
+  field_story_image: true
+  field_story_quote: true
+  field_story_type: true
+  field_sub_text: true
+  langcode: true
+  search_api_excerpt: true

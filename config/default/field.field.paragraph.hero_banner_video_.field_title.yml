@@ -1,0 +1,19 @@
+uuid: 6ad48fff-7e93-4fbd-83b8-b6af4c3dfdd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.hero_banner_video_
+id: paragraph.hero_banner_video_.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: hero_banner_video_
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

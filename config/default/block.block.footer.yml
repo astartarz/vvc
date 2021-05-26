@@ -1,0 +1,31 @@
+uuid: b32de911-bb91-4f2a-a26a-8b11a8bf2d15
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - kwall
+id: footer
+theme: kwall
+region: footer
+weight: 0
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: 'Footer Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'footer:'
+  suggestion: footer
+  label_type: block
+  label_link: 0
+visibility: {  }

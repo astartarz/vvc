@@ -1,0 +1,97 @@
+uuid: 26db40ae-8ec3-4174-87e0-b9920fe551ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_banner.field_articles_banner_nodes
+    - field.field.paragraph.news_banner.field_taxonomy
+    - field.field.paragraph.news_banner.field_title
+    - field.field.paragraph.news_banner.field_view_reference
+    - field.field.paragraph.news_banner.field_view_reference_2
+    - paragraphs.paragraphs_type.news_banner
+  module:
+    - field_group
+    - viewsreference
+third_party_settings:
+  field_group:
+    group_carousel:
+      children:
+        - field_articles_banner_nodes
+        - field_view_reference
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Articles Carousel'
+    group_list:
+      children:
+        - field_title
+        - field_taxonomy
+        - field_view_reference_2
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Articles List'
+id: paragraph.news_banner.default
+targetEntityType: paragraph
+bundle: news_banner
+mode: default
+content:
+  field_articles_banner_nodes:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_taxonomy:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_view_reference:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  field_view_reference_2:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

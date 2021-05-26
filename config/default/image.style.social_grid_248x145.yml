@@ -1,0 +1,17 @@
+uuid: e4ac8d32-f7a9-465e-a231-2aac2d3e3ccb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: social_grid_248x145
+label: 'Social Grid (248x145)'
+effects:
+  35e0bf2b-5f8a-4533-abd7-a0010f8f38c9:
+    uuid: 35e0bf2b-5f8a-4533-abd7-a0010f8f38c9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 248
+      height: 145
+      crop_type: focal_point

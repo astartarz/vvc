@@ -1,0 +1,14 @@
+diff --git a/modules/groupmenu_block/src/Plugin/Block/GroupMenuBlock.php b/modules/groupmenu_block/src/Plugin/Block/GroupMenuBlock.php
+index 138867f..63f8a78 100644
+--- a/modules/groupmenu_block/src/Plugin/Block/GroupMenuBlock.php
++++ b/modules/groupmenu_block/src/Plugin/Block/GroupMenuBlock.php
+@@ -75,6 +75,9 @@ class GroupMenuBlock extends BlockBase {
+       $tree = \Drupal::menuTree()->load($menu_name, $parameters);
+       $tree = \Drupal::menuTree()->transform($tree, $manipulators);
+       $build[] = \Drupal::menuTree()->build($tree);
++      $build['#contextual_links']['menu'] = [
++        'route_parameters' => ['menu' => $menu_name],
++      ];
+     }
+ 
+     return $build;

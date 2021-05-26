@@ -1,0 +1,73 @@
+uuid: c8bec358-3257-4eba-baec-8861979ab6fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_group
+id: site_group-group_publisher
+label: 'Group Content Publisher'
+weight: -9
+internal: false
+audience: member
+group_type: site_group
+permissions_ui: true
+permissions:
+  - 'access content overview'
+  - 'access group_menu overview'
+  - 'access group_node overview'
+  - 'create group_node:page entity'
+  - 'delete own group_node:page content'
+  - 'update any group_node:landing_page entity'
+  - 'update any group_node:layout_builder entity'
+  - 'update any group_node:online_program entity'
+  - 'update any group_node:page content'
+  - 'update any group_node:page entity'
+  - 'update any group_node:program entity'
+  - 'update own group_node:landing_page entity'
+  - 'update own group_node:layout_builder entity'
+  - 'update own group_node:online_program entity'
+  - 'update own group_node:page content'
+  - 'update own group_node:page entity'
+  - 'update own group_node:program entity'
+  - 'use editorial transition archive for group_node:landing_page'
+  - 'use editorial transition archive for group_node:layout_builder'
+  - 'use editorial transition archive for group_node:online_program'
+  - 'use editorial transition archive for group_node:program'
+  - 'use editorial transition archived_draft for group_node:landing_page'
+  - 'use editorial transition archived_draft for group_node:layout_builder'
+  - 'use editorial transition archived_draft for group_node:online_program'
+  - 'use editorial transition archived_draft for group_node:program'
+  - 'use editorial transition archived_published for group_node:landing_page'
+  - 'use editorial transition archived_published for group_node:layout_builder'
+  - 'use editorial transition archived_published for group_node:online_program'
+  - 'use editorial transition archived_published for group_node:program'
+  - 'use editorial transition create_new_draft for group_node:landing_page'
+  - 'use editorial transition create_new_draft for group_node:layout_builder'
+  - 'use editorial transition create_new_draft for group_node:online_program'
+  - 'use editorial transition create_new_draft for group_node:program'
+  - 'use editorial transition publish for group_node:landing_page'
+  - 'use editorial transition publish for group_node:layout_builder'
+  - 'use editorial transition publish for group_node:online_program'
+  - 'use editorial transition publish for group_node:program'
+  - 'use editorial transition set_to_needs_review for group_node:landing_page'
+  - 'use editorial transition set_to_needs_review for group_node:layout_builder'
+  - 'use editorial transition set_to_needs_review for group_node:online_program'
+  - 'use editorial transition set_to_needs_review for group_node:program'
+  - 'view group'
+  - 'view group_menu:menu content'
+  - 'view group_menu:menu entity'
+  - 'view group_node:landing_page entity'
+  - 'view group_node:layout_builder entity'
+  - 'view group_node:online_program entity'
+  - 'view group_node:page content'
+  - 'view group_node:page entity'
+  - 'view group_node:program entity'
+  - 'view latest version for group_node:landing_page'
+  - 'view latest version for group_node:layout_builder'
+  - 'view latest version for group_node:online_program'
+  - 'view latest version for group_node:program'
+  - 'view unpublished group_node:landing_page entity'
+  - 'view unpublished group_node:layout_builder entity'
+  - 'view unpublished group_node:online_program entity'
+  - 'view unpublished group_node:page entity'
+  - 'view unpublished group_node:program entity'

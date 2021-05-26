@@ -1,0 +1,95 @@
+uuid: 5b8ff209-157d-48e6-b721-f458bab981f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.interest.field_asides_txt
+    - field.field.node.interest.field_image
+    - field.field.node.interest.field_interest_description_txt
+    - field.field.node.interest.field_links
+    - node.type.interest
+  module:
+    - fences
+    - link
+    - user
+id: node.interest.default
+targetEntityType: node
+bundle: interest
+mode: default
+content:
+  field_asides_txt:
+    weight: 105
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_image:
+    weight: 102
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_interest_description_txt:
+    weight: 101
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+  field_links:
+    weight: 103
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

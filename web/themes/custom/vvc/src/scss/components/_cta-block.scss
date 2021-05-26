@@ -1,0 +1,44 @@
+.paragraph--type--flexible-cta-blocks{
+  .flexible-cta-block{
+    @include  cta-block;
+    margin-bottom: 40px;
+    .cta-wrap{
+      height: 100%;
+      padding: 40px 30px;
+      border: 2px solid $color-extra-light-gray;
+      background-color: $white;
+      h2{
+        color: $color-dark-gray;
+      }
+      .field--name-field-link{
+        a{
+          @include global-link;
+          color: $color-red;
+        }
+      }
+    }
+  }
+  &.col-display-2 {
+    .col.flexible-cta-block{
+      @media #{$mobile} {
+        flex: auto;
+      }
+    }
+  }
+  &.col-display-3 {
+    .col.flexible-cta-block{
+      flex-basis: 33.33%;
+      @media #{$mobile} {
+        flex: auto;
+      }
+    }
+  }
+  &.col-display-4 {
+    .col.flexible-cta-block{
+      flex-basis: 25%;
+      @media #{$mobile} {
+        flex: auto;
+      }
+    }
+  }
+}

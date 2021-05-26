@@ -1,0 +1,82 @@
+.view-id-campus_map.view-display-id-block_1 {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+
+  > .view-content {
+    flex: 0 0 80%;
+
+    .geolocation-map-container {
+      .infobubble {
+        padding: 15px 15px;
+        border-top: solid 6px $color-light-red;
+        border-radius: 5px 5px 0 0;
+        font-weight: normal;
+      }
+
+      .views-field-view-node {
+        margin-top: 10px;
+        font-family: $font-open;
+
+        a {
+          font-size: 13px;
+          font-family: $font-open;
+        }
+      }
+
+      .directions-link {
+        font-size: 13px;
+        display: none;
+      }
+
+      .views-field-title {
+        span {
+          font-size: 2rem;
+          line-height: 1;
+          font-weight: normal;
+          margin-bottom: 10px;
+          font-family: $font-mont;
+
+          a{
+            font-family: $font-mont;
+          }
+        }
+      }
+    }
+  }
+
+  > .attachment {
+    flex: 0 0 20%;
+
+    .geolocation {
+      .geolocation {
+        background: $white;
+        display: block;
+        border-bottom: #E8E8E8 solid 1px;
+        cursor: pointer;
+
+        .location-title {
+          font-size: 1.8rem;
+          line-height: 1;
+          margin: 0;
+
+          span {
+            display: block;
+            padding: 15px;
+
+            &.active {
+              background: $color-red;
+              color: $color-gold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

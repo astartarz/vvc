@@ -1,0 +1,17 @@
+uuid: ce7d16b6-64c1-450b-9d06-2ea4fc4ff60c
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: person_section
+label: 'Person Section (328x328)'
+effects:
+  a4d785c5-ded8-4947-b384-9a5e35aeb4fc:
+    uuid: a4d785c5-ded8-4947-b384-9a5e35aeb4fc
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 328
+      height: 328
+      crop_type: focal_point

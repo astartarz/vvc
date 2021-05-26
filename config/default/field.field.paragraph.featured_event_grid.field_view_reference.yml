@@ -1,0 +1,103 @@
+uuid: 9a7ef05b-ad0f-4d8b-80b2-b725ede3a635
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference
+    - paragraphs.paragraphs_type.featured_event_grid
+    - views.view.featured_event_grid
+  module:
+    - viewsreference
+id: paragraph.featured_event_grid.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+bundle: featured_event_grid
+label: 'View Reference'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    options:
+      argument: '[paragraph:field_taxonomy:target_id]'
+    display_id: list_block
+    data: 'a:5:{s:5:"pager";N;s:8:"argument";s:36:"[paragraph:field_taxonomy:target_id]";s:5:"limit";N;s:6:"offset";N;s:5:"title";N;}'
+    target_uuid: f9fc8216-2fde-4a17-90e5-991168017923
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    default: default
+    block: block
+    attachment: 0
+    page: 0
+    rest_export: 0
+    entity_browser: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    featured_event_grid: featured_event_grid
+    academics: 0
+    academic_filter_taxonomy_terms: 0
+    alerts: 0
+    articles_banner_carousel: 0
+    articles_banner_list: 0
+    articles_grid: 0
+    article_view: 0
+    block_content: 0
+    carousels: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_events: 0
+    content_finder: 0
+    content_recent: 0
+    content_social: 0
+    directory: 0
+    events_calendar: 0
+    events_grid: 0
+    event_view: 0
+    external_articles_cards: 0
+    external_articles_grid: 0
+    faculty_carousel: 0
+    feeds_feed: 0
+    files: 0
+    file_entity_browser: 0
+    frontpage: 0
+    group_members: 0
+    group_nodes: 0
+    hero_banner: 0
+    locations: 0
+    map_view: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    moderated_content: 0
+    page_banner: 0
+    persons_listing: 0
+    persons_section: 0
+    person_dashboard: 0
+    programs_gridder: 0
+    quick_links: 0
+    redirect: 0
+    scheduler_scheduled_content: 0
+    social_grid: 0
+    social_wall: 0
+    story_cards: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    view_search: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    pager: 0
+    limit: 0
+    offset: 0
+    title: 0
+field_type: viewsreference

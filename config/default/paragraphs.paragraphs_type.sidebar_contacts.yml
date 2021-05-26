@@ -1,0 +1,10 @@
+uuid: e33643ed-1eb4-49a3-913f-373b395b8843
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_contacts
+label: 'Sidebar Contacts'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

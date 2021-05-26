@@ -1,0 +1,10 @@
+uuid: 216add43-d4a5-4ba9-ac18-76ce66b7eb20
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_carousel
+label: 'Media carousel'
+targetEntityType: media
+cache: true

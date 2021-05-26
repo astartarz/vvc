@@ -1,0 +1,45 @@
+uuid: 0da3c57c-ebd4-4d9e-a24d-d1b2d6b1ff0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_banner_video_.field_media
+    - field.field.paragraph.hero_banner_video_.field_subtitle
+    - field.field.paragraph.hero_banner_video_.field_title
+    - paragraphs.paragraphs_type.hero_banner_video_
+  module:
+    - media_library
+    - media_library_edit
+id: paragraph.hero_banner_video_.default
+targetEntityType: paragraph
+bundle: hero_banner_video_
+mode: default
+content:
+  field_media:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
+    region: content
+  field_subtitle:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

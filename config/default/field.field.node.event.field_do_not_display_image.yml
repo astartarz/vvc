@@ -1,0 +1,23 @@
+uuid: 3841a3e2-e516-492c-9209-efc68a86b8f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_do_not_display_image
+    - node.type.event
+id: node.event.field_do_not_display_image
+field_name: field_do_not_display_image
+entity_type: node
+bundle: event
+label: 'x. Do not display Featured Image'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

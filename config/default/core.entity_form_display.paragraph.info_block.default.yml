@@ -1,0 +1,57 @@
+uuid: c8896f38-b66c-4ddb-871c-5163b450ba90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.info_block.field_info_block_items
+    - field.field.paragraph.info_block.field_info_block_quick_links
+    - field.field.paragraph.info_block.field_link
+    - field.field.paragraph.info_block.field_title
+    - paragraphs.paragraphs_type.info_block
+  module:
+    - link
+    - paragraphs
+id: paragraph.info_block.default
+targetEntityType: paragraph
+bundle: info_block
+mode: default
+content:
+  field_info_block_items:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: 'Thumbnail Link'
+      title_plural: 'Thumbnail Links'
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: info_block_item
+    third_party_settings: {  }
+    region: content
+  field_info_block_quick_links:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

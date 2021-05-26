@@ -1,0 +1,7 @@
+oregon_tech_layout_migration.update_urls:
+  path: '/admin/config/oit/update-urls'
+  defaults:
+    _form: '\Drupal\oregon_tech_layout_migration\Form\LegacyAlias'
+    _title: 'Update aliases'
+  requirements:
+    _permission: 'administer site configuration'

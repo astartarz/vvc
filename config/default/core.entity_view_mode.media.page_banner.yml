@@ -1,0 +1,10 @@
+uuid: ebd3ef02-8361-4494-9a07-916bc3e89bc3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.page_banner
+label: 'Interior Page Banner (1600×350)'
+targetEntityType: media
+cache: true

@@ -1,0 +1,47 @@
+uuid: 150b56bb-6267-4a3d-a377-23e28428a875
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistics_item.field_caption
+    - field.field.paragraph.statistics_item.field_statistic_txt
+    - paragraphs.paragraphs_type.statistics_item
+  module:
+    - fences
+id: paragraph.statistics_item.default
+targetEntityType: paragraph
+bundle: statistics_item
+mode: default
+content:
+  field_caption:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: lead
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_statistic_txt:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: percentage
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

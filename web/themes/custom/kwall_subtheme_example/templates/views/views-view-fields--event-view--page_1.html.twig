@@ -1,0 +1,70 @@
+{% set view_node = fields.view_node.content|render|striptags|trim %}
+
+{% set event_date = fields.field_date_range.content|render|striptags|replace({"\n":""})|trim|split(' - ') %}
+{% set image = fields.field_media_image_8.content|render|striptags('<img>')|trim %}
+
+{% set classes = 'col-md-12' %}
+{% if image is not empty %}
+  {% set classes = 'col-md-9' %}
+{% endif %}
+
+{% set event_start_date = event_date[0] %}
+{% set event_start_month = event_start_date|date('M') %}
+{% set event_start_day_number = event_start_date|date('d') %}
+
+{% set event_end_date = event_date[1] %}
+{% if event_end_date is not null %}
+  {% set event_end_month = event_end_date|date('M') %}
+  {% set event_end_day_number = event_end_date|date('d') %}
+{% endif %}
+
+{% set all_day_event = fields.field_all_day_event.content|render|striptags|replace({"\n":""})|trim %}
+
+{% if all_day_event == 'On' %}
+  {% set event_time = "All day"|t %}
+{% else %}
+  {% set event_start_time = event_start_date|date('g:i a') %}
+  {% set event_time = event_start_time %}
+
+  {% set event_end_time = event_end_date|date('g:i a') %}
+  {% if event_end_date is not null %}
+    {% set event_time = event_start_time ~ ' TO ' ~ event_end_time %}
+  {% endif %}
+{% endif %}
+
+<div class="event-wrapper row">
+  <div class="event-details-wrapper clearfix {{ classes }}">
+    <div class="date-wrap">
+      <div class="date">
+        <div class="event-date-wrap">
+          {% if event_end_day_number is not null and event_end_date|date('Y-m-d') > event_start_date|date('Y-m-d') %}
+            {% if event_end_date|date('M') == event_start_date|date('M') %}
+              <div class="date-day">{{ event_start_day_number }} - {{ event_end_day_number }}</div>
+              <div class="date-month">{{ event_start_month }}</div>
+            {% else %}
+              <div class="date-day">{{ event_start_day_number }} - {{ event_end_day_number }}</div>
+              <div class="date-month">{{ event_start_month }} - {{ event_end_month }}</div>
+            {% endif %}
+          {% else %}
+            <div class="date-day">{{ event_start_day_number }}</div>
+            <div class="date-month">{{ event_start_month }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="content-wrap">
+      <div class="title">{{ fields.title.content }}</div>
+      <div class="time">
+        <div class="time">{{ event_time }}</div>
+      </div>
+      <div class="category">
+        {{ fields.field_event_category.content }}
+      </div>
+    </div>
+  </div>
+  {% if image is not empty %}
+    <div class="event-image-wrapper col-md-3">
+      {{ fields.field_media_image_8.content }}
+    </div>
+  {% endif %}
+</div>

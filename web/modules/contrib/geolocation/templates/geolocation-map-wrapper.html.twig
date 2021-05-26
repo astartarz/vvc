@@ -1,0 +1,17 @@
+<div {{ attributes }}>
+    <div class="geolocation-map-controls">
+      {% if controls is not empty %}
+        {% for control in controls %}
+          {{ control }}
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="geolocation-map-container js-show"></div>
+
+<div class="geolocation-common-map-locations">
+    {% if children is not empty %}
+        {{ children }}
+    {% endif %}
+</div>
+</div>

@@ -1,0 +1,27 @@
+uuid: df1ade4a-72fd-4934-8d04-4dc34b775f53
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.view_search
+  module:
+    - block_class
+    - views
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: view-search-page-block
+id: exposedformview_searchpage_1_3
+theme: vvc
+region: slide_in_navigation
+weight: -20
+provider: null
+plugin: 'views_exposed_filter_block:view_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:view_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

@@ -1,0 +1,19 @@
+uuid: c4f9751f-1ff3-42b3-a18c-01ef388a50ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.articles_grid
+id: paragraph.articles_grid.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: articles_grid
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

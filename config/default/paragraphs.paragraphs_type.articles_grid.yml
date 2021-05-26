@@ -1,0 +1,10 @@
+uuid: 4f5b5ec6-3f09-4079-94ef-4f1debd0707f
+langcode: en
+status: true
+dependencies: {  }
+id: articles_grid
+label: 'News Articles Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

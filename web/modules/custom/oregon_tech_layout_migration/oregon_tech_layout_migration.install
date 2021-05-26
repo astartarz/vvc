@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Installation hooks for custom module.
+ */
+
+/**
+ * Set reusable blocks.
+ */
+//function oregon_tech_layout_migration_update_8001() {
+//
+//  $num_updated = \Drupal::database()->update('block_content_field_data')
+//    ->fields(['reusable' => 1])
+//    ->condition('reusable', 0)
+//    ->condition('type', ['basic', 'paragraph_block'], 'IN')
+//    ->execute();
+//
+//}

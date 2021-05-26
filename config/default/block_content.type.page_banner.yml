@@ -1,0 +1,8 @@
+uuid: 23ec6155-b85e-4316-8849-74c8170ec699
+langcode: en
+status: true
+dependencies: {  }
+id: page_banner
+label: 'x. Page Banner'
+revision: 1
+description: 'Page banner for specific pages.'

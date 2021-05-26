@@ -1,0 +1,10 @@
+uuid: 2947f242-7340-4333-bf73-aa21fda35a0a
+langcode: en
+status: true
+dependencies: {  }
+id: news_banner
+label: 'News Articles Banner'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

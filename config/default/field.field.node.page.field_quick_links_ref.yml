@@ -1,0 +1,28 @@
+uuid: d69e945f-67bb-4e00-88e7-b68112ab5e3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quick_links
+    - field.storage.node.field_quick_links_ref
+    - node.type.page
+id: node.page.field_quick_links_ref
+field_name: field_quick_links_ref
+entity_type: node
+bundle: page
+label: 'Quick Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      quick_links: quick_links
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

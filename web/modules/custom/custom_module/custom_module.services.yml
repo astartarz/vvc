@@ -1,0 +1,5 @@
+services:
+  custom_module.redirectoldpaths:
+    class: Drupal\custom_module\EventSubscriber\RedirectSubscriber
+    tags:
+      - { name: event_subscriber }

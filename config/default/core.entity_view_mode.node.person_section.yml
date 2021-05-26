@@ -1,0 +1,10 @@
+uuid: 0a322641-a09c-4c2f-b528-b27cd32a88b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.person_section
+label: 'Person Section'
+targetEntityType: node
+cache: true

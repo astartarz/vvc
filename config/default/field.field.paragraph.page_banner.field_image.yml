@@ -1,0 +1,28 @@
+uuid: 37ec8a0e-4255-4b3f-8e98-04119455d2ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.page_banner
+id: paragraph.page_banner.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: page_banner
+label: 'Background Image'
+description: 'Leave empty to use default image.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

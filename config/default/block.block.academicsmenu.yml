@@ -1,0 +1,37 @@
+uuid: 7fed89ad-690b-4676-ab36-ad0d25894127
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.academics-menu
+  module:
+    - menu_block
+    - system
+  theme:
+    - kwall_subtheme_example
+id: academicsmenu
+theme: kwall_subtheme_example
+region: hero
+weight: -17
+provider: null
+plugin: 'menu_block:academics-menu'
+settings:
+  id: 'menu_block:academics-menu'
+  label: 'Academics Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'academics-menu:'
+  suggestion: academics_menu
+  label_type: block
+  label_link: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/academics\r\n/academics/certificate\r\n/academics/graduate\r\n/academics/undergraduate"
+    negate: false
+    context_mapping: {  }

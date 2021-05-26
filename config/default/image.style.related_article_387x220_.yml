@@ -1,0 +1,15 @@
+uuid: d7367fb0-8bf9-4dff-bb96-c505eec85034
+langcode: en
+status: true
+dependencies: {  }
+name: related_article_387x220_
+label: 'x. Related article (387x220)'
+effects:
+  418cb884-39df-4af2-b5dc-428fad6148b3:
+    uuid: 418cb884-39df-4af2-b5dc-428fad6148b3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 387
+      height: 220
+      anchor: center-center

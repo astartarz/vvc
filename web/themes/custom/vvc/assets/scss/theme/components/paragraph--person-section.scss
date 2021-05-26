@@ -1,0 +1,110 @@
+.paragraph--type--persons-section-refs,
+.paragraph--type--persons-section-taxonomy {
+  max-width: 1140px;
+  margin: 0 auto 50px 0;
+  .field--name-field-image {
+    border-right: 10px solid $color-extra-light-gray;
+    border-bottom: 10px solid $color-extra-light-gray;
+    border-top: 5px solid $color-extra-light-gray;
+    &:before {
+      content: '';
+      height: 15px;
+      width: 100%;
+      background: white;
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 0;
+    }
+    &:after {
+      content: '';
+      height: 10px;
+      width: 15px;
+      background: white;
+      display: block;
+      position: absolute;
+      left: 10px;
+    }
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .person-wrapper {
+    position: relative;
+    &:before {
+      content: '';
+      height: 4px;
+      width: 100%;
+      background: $color-extra-light-gray;
+      position: absolute;
+      left: 10px;
+      top: 5px;
+      z-index: 1;
+    }
+    .person-details {
+      padding-top: 25px;
+      .title-department {
+        margin-bottom: 1rem;
+        a {
+          color: $color-black;
+          font-family: $font-mont;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+          text-transform: uppercase;
+          display: inline-block;
+          text-decoration: none;
+          &:focus,
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .field--name-field-departments {
+          display: inline-block;
+          margin-left: 5px;
+          background: $color-red;
+          padding: 5px 8px;
+          color: $white;
+          text-transform: uppercase;
+          font-size: 12px;
+          font-family: $font-mont;
+        }
+      }
+      .field--name-field-captions-txt {
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 1rem;
+        .field__item {
+          display: inline-block;
+          &:after {
+            content: ', ';
+            margin-right: 5px;
+            margin-left: -3px;
+          }
+          &:last-child {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+      .field--name-field-teaser-description {
+        font-size: 15px;
+        line-height: 21px;
+        color: $color-grey;
+      }
+    }
+  }
+  article {
+    margin-bottom: 2rem;
+  }
+}
+
+.layout-content-bottom {
+  .paragraph--type--persons-section-refs,
+  .paragraph--type--persons-section-taxonomy {
+    padding: 0 15px;
+  }
+}

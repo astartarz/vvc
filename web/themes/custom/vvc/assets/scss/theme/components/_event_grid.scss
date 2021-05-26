@@ -1,0 +1,151 @@
+.event-wrap {
+  display: flex;
+  margin-bottom: 20px;
+
+  .date-wrap {
+    margin-right: 20px;
+    border-top: 4px solid $color-light-red;
+
+    .date {
+      @include event-date;
+    }
+  }
+
+  .content-wrap {
+    .title {
+      font-family: $font-mont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.73px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+
+      a {
+        color: $color-black;
+        text-decoration: none;
+        &:hover, &:focus, &:active {
+          color: $color-red
+        }
+      }
+    }
+
+    .event-date {
+      font-family: $font-open;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}
+
+.featured-event {
+  @media #{$mobile} {
+    margin-bottom: 20px;
+  }
+  .node--view-mode-featured-event {
+    position: static;
+    .featured-event {
+      border-right: 3px solid $color-extra-light-gray;
+      border-left: 20px solid $color-extra-light-gray;
+      border-bottom: 20px solid $color-extra-light-gray;
+      border-top: 5px solid $color-extra-light-gray;
+
+      &:before {
+        content: '';
+        height: 20px;
+        width: 20px;
+        background: white;
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 0;
+      //  border-right: 3px solid $color-extra-light-gray;
+      }
+
+      &:after {
+        content: "";
+        background: white;
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        width: 20px;
+        height: 20px;
+        border-top: 3px solid $color-extra-light-gray;
+        @media #{$mobile} {
+          bottom: 20px;
+        }
+      }
+
+      .date-wrap {
+        width: 75px;
+        position: absolute;
+        top: 0;
+        left: 50px;
+
+        .wrap {
+          .featured {
+            font-family: $font-open;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+            padding: 10px;
+            background-color: $color-light-red;
+            color: white;
+          }
+
+          .date {
+            @include event-date;
+          }
+        }
+      }
+
+      .field--name-field-teaser-image {
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        padding: 40px;
+
+        .title {
+          @include article-title;
+          margin-bottom: 20px;
+
+          a {
+            color: $color-black;
+            text-decoration: none;
+            &:hover, &:focus, &:active {
+              color: $color-red
+            }
+          }
+        }
+
+        .field--name-field-teaser-description {
+          font-family: $font-open;
+          font-size: 18px;
+          line-height: 21px;
+          color: $color-dark-gray;
+          margin-bottom: 28px;
+        }
+
+        .field--name-field-external-url {
+          .field__item {
+            @include post-link;
+          }
+        }
+      }
+    }
+  }
+}
+
+.event-list {
+  .viewsreference--view-title {
+    @include headline-3;
+    color: $color-black;
+    margin-bottom: 20px;
+  }
+}

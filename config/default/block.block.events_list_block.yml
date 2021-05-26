@@ -1,0 +1,30 @@
+uuid: 4da99ade-da45-48c7-ba1f-07e8e2c9e800
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events_list
+  module:
+    - system
+    - views
+  theme:
+    - vvc
+id: events_list_block
+theme: vvc
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:events_list-block'
+settings:
+  id: 'views_block:events_list-block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/6258
+    negate: false
+    context_mapping: {  }

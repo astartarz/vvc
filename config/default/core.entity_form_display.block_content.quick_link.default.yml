@@ -1,0 +1,42 @@
+uuid: 593d2a9a-50ec-4a36-a645-85edfc55c34a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quick_link
+    - field.field.block_content.quick_link.field_quick_link_styles
+  module:
+    - paragraphs
+id: block_content.quick_link.default
+targetEntityType: block_content
+bundle: quick_link
+mode: default
+content:
+  field_quick_link_styles:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: 'Quick Link'
+      title_plural: 'Quick Links'
+      edit_mode: preview
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

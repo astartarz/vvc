@@ -1,0 +1,11 @@
+{
+    "/manifest.js": "/manifest.js",
+    "/manifest.js.map": "/manifest.js.map",
+    "/css/theme-vendors.css": "/css/theme-vendors.css",
+    "/css/theme-main.css": "/css/theme-main.css",
+    "/mix.js.map": "/mix.js.map",
+    "/css/theme-vendors.css.map": "/css/theme-vendors.css.map",
+    "/css/theme-main.css.map": "/css/theme-main.css.map",
+    "/vendor.js": "/vendor.js",
+    "/vendor.js.map": "/vendor.js.map"
+}

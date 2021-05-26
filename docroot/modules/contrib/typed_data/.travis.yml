@@ -1,0 +1,95 @@
+language: php
+os: linux
+dist: xenial
+
+env:
+  global:
+    # Make the script re-usable for other modules.
+    - MODULE=typed_data
+    # Allow this many deprecation warnings.
+    - SYMFONY_DEPRECATIONS_HELPER=1
+
+jobs:
+  fast_finish: true
+  include:
+    - php: 7.0
+      env: DRUPAL_CORE=8.8.x
+    - php: 7.1
+      env: DRUPAL_CORE=8.9.x
+    - php: 7.3
+      env: DRUPAL_CORE=9.0.x
+
+services:
+  - mysql
+
+# Be sure to cache composer downloads.
+cache:
+  directories:
+    - $HOME/.composer
+
+before_script:
+  - echo $MODULE
+
+  # Remove Xdebug as we don't need it and it causes
+  # PHP Fatal error:  Maximum function nesting level of '256' reached.
+  # We also don't care if that file exists or not on PHP 7.
+  - phpenv config-rm xdebug.ini || true
+
+  # Remember the current $MODULE test directory for later use in the Drupal
+  # installation.
+  - TESTDIR=$(pwd)
+  # Navigate out of module directory to prevent blown stack by recursive module
+  # lookup.
+  - cd ..
+
+  # Create database.
+  - mysql -e "create database $MODULE"
+  # Export database variable for kernel tests.
+  - export SIMPLETEST_DB=mysql://root:@127.0.0.1/$MODULE
+  # Download Drupal 8 core from the Github mirror because it is faster.
+  - travis_retry git clone --branch $DRUPAL_CORE --depth 1 https://github.com/drupal/drupal.git
+  - cd drupal
+  # Store the path to Drupal root.
+  - DRUPAL_ROOT=$(pwd)
+  - echo $DRUPAL_ROOT
+
+  # Reference $MODULE in build site.
+  - ln -s $TESTDIR modules/$MODULE
+
+  # Run composer install for Drupal 8.1 and up.
+  - travis_retry composer self-update && travis_retry composer install
+  # Run composer install in the module directory in order to fetch dev
+  # dependencies there.
+  - travis_retry composer install -d $TESTDIR
+
+  # Coder is already installed as part of composer install. We just need to set
+  # the installed_paths to pick up the Drupal standards.
+  - $DRUPAL_ROOT/vendor/bin/phpcs --config-set installed_paths $DRUPAL_ROOT/vendor/drupal/coder/coder_sniffer
+
+  # Show the allowed number of deprecation warnings.
+  - echo $SYMFONY_DEPRECATIONS_HELPER
+
+  # Start a web server on port 8888, run in the background.
+  - php -S localhost:8888 &
+
+  # Export web server URL for browser tests.
+  - export SIMPLETEST_BASE_URL=http://localhost:8888
+
+script:
+  # Run the PHPUnit tests which also include the kernel tests.
+  - ./vendor/bin/phpunit -c ./core/phpunit.xml.dist ./modules/$MODULE/tests/
+
+  # Check for coding standards. First change directory to our module.
+  - cd $DRUPAL_ROOT/modules/$MODULE
+
+  # List all the sniffs that were used.
+  - $DRUPAL_ROOT/vendor/bin/phpcs --version
+  - $DRUPAL_ROOT/vendor/bin/phpcs --config-show
+  - $DRUPAL_ROOT/vendor/bin/phpcs -i
+  - $DRUPAL_ROOT/vendor/bin/phpcs -e
+
+  # Show the violations in detail and do not fail for any errors or warnings.
+  - $DRUPAL_ROOT/vendor/bin/phpcs --report-width=130 --colors --runtime-set ignore_warnings_on_exit 1 --runtime-set ignore_errors_on_exit 1 .
+
+  # Run again to give a summary and total count.
+  - $DRUPAL_ROOT/vendor/bin/phpcs --report-width=130 --colors --runtime-set ignore_warnings_on_exit 1 --runtime-set ignore_errors_on_exit 1 --report=summary .

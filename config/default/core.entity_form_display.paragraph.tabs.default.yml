@@ -1,0 +1,38 @@
+uuid: 17884d4c-b5dc-4083-aaf1-e603dc97f9e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs.field_tab_paragraphs
+    - field.field.paragraph.tabs.field_title
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - paragraphs
+id: paragraph.tabs.default
+targetEntityType: paragraph
+bundle: tabs
+mode: default
+content:
+  field_tab_paragraphs:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Tab
+      title_plural: Tabs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: tab
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

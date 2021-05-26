@@ -1,0 +1,28 @@
+uuid: af3c562a-995a-475e-aca8-a1c2c02644b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_interest_refs
+    - node.type.interest
+    - node.type.program
+id: node.program.field_interest_refs
+field_name: field_interest_refs
+entity_type: node
+bundle: program
+label: 'Areas of Interest'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      interest: interest
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

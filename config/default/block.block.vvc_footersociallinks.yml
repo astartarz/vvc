@@ -1,0 +1,29 @@
+uuid: 42eff340-f6e8-4e09-9e79-ddeb6352ee9e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_block:76e08c09-eacc-42fc-85c3-9a02bf1e4d71'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: footer-social-links
+id: vvc_footersociallinks
+theme: vvc
+region: footer
+weight: -15
+provider: null
+plugin: 'block_content:76e08c09-eacc-42fc-85c3-9a02bf1e4d71'
+settings:
+  id: 'block_content:76e08c09-eacc-42fc-85c3-9a02bf1e4d71'
+  label: 'Footer social links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

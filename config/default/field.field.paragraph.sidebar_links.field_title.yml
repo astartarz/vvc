@@ -1,0 +1,19 @@
+uuid: b42ad4e0-e1a4-4082-ab35-b8041de08f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.sidebar_links
+id: paragraph.sidebar_links.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: sidebar_links
+label: Headline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,118 @@
+uuid: 47a95269-9b2e-4bc3-bacb-bb7da02707a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_banner_video_.field_media
+    - field.field.paragraph.hero_banner_video_.field_subtitle
+    - field.field.paragraph.hero_banner_video_.field_title
+    - paragraphs.paragraphs_type.hero_banner_video_
+  module:
+    - fences
+    - field_group
+third_party_settings:
+  field_group:
+    group_container:
+      children: {  }
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      region: hidden
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'container content-wrapper'
+      label: Container
+    group_row:
+      children: {  }
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+    group_content:
+      children: {  }
+      parent_name: ''
+      weight: 5
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: 'col-md-12 content'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
+id: paragraph.hero_banner_video_.default
+targetEntityType: paragraph
+bundle: hero_banner_video_
+mode: default
+content:
+  field_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

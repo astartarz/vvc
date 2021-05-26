@@ -1,0 +1,17 @@
+uuid: 09c00843-7e47-4a7b-816a-35025e983a88
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: inline_media
+label: 'x. Inline Media (800x600)'
+effects:
+  5973c6fd-23f2-4245-93ee-8ce0fd7706d6:
+    uuid: 5973c6fd-23f2-4245-93ee-8ce0fd7706d6
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 600
+      crop_type: focal_point

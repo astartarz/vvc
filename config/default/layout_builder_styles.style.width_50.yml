@@ -1,0 +1,10 @@
+uuid: 429edcd3-a112-4131-af9e-f0d7a9e75158
+langcode: en
+status: true
+dependencies: {  }
+id: width_50
+label: 'Width 50%'
+classes: col-md-6
+type: component
+weight: 6
+block_restrictions: {  }

@@ -1,0 +1,16 @@
+# This is the DrupalCI testbot build file for Drupal core.
+# Learn to make one for your own drupal.org project:
+# https://www.drupal.org/drupalorg/docs/drupal-ci/customizing-drupalci-testing
+build:
+  assessment:
+    testing:
+      # run_tests task is executed several times in order of performance speeds.
+      # halt-on-fail can be set on the run_tests tasks in order to fail fast.
+      # suppress-deprecations is false in order to be alerted to usages of
+      # deprecated code.
+      run_tests.javascript:
+        concurrency: 15
+        types: 'PHPUnit-FunctionalJavascript'
+        testgroups: '--class "Drupal\Tests\layout_builder\FunctionalJavascript\InlineBlockQuickeditEnabledTest"'
+        suppress-deprecations: false
+        halt-on-fail: false

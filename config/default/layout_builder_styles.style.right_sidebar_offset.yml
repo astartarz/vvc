@@ -1,0 +1,10 @@
+uuid: b870ace8-648b-40a8-8768-efcbaf72fa1d
+langcode: en
+status: true
+dependencies: {  }
+id: right_sidebar_offset
+label: 'Right Sidebar Offset'
+classes: sidebar-offset
+type: section
+weight: 5
+block_restrictions: {  }

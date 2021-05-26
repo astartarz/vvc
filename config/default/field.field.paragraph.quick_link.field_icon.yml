@@ -1,0 +1,21 @@
+uuid: 3cb82973-3edb-4c40-84ed-cfede7f07b51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.quick_link
+  module:
+    - fontawesome
+id: paragraph.quick_link.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: quick_link
+label: 'Font Awesome Icon'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

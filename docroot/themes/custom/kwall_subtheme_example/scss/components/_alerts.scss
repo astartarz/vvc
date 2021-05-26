@@ -1,0 +1,150 @@
+@import '../styleguide/scss/variables';
+@import 'mixin';
+
+$color-alert: #FFCF01;
+$color-alert-red: #BD1B00;
+$color-alert-orange: #E84708;
+$color-alert-green: #A7DBD8;
+$color-alert-text-light: $white;
+$color-alert-text-dark: $black;
+
+.region-alerts {}
+
+.kwall-alerts {
+  display: none;
+  width: 100%;
+
+  .alert {
+    display: block;
+    border-style: none;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    position: relative;
+    &.not-dismissible-on {
+      .close {
+        display: none;
+      }
+    }
+  }
+
+  .alert-content {
+    display: flex;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    &::before {
+      display: flex;
+      color: $color-alert-text-light;
+      content: "\f12a";
+      // font: 2.2rem/2.6rem $font-awesome;
+      font-family: $font-awesome;
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      // position: absolute;
+      // left: 0;
+      border-style: solid;
+      border-width: 2px;
+      width: 34px;
+      height: 34px;
+      border-radius: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+  }
+
+  .close {
+    // background: url("../images/close-button.svg") no-repeat;
+    height: 22px;
+    width: 22px;
+    flex-shrink: 0;
+    float: none; // override Bootstrap
+    opacity: .75;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .fa {
+      font-size: 1.8rem;
+    }
+
+    .alert-close-text {
+      display: none;
+    }
+  }
+
+  .alert-body {
+    flex-grow: 1;
+    padding-left: 1.5rem;
+    padding-right: 2.5rem;
+    font-size: 1.4rem;
+    line-height: 1.4em;
+    @media #{$tablet-min} {
+      font-size: 1.8rem;
+      line-height: 1.4em;
+    }
+
+    a {
+      display: inline-block;
+      color: $color-grey;
+      text-transform: uppercase;
+      // font-family: $font-family-header;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.7rem;
+      position: relative;
+      top: -2px;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .alert-level {
+    &-info {
+      background-color: $color-alert;
+
+      .alert-content::before,
+      .close {
+        color: $color-alert-text-dark;
+      }
+    }
+    &-danger {
+      background-color: $color-alert-red;
+      color: $color-alert-text-light;
+
+      .alert-content::before,
+      .close {
+        color: $color-alert-text-light;
+      }
+    }
+    &-warning {
+      background-color: $color-alert-orange;
+      color: $color-alert-text-light;
+
+      .alert-content::before,
+      .close {
+        color: $color-alert-text-light;
+      }
+    }
+    &-success {
+      background-color: $color-alert-green;
+      color: $color-alert-text-dark;
+
+      .alert-content::before,
+      .close {
+        color: $color-alert-text-dark;
+      }
+    }
+  }
+}

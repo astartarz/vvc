@@ -1,0 +1,66 @@
+id: oregon_tech_article_migration
+label: Article
+migration_group: default
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  urls: 'modules/custom/oregon_tech_xml_migration/asserts/xml/NewsExport.xml'
+  data_parser_plugin: xml
+  item_selector: /ArrayOfNewsData/NewsData
+  fields:
+    - name: title
+      label: Title
+      selector: Title
+    - name: body
+      label: Body
+      selector: Body
+    - name: summary
+      label: Summary
+      selector: Summary
+    - name: image
+      label: 'Image URL'
+      selector: ImageURL
+    - name: date
+      label: 'Publication Date'
+      selector: PublicationDate
+    - name: tags
+      label: Tags
+      selector: Tags
+    - name: categories
+      label: Categories
+      selector: Categories
+  ids:
+    title:
+      type: string
+process:
+  type:
+    plugin: default_value
+    default_value: article
+  status:
+    plugin: default_value
+    default_value: 1
+  title: title
+  body:
+    plugin: textarea
+    source:
+     - body
+     - summary
+  field_media:
+    plugin: media
+    source: image
+  field_date:
+    plugin: date
+    source: date
+  field_campus:
+    plugin: term
+    source: categories
+  field_article_taxonomies:
+    plugin: term
+    source: tags
+destination:
+  plugin: 'entity:node'
+dependencies:
+  enforced:
+    module:
+      - oregon_tech_xml_migration
+migration_dependencies: {  }

@@ -1,0 +1,8 @@
+uuid: 5ee91657-fdec-4f68-9e85-9ac80cbce41b
+langcode: en
+status: true
+dependencies: {  }
+id: event_date_and_time
+label: 'Event - Date and Time'
+locked: false
+pattern: 'F j, Y - g:ia'

@@ -1,0 +1,10 @@
+uuid: e676f880-c748-4640-8c82-714159dd78a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.person_carousel
+label: 'Person carousel'
+targetEntityType: node
+cache: true

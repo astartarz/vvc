@@ -1,0 +1,101 @@
+
+.path-news {
+  #site-branding {
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
+  }
+  h1.page-title {
+    margin-top: 30px;
+  }
+  .layout-container .layout-center {
+    padding-left: 10px;
+  }
+  .region-content-top {
+    .views-page-title {
+      > h2 {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+.view-id-article_view.view-display-id-page_1 {
+  margin: 0 0 40px;
+  .view-filters {
+    @include exposedForm();
+
+    .views-exposed-form {
+      .form--inline {
+        .form-item {
+          @media #{$tablet-min} {
+            flex-basis: calc((100% - 13rem) / 2);
+            max-width: calc((100% - 13rem) / 2);
+          }
+          @media (min-width: $screen-md-min) {
+            &.form-type-textfield {
+              max-width: calc(calc(100% - 30rem) - 13rem);
+              flex: 0 0 calc(calc(100% - 30rem) - 13rem);
+            }
+
+            &.form-type-select {
+              flex: 0 0 30rem;
+              max-width: 30rem;
+              select {
+                background: #fff url(../images/arrow-top-bottom.png) no-repeat 95%;
+              }
+            }
+          }
+        }
+      }
+
+      &.form-values-exist {
+        .form--inline {
+          .form-item {
+            @media #{$tablet-min} {
+              flex-grow: 1;
+              flex-shrink: 0;
+              flex-basis: calc((100% - 19.3rem) / 2);
+              max-width: calc((100% - 19.3rem) / 2);
+            }
+            @media (min-width: $screen-md-min) {
+              &.form-type-textfield {
+                max-width: calc(calc(100% - 30rem) - 19.3rem);
+                flex: 0 0 calc(calc(100% - 30rem) - 19.3rem);
+              }
+              &.form-type-select {
+                flex: 0 0 30rem;
+                max-width: 30rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .view-content {
+    .post-wrap {
+      .content-wrap {
+        padding-left: 0;
+        padding-top: 0;
+        .post {
+          &-title {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+          }
+          &-link {
+            a {
+              @include read_more_link($color-orange);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav.pager {
+    margin: 60px 0 0px;
+  }
+}
+
+
+

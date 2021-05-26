@@ -1,0 +1,19 @@
+uuid: 9291331a-3eb9-4df7-891f-80455235ac85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_statistic_txt
+    - paragraphs.paragraphs_type.statistics_item
+id: paragraph.statistics_item.field_statistic_txt
+field_name: field_statistic_txt
+entity_type: paragraph
+bundle: statistics_item
+label: Statistic
+description: 'ex. "86%"'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

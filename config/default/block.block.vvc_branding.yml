@@ -1,0 +1,29 @@
+uuid: a1acdb67-1de6-4e60-b06f-ecb5df67a8f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: company-brand
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: vvc_branding
+theme: vvc
+region: header
+weight: -19
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

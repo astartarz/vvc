@@ -1,0 +1,20 @@
+uuid: bf5e99ce-6baa-43f8-9094-610ed799c0a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - gtranslate
+  theme:
+    - vvc
+id: gtranslate
+theme: vvc
+region: utility
+weight: 0
+provider: null
+plugin: gtranslate_block
+settings:
+  id: gtranslate_block
+  label: GTranslate
+  provider: gtranslate
+  label_display: '0'
+visibility: {  }

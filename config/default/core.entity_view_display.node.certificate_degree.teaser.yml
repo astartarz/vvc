@@ -1,0 +1,41 @@
+uuid: dca8f207-8a51-47b5-84ee-64ee6920a07f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.certificate_degree.body
+    - field.field.node.certificate_degree.field_certificate_degree_type
+    - field.field.node.certificate_degree.field_link
+    - node.type.certificate_degree
+  module:
+    - text
+    - user
+id: node.certificate_degree.teaser
+targetEntityType: node
+bundle: certificate_degree
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_certificate_degree_type: true
+  field_link: true
+  langcode: true
+  search_api_excerpt: true

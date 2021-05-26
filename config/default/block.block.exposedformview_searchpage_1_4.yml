@@ -1,0 +1,27 @@
+uuid: 7b955c98-e5c6-44fa-aa0b-5b898cc628e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.view_search
+  module:
+    - block_class
+    - views
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: desktop-search
+id: exposedformview_searchpage_1_4
+theme: vvc
+region: utility
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:view_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:view_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

@@ -1,0 +1,15 @@
+uuid: 7ae5922f-8fa3-4dbc-85b1-a1ab731c7c38
+langcode: en
+status: true
+dependencies: {  }
+name: inline_media_600w
+label: 'x. Inline Media: 600w'
+effects:
+  94193437-6a33-4818-9767-e28576e9dcb6:
+    uuid: 94193437-6a33-4818-9767-e28576e9dcb6
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: false

@@ -1,0 +1,52 @@
+.view-articles-grid {
+  position: relative;
+
+  .views-row {
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 24px;
+    }
+    .views-field {
+      height: 100%;
+      .wrapper {
+        height: 100%;
+        @include media-breakpoint-up(md) {
+          display: flex;
+          flex-flow: row wrap;
+        }
+
+        .image {
+          @include media-breakpoint-up(md) {
+            flex: 0 0 30%;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .title {
+          width: 100%;
+          padding: 20px;
+          border: 3px solid $color-extra-light-gray;
+          border-top: none;
+          @include media-breakpoint-up(md) {
+            flex: 0 0 70%;
+            padding: 15px 22px 18px 24px;
+            border-top: 3px solid $color-extra-light-gray;
+            border-left: none;
+          }
+
+          a {
+            @include article-title;
+            color: $color-black;
+            &:hover{
+              color: $color-red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

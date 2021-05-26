@@ -1,0 +1,10 @@
+uuid: fd469ebd-ab86-42b2-a1ce-d44bac4493c9
+langcode: en
+status: true
+dependencies: {  }
+id: statistics
+label: 'Statistics Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,258 @@
+uuid: 8e6164d7-8a7e-43bf-b0cc-fd65b03a06da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.info_block.field_info_block_items
+    - field.field.paragraph.info_block.field_info_block_quick_links
+    - field.field.paragraph.info_block.field_link
+    - field.field.paragraph.info_block.field_title
+    - paragraphs.paragraphs_type.info_block
+  module:
+    - entity_reference_revisions
+    - fences
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_wrapper:
+      children:
+        - group_content_item
+      parent_name: group_row
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-4 paragraph--type--sidebar-links'
+      label: 'Quicklinks Content'
+    group_content_item:
+      children:
+        - field_info_block_quick_links
+      parent_name: group_wrapper
+      weight: 6
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: sidebar-link
+      label: Quicklinks
+    group_co:
+      children:
+        - group_row
+      parent_name: group_wrap
+      weight: 21
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: wrapper
+      label: 'Content Wrapper'
+    group_row:
+      children:
+        - group_content_wrap
+        - group_wrapper
+      parent_name: group_co
+      weight: 6
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+    group_content_wrap:
+      children:
+        - field_title
+        - group_thumbnail_links
+      parent_name: group_row
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-8 content-wrap'
+      label: 'Content Wrap'
+    group_thumbnail_links:
+      children:
+        - field_info_block_items
+      parent_name: group_content_wrap
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: thumbnail-links
+      label: 'Thumbnail Links'
+    group_container:
+      children:
+        - group_wrap
+      parent_name: group_parent_block
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: container
+      label: Container
+    group_wrap:
+      children:
+        - group_co
+      parent_name: group_container
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: info-block
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Wrap
+    group_parent_block:
+      children:
+        - field_link
+        - group_container
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: learn-more-info-block
+      label: 'Info Block'
+id: paragraph.info_block.default
+targetEntityType: paragraph
+bundle: info_block
+mode: default
+content:
+  field_info_block_items:
+    type: entity_reference_revisions_entity_view
+    weight: 11
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+  field_info_block_quick_links:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: sidebar-link-item
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_link:
+    type: link
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: container
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

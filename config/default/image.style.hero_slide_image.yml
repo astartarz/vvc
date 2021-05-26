@@ -1,0 +1,15 @@
+uuid: 7b2b1e6f-7b10-49f4-9f87-87746644cc4f
+langcode: en
+status: true
+dependencies: {  }
+name: hero_slide_image
+label: 'x. Hero Slide Image (1242x700)'
+effects:
+  9c12b09a-1e84-45e2-808e-411a54ededd3:
+    uuid: 9c12b09a-1e84-45e2-808e-411a54ededd3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1242
+      height: 700
+      anchor: center-center

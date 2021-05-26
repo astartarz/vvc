@@ -1,0 +1,18 @@
+{
+  "name": "coursesearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "http-server d:\\code-testing\\CourseSearch\\ -p 8085 "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm": "^6.13.6"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.1"
+  }
+}

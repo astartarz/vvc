@@ -1,0 +1,26 @@
+uuid: c6f11554-850e-47a3-9da8-82fc6d6185dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imported_image
+    - node.type.person
+id: node.person.field_imported_image
+field_name: field_imported_image
+entity_type: node
+bundle: person
+label: 'x. Imported Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

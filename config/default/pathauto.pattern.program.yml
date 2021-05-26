@@ -1,0 +1,22 @@
+uuid: d8402b0b-fc00-46e8-8598-6ecf75c1e937
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: program
+label: Program
+type: 'canonical_entities:node'
+pattern: 'academics/degrees/[node:title]'
+selection_criteria:
+  3803c068-bcb0-4dc5-adbe-19613541c8c6:
+    id: node_type
+    bundles:
+      program: program
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3803c068-bcb0-4dc5-adbe-19613541c8c6
+selection_logic: and
+weight: -5
+relationships: {  }

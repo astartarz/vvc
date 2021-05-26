@@ -1,0 +1,17 @@
+uuid: 6c503bf9-4c8c-4458-abc9-97f2d191f7f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: carousel_image
+label: 'Carousel Image(700X400)'
+effects:
+  7170b425-f32a-491f-98b3-e1701312665c:
+    uuid: 7170b425-f32a-491f-98b3-e1701312665c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 400
+      crop_type: focal_point

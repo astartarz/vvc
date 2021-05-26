@@ -1,0 +1,139 @@
+uuid: b8c38f37-b9dc-47bd-85d0-fded0f09cb7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_hero_content
+    - paragraphs.paragraphs_type.hero_banner
+  module:
+    - entity_reference_revisions
+id: block_content.hero_banner.field_hero_content
+field_name: field_hero_content
+entity_type: block_content
+bundle: hero_banner
+label: 'Hero Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      hero_banner: hero_banner
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 38
+        enabled: false
+      3_column_cta:
+        weight: 39
+        enabled: false
+      4_column_cta:
+        weight: 40
+        enabled: false
+      accordion:
+        weight: 41
+        enabled: false
+      accordion_item:
+        weight: 42
+        enabled: false
+      adjustable_media_and_content:
+        weight: 43
+        enabled: false
+      article_slideshow:
+        weight: 44
+        enabled: false
+      article_slideshow_item:
+        weight: 45
+        enabled: false
+      column_section:
+        weight: 46
+        enabled: false
+      cta_buttons:
+        weight: 47
+        enabled: false
+      flexible_bg_image_block:
+        weight: 48
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 49
+        enabled: false
+      flexible_cta_block:
+        weight: 50
+        enabled: false
+      flexible_cta_blocks:
+        weight: 51
+        enabled: false
+      full_width_image_section:
+        weight: 52
+        enabled: false
+      gridder:
+        weight: 53
+        enabled: false
+      gridder_item:
+        weight: 54
+        enabled: false
+      hero_banner:
+        enabled: true
+        weight: 55
+      hero_slide:
+        weight: 56
+        enabled: false
+      hero_slideshow:
+        weight: 57
+        enabled: false
+      interior_column_section:
+        weight: 58
+        enabled: false
+      interior_slideshow:
+        weight: 59
+        enabled: false
+      interior_slideshow_slide:
+        weight: 60
+        enabled: false
+      person_carousel:
+        weight: 61
+        enabled: false
+      quick_link:
+        weight: 62
+        enabled: false
+      quick_link_minimal:
+        weight: 63
+        enabled: false
+      quicktab_item:
+        weight: 64
+        enabled: false
+      quicktabs:
+        weight: 65
+        enabled: false
+      quote:
+        weight: 66
+        enabled: false
+      recent_articles:
+        weight: 67
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 68
+        enabled: false
+      upcoming_events:
+        weight: 69
+        enabled: false
+      video_embed:
+        weight: 70
+        enabled: false
+      video_tab_carousel:
+        weight: 71
+        enabled: false
+      video_tab_item:
+        weight: 72
+        enabled: false
+      views:
+        weight: 73
+        enabled: false
+      wysiwyg:
+        weight: 74
+        enabled: false
+field_type: entity_reference_revisions

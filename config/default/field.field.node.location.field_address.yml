@@ -1,0 +1,62 @@
+uuid: 12a9301d-c56e-4c92-9e23-8ac44df163cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.location
+  module:
+    - address
+id: node.location.field_address
+field_name: field_address
+entity_type: node
+bundle: location
+label: Address
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    langcode: ''
+    country_code: US
+    administrative_area: CA
+    locality: Victorville
+    dependent_locality: null
+    postal_code: '92395'
+    sorting_code: null
+    address_line1: '18422 Bear Valley Road'
+    address_line2: ''
+    organization: null
+    given_name: null
+    additional_name: null
+    family_name: null
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: optional
+    addressLine2:
+      override: optional
+    postalCode:
+      override: optional
+    sortingCode:
+      override: optional
+    dependentLocality:
+      override: hidden
+    locality:
+      override: optional
+    administrativeArea:
+      override: optional
+  fields: {  }
+field_type: address

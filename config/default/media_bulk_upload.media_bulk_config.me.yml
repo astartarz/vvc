@@ -1,0 +1,15 @@
+uuid: 7696e81f-40a5-40d3-8763-497615c4f9ea
+langcode: en
+status: true
+dependencies: {  }
+id: me
+label: 'Media Bulk'
+media_types:
+  file: file
+  image: image
+  audio: 0
+  remote_video: 0
+  video: 0
+show_alt: null
+show_title: null
+form_mode: media_library

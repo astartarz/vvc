@@ -1,0 +1,124 @@
+// stylelint-disable
+/*------------------------------------ STYLES -----------------------------------*/
+
+// Headers
+.heading-style-1 {
+  @include heading-style-1;
+}
+
+.heading-style-2 {
+  @include heading-style-2;
+}
+
+.heading-style-3 {
+  @include heading-style-3;
+}
+
+.heading-style-4 {
+  @include heading-style-4;
+}
+
+.heading-style-5 {
+  @include heading-style-5;
+}
+
+.heading-style-6 {
+  @include heading-style-6;
+}
+
+.heading-style-7 {
+  @include heading-style-7;
+}
+
+// Text
+.text-style-1 {
+  @include text-style-1;
+}
+
+.text-style-2 {
+  @include text-style-2;
+}
+
+// Color Modifiers (Interchangeable between Headers and Text)
+.text-black {
+  color: $black;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-white {
+  color: $white;
+}
+
+/*----------------------------------- SPACING -----------------------------------*/
+
+// Heading (Style 2)
+.heading-style-2 + .text-style-1 {
+  margin-top: $space-medium;
+}
+
+.heading-style-2 + .text-style-2 {
+  margin-top: $space-medium;
+}
+
+// Heading (Style 3)
+.heading-style-3 + .text-style-1 {
+  margin-top: $space-medium;
+}
+
+// Heading (Style 4)
+.heading-style-4 + .text-style-1 {
+  margin-top: $space-small;
+}
+
+// Heading (Style 5)
+.heading-style-5 + .text-style-1 {
+  margin-top: $space-small;
+}
+
+// Heading (Style 6)
+.heading-style-6 + .heading-style-4 {
+  margin-top: $space-small;
+}
+
+// Text (Style 1)
+.text-style-1 + .text-style-1 {
+  margin-top: $space-medium;
+}
+
+.text-style-1 + .button-text {
+  margin-top: $space-medium;
+}
+
+.text-style-1 + .button-grid {
+  margin-top: $space-medium;
+}
+
+// Text (Style 2)
+.text-style-2 + .button-text {
+  margin-top: $space-medium;
+}
+
+.text-style-2 + .button-grid {
+  margin-top: $space-medium;
+}
+
+/*-------------------------------- INTERACTIONS ---------------------------------*/
+
+.heading-style-4.text-black a {
+  transition: $transition-short color ease-out;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.heading-style-5.text-orange a {
+  transition: $transition-short color ease-out;
+
+  &:hover {
+    color: $black;
+  }
+}

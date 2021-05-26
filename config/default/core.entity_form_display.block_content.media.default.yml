@@ -1,0 +1,42 @@
+uuid: 4cedf6a4-8165-4718-8973-275d18c6703c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media
+    - field.field.block_content.media.field_media
+  module:
+    - media_library
+    - media_library_edit
+id: block_content.media.default
+targetEntityType: block_content
+bundle: media
+mode: default
+content:
+  field_media:
+    type: media_library_widget
+    weight: 27
+    settings:
+      media_types:
+        - inline_media
+        - remote_video
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

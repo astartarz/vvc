@@ -1,0 +1,43 @@
+uuid: 6087f8e5-b412-45b4-96bd-9f6f9200361c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_image_cta_blocks.field_flex_image_blocks_display
+    - field.field.paragraph.flexible_image_cta_blocks.field_flexible_image_cta_blocks
+    - field.field.paragraph.flexible_image_cta_blocks.field_title
+    - paragraphs.paragraphs_type.flexible_image_cta_blocks
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.flexible_image_cta_blocks.default
+targetEntityType: paragraph
+bundle: flexible_image_cta_blocks
+mode: default
+content:
+  field_flex_image_blocks_display:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_flexible_image_cta_blocks:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,10 @@
+uuid: da96f8d9-7dcd-44d7-95ed-ec92299d040a
+langcode: en
+status: true
+dependencies: {  }
+id: academic_tabs
+label: 'Academic Tabs'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

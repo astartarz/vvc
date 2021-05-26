@@ -1,0 +1,10 @@
+uuid: 4d61df93-59e5-49c7-8039-471d7136351e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.campus_tag
+label: 'Campus Tag'
+targetEntityType: taxonomy_term
+cache: true

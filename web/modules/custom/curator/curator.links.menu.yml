@@ -1,0 +1,6 @@
+# Define default links for this module.
+curator.settings:
+  title: Curator Settings
+  description: 'Curator settings and feeds.'
+  route_name: entity.curator.collection
+  parent: system.admin_config_services

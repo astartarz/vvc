@@ -1,0 +1,399 @@
+aside.layout-sidebar-right {
+  .region-sidebar-right {
+    position: relative;
+    padding: 50px 20px 30px 20px;
+    &:before {
+      content: "";
+      background-image: url("../images/pattren-light-gray.jpg");
+      background-repeat: repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+    }
+    .page-banner & {
+      padding: 20px 20px 40px 20px;
+      &:before {
+        top: -20px;
+      }
+    }
+    @media #{$mobile} {
+      display: none;
+      padding: 0;
+      &.sidebar-content {
+        display: block;
+        padding: 40px 0 10px 0;
+
+        &:before {
+          left: -50vw;
+          margin-left: 50%;
+        }
+      }
+    }
+  }
+}
+
+#block-vvc-sidebarcontent {
+  position: relative;
+}
+
+.paragraph--type--sidebar-social {
+  background: $white;
+  padding: 20px;
+  margin-bottom: 30px;
+
+  .article-title {
+    margin-bottom: 10px;
+
+    h2 {
+      @include article-title;
+      margin: 0;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    a {
+      font-size: 0;
+
+      &:before {
+        @include social-icon;
+        color: $color-red;
+        transition: 0.2s;
+      }
+
+      &:hover {
+        &:before {
+          color: $color-light-red;
+        }
+      }
+    }
+
+    .twitter {
+      a {
+        &:before {
+          content: "\f099";
+        }
+      }
+    }
+
+    .linkedin {
+      a {
+        &:before {
+          content: "\f0e1";
+        }
+      }
+    }
+
+    .instagram {
+      a {
+        &:before {
+          content: "\f16d";
+        }
+      }
+    }
+
+    .facebook {
+      a {
+        &:before {
+          content: "\f09a";
+        }
+      }
+    }
+  }
+}
+
+.paragraph--type--sidebar-links {
+  padding: 20px;
+  background-color: $white;
+  margin-bottom: 30px;
+
+  .article-title {
+    margin-bottom: 20px;
+
+    h2 {
+      @include article-title;
+      margin: 0;
+    }
+  }
+
+  .sidebar-link {
+    .sidebar-link-item {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        @include global-link;
+        text-transform: uppercase;
+        font-family: $font-mont;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        display: block;
+      }
+    }
+  }
+}
+
+.paragraph--type--sidebar-contacts {
+  padding: 20px;
+  background-color: $white;
+  margin-bottom: 30px;
+
+  .article-title {
+    margin-bottom: 10px;
+
+    h2 {
+      @include article-title;
+      margin: 0;
+    }
+  }
+
+  .paragraph--type--contact {
+    h2 {
+      @include body;
+      color: $color-black;
+      font-weight: normal;
+      margin: 0 0 25px 0;
+      text-transform: capitalize;
+    }
+
+    .field--name-field-location-ref,
+    .field--name-field-phone-num,
+    .field--name-field-email {
+      @include body;
+      color: $color-red;
+      margin-bottom: 10px;
+      position: relative;
+
+      &:before {
+        font-family: $font-awes;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 23px;
+        color: $color-red;
+        margin-right: 5px;
+      }
+
+      a {
+        color: $color-red;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $color-light-red;
+        }
+      }
+    }
+
+    .field--name-field-location-ref {
+      &:before {
+        content: "\f041";
+      }
+    }
+
+    .field--name-field-phone-num {
+      &:before {
+        content: "\f095";
+      }
+    }
+
+    .field--name-field-email {
+      &:before {
+        content: "\f0e0";
+      }
+    }
+
+    & + .paragraph--type--contact {
+      margin-top: 20px;
+    }
+  }
+}
+
+.sidebar-menu-block {
+  margin-bottom: 30px;
+  @media #{$mobile} {
+    background-image: url("../images/sidebar-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 25px 0 0 0;
+    .page-banner & {
+      margin: -25px 0 30px 0;
+    }
+    & > h2 {
+      color: $color-black;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      position: relative;
+      padding: 20px;
+      margin: 0;
+      cursor: pointer;
+
+      &:before {
+        position: absolute;
+        content: "";
+        background-color: $color-light-red;
+        width: 4px;
+        height: 27px;
+        left: 0;
+      }
+
+      &:after {
+        content: "\f107";
+        transform: rotate(0deg);
+        transition: all 0.2s;
+        position: absolute;
+        right: 20px;
+        font-family: $font-awes;
+        color: $color-light-red;
+        font-weight: 500;
+        font-size: 30px;
+      }
+
+      &.open {
+        color: $white;
+        background-image: url("../images/sidebar-back-active.png");
+        background-size: contain;
+        border-bottom: 4px solid $color-light-gray;
+
+        &:after {
+          color: $white;
+          transform: rotate(180deg);
+          transition: all 0.2s;
+        }
+      }
+    }
+  }
+
+  ul.nav {
+    &.menu {
+      @media #{$mobile} {
+        padding: 20px;
+        display: none;
+      }
+
+      & > li {
+        &:before {
+          content: "";
+          background: $color-light-red;
+          position: absolute;
+          left: -20px;
+          width: 4px;
+          height: 27px;
+          top: 5px;
+        }
+      }
+
+      li {
+        position: relative;
+        display: block;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        &.expanded {
+          > a,
+          span {
+            &:before {
+              content: "\f107";
+              font-family: $font-awes;
+              width: 20px;
+              height: 30px;
+              position: absolute;
+              right: 0;
+              top: 5px;
+              transition: all 0.2s;
+              font-size: 30px;
+              line-height: 34px;
+              cursor: pointer;
+              display: block;
+              color: $color-light-red;
+            }
+          }
+
+          &.menu-opened,
+          &.active {
+            > a,
+            span {
+              &:before {
+                transform: rotate(180deg);
+                transition: all 0.2s;
+              }
+            }
+          }
+
+          &.active.menu-closed {
+            > a,
+            span {
+              &:before {
+                transform: rotate(0deg);
+                transition: all 0.2s;
+              }
+            }
+          }
+        }
+
+        svg {
+          position: absolute;
+          right: 0;
+          top: 5px;
+          cursor: pointer;
+          outline: none;
+          width: 20px;
+          height: 30px;
+          font-size: 30px;
+          line-height: 34px;
+          opacity: 0;
+          color: transparent;
+          background-color: transparent;
+
+          path {
+            fill: $color-light-red;
+          }
+        }
+
+        a,
+        span {
+          display: block;
+          float: none !important;
+          width: 100%;
+          padding: 5px 0;
+          color: $color-black;
+          font-family: $font-open;
+          font-size: 20px;
+          line-height: 27px;
+          font-weight: 500;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: none;
+        }
+
+        .dropdown-menu-list {
+          ul {
+            li {
+              margin: 0;
+              padding: 0 0 0 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

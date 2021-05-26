@@ -1,0 +1,59 @@
+uuid: 8eac805c-d1f3-4b94-a447-8a63f30d83ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_banner.field_adjustable_height
+    - field.field.paragraph.hero_banner.field_image
+    - field.field.paragraph.hero_banner.field_subtitle
+    - field.field.paragraph.hero_banner.field_title
+    - paragraphs.paragraphs_type.hero_banner
+  module:
+    - fences
+id: paragraph.hero_banner.default
+targetEntityType: paragraph
+bundle: hero_banner
+mode: default
+content:
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: hero_banner
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_adjustable_height: true
+  search_api_excerpt: true

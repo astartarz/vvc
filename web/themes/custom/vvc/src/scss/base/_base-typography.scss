@@ -1,0 +1,86 @@
+// Base typography based on design.
+html {
+  font-size: 62.5%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  //scroll-behavior: smooth;
+}
+
+body {
+  @include body();
+}
+
+h1, .h1 {
+  @include headline-1();
+}
+
+h2, .h2 {
+  @include headline-2();
+}
+
+h3, .h3 {
+  @include headline-3();
+}
+
+h4, .h4 {
+  @include headline-4();
+}
+
+h5, .h5 {
+  @include headline-5();
+}
+
+h6, .h6 {
+  @include headline-6();
+}
+
+.displaytext {
+  @include displaytext();
+}
+
+.displaytextxxl {
+  @include displaytextxxl();
+}
+
+.article-title {
+  @include article-title();
+}
+
+.lead {
+  @include lead();
+}
+
+.body {
+  @include body();
+}
+
+.smalltext {
+  @include smalltext();
+}
+
+.buttontext {
+  @include buttontext();
+}
+
+.morelink {
+  @include morelink();
+}
+
+.label {
+  @include label();
+}
+
+
+.buttonprimary{
+  @include buttonprimary;
+}
+
+
+.buttonfilled{
+  @include buttonfilled;
+}
+
+
+.globallink{
+  @include global-link;
+}

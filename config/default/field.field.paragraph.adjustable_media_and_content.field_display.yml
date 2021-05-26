@@ -1,0 +1,23 @@
+uuid: 2f8bd36a-ca28-420d-b55c-c6b234334d25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+  module:
+    - options
+id: paragraph.adjustable_media_and_content.field_display
+field_name: field_display
+entity_type: paragraph
+bundle: adjustable_media_and_content
+label: Layout
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: media-left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

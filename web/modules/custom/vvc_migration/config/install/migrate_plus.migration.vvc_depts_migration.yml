@@ -1,0 +1,37 @@
+id: vvc_depts_migration
+label: Departments & Offices
+migration_group: default
+source:
+  plugin: csv
+  path: 'modules/custom/vvc_migration/assets/csv/depts.csv'
+  ids: [ id ]
+process:
+  type:
+    plugin: default_value
+    default_value: page
+  status:
+    plugin: default_value
+    default_value: 1
+  title: title
+  field_legacy_menu_title: title
+  field_related_department:
+    plugin: entity_generate
+    source: department
+    bundle_key: vid
+    value_key: name
+    bundle: departments
+    entity_type: taxonomy_term
+  body:
+    plugin: page
+    source: url
+  field_legacy_path: url
+  moderation_state:
+    plugin: default_value
+    default_value: published
+destination:
+  plugin: 'entity:node'
+dependencies:
+  enforced:
+    module:
+      - vvc_migration
+migration_dependencies: {  }

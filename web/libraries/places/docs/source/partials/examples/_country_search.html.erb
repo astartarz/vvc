@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+
+<div class="f16">
+  <input type="search" id="country" class="form-control" placeholder="What's your favorite country?" />
+</div>
+
+<%= javascript_include_tag config[:places_lib_url] %>
+<script>
+(function() {
+  var placesAutocomplete = places({
+    appId: '<%= app_id %>',
+    apiKey: '<%= api_key %>',
+    container: document.querySelector('#country'),
+    templates: {
+      suggestion: function(suggestion) {
+        return '<i class="flag ' + suggestion.countryCode + '"></i> ' +
+          suggestion.highlight.name;
+      }
+    }
+  }).configure({
+    type: 'country',
+  });
+})();
+</script>

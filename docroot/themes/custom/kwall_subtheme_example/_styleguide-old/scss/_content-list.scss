@@ -1,0 +1,296 @@
+/**
+ * @file
+ * Content-List
+ *
+ ****
+ *
+ * List Style
+ * Event Listing
+ * Person Listing
+ *
+ ****
+*/
+  
+  
+  
+  
+/****
+ *
+ * List Style
+ * Generic Listing Styles
+ *
+ ****/
+//Date Badge Style
+.date {
+	background: $color-blue;
+	border-radius: 0 0 5px 5px;
+	border-top: 6px solid $color-blue-light;
+	display: inline-block;
+	left: 0;
+	margin: -6px 1rem 1rem 1rem;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	p {
+		font-size: 0;
+		line-height: 0;
+		margin: 0;
+	}
+	span { 
+		color: #fff;
+	}
+	.day {
+		font-family: $font-family-bold;
+		font-size: 4.5rem;
+		line-height: 1;
+	}
+	.month {
+		background-color: $color-blue-dark;
+		display: block;
+		font-size: 2.4rem;
+		line-height: 2.6rem;
+		padding: 4px 15.5px 8px 15.5px;
+		text-transform: uppercase;
+		width: 8.2rem;
+	}
+}
+
+//Generic Listing View
+.listing-view {
+	.views-row {
+		border-bottom: 6px solid $color-grey-xlight;
+		display: inline-block;
+    font-size: 0;
+		padding-bottom: 3rem;
+		width: 100%;
+	}
+	
+	.date-image-wrapper {
+		position: relative;
+	}
+	
+	//Fields
+	.field-name-field-image {
+		border-radius: $border-radius;
+		float: left;
+		overflow: hidden;
+		margin-right: 15px;
+		img {
+			height: auto;
+			width: 100%;
+		}
+		@media (max-width: 490px) {
+			float: none;
+			margin-bottom: 1.5rem;
+			margin-right: 0;
+		}
+	}
+	
+	.views-field-title, .field-title-field {
+		color: $color-header;
+		font-family: $font-family-header-bold;
+		font-size: 2.6rem;
+		line-height: 1.269;
+		margin-bottom: 1rem;
+		a {
+			color: $color-header;
+			text-decoration: none;
+		}
+	}
+	
+	.field-type-date,
+	.field-type-author,
+	.field-type-time {
+		display: inline-block;
+		font-size: 1.6rem;
+		font-style: italic;
+		margin-bottom: 1rem;
+	}
+	.field-type-date + .field-type-author,
+	.field-type-date + .field-type-time {
+		&:before {
+			content: "|";
+			margin: 0 1rem;
+		}
+	}
+	
+	.field-name-field-body {
+		font-size: 1.6rem;
+		margin-bottom: 0.8rem;
+	}
+	.field-role,
+	.views-field-role {
+		display: inline-block;
+		font-family: $font-family-light;
+		font-style: italic;
+		font-size: 1.6rem;
+	}
+	.field-department,
+	.views-field-department {
+		display: inline-block;
+		font-family: $font-family-light;
+		font-size: 1.6rem;
+		font-style: italic;
+		margin-bottom: 1rem;
+	}
+	
+	.field-phone,
+	.field-email,
+	.field-location {
+		color: $color-blue;
+		font-family: $font-family-light;
+		font-size: 1.6rem;
+		margin-bottom: 0.7rem;
+		i {
+			margin-right: 1rem;
+		}
+	}
+
+	.views-field-view-node {
+		line-height: 1;
+	}
+}
+
+
+
+
+/****
+ *
+ * Event Listing
+ *
+ ****/
+.event-listing {
+	.views-row {
+		background-color: rgba(255,255,255,0.65);
+		border-bottom: none;
+		border-top: 6px solid $color-blue;
+		border-radius: 5px;
+		margin-bottom: 0;
+		padding: 0;
+		position: relative;
+		transition: $transition;
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: rgba(255,255,255,1);
+			border-color: $color-red;
+			box-shadow: $box-shadow-dark;
+			text-decoration: none;
+		}
+	}
+	.field-name-field-image {
+		border-radius: 0 0 5px 5px;
+	}
+	.list-text-wrapper {
+		margin-left: 9rem; 
+		padding: 1.2rem 2rem 2rem 2rem;
+	}
+	.views-field-title {
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+	}
+}
+
+
+
+
+/****
+ *
+ * Person Listing
+ *
+ ****/
+.directory-listing {
+	.views-row {
+		background-color: $color-grey-xlight;
+		border-radius: $border-radius;
+		border-bottom: none;
+		border-top: 6px solid $color-blue;
+		overflow: hidden;
+		padding: 2rem;
+		transition: $transition;
+		&:hover {
+			text-decoration: none;
+			background-color: #fff;
+			border-color: $color-red;
+			box-shadow: $box-shadow-dark;
+		}
+	}
+	.field-name-field-image {
+		border-radius: 0;
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+	.list-info-wrapper {
+		margin-bottom: 1.8rem;
+		margin-left: 180px;
+		@media (max-width: 767px) {
+			margin-left: 0;
+		}
+	}
+	.list-text-wrapper {
+		display: block;
+	}
+	.faculty-title {
+		color: $color-style-dark-grey;
+		font-family: 2.2rem;
+		margin-top: 0;
+	}
+	.field-role + .field-department,
+	.views-field-role + .views-field-department {
+		&:before {
+			content: "-";
+			margin: 0 1rem;
+		}
+	}
+	hr {
+		margin: 0 0 1.4rem 0;
+	}
+}
+//directory grid
+.directory-listing-grid {
+	padding: 5rem 0;
+	.views-row {
+		border: none;
+		border-radius: $border-radius;
+		overflow: hidden;
+		margin-bottom: 2rem;
+		padding: 0;
+		transition: $transition;
+		&:hover,
+		&:active,
+		&:focus {
+			box-shadow: $box-shadow-light;
+			text-decoration: none;
+			.field-name-field-image {
+				border-color: $color-red;
+			}
+		}
+	}
+	.field-name-field-image {
+		border-bottom: 6px solid $color-blue;
+		border-radius: 0;
+		float: none;
+		overflow: auto;
+		margin: 0;
+		transition: $transition;
+	}
+	.list-text-wrapper {
+		background-color: #fff;
+		padding: 2rem;
+	}
+	.views-field-title {
+		color: $color-blue-dark;
+		font-size: 1.8rem;
+	}
+	.views-field-role,
+	.views-field-department {
+		display: block;
+		font-style: normal;
+	}
+	.views-field-role {
+		font-family: $font-family;
+		margin-bottom: 1rem;
+	}
+}

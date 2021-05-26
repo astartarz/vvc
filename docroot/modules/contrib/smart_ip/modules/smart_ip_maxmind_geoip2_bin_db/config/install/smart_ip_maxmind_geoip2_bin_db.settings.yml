@@ -1,0 +1,6 @@
+version: lite
+edition: city
+user_account: null
+license_key: null
+db_auto_update: true
+bin_file_custom_path: null

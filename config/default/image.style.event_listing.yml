@@ -1,0 +1,17 @@
+uuid: c92be005-8e4b-4f8d-9d37-39bfabbd13d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: event_listing
+label: 'Event listing'
+effects:
+  b783347c-8b92-45cd-8c6d-9f7cec774428:
+    uuid: b783347c-8b92-45cd-8c6d-9f7cec774428
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 290
+      height: 164
+      crop_type: focal_point

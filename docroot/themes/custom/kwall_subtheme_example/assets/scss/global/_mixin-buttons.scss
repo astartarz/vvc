@@ -1,0 +1,132 @@
+@mixin button-text($color, $hover-color) {
+  display: inline-block;
+  font-family: $font-brandongrotesque;
+  font-size: rem-calc(19px);
+  font-weight: 700;
+  line-height: (22 / 18);
+  color: $color;
+  text-decoration: underline;
+  transition: $transition-short color ease;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+}
+
+@mixin button-hollow($color, $border-color, $hover-color, $hover-border-color, $hover-fill) {
+  @include button-text-style-1;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 17px 40px 12px;
+  overflow: hidden;
+  color: $color;
+  text-align: center;
+  border: $border-color 2px solid;
+  transition:
+    $transition-short color ease-out,
+    $transition-short border-color ease-out;
+
+  @include breakpoint(medium) {
+    width: auto;
+  }
+
+  @include breakpoint(large) {
+    display: inline-block;
+  }
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    border-color: $hover-border-color;
+
+    &::after {
+      transform: translateX(-0.5%);
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 120%;
+    height: 101%;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    content: "";
+    background-color: $hover-fill;
+    transition: $transition-short transform ease-out;
+    transform: translateX(-120%);
+  }
+}
+
+@mixin button-solid($color, $background, $hover-color, $hover-background) {
+  @include button-text-style-1;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 19px 40px 14px;
+  color: $color;
+  text-align: center;
+  background-color: $background;
+  transition:
+    $transition-short color ease-out,
+    $transition-short background-color ease-out;
+
+  @include breakpoint(medium) {
+    width: auto;
+  }
+
+  @include breakpoint(large) {
+    display: inline-block;
+  }
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    background-color: $hover-background;
+  }
+}
+
+@mixin button-left-bordered($color, $background, $hover-color, $border-color) {
+  position: relative;
+  padding: 29px 30px 24px;
+  color: $color;
+  text-align: left;
+  transition: $transition-short color ease-out;
+  @include button-text-style-1;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    content: "";
+  }
+
+  &::before {
+    z-index: -1;
+    width: 3px;
+    background-color: $border-color;
+    transition: $transition-short width ease-out;
+  }
+
+  &::after {
+    z-index: -2;
+    width: 100%;
+    background-color: $background;
+  }
+}

@@ -1,0 +1,7 @@
+uuid: c12f70d5-6e39-475c-b5c6-2dec60a44f71
+langcode: en
+status: true
+dependencies: {  }
+id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
+label: 'http://localhost:8888/_fresh/docroot/'
+context: {  }

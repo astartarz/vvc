@@ -1,0 +1,17 @@
+uuid: c6f14fdd-1839-4901-b736-358ba6eb774e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: story_image
+label: 'x. Story Image (384×560)'
+effects:
+  3598a9b4-2b72-4cae-8e7e-c0605df39a3a:
+    uuid: 3598a9b4-2b72-4cae-8e7e-c0605df39a3a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 384
+      height: 560
+      crop_type: focal_point

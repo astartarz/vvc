@@ -1,0 +1,53 @@
+uuid: cc3c2ca3-d111-4260-95a2-cb0c5c39fc31
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.scale_width_600px
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_media_image
+    - image.style.scale_width_600px
+    - media.type.image
+  module:
+    - fences
+    - layout_builder
+    - svg_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
+id: media.image.scale_width_600px
+targetEntityType: media
+bundle: image
+mode: scale_width_600px
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      image_style: scale_width_600px
+      image_link: ''
+      svg_render_as_image: true
+      svg_attributes:
+        width: null
+        height: null
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: image
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_categories: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

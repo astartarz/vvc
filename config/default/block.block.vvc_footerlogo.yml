@@ -1,0 +1,29 @@
+uuid: 404e8b73-014d-4112-b834-43458159fe01
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7806ecac-9fd8-490b-bf4f-a303c8ed553a'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: footer-logo
+id: vvc_footerlogo
+theme: vvc
+region: footer
+weight: -16
+provider: null
+plugin: 'block_content:7806ecac-9fd8-490b-bf4f-a303c8ed553a'
+settings:
+  id: 'block_content:7806ecac-9fd8-490b-bf4f-a303c8ed553a'
+  label: 'Footer logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

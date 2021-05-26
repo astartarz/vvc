@@ -1,0 +1,13 @@
+providers_list:
+  facebook: facebook
+  twitter: twitter
+  linkedin: linkedin
+  email: email
+use_module_css: 1
+providers:
+  facebook: facebook
+  twitter: twitter
+  linkedin: 0
+  email: email
+_core:
+  default_config_hash: EbmjsPFUieQdddy1g5qrOj3H3xCysz1dOv3aPqvm1pY

@@ -1,0 +1,18 @@
+uuid: 7388847a-5c87-4128-8abb-eb8eb61571bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_show_logo
+field_name: field_show_logo
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

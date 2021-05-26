@@ -1,0 +1,8 @@
+name: KWALL Share Bar
+description: 'Provides a Share block on your site.'
+core: 8.x
+package: Custom
+dependencies:
+  - block
+type: module
+configure: block.admin_display

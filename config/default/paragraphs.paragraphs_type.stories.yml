@@ -1,0 +1,10 @@
+uuid: 71d8e80d-329a-4f02-9413-fbc8b3e14c1e
+langcode: en
+status: true
+dependencies: {  }
+id: stories
+label: 'Student Stories'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

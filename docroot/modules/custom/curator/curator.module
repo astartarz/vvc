@@ -1,0 +1,61 @@
+<?php
+/**
+ * Curator - Social post sync
+ *
+ * @package     curator
+ * @author      Kwall <info@kwallcompany.com>
+ * @license     GPL-2.0+
+ * @link        http://www.kwallcompany.com/
+ * @copyright   KwallCompany
+ * Date:        06/26/2020
+ * Time:        11:40 PM
+ */
+
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_cron().
+ */
+function curator_cron() {
+  // Use drupal_static so that any function can find out if we are running
+  // Set the default value to FALSE, then turn on the flag.
+  // @see curator_is_running().
+  $curator_cron = &drupal_static(__FUNCTION__, FALSE);
+  $curator_cron = TRUE;
+
+  // Run importer.
+  \Drupal::service('curator.manager')->runImporter();
+
+  // Log time of cron run.
+  \Drupal::logger('curator')
+    ->notice('Running Curator:- ' . date('Y-m-d H:i:s'));
+
+  // Reset the static curator_cron flag.
+  drupal_static_reset(__FUNCTION__);
+}
+
+/**
+ * Return whether curator cron is running.
+ *
+ * @return bool
+ *   TRUE if curator_cron is currently running. FALSE if not.
+ */
+function curator_cron_is_running() {
+  return drupal_static('curator_cron');
+}
+
+
+/**
+ * Shuffle view results.
+ *
+ * Implements hook_views_pre_render()
+ * @param \Drupal\views\ViewExecutable $view
+ */
+function curator_views_pre_render(ViewExecutable $view) {
+  if ($view->id() == "social_wall" && $view->current_display == 'para_block') {
+    // Scramble the order of the rows shown on this result page.
+    // Note that this could be done earlier, but not later in the view execution
+    // process.
+    shuffle($view->result);
+  }
+}

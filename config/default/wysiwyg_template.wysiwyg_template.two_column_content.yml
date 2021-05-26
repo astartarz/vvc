@@ -1,0 +1,12 @@
+uuid: a51e23c0-df30-4040-82fd-f93e0cf6506c
+langcode: en
+status: true
+dependencies: {  }
+id: two_column_content
+label: 'Two column content'
+description: 'Use to provide 2 columns of content'
+body:
+  value: "<div class=\"row\">\r\n<div class=\"col-sm-6\">\r\n<ul>\r\n\t<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>\r\n\t<li>Quisque ultrices massa nec diam fringilla, quis posuere tellus commodo.</li>\r\n\t<li>Maecenas eget metus consectetur, luctus odio eu, laoreet justo.</li>\r\n</ul>\r\n</div>\r\n\r\n<div class=\"col-sm-6\">\r\n<ol>\r\n\t<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>\r\n\t<li>Quisque ultrices massa nec diam fringilla, quis posuere tellus commodo.</li>\r\n\t<li>Maecenas eget metus consectetur, luctus odio eu, laoreet justo.</li>\r\n</ol>\r\n</div>\r\n</div>\r\n"
+  format: full_html
+weight: null
+node_types: {  }

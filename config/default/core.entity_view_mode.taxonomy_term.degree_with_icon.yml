@@ -1,0 +1,10 @@
+uuid: 9e101d28-a7d1-4575-b048-d2734b197257
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.degree_with_icon
+label: 'Degree with Icon'
+targetEntityType: taxonomy_term
+cache: true

@@ -1,0 +1,12 @@
+name: Smart IP MaxMind GeoIP2 Precision web service
+type: module
+description: Uses MaxMind GeoIP2 Precision web service as Smart IP data source.
+core_version_requirement: ^8.7.7 || ^9
+package: Smart IP data source
+configure: smart_ip.settings
+dependencies:
+  - smart_ip:smart_ip
+# Information added by Drupal.org packaging script on 2020-05-11
+version: '8.x-4.0'
+project: 'smart_ip'
+datestamp: 1589192886

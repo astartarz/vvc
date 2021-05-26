@@ -1,0 +1,157 @@
+.layout-footer-content {
+  background: #282B2D;
+  color: #eeeeee;
+  padding: 40px 0;
+  clear: both;
+  a {
+    color: #eeeeee;
+    text-decoration: none;
+  }
+  .region-footer {
+    @media #{$tablet-min} {
+      display: flex;
+    }
+    .footer-logo {
+      font-size: 1.5rem;
+      .footer-logo-right {
+        a {
+          color: $color-orange;
+          margin-top: 10px;
+          display: block;
+        }
+      }
+      @media #{$tablet-min} {
+        width: 36%;
+        .field__item {
+          display: flex;
+          flex-flow: row wrap;
+        }
+        .footer-logo-left {
+          flex: auto;
+          img {
+            margin-top: 6px;
+          }
+        }
+      }
+      @media #{$mobile} {
+        margin-bottom: 40px;
+        text-align: center;
+        .footer-logo-left {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .footer-menu {
+      padding: 0 30px;
+      @media #{$tablet-min} {
+        width: 42%;
+      }
+      @media #{$mobile} {
+        padding: 0;
+      }
+      ul.menu {
+        margin-left: 0;
+        @media #{$tablet-min} {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        @media #{$mobile} {
+          text-align: center;
+        }
+        li {
+          @media #{$tablet-min} {
+            width: 50%;
+            padding-bottom: 0.2rem;
+            padding-top: 0;
+          }
+          a {
+            color: #eeeeee;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+      @media #{$mobile} {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    }
+    .footer-social-links {
+      font-size: 1.5rem;
+      @media #{$tablet-min} {
+        width: 22%;
+      }
+      .field--name-field-title {
+        display: inline-block;
+        padding-right: 5px;
+        @media (min-width: $screen-sm-min) {
+          float: left;
+          margin-top: 3px;
+        }
+      }
+      .field--name-field-link {
+        display: inline-block;
+        @media (min-width: $screen-sm-min) {
+          margin-top: 6px;
+        }
+        a {
+          font-size: 1.8rem;
+          letter-spacing: 0.8rem;
+          display: inline-block;
+          width: 18px;
+          overflow: hidden;
+          margin: 0 2px;
+          &:before {
+            content: '';
+            font-family: "Font Awesome 5 Brands";
+          }
+          &.facebook {
+            &:before {
+              content: '\f09a';
+            }
+          }
+          &.twitter {
+            &:before {
+              content: '\f099';
+            }
+          }
+          &.instagram {
+            &:before {
+              content: '\f16d';
+            }
+          }
+          &.youtube {
+            &:before {
+              content: '\f167';
+            }
+          }
+          &.linkedin {
+            &:before {
+              content: '\f08c';
+            }
+          }
+        }
+      }
+      .field--name-field-cta {
+        margin-top: 20px;
+      }
+      @media #{$mobile} {
+        text-align: center;
+      }
+    }
+  }
+
+}
+.layout-footer-copyright {
+  background: #18191C;
+  color: #eeeeee;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.4rem;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+

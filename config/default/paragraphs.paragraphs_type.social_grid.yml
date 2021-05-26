@@ -1,0 +1,10 @@
+uuid: 699fdd87-6540-4a2b-85c0-ec4cf8b5192e
+langcode: en
+status: true
+dependencies: {  }
+id: social_grid
+label: 'Social Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

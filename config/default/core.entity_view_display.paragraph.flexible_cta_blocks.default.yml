@@ -1,0 +1,54 @@
+uuid: 6a97f9ab-cb7b-4a09-babd-32d934d859d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_cta_blocks.field_boolean
+    - field.field.paragraph.flexible_cta_blocks.field_flexible_blocks_display
+    - field.field.paragraph.flexible_cta_blocks.field_flexible_cta_blocks
+    - field.field.paragraph.flexible_cta_blocks.field_title
+    - paragraphs.paragraphs_type.flexible_cta_blocks
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.flexible_cta_blocks.default
+targetEntityType: paragraph
+bundle: flexible_cta_blocks
+mode: default
+content:
+  field_boolean:
+    weight: 1
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_flexible_blocks_display:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_flexible_cta_blocks:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

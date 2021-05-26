@@ -1,0 +1,28 @@
+uuid: 109193c7-4e67-4fbe-825b-d15a7dda2495
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_interest_refs
+    - node.type.interest
+    - paragraphs.paragraphs_type.academic_tabs
+id: paragraph.academic_tabs.field_interest_refs
+field_name: field_interest_refs
+entity_type: paragraph
+bundle: academic_tabs
+label: 'Areas of Interests'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      interest: interest
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

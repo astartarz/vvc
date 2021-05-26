@@ -1,0 +1,23 @@
+uuid: 271b3a27-3072-4998-a67f-9a7c666997c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_url
+    - node.type.social_post
+  module:
+    - link
+id: node.social_post.field_user_url
+field_name: field_user_url
+entity_type: node
+bundle: social_post
+label: 'x. Social user URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

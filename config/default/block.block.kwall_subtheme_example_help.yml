@@ -1,0 +1,22 @@
+uuid: 51f0beae-9a8d-43f4-8087-54424819f421
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - kwall_subtheme_example
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: kwall_subtheme_example_help
+theme: kwall_subtheme_example
+region: content
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

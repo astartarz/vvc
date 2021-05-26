@@ -1,0 +1,4 @@
+services:
+  class_schedule.api_service:
+    class: Drupal\oregon_tech_class_schedule\ClassScheduleApiService
+    arguments: ['@logger.factory', '@http_client', '@cache.default']

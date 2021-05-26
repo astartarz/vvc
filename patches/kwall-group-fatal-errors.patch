@@ -1,0 +1,42 @@
+diff --git a/src/Plugin/GroupContentEnablerBase.php b/src/Plugin/GroupContentEnablerBase.php
+index c3583ff..685a324 100644
+--- a/src/Plugin/GroupContentEnablerBase.php
++++ b/src/Plugin/GroupContentEnablerBase.php
+@@ -146,7 +146,7 @@ public function isEnforced() {
+    * {@inheritdoc}
+    */
+   public function getContentLabel(GroupContentInterface $group_content) {
+-    return $group_content->getEntity()->label();
++    return is_object($group_content->getEntity()) ? $group_content->getEntity()->label() : '' ;
+   }
+ 
+   /**
+diff --git a/src/Entity/Controller/GroupContentListBuilder.php b/src/Entity/Controller/GroupContentListBuilder.php
+index 5bd7362..15852ec 100644
+--- a/src/Entity/Controller/GroupContentListBuilder.php
++++ b/src/Entity/Controller/GroupContentListBuilder.php
+@@ -148,13 +148,17 @@ protected function getDefaultOperations(EntityInterface $entity) {
+       $operations[$key]['query'] = $destination;
+     }
+ 
+-    // Add an operation to view the actual entity.
+-    if ($entity->getEntity()->access('view') && $entity->getEntity()->hasLinkTemplate('canonical')) {
+-      $operations['view'] = [
+-        'title' => $this->t('View entity'),
+-        'weight' => 101,
+-        'url' => $entity->getEntity()->toUrl('canonical'),
+-      ];
++    // Confirm the entity exists
++    $entity_object = $entity->getEntity();
++    if ($entity_object !== NULL) {
++      // Add an operation to view the actual entity.
++      if ($entity->getEntity()->access('view') && $entity->getEntity()->hasLinkTemplate('canonical')) {
++        $operations['view'] = [
++          'title' => $this->t('View related entity'),
++          'weight' => 101,
++          'url' => $entity->getEntity()->toUrl('canonical'),
++        ];
++      }
+     }
+ 
+     return $operations;

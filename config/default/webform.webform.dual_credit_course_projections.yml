@@ -1,0 +1,194 @@
+uuid: 4e9a5505-4f4c-4acd-92a4-48673401b5aa
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: dual_credit_course_projections
+title: 'Dual Credit Course Projections'
+description: ''
+category: ''
+elements: "teacher_name:\n  '#type': textfield\n  '#title': 'Teacher Name'\n  '#required': true\nschool_name:\n  '#type': textfield\n  '#title': 'School Name'\n  '#required': true\napproved_subjects:\n  '#type': textfield\n  '#title': 'Approved Subjects'\n  '#required': true\nliason_name:\n  '#type': select\n  '#title': 'Liason Name'\n  '#options':\n    'Anthony, Seth': 'Anthony, Seth'\n    'Bavarskas, Jennifer ': 'Bavarskas, Jennifer '\n    'Culler, David ': 'Culler, David '\n    'Douglas, Allan': 'Douglas, Allan'\n    'Hopper, Suzanne': 'Hopper, Suzanne'\n    'Huntoon, Alishia': 'Huntoon, Alishia'\n    'Lundgren, Kari ': 'Lundgren, Kari '\n    'Madden, Ryan ': 'Madden, Ryan '\n    'McClure, Rosalind ': 'McClure, Rosalind '\n    'Morgan, Carmen ': 'Morgan, Carmen '\n    'Negoita, Cristina ': 'Negoita, Cristina '\n    'Neupert, Hallie ': 'Neupert, Hallie '\n    'Pak, Greg ': 'Pak, Greg '\n    'Parratt, Lloyd ': 'Parratt, Lloyd '\n    'Rosenberg, Kris ': 'Rosenberg, Kris '\n    'Search, Matt ': 'Search, Matt '\n    'Sevigny, Maureen ': 'Sevigny, Maureen '\n    'Thompson, Tim ': 'Thompson, Tim '\n    'TorresGaribay, Claudia ': 'TorresGaribay, Claudia '\n    'VanRooyen, Christy': 'VanRooyen, Christy'\n    'Yang, Sherry ': 'Yang, Sherry '\n  '#required': true\napprox_class_size:\n  '#type': number\n  '#title': 'Approx. Class Size'\n  '#required': true\nprojected_course_calendar:\n  '#type': webform_custom_composite\n  '#title': 'Projected Course Calendar'\n  '#element':\n    class:\n      '#type': select\n      '#options':\n        'BIO 101 ': 'BIO 101 '\n        'BIO 102 ': 'BIO 102 '\n        'BIO 103 ': 'BIO 103 '\n        'BIO 109 ': 'BIO 109 '\n        'BIO 111 ': 'BIO 111 '\n        'BIO 200 ': 'BIO 200 '\n        'CE 203(PLTW)': 'CE 203(PLTW)'\n        'CHE 101/104': 'CHE 101/104'\n        'CHE 221 ': 'CHE 221 '\n        'CHE 222 ': 'CHE 222 '\n        'CST 162(PLTW) ': 'CST 162(PLTW) '\n        'CST 207 ': 'CST 207 '\n        'DH 100 ': 'DH 100 '\n        'ECON 201 ': 'ECON 201 '\n        'ECON 202 ': 'ECON 202 '\n        'EE 131(PLTW) ': 'EE 131(PLTW) '\n        'ENGR 101(PLTW) ': 'ENGR 101(PLTW) '\n        'ENGR 102(PLTW) ': 'ENGR 102(PLTW) '\n        'ENGR 111 (PLTW) ': 'ENGR 111 (PLTW) '\n        'ENGR 120(PLTW) ': 'ENGR 120(PLTW) '\n        'ENGR 121 (PLTW) ': 'ENGR 121 (PLTW) '\n        'ENGR 122(PLTW) ': 'ENGR 122(PLTW) '\n        'HED 240 ': 'HED 240 '\n        'HED 246 ': 'HED 246 '\n        'HED 260 ': 'HED 260 '\n        'HED 275 ': 'HED 275 '\n        'HIST 201 ': 'HIST 201 '\n        'HIST 202 ': 'HIST 202 '\n        'HIST 203 ': 'HIST 203 '\n        'MATH 105 ': 'MATH 105 '\n        'MATH 111 ': 'MATH 111 '\n        'MATH 112 ': 'MATH 112 '\n        'MATH 243 ': 'MATH 243 '\n        'MATH 251 ': 'MATH 251 '\n        'MATH 252 ': 'MATH 252 '\n        'MATH 254N ': 'MATH 254N '\n        'MET 241 (PLTW) ': 'MET 241 (PLTW) '\n        'MFG 120 (PLTW) ': 'MFG 120 (PLTW) '\n        'MIS 118 ': 'MIS 118 '\n        'PHED 107 ': 'PHED 107 '\n        'PHED 121 ': 'PHED 121 '\n        'PHY 201 ': 'PHY 201 '\n        'PHY 202 ': 'PHY 202 '\n        'PSY 201 ': 'PSY 201 '\n        'PSY 202 ': 'PSY 202 '\n        'PSY 203 ': 'PSY 203 '\n        'SPE 111 ': 'SPE 111 '\n        'WRI 121 ': 'WRI 121 '\n        'WRI 122': 'WRI 122'\n      '#title': Class\n    start_date:\n      '#type': date\n      '#title': 'Start Date'\n    end_date:\n      '#type': date\n      '#title': 'End Date'\n  '#required': true"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

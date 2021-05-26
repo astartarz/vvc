@@ -1,0 +1,107 @@
+.view-events-list {
+  .views-row {
+    margin-bottom: 3rem;
+    .event-wrapper {
+      position: relative;
+      @media screen and #{$mobile} {
+        padding-top: 3rem;
+      }
+      &:before {
+        content: '';
+        height: 4px;
+        width: calc(100% - 30px);
+        background: $color-extra-light-gray;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 5px;
+        z-index: 1;
+        @media screen and #{$mobile} {
+          width: 100%;
+          top: 0;
+        }
+      }
+      .event-title {
+        margin-bottom: 1rem;
+        padding-top: 3rem;
+        @media screen and #{$mobile} {
+          padding-top: 0;
+        }
+        a {
+          font-family: $font-mont;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 0.727273px;
+          text-transform: uppercase;
+          &:hover,
+          &:focus {
+            color: $color-red;
+          }
+        }
+      }
+      .event-date {
+        font-family: $font-open;
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-black;
+        @media screen and #{$mobile} {
+          font-size: 16px;
+        }
+        &:before {
+          content: '\f133';
+          font-family: $font-awes;
+          color: $color-red;
+          display: inline-block;
+        }
+        .event-month {
+          display: inline-block;
+        }
+        .event-time {
+          display: inline-block;
+
+        }
+      }
+      .event-image {
+        border-left: 10px solid $color-extra-light-gray;
+        border-bottom: 10px solid $color-extra-light-gray;
+        border-top: 5px solid $color-extra-light-gray;
+        &:before {
+          content: '';
+          height: 15px;
+          width: 100%;
+          background: white;
+          display: block;
+          position: absolute;
+          left: 10px;
+          top: 0;
+        }
+        &:after {
+          content: '';
+          height: 10px;
+          width: 15px;
+          background: white;
+          display: block;
+          position: absolute;
+          right: 10px;
+        }
+        img {
+          position: relative;
+          z-index: 2;
+          height: auto;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      @media screen and #{$mobile} {
+        .col-md-9 {
+          order: 2;
+        }
+        .col-md-3 {
+          order: 1;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+uuid: 96d5baa6-e069-4d33-895c-27d8d7814640
+langcode: en
+status: true
+dependencies: {  }
+name: scale_width_450px
+label: 'Scale Width: 450px'
+effects:
+  9c1924b9-2d2e-4608-94a3-345972ca2303:
+    uuid: 9c1924b9-2d2e-4608-94a3-345972ca2303
+    id: image_scale
+    weight: 1
+    data:
+      width: 450
+      height: null
+      upscale: false

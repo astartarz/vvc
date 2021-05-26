@@ -1,0 +1,35 @@
+# Custom module admin settings page.
+custom_module.settings:
+  path: '/admin/config/custom-module-settings'
+  defaults:
+    _controller: '\Drupal\custom_module\Controller\CustomModuleSettings::content'
+    _title: 'Custom Module Settings'
+  requirements:
+    _permission: 'access content'
+
+# Custom module page display.
+custom_module.content:
+  path: '/custom-module'
+  defaults:
+    _controller: '\Drupal\custom_module\Controller\CustomModule::content'
+    _title: 'Custom Module Page'
+  requirements:
+    _permission: 'access content'
+
+# Custom google search.
+custom_module.gcse:
+  path: '/search-results'
+  defaults:
+    _controller: '\Drupal\custom_module\Controller\GoogleSearchController::content'
+    _title: 'Search Results'
+  requirements:
+    _permission: 'access content'
+
+# Create Global Navigation menu.
+custom_module.create_menu:
+  path: '/admin/config/create-menu'
+  defaults:
+    _form: '\Drupal\custom_module\Form\CreateGlobalMenu'
+    _title: 'Create Global Navigation menu'
+  requirements:
+    _permission: 'administer site configuration'

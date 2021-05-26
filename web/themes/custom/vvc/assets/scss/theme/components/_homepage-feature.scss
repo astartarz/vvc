@@ -1,0 +1,64 @@
+.home-page-feature {
+
+}
+
+.feature {
+  position: relative;
+
+  &:before {
+    content: "";
+    background-image: url("../images/red-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -20px;
+    top: 20px;
+    z-index: -1;
+  }
+
+  .feature-desc {
+    background: $white;
+
+    .feature-left{
+      padding: 40px;
+      h3{
+        margin-bottom: 15px;
+        color: $color-black;
+
+      }
+      .lead{
+        font-weight: 600;
+        font-style: italic;
+        color: $color-black;
+
+      }
+      .feature-list{
+        p {
+          margin-bottom: 20px;
+          a.morelink {
+            color: $color-red;
+            &:hover{
+              color: $color-light-red;
+
+              &:before{
+                background: $color-light-red;
+              }
+            }
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .feature-right{
+      background-image: url("../images/feature-img.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+    }
+  }
+}

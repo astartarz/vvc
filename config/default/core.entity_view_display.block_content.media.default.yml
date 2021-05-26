@@ -1,0 +1,32 @@
+uuid: 414833b1-f2f6-4060-9172-bcfc4736c50a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media
+    - field.field.block_content.media.field_media
+  module:
+    - fences
+id: block_content.media.default
+targetEntityType: block_content
+bundle: media
+mode: default
+content:
+  field_media:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: full_width
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,33 @@
+uuid: 561ca427-b19f-4d9d-a703-d22e14b110fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.person_profile_image
+  module:
+    - node
+    - views
+  theme:
+    - vvc
+id: views_block__person_profile_image_profile_image
+theme: vvc
+region: content
+weight: -16
+provider: null
+plugin: 'views_block:person_profile_image-profile_image'
+settings:
+  id: 'views_block:person_profile_image-profile_image'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      person: person
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

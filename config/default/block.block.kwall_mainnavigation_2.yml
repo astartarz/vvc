@@ -1,0 +1,41 @@
+uuid: 7458d99b-427c-4421-be79-cc5a0b844908
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - menu_block
+    - system
+  theme:
+    - kwall
+third_party_settings:
+  block_class:
+    classes: sidebar-menu-block
+id: kwall_mainnavigation_2
+theme: kwall
+region: sidebar_left
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: true
+  parent: 'main:'
+  suggestion: sidebar_menu
+  label_type: block
+  label_link: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/node/11\r\n/news\r\n/events"
+    negate: true
+    context_mapping: {  }

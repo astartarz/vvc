@@ -1,0 +1,6 @@
+status: 1
+pattern: '[node:field_social_network] Post on [node:field_date:date:custom:F j, Y]'
+escape: false
+dependencies:
+  config:
+    - node.type.social_post

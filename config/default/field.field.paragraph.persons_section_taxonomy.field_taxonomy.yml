@@ -1,0 +1,29 @@
+uuid: b7117c58-41dc-4a2e-99e3-0395d592ec0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taxonomy
+    - paragraphs.paragraphs_type.persons_section_taxonomy
+    - taxonomy.vocabulary.departments
+id: paragraph.persons_section_taxonomy.field_taxonomy
+field_name: field_taxonomy
+entity_type: paragraph
+bundle: persons_section_taxonomy
+label: Taxonomy
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments: departments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

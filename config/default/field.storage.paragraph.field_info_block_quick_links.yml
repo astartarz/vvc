@@ -1,0 +1,19 @@
+uuid: 10481ebc-d7f8-446e-8c3c-511534607b8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_info_block_quick_links
+field_name: field_info_block_quick_links
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+type: theme
+base theme: kwall
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+name: 'VVC'
+description: 'Custom sub theme based on Bootstrap for specific features'
+package: 'Bootstrap'
+
+regions:
+  alerts: 'Alerts'
+  utility: 'Utility Navigation'
+  header: 'Header'
+  slide_in_navigation: 'Slide In Navigation'
+  hero: 'Hero'
+  content_top: 'Pre Content'
+  content: 'Interior Content'
+  sidebar_right: 'Sidebar right'
+  content_bottom: 'Full-Width Content'
+  footer: 'Footer'
+
+features:
+  - favicon
+  - logo
+
+libraries:
+  - vvc/global-styling
+  - vvc/js-scripts
+  - vvc/header-scripts
+  - vvc/fontawesome

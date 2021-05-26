@@ -1,0 +1,28 @@
+uuid: 93004828-de37-4d5a-b0de-e682c35f1b80
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files
+  module:
+    - entity_embed
+    - file
+    - image
+_core:
+  default_config_hash: D5QbkhbHfWlohKBxTofPCBUqp9vCE2dFnJii5JdWEk4
+label: 'File Browser'
+id: file_browser
+type_id: entity
+type_settings:
+  entity_type: file
+  bundles: {  }
+  display_plugins:
+    - 'image:image'
+    - 'file:file_default'
+  entity_browser: browse_files
+  entity_browser_settings:
+    display_review: false
+icon:
+  data: iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAA90lEQVR4Ae3WP0oDQRiG8aeQFFoLeoEwaC/kNtEiJ7IxVTxBkj2BheQGewOxlGX/gFuNi7jDsM3M5+fAgvO81STFDyYphtysMxyoscK1FBgiMlTYX66KIQ5YxY4Eq1VAQzCrmxzIgPvi/wEZyEAGntimBF5ZDDv9FbAb5p/fuALgmnf0ACXnw0p3/uSOsRW9Fui4AeCW7ueTe/w2WmDN2MP3+ZFpWw2ww++ZF86YtuAkBfzb97vgkmnuxxYD7vZjWtHLgTWSNvFAq354BYBCBezDgObx+8EyDIDhSIP8cvYsIQToy4C8NvVrukgNGKp0gOJ/75abbV+Z71+lKiSBNwAAAABJRU5ErkJggg==
+  uri: 'public://file_browser_icon.png'
+icon_uuid: null

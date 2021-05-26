@@ -1,0 +1,8 @@
+uuid: d8f49750-19c6-4398-a63f-301d4ec82283
+langcode: en
+status: true
+dependencies: {  }
+id: program_sidebar_block
+label: 'x. Program Sidebar Block'
+revision: 1
+description: ''

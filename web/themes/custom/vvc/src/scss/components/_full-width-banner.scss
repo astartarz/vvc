@@ -1,0 +1,59 @@
+.full-width-img-section {
+  padding: 40px 0;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    padding: 150px 0;
+  }
+  &:after{
+    content: "";
+    background: linear-gradient(0deg, rgba(3, 24, 47, 0) 0%, #03182F 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .content-body {
+    max-width: 538px;
+    position: relative;
+    z-index: 9;
+
+    .field--name {
+      &-field-title {
+        margin-bottom: 20px;
+
+        .displaytextxxl {
+          color: $white;
+        }
+      }
+
+      &-field-body-unformatted {
+        margin-bottom: 30px;
+
+        .field__item {
+          font-family: $font-open;
+          font-size: 20px;
+          line-height: 23px;
+          color: $white;
+        }
+      }
+    }
+
+    .field--name-field-links {
+      display: flex;
+      a {
+        &:first-child {
+          @include buttonfilled;
+        }
+
+        &:last-child {
+          @include buttonprimary;
+          margin-left: 30px;
+          color: $white;
+        }
+      }
+    }
+  }
+}

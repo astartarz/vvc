@@ -1,0 +1,355 @@
+uuid: 386d0284-6665-4359-9315-314f250bfbdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.field_bio
+    - field.field.node.person.field_captions_txt
+    - field.field.node.person.field_department
+    - field.field.node.person.field_departments
+    - field.field.node.person.field_education
+    - field.field.node.person.field_email
+    - field.field.node.person.field_fax
+    - field.field.node.person.field_image
+    - field.field.node.person.field_imported_image
+    - field.field.node.person.field_mailbox
+    - field.field.node.person.field_mailstop
+    - field.field.node.person.field_media
+    - field.field.node.person.field_meta_tags
+    - field.field.node.person.field_name
+    - field.field.node.person.field_office
+    - field.field.node.person.field_office_location
+    - field.field.node.person.field_person_hidden
+    - field.field.node.person.field_person_homepage
+    - field.field.node.person.field_person_is_staff
+    - field.field.node.person.field_person_is_student
+    - field.field.node.person.field_person_job
+    - field.field.node.person.field_person_office
+    - field.field.node.person.field_person_pidm
+    - field.field.node.person.field_person_supervisor_pidm
+    - field.field.node.person.field_person_types
+    - field.field.node.person.field_person_username
+    - field.field.node.person.field_person_website
+    - field.field.node.person.field_phone
+    - field.field.node.person.field_position
+    - field.field.node.person.field_sidebar_content
+    - field.field.node.person.field_teaser_description
+    - field.field.node.person.field_telephone_number
+    - node.type.person
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - field_group
+    - media_library
+    - media_library_edit
+    - name
+    - paragraphs
+    - path
+    - scheduler
+    - telephone
+third_party_settings:
+  field_group:
+    group_imported_data:
+      children:
+        - field_fax
+        - field_imported_image
+        - field_mailstop
+        - field_person_department
+        - field_person_hidden
+        - field_person_homepage
+        - field_person_is_staff
+        - field_person_is_student
+        - field_person_job
+        - field_person_office
+        - field_person_pidm
+        - field_person_supervisor_pidm
+        - field_person_username
+        - field_telephone_number
+      parent_name: ''
+      weight: 28
+      format_type: details
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Imported Data'
+    group_contact:
+      children:
+        - field_email
+        - field_phone
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Contact Info'
+    group_teaser_content:
+      children:
+        - field_teaser_description
+      parent_name: ''
+      weight: 16
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Teaser Content'
+    group_categorization:
+      children:
+        - field_person_types
+        - field_departments
+      parent_name: ''
+      weight: 17
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Categorization
+    group_basic_info:
+      children:
+        - field_name
+        - field_captions_txt
+      parent_name: ''
+      weight: 12
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Basic Info'
+    group_sidebar_content:
+      children:
+        - field_sidebar_content
+      parent_name: ''
+      weight: 15
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Sidebar Content'
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_captions_txt:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_departments:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_email:
+    type: email_default
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    weight: 14
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
+    region: content
+  field_name:
+    weight: 11
+    settings:
+      labels:
+        title: Title
+        given: Given
+        middle: 'Middle name(s)'
+        family: Family
+        generational: Generational
+        credentials: Credentials
+      size:
+        title: 6
+        given: 20
+        middle: 20
+        family: 20
+        generational: 5
+        credentials: 35
+      title_display:
+        title: description
+        given: description
+        middle: description
+        family: description
+        generational: description
+        credentials: description
+      widget_layout: stacked
+      show_component_required_marker: false
+      credentials_inline: false
+      override_field_settings: false
+    third_party_settings: {  }
+    type: name_default
+    region: content
+  field_person_types:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_phone:
+    weight: 20
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_sidebar_content:
+    weight: 18
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_teaser_description:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 6
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_bio: true
+  field_department: true
+  field_education: true
+  field_fax: true
+  field_imported_image: true
+  field_mailbox: true
+  field_mailstop: true
+  field_media: true
+  field_meta_tags: true
+  field_office: true
+  field_office_location: true
+  field_person_hidden: true
+  field_person_homepage: true
+  field_person_is_staff: true
+  field_person_is_student: true
+  field_person_job: true
+  field_person_office: true
+  field_person_pidm: true
+  field_person_supervisor_pidm: true
+  field_person_username: true
+  field_person_website: true
+  field_position: true
+  field_telephone_number: true

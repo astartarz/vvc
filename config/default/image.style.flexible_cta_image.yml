@@ -1,0 +1,17 @@
+uuid: 08552817-42f2-4b76-a3a9-da079f3526db
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: flexible_cta_image
+label: 'x. Flexible CTA Image'
+effects:
+  6753a735-0025-4cbe-a937-52f9a361a220:
+    uuid: 6753a735-0025-4cbe-a937-52f9a361a220
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 420
+      height: 235
+      crop_type: focal_point

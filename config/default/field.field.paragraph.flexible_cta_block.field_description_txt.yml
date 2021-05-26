@@ -1,0 +1,19 @@
+uuid: e47e0843-ca2b-4478-b8a3-b10cad986bcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_txt
+    - paragraphs.paragraphs_type.flexible_cta_block
+id: paragraph.flexible_cta_block.field_description_txt
+field_name: field_description_txt
+entity_type: paragraph
+bundle: flexible_cta_block
+label: 'Block Caption'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

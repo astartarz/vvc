@@ -1,0 +1,118 @@
+.paragraph--type--social-grid {
+  background: $color-dark-gray;
+  padding: 8rem 0;
+  .social-wrap {
+    flex: 0 0 25%;
+    max-width: 25%;
+    @media screen and #{$tablet} {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    &:last-child {
+      flex: 0 0 75%;
+      max-width: 75%;
+      @media screen and #{$tablet} {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .attachment-before,
+      .view-display-id-facebook2_block > .view-content,
+      .attachment-after {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        @media screen and #{$tablet} {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+      .view-display-id-facebook2_block {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    .views-row {
+      @media screen and #{$tablet} {
+        margin-bottom: 2rem;
+      }
+      .views-field-nothing {
+        background: $white;
+        height: 100%;
+      }
+      .social-post-image {
+        img {
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+      }
+      .social-post-info {
+        padding: 2rem;
+        text-align: center;
+        .social-network {
+          font-family: $font-awes;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 23px;
+          text-align: center;
+          margin-bottom: 1rem;
+          &.facebook {
+            color: #4267B2;
+            &:before {
+              content: '\f09a';
+            }
+          }
+          &.instagram {
+            color: #BC2A8D;
+            &:before {
+              content: '\f16d';
+            }
+          }
+          &.twitter {
+            color: #1DA1F2;
+            &:before {
+              content: '\f099';
+            }
+          }
+        }
+        .social-post-title {
+          margin-bottom: 2rem;
+          font-weight: bold;
+          a {
+            color: $color-dark-gray;
+            &:focus,
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .social-post-description {
+          font-size: 15px;
+          line-height: 21px;
+          a {
+            color: $color-red;
+            word-break: break-all;
+            text-decoration: none;
+            &:focus,
+            &:hover {
+              color: $color-light-red;
+            }
+          }
+        }
+        .social-post-link {
+          a {
+            color: $color-red;
+            font-size: 15px;
+            word-break: break-all;
+            text-decoration: none;
+            &:focus,
+            &:hover {
+              color: $color-light-red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+uuid: f40df009-1a40-4b0d-9812-0af1720f6681
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_cta_block.field_description_txt
+    - field.field.paragraph.flexible_cta_block.field_link
+    - field.field.paragraph.flexible_cta_block.field_title
+    - paragraphs.paragraphs_type.flexible_cta_block
+  module:
+    - link_attributes
+id: paragraph.flexible_cta_block.default
+targetEntityType: paragraph
+bundle: flexible_cta_block
+mode: default
+content:
+  field_description_txt:
+    weight: 1
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

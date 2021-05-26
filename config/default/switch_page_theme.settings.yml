@@ -1,0 +1,41 @@
+spt_table:
+  -
+    status: '1'
+    pages: '/group/*'
+    theme: seven
+    roles:
+      authenticated: authenticated
+      anonymous: 0
+      article_editor: 0
+      event_editor: 0
+      group_member: 0
+      content_editor: 0
+      group_content_editor: 0
+      content_publisher: 0
+      group_content_publisher: 0
+      administrator: 0
+      site_publisher: 0
+    weight: '-10'
+    language:
+      en: 0
+    remove: Remove
+  -
+    status: '1'
+    pages: /media-library
+    theme: seven
+    roles:
+      authenticated: authenticated
+      anonymous: 0
+      article_editor: 0
+      event_editor: 0
+      group_member: 0
+      content_editor: 0
+      group_content_editor: 0
+      content_publisher: 0
+      group_content_publisher: 0
+      administrator: 0
+      site_publisher: 0
+    weight: '-10'
+    language:
+      en: 0
+    remove: Remove

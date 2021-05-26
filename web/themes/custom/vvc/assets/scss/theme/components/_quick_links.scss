@@ -1,0 +1,76 @@
+  .field--name-field-quick-links-items {
+    background-image: url("../images/red-back.png");
+    padding: 50px 0;
+    @media #{$mobile} {
+      padding: 40px 0;
+    }
+
+    .field__label {
+      display: none;
+    }
+
+    .content-wrap {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .field__item {
+        @media #{$mobile} {
+          flex: 0 0 50%;
+          margin-bottom: 30px;
+        }
+
+        .paragraph--type--quick-link {
+          text-align: center;
+          position: relative;
+
+          .fontawesome-icons {
+            margin-bottom: 10px;
+
+            svg {
+              font-size: 50px;
+              line-height: 57px;
+              text-align: center;
+              color: $white;
+            }
+          }
+
+           .link-title {
+            @include label;
+            color: $white;
+          }
+          .link-url{
+            a{
+              font-size: 0;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+            }
+          }
+          &:hover, &:focus{
+            .fontawesome-icons {
+              svg{
+                path{
+                  fill: #FFC107;
+                }
+              }
+            }
+            .link-title {
+              color: #FFC107;
+            }
+          }
+        }
+      }
+    }
+  }
+  .field--name-field-quick-links-ref{
+    .field--name-field-quick-links-items{
+      position: relative;
+      width: 100vw;
+      left: -50vw;
+      margin-right: 50vw;
+      margin-left: 50%;
+    }
+  }

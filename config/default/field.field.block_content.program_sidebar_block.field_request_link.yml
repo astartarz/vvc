@@ -1,0 +1,28 @@
+uuid: ad2f8d98-1940-421e-adf3-0bf0a3dd093c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.program_sidebar_block
+    - field.storage.block_content.field_request_link
+  module:
+    - link
+id: block_content.program_sidebar_block.field_request_link
+field_name: field_request_link
+entity_type: block_content
+bundle: program_sidebar_block
+label: 'Request Link'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/register/request-info'
+    title: 'Request Info'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

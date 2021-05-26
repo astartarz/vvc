@@ -1,0 +1,23 @@
+uuid: 48c1b315-bf2d-4d3c-9f9f-46cb39d065d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show_logo
+    - paragraphs.paragraphs_type.hero_slide
+id: paragraph.hero_slide.field_show_logo
+field_name: field_show_logo
+entity_type: paragraph
+bundle: hero_slide
+label: 'Show Logo'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

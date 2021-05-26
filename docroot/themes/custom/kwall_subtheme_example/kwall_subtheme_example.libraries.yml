@@ -1,0 +1,15 @@
+default:
+  version: 1.x
+  css:
+    theme:
+      styleguide/css/style.css: {}
+      styleguide/fonts/stylesheet.scss: {}
+      css/global.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+  js:
+    js/jquery.actual.min.js: {}
+    js/scripts.js: {}

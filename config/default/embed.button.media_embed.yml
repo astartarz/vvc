@@ -1,0 +1,24 @@
+uuid: fe41a054-ca79-4bc7-85fd-ccbc179fdf56
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.inline_media_browser
+    - media.type.image
+  module:
+    - entity_embed
+    - media
+label: 'Media Embed'
+id: media_embed
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - inline_media
+  display_plugins:
+    - 'entity_reference:media_thumbnail'
+  entity_browser: inline_media_browser
+  entity_browser_settings:
+    display_review: false
+icon: {  }
+icon_uuid: null

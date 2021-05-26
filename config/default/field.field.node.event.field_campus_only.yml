@@ -1,0 +1,23 @@
+uuid: a4f65a92-69f7-4c2e-84bc-edc751999345
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campus_only
+    - node.type.event
+id: node.event.field_campus_only
+field_name: field_campus_only
+entity_type: node
+bundle: event
+label: 'x. Campus Only'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

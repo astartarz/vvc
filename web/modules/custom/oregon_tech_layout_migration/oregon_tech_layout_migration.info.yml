@@ -1,0 +1,9 @@
+name: Oregon Tech Layout Migration
+description: "Oregon Tech Layout Migration"
+package: Custom
+type: module
+core: 8.x
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools

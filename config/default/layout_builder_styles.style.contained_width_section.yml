@@ -1,0 +1,10 @@
+uuid: 85dbe82a-8579-459b-a358-16d526000cd5
+langcode: en
+status: true
+dependencies: {  }
+id: contained_width_section
+label: 'Contained Width Section'
+classes: contained-width
+type: section
+weight: 2
+block_restrictions: {  }

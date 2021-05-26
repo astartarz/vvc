@@ -1,0 +1,23 @@
+uuid: f7490ba4-bbfb-44aa-8ff7-ade5d6bdbcfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_block
+    - field.storage.block_content.field_cta
+  module:
+    - link
+id: block_content.social_block.field_cta
+field_name: field_cta
+entity_type: block_content
+bundle: social_block
+label: CTA
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

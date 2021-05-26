@@ -1,0 +1,29 @@
+uuid: a2df1e19-c7d0-4160-bac8-de9dab200b0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - vvc
+id: quicklinks
+theme: vvc
+region: content_top
+weight: 0
+provider: null
+plugin: 'entity_field:node:field_quick_links_ref'
+settings:
+  id: 'entity_field:node:field_quick_links_ref'
+  label: 'Quick Links'
+  provider: ctools_block
+  label_display: '0'
+  formatter:
+    label: hidden
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

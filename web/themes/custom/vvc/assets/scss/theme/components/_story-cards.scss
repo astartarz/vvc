@@ -1,0 +1,118 @@
+.story-cards{
+  padding: 190px 0 130px 0;
+  background-image: url("../images/cards-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .view-content{
+    .views-row{
+      a{
+        height: inherit;
+        &:hover{
+          .card-content{
+            .card-description{
+              max-height: 500px;
+              transition: max-height 0.5s ease-in-out;
+              margin-top: 14px;
+            }
+          }
+        }
+      }
+      .student-story-card{
+        position: relative;
+        height: 100%;
+        .card-img{
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+        .card-content{
+          position: absolute;
+          bottom: 0;
+          padding: 40px 30px;
+          background: linear-gradient(180deg, rgba(3,24,47,0) -190%, rgba(3,24,47,1) 20%);
+          border-top: 1px solid #fff;
+          width: 100%;
+          .card-title{
+              font-family: Montserrat;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 20px;
+              line-height: 24px;
+              letter-spacing: 0.727273px;
+              text-transform: uppercase;
+              color: #fff;
+          }
+          .card-caption{
+            font-family: OpenSans;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.581818px;
+            color: #FFC107;
+          }
+          .card-description{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.581818px;
+            color: #FFFFFF;
+          }
+          &:before{
+            content: '';
+            height: 70px;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(3,24,47,0) -6%, rgba(3,24,47,1) 100%);
+            position: absolute;
+            top: -71px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  .hide-item {
+    display: none;
+  }
+  .open-video,
+  .close-video {
+    color: $color-gold;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    width: 40px;
+  }
+  .close-video {
+    font-size: 2rem;
+    text-align: center;
+    color: $color-dark-gray;
+    padding: .8rem;
+    background: $color-gold;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    margin: 0 auto;
+    width: 40px;
+  }
+  .video-teaser,
+  .video-full {
+    height: 100%;
+    * {
+      height: 100%;
+    }
+    video {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  .student-story-card-wrapper {
+    position: relative;
+    height: 100%;
+  }
+}

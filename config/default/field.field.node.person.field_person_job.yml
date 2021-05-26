@@ -1,0 +1,19 @@
+uuid: 7e0602f5-dabe-4501-8e24-e3fa1372551e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_job
+    - node.type.person
+id: node.person.field_person_job
+field_name: field_person_job
+entity_type: node
+bundle: person
+label: 'x. Job'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

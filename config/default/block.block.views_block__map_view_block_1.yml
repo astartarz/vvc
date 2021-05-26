@@ -1,0 +1,30 @@
+uuid: d6c7572d-fb85-4829-895b-58b35e8a15bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.map_view
+  module:
+    - system
+    - views
+  theme:
+    - vvc
+id: views_block__map_view_block_1
+theme: vvc
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'views_block:map_view-block_1'
+settings:
+  id: 'views_block:map_view-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '20'
+visibility:
+  request_path:
+    id: request_path
+    pages: /test
+    negate: false
+    context_mapping: {  }

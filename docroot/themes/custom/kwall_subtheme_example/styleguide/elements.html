@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<title>KWALL University | Styleguide</title>
+<link rel="shortcut icon" href="favicon.ico" />
+
+<!-- jQuery -->
+<script
+	defer
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous">
+</script>
+<script
+	defer
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous">
+</script>
+
+<!-- Bootstrap JS -->
+<script 
+	defer
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+	crossorigin="anonymous">
+</script>
+
+<!--Flexslider JS-->
+<script 
+	defer
+	src="libraries/flexslider/jquery.flexslider-min.js">
+</script>
+
+<!--Slick JS-->
+<script 
+	defer
+	type="text/javascript" src="libraries/slick/slick/slick.min.js">
+</script>
+
+<!-- Fonts -->
+<script src="https://use.fontawesome.com/38eaee5b57.js"></script>
+
+<!-- Local Files -->
+<link href="css/style.css" rel="stylesheet">
+<script 
+	defer
+	src="js/KWALLU.js">
+</script>
+
+<!-- Highlight JS -->
+<script src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(),
+  $( "#tabs" ).tabs(),
+  $( "#accordion-85" ).accordion();
+  $( "#accordion-86" ).accordion();
+  $( "#accordion-87" ).accordion();
+  $( "#accordion-88" ).accordion();
+});
+</script>
+
+</head>
+<body>
+
+<!--NAVIGATION-->
+<nav class="style-navbar navbar navbar-expand-lg fixed-top navbar-light bg-light" role="navigation">
+	<div class="navbar-brand">
+		<a href="index.html"><img alt="Brand" src="images/logo.png"><span>Styleguide</span></a>
+	</div>
+	<a type="button" class="navbar-toggler collapsed btn btn-action" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<span class="navbar-toggler-icon"></span>
+	</a>
+	
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse flex-row-reverse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item"><a class="nav-link"href="layout.html">Layout</a></li>
+			<li class="nav-item"><a class="nav-link" href="colors.html">Colors</a></li>
+			<li class="nav-item"><a class="nav-link" href="typography.html">Typography</a></li>
+			<li class="nav-item active"><a class="nav-link" href="elements.html">Elements</a></li>
+			<li class="nav-item"><a class="nav-link"href="contentlists.html">Content List</a></li>
+<!-- 	<li class="nav-item"><a class="nav-link" href="components.html">Components</a></li> -->
+		</ul>
+	</div>
+</nav>
+
+<!--STYLEGUIDE CONTENT-->
+<div class="style-wrap">
+	<h1>Elements</h1>
+</div>
+
+<!-- ALERTS -->
+<div class="style-wrap">
+	<h2 class="style-header">Alerts</h2>
+
+	<div id="alerts" class="block-kwall-site-alert">
+		<div class="slick-carousel-alert">
+			<div>
+				<div class="alert alert-success">
+					<div class="arrow-container">
+						<button class="slick-arrow slick-prev">Prev<i class="fa fa-chevron-left"></i></button>
+						<button class="slick-arrow slick-next">Next<i class="fa fa-chevron-right"></i></button>
+					</div>
+					<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+					<p><b>Success:</b> This is a message that can be used to notify visitors. <a href="#" onclick="return false;">Message Link</a></p>
+				</div>
+			</div>
+			
+			<div>
+				<div class="alert alert-warning">
+					<div class="arrow-container">
+						<button class="slick-arrow slick-prev">Prev<i class="fa fa-chevron-left"></i></button>
+						<button class="slick-arrow slick-next">Next<i class="fa fa-chevron-right"></i></button>
+					</div>
+					<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+					<p><b>Warning:</b> This is a message that can be used to notify visitors. <a href="#" onclick="return false;">Message Link</a></p>
+				</div>
+			</div>
+			
+			<div>
+				<div class="alert alert-danger">
+					<div class="arrow-container">
+						<button class="slick-arrow slick-prev">Prev<i class="fa fa-chevron-left"></i></button>
+						<button class="slick-arrow slick-next">Next<i class="fa fa-chevron-right"></i></button>
+					</div>
+					<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+					<p><b>Danger:</b> This is a message that can be used to notify visitors. <a href="#" onclick="return false;">Message Link</a></p>
+				</div>
+			</div>
+		</div><!-- .slick-carosel-example -->
+	</div><!-- #alerts -->
+
+	<!-- BREADCRUMBS -->
+	<h2 class="style-header">Breadcrumbs</h2>
+	<div id="block-kwall-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+		<nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+			<h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+			<ol>
+				<li><a href="/">Home</a></li>
+				<li><a href="/generic-page-simple">Parent Page</a></li>
+				<li>Current Page</li>
+				</ol>
+		</nav>
+	</div><!-- #block-kwall-breadcrumbs -->
+	
+	<!-- PAGER -->
+	<h2 class="style-header">Pager</h2>	
+	<nav id="pager" class="pager" role="navigation" aria-labelledby="pagination-heading">
+		<h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+		<ul class="pager__items js-pager__items">
+			<li class="pager__item pager__item--first">
+				<a href="#" title="Go to first page">
+					<span class="visually-hidden">First page</span>
+					<span aria-hidden="true">« First</span>
+				</a>
+			</li>
+		  <li class="pager__item pager__item--previous">
+				<a href="#" title="Go to previous page" rel="prev">
+					<span class="visually-hidden">Previous page</span>
+					<span aria-hidden="true">‹ Previous</span>
+				</a>
+			</li>
+		  <li class="pager__item">
+		  	<a href="#" title="Go to page 1">
+					<span class="visually-hidden">Page</span>
+					1
+				</a>
+			</li>
+			<li class="pager__item is-active">
+		  	<a href="#" title="Current page">
+					<span class="visually-hidden">Current page</span>2
+				</a>
+			</li>
+			<li class="pager__item">
+		  	<a href="#" title="Go to page 3">
+					<span class="visually-hidden">Page</span>3
+				</a>
+			</li>
+			<li class="pager__item">
+		  	<a href="#" title="Go to page 4">
+					<span class="visually-hidden">Page</span>4
+				</a>
+			</li>
+		  <li class="pager__item pager__item--next">
+				<a href="#" title="Go to next page" rel="next">
+					<span class="visually-hidden">Next page</span>
+					<span aria-hidden="true">Next ›</span>
+				</a>
+			</li>
+		  <li class="pager__item pager__item--last">
+				<a href="#" title="Go to last page">
+					<span class="visually-hidden">Last page</span>
+					<span aria-hidden="true">Last »</span>
+				</a>
+			</li>
+		</ul>
+	</nav><!-- #pager -->
+	
+	<!-- IMAGE CAPTION -->
+	<h2 class="style-header">Image with Caption</h2>
+	<div id="image-caption">
+		<figure>
+	  	<img src="https://dummyimage.com/335x230/CCC/777.png">
+	  	<figcaption>Fig1. - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ex tortor, tincidunt eget tortor non, tincidunt vulputate lorem. </figcaption>
+		</figure>
+	</div><!-- #image-caption -->
+	
+	<!-- TABLE -->
+	<h2 class="style-header">Table</h2>
+	<div id="table">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">First</th>
+					<th scope="col">Last</th>
+					<th scope="col">Handle</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Larry</td>
+					<td>the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- #table -->
+	
+	<!-- ACCORDION -->
+	<h2 class="style-header">Accordion</h2>
+	<div id="accordion" class="paragraph paragraph--type--accordion paragraph--view-mode--default">
+		<div>
+			<div class="row">
+				<div class="col-md-12 card-wrap">
+					<div class="card">
+						<div class="card-header">      				
+							<a data-toggle="collapse" href="#accordion-85" aria-controls="accordion-85">Accordion Title 1</a>
+						</div><!-- .card-header -->
+						<div id="accordion-85" class="collapse hide" aria-labelledby="headingOne">
+							<div class="card-body">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec arcu luctus, elementum arcu sed, laoreet ex. Maecenas magna orci, suscipit eget egestas eget, venenatis eu magna. Integer quis enim et libero eleifend tincidunt.</p>
+		
+								<p>Nullam sit amet tellus vestibulum, malesuada leo eu, euismod ante. Nulla luctus, ante id rutrum pharetra, libero ante efficitur mauris, vitae facilisis lorem eros at sem. Donec eget sollicitudin urna. Donec tincidunt imperdiet enim vitae sodales. Aliquam aliquam ipsum sed laoreet porta. Aliquam eros velit, efficitur et congue non, efficitur at metus. Sed malesuada accumsan congue.</p>
+							</div><!-- .card-body -->
+						</div><!-- .collapse -->
+					</div><!-- .card -->
+				</div><!-- .col-md-12 -->
+				<div class="col-md-12 card-wrap">
+					<div class="card">
+						<div class="card-header">      				
+							<a data-toggle="collapse" href="#accordion-86" aria-controls="accordion-86">Accordion Title 2</a>
+						</div><!-- .card-header -->
+						<div id="accordion-86" class="collapse hide" aria-labelledby="headingOne">
+							<div class="card-body">
+								<p>Etiam efficitur sem eget felis finibus posuere. Phasellus id eros vestibulum, facilisis est a, finibus magna. Phasellus sagittis tempor erat. Ut et ipsum felis. Sed ut luctus tortor. Aliquam in arcu vel ipsum iaculis efficitur at in est. In hac habitasse platea dictumst. Cras feugiat consequat felis, vel auctor lectus malesuada nec. Nulla feugiat pulvinar euismod. Sed non lacus imperdiet, bibendum leo at, ultricies augue. Sed in odio luctus, rutrum sapien vitae, scelerisque purus. Mauris iaculis, ex nec commodo sodales, libero mauris accumsan erat, quis efficitur erat orci vitae lectus. Maecenas consequat nunc lorem, lacinia tristique ante facilisis in.</p>
+							</div><!-- .card-body -->
+						</div><!-- .collapse -->
+					</div><!-- .card -->
+				</div><!-- .col-md-12 -->
+				<div class="col-md-12 card-wrap">
+					<div class="card">
+						<div class="card-header">      				
+							<a data-toggle="collapse" href="#accordion-87" aria-controls="accordion-87">Accordion Title 3</a>
+						</div><!-- .card-header -->
+						<div id="accordion-87" class="collapse hide" aria-labelledby="headingOne">
+							<div class="card-body">
+								<p>Mauris vitae dui non nulla auctor fringilla sed et lectus. Nullam id vehicula turpis, vel ultricies orci. Sed tempus justo at quam volutpat congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque sit amet egestas felis. Curabitur euismod fermentum massa, et sollicitudin neque rhoncus et. Suspendisse potenti. Sed rhoncus justo vel tincidunt hendrerit. Nunc tellus diam, ornare in tristique vel, pulvinar vel nisl. Praesent tristique, magna nec suscipit convallis, nunc ligula ornare massa, id convallis tellus justo ut lectus.</p>
+							</div><!-- .card-body -->
+						</div><!-- .collapse -->
+					</div><!-- .card -->
+				</div><!-- .col-md-12 -->
+			</div><!-- .row -->
+		</div>
+	</div><!-- #accordion -->
+	
+	<!--FORMS-->
+	<h2 class="style-header">Forms</h2>
+	<form id="form" class="webform-client-form webform-client-form-25" accept-charset="UTF-8" method="post" action="/test-webform" enctype="multipart/form-data">
+		<div class="row">
+	   	<!-- FIRST NAME -->
+			<div class="col-md-6 form-item webform-component webform-component-textfield webform-component--name">
+	    	<label for="edit-submitted-name">Name</label> 
+	    	<input id="edit-submitted-name" class="form-text jquery_placeholder-processed" type="text" maxlength="128" value="" name="submitted[name]" placeholder="Name">
+	    </div>
+	        
+			<!-- LAST NAME -->
+	    <div class="col-md-6 form-item webform-component webform-component-textfield webform-component--last-name">
+		  	<label for="edit-submitted-last-name">Last Name</label> 
+		  	<input id="edit-submitted-last-name" class="form-text" type="text" maxlength="128" value="" name="submitted[last_name]">
+	    </div>
+	        
+			<!-- TEXT AREA -->
+	    <div class="col-md-12 form-item webform-component webform-component-textarea webform-component--message">
+	    	<label for="edit-submitted-message">Message</label>
+				<div class="form-textarea-wrapper resizable textarea-processed resizable-textarea">
+					<textarea id="edit-submitted-message" class="form-textarea" rows="5" cols="60" name="submitted[message]"></textarea>
+					<div class="grippie"></div>
+				</div>
+			</div><!-- .webform-component -->
+	        
+			<!-- SELECT LIST -->
+			<div class="col-md-8 form-item webform-component webform-component-select">
+				<label for="edit-submitted-text-fields-how-did-you-hear-about-us">Select List</label>
+				<select required="required" id="edit-submitted-text-fields" name="submitted[text_fields][how_did_you_hear_about_us]" class="form-select required">
+					<option value="" selected="selected">- Select -</option>
+					<option value="1">option 1</option>
+					<option value="2">option 2</option>	  
+				</select>
+			</div><!-- .webform-component -->
+			
+			<!-- RADIOS -->
+			<div class="col-md-6 form-item webform-component webform-component-radios webform-component--newsletter-sign-up">
+				<label for="edit-submitted-newsletter-sign-up">Radios</label>
+				<div id="edit-submitted-newsletter-sign-up" class="form-radios">
+					<div class="form-item form-type-radio form-item-submitted-newsletter-sign-up">
+						<input id="edit-submitted-newsletter-sign-up-1" class="form-radio" type="radio" value="1" name="submitted[newsletter_sign_up]"> 
+						<label class="option" for="edit-submitted-newsletter-sign-up-1">yes</label>
+					</div>
+					<div class="form-item form-type-radio form-item-submitted-newsletter-sign-up">
+						<input id="edit-submitted-newsletter-sign-up-2" class="form-radio" type="radio" value="2" name="submitted[newsletter_sign_up]"> 
+						<label class="option" for="edit-submitted-newsletter-sign-up-2">no</label>
+					</div>
+				</div>
+			</div><!-- .webform-component -->
+	        
+			<!-- CHECK BOXES -->
+			<div class="col-md-6 form-item webform-component webform-component-checkboxes webform-component--occupation">
+				<label for="edit-submitted-occupation">Checkboxes</label>
+				<div id="edit-submitted-occupation" class="form-checkboxes">
+					<div class="form-item form-type-checkbox form-item-submitted-occupation-1">
+						<input id="edit-submitted-occupation-1" class="form-checkbox" type="checkbox" value="1" name="submitted[occupation][1]"> 
+						<label class="option" for="edit-submitted-occupation-1">Student</label>
+					</div>
+				
+					<div class="form-item form-type-checkbox form-item-submitted-occupation-2">
+						<input id="edit-submitted-occupation-2" class="form-checkbox" type="checkbox" value="2" name="submitted[occupation][2]"> 
+						<label class="option" for="edit-submitted-occupation-2">Teacher</label>
+					</div>
+				</div>
+			</div><!-- .webform-component -->
+		
+			<!-- FORM ACTIONS -->
+			<div class="form-actions col-md-3">
+				<input class="webform-submit button-primary form-submit" type="submit" value="Submit" name="op">
+			</div><!-- .form-actions -->
+		</div><!-- .row -->
+	</form><!-- #form -->
+
+	<!-- BUTTONS -->
+	<h2 class="col-md-12 style-header">Buttons</h2>
+	<div id="buttons" class="row">
+	
+		<div class="column col-md-4">
+			<!-- <label>Default</label> -->
+			<a class="button button" href="#">Default</a><br/>
+<!-- CODE -->
+<pre class="html"><code class="hljs html"><<span>a class="button button"</span>>...<<span>/a</span>></code></pre>
+		</div>
+		<div class="column col-md-4">
+			<!-- <label>Orange Button</label> -->
+			<a class="button button-orange" href="#">Orange Button</a><br/>
+<!-- CODE -->
+<pre class="html"><code class="hljs html"><<span>a class="button button-orange"</span>>...<<span>/a</span>></code></pre>
+		</div>
+		<div class="column col-md-4">
+			<!-- <label>Inverted Button</label> -->
+			<a class="button button-inverted" href="#">Inverted Button</a><br/>
+<!-- CODE -->
+<pre class="html"><code class="hljs html"><<span>a class="button button-inverted"</span>>...<<span>/a</span>></code></pre>
+		</div>
+		<div class="column col-md-4">
+			<!-- <label>Hollow Button</label> -->
+			<a class="button button-hollow" href="#">Hollow Button</a><br/>
+<!-- CODE -->
+<pre class="html"><code class="hljs html"><<span>a class="button button-hollow"</span>>...<<span>/a</span>></code></pre>
+		</div>
+
+	</div><!-- #buttons -->
+
+</div><!-- .style-wrap -->
+
+<footer class="style-footer">
+	<p>Designed by <a href="http://kwallcompany.com">KWALL</a></p>
+</footer>
+</body>
+</html>
+

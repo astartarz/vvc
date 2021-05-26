@@ -1,0 +1,112 @@
+.paragraph--type--gridder {
+  .gridder {
+    width: 100%;
+    font-size: 0;
+    padding: 0;
+
+    .gridder-list {
+      margin-left: 0;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 1.6rem;
+
+      .icon-tile {
+        display: inline-block;
+        overflow: hidden;
+        padding: 50px 30px;
+        text-align: center;
+        transition: all 0.2s ease-out;
+        width: 100%;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, .25);
+        cursor: pointer;
+        @media (max-width: $screen-mobile) {
+         text-align: left;
+        }
+        .icon-wrap {
+          height: 80px;
+          width: 80px;
+          overflow: hidden;
+          border-radius: 100%;
+          background: $color-white;
+          margin: 0 auto 20px;
+          border: 1px solid $border-color;
+          @media (max-width: $screen-mobile) {
+            float: left;
+            margin: 0;
+            margin-right: 15px;
+          }
+          img {
+            width: 100%;
+            height: auto;
+            @media (max-width: $screen-mobile) {
+            }
+          }
+        }
+
+        .title {
+          font-size: 2.4rem;
+          line-height: 3.2rem;
+          font-weight: bold;
+          margin-bottom: 1.2rem;
+        }
+        .excerpt{
+          span{
+            display: block;
+            color: #E84708;
+            margin-top: 1rem;
+            @media (max-width: $screen-mobile) {
+              display: inline-block;
+            }
+          }
+        }
+        &:hover {
+          background-color: $color-blue;
+          color: $color-white;
+          .excerpt {
+            span {
+              color: $color-white;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      &.selectedItem {
+        .icon-tile {
+          background-color: $color-blue;
+          .title {
+            color: $color-white;
+          }
+          .excerpt {
+            color: $color-white;
+            span {
+              color: $color-white;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .gridder-show {
+      margin-bottom: 20px;
+      display: block;
+      float: left;
+      width: 100%;
+      position: relative;
+      font-size: 1.8rem;
+
+      .gridder-padding {
+        .gridder-navigation {
+          display: none;
+        }
+
+        .gridder-expanded-content {
+          background: $color-grey-xlt;
+          padding: 3rem 2rem;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}

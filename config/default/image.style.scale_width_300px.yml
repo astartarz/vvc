@@ -1,0 +1,15 @@
+uuid: a458c38c-9f46-48ea-92c4-650d4d2fd634
+langcode: en
+status: true
+dependencies: {  }
+name: scale_width_300px
+label: 'Scale Width: 300px'
+effects:
+  18264ca2-40a8-4673-b708-d33f9cd072cc:
+    uuid: 18264ca2-40a8-4673-b708-d33f9cd072cc
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false

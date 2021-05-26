@@ -1,0 +1,19 @@
+uuid: 6cabd20e-8591-4b04-ad51-626529ebc69c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_unformatted
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+id: paragraph.adjustable_media_and_content.field_body_unformatted
+field_name: field_body_unformatted
+entity_type: paragraph
+bundle: adjustable_media_and_content
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

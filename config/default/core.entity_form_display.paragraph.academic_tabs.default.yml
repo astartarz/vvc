@@ -1,0 +1,95 @@
+uuid: eeb1cfd8-4373-46e0-9168-99b923aa1fca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.academic_tabs.field_aside_body_txt
+    - field.field.paragraph.academic_tabs.field_aside_link
+    - field.field.paragraph.academic_tabs.field_aside_title
+    - field.field.paragraph.academic_tabs.field_interest_refs
+    - field.field.paragraph.academic_tabs.field_link
+    - field.field.paragraph.academic_tabs.field_title
+    - field.field.paragraph.academic_tabs.field_view_reference
+    - field.field.paragraph.academic_tabs.field_view_reference_2
+    - paragraphs.paragraphs_type.academic_tabs
+  module:
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_aside:
+      children:
+        - field_aside_title
+        - field_aside_body_txt
+        - field_aside_link
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        open: false
+      label: Aside
+id: paragraph.academic_tabs.default
+targetEntityType: paragraph
+bundle: academic_tabs
+mode: default
+content:
+  field_aside_body_txt:
+    weight: 4
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_aside_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_aside_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_interest_refs:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  field_view_reference_2: true
+  status: true

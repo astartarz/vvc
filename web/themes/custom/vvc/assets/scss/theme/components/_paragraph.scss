@@ -1,0 +1,243 @@
+body.hide-hero-slideshow-paragraph {
+  .region-hero {
+    .paragraph--type--hero-slideshow {
+      display: none;
+    }
+  }
+}
+
+.paragraph--type--articles-grid {
+  position: relative;
+  padding: 20px 0 30px;
+  @media #{$mobile} {
+    padding: 0 0 95px;
+  }
+  .article-grid-header {
+    @media #{$tablet-min} {
+      margin-bottom: 10px;
+    }
+    .article-title {
+      h2 {
+        @include style-header;
+      }
+    }
+    .article-link {
+      text-align: right;
+      @media #{$mobile} {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 50px;
+        text-align: left;
+      }
+      a {
+        @include button-hollow;
+        @media #{$tablet-min} {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}
+
+.paragraph--type--events-grid {
+  position: relative;
+  padding: 20px 0 30px;
+  @media #{$mobile} {
+    padding: 0 0 95px;
+  }
+  .event-grid-header {
+    @media #{$tablet-min} {
+      margin-bottom: 10px;
+    }
+    .grid-title {
+      h2 {
+        @include style-header;
+      }
+    }
+    .grid-link {
+      text-align: right;
+      @media #{$mobile} {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 50px;
+        text-align: left;
+      }
+      a {
+        @include button-hollow;
+        @media #{$tablet-min} {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+  .content-wrap {
+    .title {
+      a {
+        color: $color-black;
+        text-decoration: none;
+      }
+    }
+  }
+  &.red_background {
+    background-image: url("../images/red-back.png");
+    .event-grid-header {
+      .grid-title {
+        h2 {
+          color: $white;
+          &:before {
+            display: none;
+          }
+        }
+      }
+      .grid-link {
+        a, a:hover {
+          color: white;
+        }
+      }
+    }
+    .event-wrap {
+      .date-wrap {
+        border-top: 4px solid $color-light-gray;
+        .date {
+          background-color: white;
+          color: $color-black;
+        }
+      }
+    }
+    .content-wrap {
+      .title {
+        text-transform: uppercase;
+        a {
+          color: $white;
+          &:hover {
+            color: $color-gold;
+          }
+        }
+      }
+      .event-date {
+        color: $white;
+      }
+    }
+  }
+}
+
+.paragraph--type--featured-external-articles {
+  position: relative;
+  background-image: url("../images/pattren-light-gray.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+  // margin-bottom: 40px;
+  @media #{$mobile} {
+    padding: 40px 0 85px 0;
+    background-image: url("../images/pattren-light-gray-mobile.jpg");
+  }
+  .grid-header {
+    h2 {
+      margin-top: 0;
+    }
+    .link {
+      text-align: right;
+      @media #{$mobile} {
+        text-align: left;
+        position: absolute;
+        bottom: 40px;
+      }
+      a {
+        @include default-button;
+      }
+    }
+  }
+}
+
+
+.paragraph--type--featured-event-grid {
+  position: relative;
+  padding: 120px 0;
+  @media #{$mobile} {
+    padding: 0 0 80px 0;
+    margin-bottom: 5px;
+  }
+  .grid-header {
+    h2 {
+      @include style-header;
+      margin-top: 0;
+      @media #{$mobile}{
+        padding: 28px 0 25px;
+      }
+    }
+    .link {
+      text-align: right;
+      @media #{$mobile} {
+        text-align: left;
+        position: absolute;
+        bottom: 0;
+      }
+      a {
+        @include default-button;
+        margin: 20px 0;
+
+        @media #{$mobile} {
+          margin:0 0 35px;
+        }
+      }
+    }
+  }
+}
+
+.paragraph--type--flexible-image-cta-blocks, .paragraph--type--flexible-cta-blocks {
+  .cta-block-section-title {
+    margin-bottom: 5px;
+    h2 {
+      @include style-header;
+      @media #{$mobile} {
+        padding: 10px 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/** quote **/
+.paragraph--type--quote {
+  background-image: url("../images/red-back.jpg");
+  padding: 20px;
+  margin-bottom: 50px;
+  blockquote {
+    font-family: $font-open;
+    font-style: italic;
+    color: $white;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .field--name-field-quote-author {
+    font-family: $font-open;
+    font-style: normal;
+    color: $color-gold;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: right;
+    .field__item {
+      &:before {
+        content: '-';
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.paragraph--type--wysiwyg {
+  margin-bottom: 50px;
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.paragraph--type--embed-code {
+  margin-bottom: 50px;
+}

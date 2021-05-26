@@ -1,0 +1,103 @@
+.paragraph--type--image-carousel{
+  position: relative;
+  background: rgb(3, 24, 47);
+  margin-bottom: 50px;
+  .image-carousel{
+    .slide-item{
+      position: relative;
+      .slide-content{
+        @media screen and (min-width: 767px) {
+          position: absolute;
+        }
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        min-height: 82px;
+        background: rgba(3, 24, 47, 0.7);
+        .slide-desc{
+          padding: 20px;
+          @media screen and (min-width: 767px) {
+            padding: 20px 150px 20px 20px;
+          }
+          font-family: "Open Sans", sans-serif;
+          font-size: 15px;
+          line-height: 21px;
+          color: $white;
+        }
+      }
+    }
+  }
+  .slide-arrows{
+    display: flex;
+    max-width: 115px;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 18%;
+    @media screen and (max-width: 767px){
+      bottom: 155px;
+    }
+    right: 10px;
+    z-index: 9;
+    a{
+      display: block;
+      img{
+        max-width: 70px;
+        max-height:70px;
+        padding: 14.5px 18px;
+        background: #891a0f;
+        border: 2px solid red;
+      }
+      &:hover, &:focus{
+        img{
+          background: transparent;
+          border-color: #fff;
+        }
+      }
+    }
+    .slick-arrow{
+      cursor: pointer;
+    }
+  }
+  .image-nav {
+    .slick-slide {
+      position: relative;
+      margin: 0 4px;
+      cursor: pointer;
+
+      a{
+        display: block;
+      }
+
+      &:after {
+        content: '';
+        background: rgba(3, 24, 47, 0.56);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      &.slick-current {
+        &:after {
+          background: transparent;
+        }
+        &:hover, &:focus{
+          &:after{
+            background: transparent;
+          }
+        }
+      }
+      &:hover, &:focus{
+        &:after{
+          background: rgba(255, 224, 0, 0.56);
+        }
+      }
+    }
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+}

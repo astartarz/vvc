@@ -1,0 +1,29 @@
+global-styling:
+  css:
+    theme:
+      assets/css/style.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css: { type: external, minified: true }
+      https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.16/css/bootstrap-multiselect.min.css: { type: external, minified: true }
+      https://amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css: { type: external, minified: true }
+
+js-scripts:
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js: { type: external, minified: true }
+    https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.16/js/bootstrap-multiselect.min.js: { type: external, minified: true }
+    assets/js/theme.js: {}
+
+header-scripts:
+  header: true
+  js:
+    https://amp.azure.net/libs/amp/latest/azuremediaplayer.min.js: { type: external, minified: true }
+
+fontawesome:
+  remote: https://fortawesome.github.io/Font-Awesome/
+  version: 4.5.0
+  license:
+    name: MIT
+    url: https://fortawesome.github.io/Font-Awesome/license/
+    gpl-compatible: true
+  css:
+    theme:
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css: { type: external, minified: true }

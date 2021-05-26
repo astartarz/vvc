@@ -1,0 +1,130 @@
+uuid: 9269e77d-a6eb-431d-bd5d-adc91ee5c6f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.field_after_content
+    - field.field.node.article.field_author_txt
+    - field.field.node.article.field_caption_txt
+    - field.field.node.article.field_categories
+    - field.field.node.article.field_date
+    - field.field.node.article.field_featured
+    - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_teaser_image
+    - node.type.article
+  module:
+    - addtocalendar
+    - datetime
+    - fences
+    - text
+    - user
+_core:
+  default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: mb-5
+        fences_label_tag: none
+        fences_label_classes: ''
+    label: hidden
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_author_txt:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_categories:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F jS, Y'
+    third_party_settings:
+      addtocalendar:
+        addtocalendar_settings:
+          style: '0'
+          display_text: 'Add to Calendar'
+          atc_title:
+            field: token
+            tokenized: Title
+          atc_description:
+            field: token
+            tokenized: Description
+          atc_location:
+            field: token
+            tokenized: Location
+          atc_organizer:
+            field: token
+            tokenized: 'Oregon Tech'
+          atc_organizer_email:
+            field: token
+            tokenized: info@kwallcompany.com
+          atc_date_end:
+            field: token
+            tokenized: ''
+          atc_privacy: public
+          data_secure: auto
+          data_calendars:
+            iCalendar: 0
+            'Google Calendar': 0
+            Outlook: 0
+            'Outlook Online': 0
+            'Yahoo! Calendar': 0
+        addtocalendar_show: 0
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: datetime_custom
+    region: content
+  field_image:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_after_content: true
+  field_caption_txt: true
+  field_featured: true
+  field_meta_tags: true
+  field_teaser_image: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

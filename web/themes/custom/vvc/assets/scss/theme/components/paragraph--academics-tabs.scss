@@ -1,0 +1,357 @@
+.paragraph--type--academic-tabs {
+  position: relative;
+  .academics-tabs-wrapper {
+    position: relative;
+    padding: 37px 0 290px 0;
+    margin-bottom: -90px;
+    @media screen and #{$tablet} {
+      padding-bottom: 80px;
+      margin-bottom: 0;
+    }
+    &:before {
+      content: '';
+      background: linear-gradient(180deg, #03182F 25.83%, rgba(3, 24, 47, 0) 100%);
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: 0;
+      z-index: 2;
+      bottom: 0;
+      width: 100%;
+    }
+    &:after {
+      content: '';
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #03182F 100%);
+      position: absolute;
+      height: 100%;
+      left: 0;
+      z-index: 2;
+      bottom: 90px;
+      width: 100%;
+      @media screen and #{$tablet} {
+        bottom: 0;
+      }
+    }
+  }
+  h2.style-header {
+    color: $white;
+    margin: 0;
+    @media screen and #{$desktop-min} {
+      padding: 34px 0;
+      &:before {
+        content: '';
+        background: url("../images/footer-pattern.png") center center;
+        position: absolute;
+        left: -69%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: $white;
+      }
+    }
+  }
+  .grid-link {
+    @media screen and #{$desktop-min} {
+      text-align: right;
+    }
+    a {
+      @include button-hollow;
+      color: $white !important;
+      margin: 34px 0 !important;
+      @media #{$tablet-min} {
+        margin: 20px 0;
+      }
+    }
+  }
+  .viewsreference--view-title {
+    display: none;
+  }
+  .get-ready-block {
+    @media screen and #{$desktop-min} {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+  .aside-wrapper {
+    position: relative;
+    max-width: 444px;
+    margin-left: auto;
+    @media screen and #{$tablet} {
+      max-width: 100%;
+    }
+    .aside-content {
+      height: 100%;
+      padding: 40px 30px;
+      background-color: $white;
+      margin-left: 20px;
+      z-index: 5;
+      position: relative;
+      .field--name-field-link {
+        a {
+          @include global-link;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
+      h3 {
+        font-size: 30px;
+        line-height: 37px;
+        letter-spacing: 1px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        @media screen and #{$tablet} {
+          font-size: 26px;
+          line-height: 32px;
+        }
+      }
+      .aside-description {
+        font-style: italic;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+      .aside-link {
+        a {
+          @include button-hollow;
+        }
+      }
+    }
+    &:after {
+      content: "";
+      background-image: url('../images/red-back.jpg');
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 20px;
+      width: calc(100% - 20px);
+      height: 100%;
+      z-index: 4;
+    }
+  }
+  .academics-grid-header,
+  .field--name-field-view-reference-2 {
+    position: relative;
+    z-index: 3;
+  }
+  .nav-tabs {
+    display: flex;
+    margin-top: 15px;
+    border: none;
+    li {
+      flex: 0 0 25%;
+      max-width: 25%;
+      list-style: none;
+      margin: 0;
+      @media screen and #{$tablet} {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      a {
+        color: $white;
+        font-family: $font-mont;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        mix-blend-mode: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        border: 1px solid rgba(255,255,255,0.36);
+        box-sizing: border-box;
+        padding: 10px 16px;
+        font-weight: 500;
+        &:hover,
+        &:focus,
+        &.active {
+          color: $color-gold;
+          border: 1px solid $white;
+        }
+        @media screen and #{$mobile} {
+          font-size: 14px;
+          line-height: 17px;
+          padding: 10px;
+        }
+      }
+      @media screen and #{$desktop-min} {
+        &:first-child,
+        &:nth-child(5n) {
+          a {
+            border-left: 0;
+          }
+        }
+        &:nth-child(4n) {
+          a {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .tab-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 90px;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    @media screen and #{$tablet} {
+      bottom: 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    div {
+      height: 100%;
+    }
+  }
+  .tab-content-wrapper {
+    position: relative;
+    z-index: 3;
+    margin-top: 70px;
+    padding-bottom: 100px;
+    @media screen and #{$tablet} {
+      margin-top: 30px;
+      padding-bottom: 0;
+      .container {
+        padding: 0;
+        .col-md-9,
+        .col-md-3 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    .tab-description {
+      color: $white;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 50px;
+      @media screen and #{$tablet} {
+        margin-bottom: 30px;
+      }
+    }
+    .tab-links {
+      ul {
+        li {
+          list-style: none;
+          margin-left: 0;
+          display: inline-block;
+          width: 46%;
+          margin-bottom: 15px;
+          vertical-align: top;
+          @media screen and #{$tablet} {
+            display: block;
+            width: 100%;
+          }
+          a {
+            @include global-link;
+            text-transform: uppercase;
+            font-family: $font-mont;
+            font-size: 16px;
+            line-height: 20px;
+            display: block;
+            color: $color-gold !important;
+            &:before {
+              background: $color-gold !important;
+            }
+          }
+          @media screen and #{$desktop-min} {
+            &:nth-child(2n+1) {
+              margin-right: 2%;
+            }
+            &:nth-child(2n) {
+              margin-left: 2%;
+            }
+          }
+        }
+      }
+    }
+    .aside-text-wrapper {
+      position: relative;
+      @media screen and #{$tablet} {
+        //margin-top: 30px;
+        display: none;
+      }
+      &:after {
+        content: '';
+        background: #C4C4C4;
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        opacity: .8;
+      }
+      &:before {
+        content: '';
+        background: #C4C4C4;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        left: -10px;
+        top: 10px;
+        opacity: .8;
+      }
+      .aside-text-content {
+        color: $white;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        box-sizing: border-box;
+        padding: 25px;
+        h3 {
+          font-size: 16px;
+          line-height: 20px;
+          text-transform: uppercase;
+          margin-top: 0;
+          margin-bottom: 20px;
+          color: $white;
+        }
+        ul {
+          li {
+            list-style: none;
+            font-size: 15px;
+            line-height: 21px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            margin: 0 0 20px 0;
+            &:last-child {
+              margin-bottom: 0;
+              border: none;
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .contextual-region {
+    position: static;
+  }
+  @media screen and #{$tablet} {
+    .view-interests-tabs {
+      padding: 0 15px;
+    }
+    .get-ready-block {
+      padding: 0;
+      width: 100%;
+      margin-bottom: 60px;
+      margin-top: -20px;
+      max-width: 100%;
+      @media screen and #{$tablet} {
+        margin-bottom: 20px;
+      }
+    }
+    .grid-title,
+    .grid-link {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}

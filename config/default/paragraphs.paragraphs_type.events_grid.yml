@@ -1,0 +1,10 @@
+uuid: 08cc1667-0693-48f1-850a-c8aebf38b540
+langcode: en
+status: true
+dependencies: {  }
+id: events_grid
+label: 'Events Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

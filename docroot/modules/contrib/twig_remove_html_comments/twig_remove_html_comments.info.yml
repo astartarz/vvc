@@ -1,0 +1,10 @@
+name: Twig - Remove HTML comments
+type: module
+description: 'Provides a Twig filter that removes HTML comments.'
+core_version_requirement: ^8.8 || ^9
+package: 'Twig'
+
+# Information added by Drupal.org packaging script on 2020-08-05
+version: '8.x-1.0-beta1'
+project: 'twig_remove_html_comments'
+datestamp: 1596630141

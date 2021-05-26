@@ -1,0 +1,46 @@
+.paragraph--type--external-articles-grid{
+  background: url("../images/back-pattern-grid.png");
+  padding: 52px 0 100px 0;
+  .grid-header{
+    align-items: center;
+    margin-bottom: 40px;
+    .style-header{
+      color: #03182F;
+      text-transform: uppercase;
+      font-family: $font-mont;
+    }
+    .link{
+      text-align: right;
+      a{
+        @include button-hollow;
+      }
+    }
+  }
+.view-external-articles-grid{
+  padding: 0 12px;
+  > .view-content{
+    @include make-row();
+    .views-row{
+      margin-bottom: 34px;
+    }
+    .views-field-title{
+      font-family: $font-mont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.727273px;
+      text-transform: uppercase;
+      img{
+        margin-bottom: 5px;
+      }
+      a{
+        color: #03182F;
+        &:hover, &:focus{
+          color: #891A0F;
+        }
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,28 @@
+uuid: 7df0e7e8-4af9-4ca6-b6c3-2ac4f5836dd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.program_sidebar_block
+    - field.storage.block_content.field_apply_link
+  module:
+    - link
+id: block_content.program_sidebar_block.field_apply_link
+field_name: field_apply_link
+entity_type: block_content
+bundle: program_sidebar_block
+label: 'Apply Link'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/admissions/apply-now'
+    title: Apply
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

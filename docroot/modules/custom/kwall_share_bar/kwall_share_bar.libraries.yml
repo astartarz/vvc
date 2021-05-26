@@ -1,0 +1,5 @@
+kwall_share_bar:
+  version: 1.x
+  css:
+    theme:
+      css/kwall_share_bar.css: {}

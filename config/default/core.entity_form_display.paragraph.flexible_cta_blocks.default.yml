@@ -1,0 +1,65 @@
+uuid: e5669e68-465b-4c17-8b43-13b342d8415e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_cta_blocks.field_boolean
+    - field.field.paragraph.flexible_cta_blocks.field_flexible_blocks_display
+    - field.field.paragraph.flexible_cta_blocks.field_flexible_cta_blocks
+    - field.field.paragraph.flexible_cta_blocks.field_title
+    - paragraphs.paragraphs_type.flexible_cta_blocks
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_display_options:
+      children:
+        - field_flexible_blocks_display
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+      label: 'Display Options'
+id: paragraph.flexible_cta_blocks.default
+targetEntityType: paragraph
+bundle: flexible_cta_blocks
+mode: default
+content:
+  field_flexible_blocks_display:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_flexible_cta_blocks:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: 'CTA Block'
+      title_plural: 'CTA Blocks'
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: flexible_cta_block
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_boolean: true
+  status: true
+  uid: true

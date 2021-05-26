@@ -1,0 +1,10 @@
+uuid: 6bbb0cbb-0e48-4f3a-9ab5-308834997e1b
+langcode: en
+status: true
+dependencies: {  }
+id: image_carousel_item
+label: 'Image Carousel Item'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Image Carousel</em> paragraph.'
+behavior_plugins: {  }

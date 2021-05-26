@@ -1,0 +1,10 @@
+uuid: 55f03374-07d5-45c1-8835-49acf6a89f4f
+langcode: en
+status: true
+dependencies: {  }
+id: flexible_cta_block
+label: 'Flexible CTA Block'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Flexible CTA Blocks</em> paragraph.'
+behavior_plugins: {  }

@@ -1,0 +1,194 @@
+uuid: 9ca4d3eb-bacc-48a8-8884-0fa3f6ce0288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_bottom
+    - node.type.page
+    - paragraphs.paragraphs_type.academic_tabs
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+    - paragraphs.paragraphs_type.articles_grid
+    - paragraphs.paragraphs_type.events_grid
+    - paragraphs.paragraphs_type.external_articles_grid
+    - paragraphs.paragraphs_type.featured_event_grid
+    - paragraphs.paragraphs_type.featured_external_articles
+    - paragraphs.paragraphs_type.flexible_cta_blocks
+    - paragraphs.paragraphs_type.flexible_image_cta_blocks
+    - paragraphs.paragraphs_type.full_width_image_section
+    - paragraphs.paragraphs_type.gridder
+    - paragraphs.paragraphs_type.info_block
+    - paragraphs.paragraphs_type.persons_section_refs
+    - paragraphs.paragraphs_type.persons_section_taxonomy
+    - paragraphs.paragraphs_type.social_grid
+    - paragraphs.paragraphs_type.statistics
+    - paragraphs.paragraphs_type.stories
+    - paragraphs.paragraphs_type.tabs
+    - paragraphs.paragraphs_type.views
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.page.field_content_bottom
+field_name: field_content_bottom
+entity_type: node
+bundle: page
+label: 'Full-Width Paragraphs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      academic_tabs: academic_tabs
+      accordion: accordion
+      adjustable_media_and_content: adjustable_media_and_content
+      events_grid: events_grid
+      external_articles_grid: external_articles_grid
+      featured_event_grid: featured_event_grid
+      featured_external_articles: featured_external_articles
+      flexible_cta_blocks: flexible_cta_blocks
+      flexible_image_cta_blocks: flexible_image_cta_blocks
+      full_width_image_section: full_width_image_section
+      gridder: gridder
+      info_block: info_block
+      articles_grid: articles_grid
+      persons_section_refs: persons_section_refs
+      persons_section_taxonomy: persons_section_taxonomy
+      social_grid: social_grid
+      statistics: statistics
+      stories: stories
+      tabs: tabs
+      views: views
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      academic_tabs:
+        enabled: true
+        weight: -85
+      accordion:
+        enabled: true
+        weight: -84
+      accordion_item:
+        weight: -83
+        enabled: false
+      adjustable_media_and_content:
+        enabled: true
+        weight: -82
+      articles_grid:
+        enabled: true
+        weight: -68
+      contact:
+        weight: -52
+        enabled: false
+      events_grid:
+        enabled: true
+        weight: -81
+      external_articles_grid:
+        enabled: true
+        weight: -80
+      featured_event_grid:
+        enabled: true
+        weight: -79
+      featured_external_articles:
+        enabled: true
+        weight: -78
+      flexible_cta_block:
+        weight: -77
+        enabled: false
+      flexible_cta_blocks:
+        enabled: true
+        weight: -76
+      flexible_image_cta_block:
+        weight: -75
+        enabled: false
+      flexible_image_cta_blocks:
+        enabled: true
+        weight: -74
+      full_width_image_section:
+        enabled: true
+        weight: -73
+      gridder:
+        enabled: true
+        weight: -72
+      gridder_item:
+        weight: -71
+        enabled: false
+      hero_banner:
+        weight: -54
+        enabled: false
+      hero_banner_video_:
+        weight: -46
+        enabled: false
+      hero_slide:
+        weight: -57
+        enabled: false
+      hero_slideshow:
+        weight: -53
+        enabled: false
+      image_carousel:
+        weight: -48
+        enabled: false
+      image_carousel_item:
+        weight: -47
+        enabled: false
+      info_block:
+        enabled: true
+        weight: -70
+      info_block_item:
+        weight: -69
+        enabled: false
+      news_banner:
+        weight: -45
+        enabled: false
+      page_banner:
+        weight: -44
+        enabled: false
+      persons_section_refs:
+        enabled: true
+        weight: -67
+      persons_section_taxonomy:
+        enabled: true
+        weight: -66
+      quick_link:
+        weight: -56
+        enabled: false
+      quote:
+        weight: -51
+        enabled: false
+      sidebar_contacts:
+        weight: -55
+        enabled: false
+      sidebar_links:
+        weight: -50
+        enabled: false
+      sidebar_social:
+        weight: -49
+        enabled: false
+      social_grid:
+        enabled: true
+        weight: -65
+      statistics:
+        enabled: true
+        weight: -63
+      statistics_item:
+        weight: -64
+        enabled: false
+      stories:
+        enabled: true
+        weight: -62
+      tab:
+        weight: -61
+        enabled: false
+      tabs:
+        enabled: true
+        weight: -60
+      views:
+        enabled: true
+        weight: -59
+      wysiwyg:
+        enabled: true
+        weight: -58
+field_type: entity_reference_revisions

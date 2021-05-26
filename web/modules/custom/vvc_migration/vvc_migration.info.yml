@@ -1,0 +1,6 @@
+name: VVC Migration
+description: "VVC Migrations from the old website."
+package: Custom
+
+type: module
+core: 8.x

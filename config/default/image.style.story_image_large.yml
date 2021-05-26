@@ -1,0 +1,17 @@
+uuid: a01d2a4a-15b8-4554-9e49-d90125cc242c
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: story_image_large
+label: 'x. Story Image Large (442×644)'
+effects:
+  ff90ec64-12ef-4d21-b550-da452eb944a2:
+    uuid: ff90ec64-12ef-4d21-b550-da452eb944a2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 442
+      height: 644
+      crop_type: focal_point

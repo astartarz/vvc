@@ -1,0 +1,8 @@
+uuid: b10349a9-b233-42a5-8079-e91cdf9b2864
+langcode: en
+status: true
+dependencies: {  }
+id: mega_menu_block
+label: 'x. Mega Menu Block'
+revision: 1
+description: 'A block containing a thumbnail, title and caption to be displayed as a block in the site Mega Menu.'

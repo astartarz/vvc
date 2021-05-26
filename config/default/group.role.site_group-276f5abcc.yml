@@ -1,0 +1,17 @@
+uuid: 00751ba6-19cf-4773-99dd-e637f7f010bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_group
+  enforced:
+    config:
+      - user.role.directory_publisher
+id: site_group-276f5abcc
+label: 'Directory Publisher'
+weight: -2
+internal: true
+audience: outsider
+group_type: site_group
+permissions_ui: false
+permissions: {  }

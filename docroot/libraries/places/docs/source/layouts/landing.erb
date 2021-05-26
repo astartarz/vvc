@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <!--[if IE]><link rel="shortcut icon" href="images/favicon.png"><![endif]-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- / Twitter card -->
+    <meta content='summary_large_image' name='twitter:card'>
+    <meta content='Algolia Places' name='twitter:site'>
+    <meta content='@Algolia' name='twitter:creator'>
+    <meta content="Algolia Places provides a fast, distributed and easy way to use an address search autocomplete JavaScript library on your website. It has been designed to improve the user experience of your HTML forms." name="twitter:description">
+    <meta content="https://res.cloudinary.com/hilnmyskv/image/upload/v1466000434/places-og-image_jp9phw.png" name="twitter:image">
+    <!-- / OG meta -->
+    <meta content='https://community.algolia.com/places/' property='og:url'>
+    <meta content='Algolia Places' property='og:title'>
+    <meta content='https://res.cloudinary.com/hilnmyskv/image/upload/v1466000434/places-og-image_jp9phw.png' property='og:image'>
+    <meta content='Algolia Places provides a fast, distributed and easy way to use an address search autocomplete JavaScript library on your website. It has been designed to improve the user experience of your HTML forms.' property='og:description'>
+    <meta content='Algolia Places' property='og:site_name'>
+
+    <title>Algolia Places <%= "| #{current_page.data.title}" if (current_page.path != 'index.html') %></title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/hint.css/2/hint.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/algolia-aerial@1.3.4/dist/aerial.css">
+    <% if current_page.path == 'index.html' %>
+    <link rel=canonical href="https://community.algolia.com/places">
+    <% end %>
+
+    <%= stylesheet_link_tag(:landing) %>
+    <%= auto_stylesheet_link_tag %>
+    <%= javascript_include_tag config[:places_lib_url] %>
+    <script>
+      var currentPath = '<%= current_page.path %>';
+      var clippyPath = '<%= image_path 'clippy.svg' %>';
+    </script>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial("/partials/navigation") %>
+    <%= yield %>
+    <%= partial("/partials/footer") %>
+    <%= javascript_include_tag :common %>
+    <%= auto_javascript_include_tag %>
+  </body>
+</html>

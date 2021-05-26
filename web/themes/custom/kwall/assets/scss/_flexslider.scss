@@ -1,0 +1,62 @@
+/*
+ * Global Flexslider overwrites
+ */
+.flexslider {
+  border: none;
+  margin: 0;
+
+  .controls {
+    .custom-controls-container {
+      .pause,
+      .play {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .pause {
+
+      }
+
+      .play {
+
+      }
+
+      .flex-control-nav {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        width: initial;
+        bottom: initial;
+        text-align: inherit;
+      }
+    }
+
+    .flex-prev,
+    .flex-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      font-size: 30px;
+      color: #ffffff;
+      transition: ease all 0.4s;
+
+      &:focus,
+      &:active,
+      &:hover {
+        text-decoration: none;
+        opacity: .5;
+      }
+    }
+
+    .flex-prev {
+      left: 0;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .flex-next {
+      right: 0;
+      text-shadow: -1px 1px 2px #000;
+    }
+  }
+}

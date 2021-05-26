@@ -1,0 +1,10 @@
+kwall_map:
+  version: 1.x
+  css:
+    theme:
+      assets/css/kwall_map.css: {}
+  js:
+    assets/js/kwall_map.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

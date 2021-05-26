@@ -1,0 +1,22 @@
+uuid: 47f26b4a-06f2-4152-a6c9-6a129d8629dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - vvc
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: vvc_help
+theme: vvc
+region: content
+weight: -14
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

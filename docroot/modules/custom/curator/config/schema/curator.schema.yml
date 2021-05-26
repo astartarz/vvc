@@ -1,0 +1,27 @@
+curator.curator.*:
+  type: config_entity
+  label: 'Social post sync'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    enable:
+      type: boolean
+      label: 'Enable'
+    limit:
+      type: integer
+      label: 'limit'
+    content_type:
+      type: string
+      label: 'Content Type'
+    feed:
+      type: string
+      label: 'Feed'
+    setting:
+      type: sequence
+      label: 'Setting'
+      sequence:
+        type: curator.curator.[%key]

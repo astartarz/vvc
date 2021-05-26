@@ -1,0 +1,29 @@
+uuid: 2ed67198-8dfd-4df5-81aa-9561d6e2efef
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0851f05a-8efd-4648-9f3e-80692aedf13b'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: hamburger-menu
+id: mobilemenubar
+theme: vvc
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:0851f05a-8efd-4648-9f3e-80692aedf13b'
+settings:
+  id: 'block_content:0851f05a-8efd-4648-9f3e-80692aedf13b'
+  label: 'Mobile Menu Bar'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

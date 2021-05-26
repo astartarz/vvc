@@ -1,0 +1,128 @@
+.view-id-directory.view-display-id-page_1,
+.view-id-article_view.view-display-id-block_3 {
+  > .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.view-article-view {
+  .post-wrap {
+    box-sizing: border-box;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.1);
+
+    .content-wrap {
+      padding: 15px;
+
+      .post-title {
+      }
+
+      .post-body {
+      }
+    }
+
+    .post-img {
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.view-id-directory.view-display-id-block_1 {
+  .view-content {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .alpaha-item {
+      float: left;
+      width: calc(100% / 27);
+      text-align: center;
+    }
+  }
+}
+
+.view-id-directory.view-display-id-page_1 {
+  display: flex;
+  flex-direction: column;
+
+  > .view-header {
+    order: 2;
+  }
+
+  > .view-filters {
+    order: 1;
+  }
+
+  > .view-content {
+    order: 3;
+
+    .profile-wrap {
+      margin-bottom: 15px;
+
+      .profile-img {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .content-wrap {
+        padding-left: 10px;
+
+        .item-list {
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pager {
+    order: 4;
+  }
+}
+
+
+.view-id-event_view.view-display-id-page_1 {
+  .event-wrap {
+    .image-wrap {
+      position: relative;
+
+      .date-wrap {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        z-index: 3;
+      }
+
+      img {
+        position: relative;
+        height: auto;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+
+    .content-wrap {
+
+    }
+  }
+}

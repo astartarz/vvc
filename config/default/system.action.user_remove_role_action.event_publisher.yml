@@ -1,0 +1,14 @@
+uuid: b9af2554-9418-4676-b693-dcf01f7a7a56
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.event_publisher
+  module:
+    - user
+id: user_remove_role_action.event_publisher
+label: 'Remove the Event Publisher role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: event_publisher

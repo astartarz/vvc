@@ -1,0 +1,33 @@
+uuid: 8b0d49dd-1e31-4a71-9b68-9f3bc25cae8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_flexible_blocks_display
+field_name: field_flexible_blocks_display
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '2'
+      label: '2 Columns'
+    -
+      value: '3'
+      label: '3 Columns'
+    -
+      value: '4'
+      label: '4 Columns'
+    -
+      value: '5'
+      label: '5 Columns'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

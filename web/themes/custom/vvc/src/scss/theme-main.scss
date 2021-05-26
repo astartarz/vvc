@@ -1,0 +1,78 @@
+// Import bootstrap-reboot to use bootstrap mixins directly. it will not add the css, just provides mixins to use.
+@import "~bootstrap/scss/bootstrap-reboot";
+
+// Global custom libraries.
+@import "global/unit";
+@import "global/spacing-mixins";
+
+// Global Custom mixins specific to site.
+@import "global/mixin-typography";
+
+// Global Variables specific to site.
+@import "global/variables";
+
+// Reset file to remove browser default css.
+@import "global/base-reset";
+
+// Site typography.
+@import "base/base-typography";
+
+// Components based scss files.
+@import "components/footer";
+@import "components/CTA_with_text";
+@import "components/4-block-components";
+@import "components/homepage-feature";
+@import "components/full-width-banner";
+@import "components/accordion";
+@import "components/paragraph";
+@import "components/paragraph--stats";
+@import "components/paragraph--tabs";
+@import "components/paragraph--sidebar-links";
+@import "components/paragraph--adjustable-media-and-content";
+@import "components/paragraph--info-block";
+@import "components/paragraph--hero-banner-video";
+@import "components/paragraph--hero-banner-image";
+@import "components/view-articles-grid";
+@import "components/story-cards";
+@import "components/cta-block";
+@import "components/image-cta-block";
+@import "components/quick_links";
+@import "components/image-carousel";
+// Most probably list of components.
+//Header
+//Campus Tours or Customized Campus Map
+//Slideshows
+//Breadcrumbs
+//Homepage Hero Banner
+//Interior Hero Banner
+//Interior Banner
+//Interior No Banner
+//News & Events Banner
+//Info Block
+//Adjustable Media & Content
+//Stat Section
+//Academic Tabs
+//Student Stories
+//Full-Width Image Section
+//Featured Event Grid
+//Event Grid
+//Featured External News
+//External News Grid
+//News Articles Grid
+//Social Grid
+//Flexible CTA Blocks with Images
+//Flexible CTA Blocks
+//Tab Section
+//Accordion Section
+//Gridder Section
+//Quick Links
+//Person Section
+//Carousel
+//Quote (WYSIWYG Template)
+//Sidebar Contact
+//Sidebar Social
+//Sidebar Links
+//Directory Filters
+//Directory Listing
+//Program Filters
+//Program Listing

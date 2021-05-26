@@ -1,0 +1,27 @@
+uuid: 79eff6b9-e27b-4cfa-9c72-46d374fb2e49
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vvc
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: vvc_breadcrumbs
+theme: vvc
+region: content
+weight: -17
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/academics\r\n/academics/graduate\r\n/academics/undergraduate\r\n/academics/certificate\r\n"
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,441 @@
+// Base typography based on design.
+html {
+  font-size: 62.5%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  //scroll-behavior: smooth;
+}
+
+body {
+  @include body();
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-black;
+  font-family: $font-mont;
+  letter-spacing: 0;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+h1, .h1 {
+  @include headline-1();
+}
+
+h2, .h2 {
+  @include headline-2();
+}
+
+h3, .h3 {
+  @include headline-3();
+}
+
+h4, .h4 {
+  @include headline-4();
+}
+
+h5, .h5 {
+  @include headline-5();
+}
+
+h6, .h6 {
+  @include headline-6();
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+/****
+ *
+ * Lists
+ *
+ ****/
+ul li,
+ol li {
+  line-height: 1.6;
+}
+
+ul {
+  li {
+    display: list-item;
+    list-style-type: disc;
+    margin-left: 40px;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  &.toolbar-menu{
+    li{
+      margin-left: 0;
+    }
+  }
+}
+
+ol {
+  li {
+    display: list-item;
+    list-style-type: decimal;
+    margin-left: 40px;
+  }
+
+  ol {
+    padding: 0;
+  }
+}
+
+.displaytext {
+  @include displaytext();
+}
+
+.displaytextxxl {
+  @include displaytextxxl();
+}
+
+.article-title {
+  @include article-title();
+}
+
+.lead {
+  @include lead();
+}
+
+.body {
+  @include body();
+}
+
+.smalltext {
+  @include smalltext();
+}
+
+.buttontext {
+  @include buttontext();
+}
+
+.morelink {
+  @include morelink();
+}
+
+.label {
+  @include label();
+}
+
+
+.buttonprimary {
+  @include buttonprimary;
+}
+
+
+.buttonfilled {
+  @include buttonfilled;
+}
+
+.button-solid {
+  @include button-solid;
+}
+
+.button-inverted {
+  @include button-inverted;
+}
+
+.globallink {
+  @include global-link;
+}
+
+.button {
+  @include default-button;
+}
+
+.field-title {
+  position: relative;
+  padding: 30px 0;
+  margin-bottom: 10px;
+
+  &:before {
+    content: '';
+    background: url("../images/title-pattern.svg") center center;
+    position: absolute;
+    left: -80%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.breadcrumb {
+  background: none;
+  font-size: 1.8rem;
+  padding: 0;
+  padding-bottom: 0.5em;
+
+  li {
+    color: $color-black;
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &:before {
+      color: $color-black;
+      content: ' / ';
+      margin: 0;
+    }
+
+    a {
+      color: $color-black;
+      text-decoration: underline;
+    }
+  }
+}
+
+.post-link {
+  @include post-link;
+}
+
+/**
+Input Styles
+ */
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 4px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+body {
+  &.page-banner {
+    #block-vvc-page-title, #block-vvc-breadcrumbs {
+      display: none;
+    }
+  }
+
+  &:not(.page-banner) {
+    header {
+      margin-bottom: 80px;
+    }
+  }
+
+  #block-vvc-page-title {
+    h1.page-title {
+      margin-bottom: 5px;
+      @media #{$mobile} {
+        text-align: center;
+      }
+
+      &:after {
+        content: '';
+        border-bottom: 2px solid $color-light-red;
+        width: 188px;
+        display: block;
+        padding-top: 10px;
+        @media #{$mobile} {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  #block-vvc-breadcrumbs {
+    .breadcrumb {
+      @media #{$mobile} {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+figure {
+  display: table;
+
+  figcaption {
+    background-color: $color-extra-light-gray;
+    font-size: 1.5rem;
+    padding: 30px;
+    display: table;
+    position: relative;
+    width: 100%;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  img {
+  //  width: 100%;
+    height: auto;
+  }
+
+  &.align-left {
+    margin-right: 20px;
+  }
+
+  &.align-right {
+    margin-left: 20px;
+  }
+}
+
+article.node {
+  a:not(.button):not(.button-solid) {
+    color: $color-red;
+    text-decoration: underline;
+    word-break: break-all;
+
+    &:hover, &:focus, &:active {
+      color: $color-light-red;
+      text-decoration: none;
+    }
+  }
+
+  img {
+  //  width: 100%;
+    height: auto;
+  }
+
+  .field--name-field-intro {
+    font-family: $font-open;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-dark-gray;
+  }
+}
+
+ul.tabs {
+  li {
+    list-style: none;
+    margin-left: 0;
+  }
+}
+
+/**
+Back to top
+ */
+.back-to-top {
+  position: relative;
+
+  #back_to_top {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    @media #{$mobile} {
+      bottom: -25px;
+    }
+
+    svg {
+      width: 50px;
+      height: 50px;
+      padding: 15px;
+      background: $color-red;
+      border: 2px solid $color-light-red;
+      transform: rotate(270deg);
+      transition: .2s;
+
+      &:hover {
+        background: $white;
+        box-shadow: -5px -5px 0 $color-light-red;
+
+        path {
+          fill: $color-red;
+        }
+
+      }
+    }
+
+    &:hover, &:focus {
+      cursor: pointer;
+    }
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+/**
+pager
+ */
+.pager {
+  .pager__items {
+    display: block;
+    margin: 15px 0;
+
+    .pager__item {
+      font-size: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      a {
+        display: inline-block;
+        font-family: $font-open;
+        font-size: 1.6rem;
+        font-weight: bold;
+        background-color: $white;
+        color: $color-red;
+        padding: 14px 18px;
+        text-decoration: none;
+
+        &:hover, &:focus, &:active {
+          background-color: $color-extra-light-gray;
+        }
+      }
+
+      &.is-active {
+        a {
+          background-color: $color-red;
+          color: $white;
+        }
+      }
+    }
+
+    .pager__item--ellipsis {
+      display: none;
+    }
+  }
+}
+
+.align-left {
+  margin-right: 20px;
+}
+
+.align-right {
+  margin-left: 20px;
+}
+
+.field--name-field-media-oembed-video {
+  .field__item {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}

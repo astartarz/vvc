@@ -1,0 +1,51 @@
+uuid: be866fab-8440-4b74-994e-66f1f6fb6d4e
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.sidebar-menu
+  module:
+    - block_class
+    - menu_block
+    - node
+    - system
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: 'sidebar-menu-block d-none d-md-block'
+id: sidebarmenu_section
+theme: vvc
+region: sidebar_right
+weight: -21
+provider: null
+plugin: 'menu_block:sidebar-menu'
+settings:
+  id: 'menu_block:sidebar-menu'
+  label: 'Section Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: true
+  follow_parent: active
+  level: 1
+  depth: 2
+  expand: true
+  parent: 'sidebar-menu:'
+  suggestion: sidebar_menu
+  label_type: block
+  label_link: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/demo-news-events\r\n/node/6242\r\n/demo-faculty-staff-resource\r\n/node/6244"
+    negate: true
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      event: event
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,29 @@
+uuid: f111d155-a4d6-4189-a8df-f1575cfd0861
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_department
+    - node.type.page
+    - taxonomy.vocabulary.departments
+id: node.page.field_related_department
+field_name: field_related_department
+entity_type: node
+bundle: page
+label: Department
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments: departments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

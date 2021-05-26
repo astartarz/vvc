@@ -1,0 +1,19 @@
+uuid: f037dea8-b7b5-45d2-9938-09f1b45ac338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_aside_title
+    - paragraphs.paragraphs_type.academic_tabs
+id: paragraph.academic_tabs.field_aside_title
+field_name: field_aside_title
+entity_type: paragraph
+bundle: academic_tabs
+label: 'Aside Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

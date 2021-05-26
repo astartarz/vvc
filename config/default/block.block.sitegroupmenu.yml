@@ -1,0 +1,31 @@
+uuid: 4eb14cfa-521f-4b4a-83b6-b092a9ea7486
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.site_group_menu
+  module:
+    - block_class
+    - group_content_menu
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: sidebar-menu-block
+id: sitegroupmenu
+theme: vvc
+region: sidebar_right
+weight: -23
+provider: null
+plugin: 'group_content_menu:site_group_menu'
+settings:
+  id: 'group_content_menu:site_group_menu'
+  label: 'Site Group Menu'
+  provider: group_content_menu
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility: {  }

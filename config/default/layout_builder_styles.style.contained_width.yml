@@ -1,0 +1,10 @@
+uuid: 39b50a05-4d64-4ccd-a5ce-e3ef892dc625
+langcode: en
+status: true
+dependencies: {  }
+id: contained_width
+label: 'Contained Width'
+classes: contained-width
+type: component
+weight: 1
+block_restrictions: {  }

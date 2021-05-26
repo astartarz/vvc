@@ -1,0 +1,11 @@
+uuid: 6216d990-9eac-4588-83d2-915c7060344d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.social_post
+id: node.social_post
+target_entity_type_id: node
+target_bundle: social_post
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,108 @@
+// Global fonts
+@import "theme/global/base-fonts";
+
+// Include custom sub theme.
+@import 'custom/variables';
+
+// Include bootstrap variables definitions overrides.
+@import 'overrides/variables';
+
+// Import bootstrap-reboot to use bootstrap mixins directly. it will not add the css, just provides mixins to use.
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+
+// Global custom libraries.
+@import "theme/global/unit";
+@import "theme/global/spacing-mixins";
+
+// Global Custom mixins specific to site.
+@import "theme/global/mixin-typography";
+
+// Reset file to remove browser default css.
+@import "theme/global/base-reset";
+
+// Site typography.
+@import "theme/base/base-typography";
+
+@import "theme/global/forms";
+
+// Components based scss files.
+@import "theme/components/header";
+@import "theme/components/footer";
+@import "theme/components/CTA_with_text";
+@import "theme/components/4-block-components";
+@import "theme/components/homepage-feature";
+@import "theme/components/full-width-banner";
+@import "theme/components/accordion";
+@import "theme/components/paragraph";
+@import "theme/components/paragraph--stats";
+@import "theme/components/paragraph--tabs";
+@import "theme/components/paragraph--academics-tabs";
+@import "theme/components/paragraph--social-grid";
+@import "theme/components/paragraph--person-section";
+@import "theme/components/paragraph--sidebar-content";
+@import "theme/components/paragraph--adjustable-media-and-content";
+@import "theme/components/paragraph--info-block";
+@import "theme/components/paragraph--hero-banner-video";
+@import "theme/components/paragraph--hero-page-banner";
+@import "theme/components/paragraph--news-banner";
+@import "theme/components/view-articles-grid";
+@import "theme/components/program-gridder";
+@import "theme/components/story-cards";
+@import "theme/components/cta-block";
+@import "theme/components/image-cta-block";
+@import "theme/components/quick_links";
+@import "theme/components/image-carousel";
+@import "theme/components/alert";
+@import "theme/components/article-node";
+@import "theme/components/event-node";
+@import "theme/components/program-node";
+@import "theme/components/person-node";
+@import "theme/components/event_grid";
+@import "theme/components/events-listing";
+@import "theme/components/article-listing";
+@import "theme/components/gridder";
+@import "theme/components/external-article-grid";
+@import "theme/components/article-news";
+@import "theme/components/directory";
+@import "theme/components/hero_slider";
+@import "theme/components/table";
+@import "theme/components/legacy";
+@import "theme/components/campus-map";
+// Most probably list of components.
+//Header
+//Campus Tours or Customized Campus Map
+//Slideshows
+//Breadcrumbs
+//Homepage Hero Banner
+//Interior Hero Banner
+//Interior Banner
+//Interior No Banner
+//News & Events Banner
+//Info Block
+//Adjustable Media & Content
+//Stat Section
+//Academic Tabs
+//Student Stories
+//Full-Width Image Section
+//Featured Event Grid
+//Event Grid
+//Featured External News
+//External News Grid
+//News Articles Grid
+//Social Grid
+//Flexible CTA Blocks with Images
+//Flexible CTA Blocks
+//Tab Section
+//Accordion Section
+//Gridder Section
+//Quick Links
+//Person Section
+//Carousel
+//Quote (WYSIWYG Template)
+//Sidebar Contact
+//Sidebar Social
+//Sidebar Links
+//Directory Filters
+//Directory Listing
+//Program Filters
+//Program Listing

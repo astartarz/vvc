@@ -1,0 +1,14 @@
+uuid: d62c42be-11b4-49f7-aa3e-578b21901b15
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.article_publisher
+  module:
+    - user
+id: user_add_role_action.article_publisher
+label: 'Add the Article Publisher role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: article_publisher

@@ -1,0 +1,14 @@
+uuid: 7f2a14f1-599a-482e-880e-ae820c17c65f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.article_publisher
+  module:
+    - user
+id: user_remove_role_action.article_publisher
+label: 'Remove the Article Publisher role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: article_publisher

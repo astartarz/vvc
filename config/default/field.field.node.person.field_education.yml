@@ -1,0 +1,21 @@
+uuid: 81c1eac3-8aac-42a6-a76a-3c7e36e31e48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_education
+    - node.type.person
+  module:
+    - text
+id: node.person.field_education
+field_name: field_education
+entity_type: node
+bundle: person
+label: 'x. Education'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

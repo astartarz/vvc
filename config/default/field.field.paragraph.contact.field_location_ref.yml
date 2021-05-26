@@ -1,0 +1,28 @@
+uuid: bd89ccf3-b64d-4659-9bc7-cb0e42418a47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_location_ref
+    - node.type.location
+    - paragraphs.paragraphs_type.contact
+id: paragraph.contact.field_location_ref
+field_name: field_location_ref
+entity_type: paragraph
+bundle: contact
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

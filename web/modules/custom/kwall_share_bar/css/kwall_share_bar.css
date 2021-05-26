@@ -1,0 +1,58 @@
+.kwall-share-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.kwall-share-bar > span {
+  margin-right: .5rem;
+}
+
+.kwall-share-bar ul.share-list {
+  margin: 0;
+  padding: 0;
+}
+
+.kwall-share-bar ul.share-list li {
+  display: inline-block;
+}
+
+.kwall-share-bar .email,
+.kwall-share-bar .twitter,
+.kwall-share-bar .facebook {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin: 0 2px;
+  padding: 2px;
+  text-align: center;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.kwall-share-bar .email:hover,
+.kwall-share-bar .twitter:hover,
+.kwall-share-bar .facebook:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.kwall-share-bar .email i:before,
+.kwall-share-bar .twitter i:before,
+.kwall-share-bar .facebook i:before {
+  font-size: .8rem;
+}
+
+.kwall-share-bar .email {
+  background-color: #848484;
+}
+
+.kwall-share-bar .twitter {
+  background-color: #1da1f2;
+}
+
+.kwall-share-bar .facebook {
+  background-color: #3b5998;
+}
+
+/*# sourceMappingURL=kwall_share_bar.css.map */

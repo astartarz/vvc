@@ -1,0 +1,12 @@
+curator.task:
+  route_name: entity.curator.collection
+  title: 'Curator Feeds'
+  base_route: entity.curator.collection
+curator.setting.task:
+  route_name: curator.api_setting
+  title: 'Curator Api Setting'
+  base_route: entity.curator.collection
+curator.cron.task:
+  route_name: curator.cron
+  title: 'Cron Settings'
+  base_route: entity.curator.collection

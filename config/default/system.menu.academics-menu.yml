@@ -1,0 +1,8 @@
+uuid: 27ea5b33-702e-4071-a914-88e33eae32d5
+langcode: en
+status: true
+dependencies: {  }
+id: academics-menu
+label: 'x. Academics Menu'
+description: ''
+locked: false

@@ -1,0 +1,47 @@
+uuid: a734e656-540f-462d-8533-48ff2bda9738
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.persons_section_refs.field_node_refs
+    - field.field.paragraph.persons_section_refs.field_title
+    - field.field.paragraph.persons_section_refs.field_view_reference
+    - paragraphs.paragraphs_type.persons_section_refs
+  module:
+    - viewsreference
+id: paragraph.persons_section_refs.default
+targetEntityType: paragraph
+bundle: persons_section_refs
+mode: default
+content:
+  field_node_refs:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_view_reference:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

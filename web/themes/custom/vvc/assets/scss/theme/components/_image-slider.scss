@@ -1,0 +1,158 @@
+.partners {
+  position: relative;
+  padding-bottom: 50px;
+  @media #{$tablet-min} {
+    padding-bottom: 110px;
+  }
+
+  h2.main-headline {
+    margin-bottom: 0;
+  }
+
+  .slide-items {
+    &.slick-dotted.slick-slider {
+      margin-bottom: 0;
+    }
+    &.hide-dots .js-slick-dots {
+      display: none;
+    }
+  }
+
+  .slide-item {
+    @media #{$tablet-min} {
+      margin: 20px;
+    }
+    .slide-wrapper{
+      padding: 30px;
+      text-align: center;
+      transition: 0.5s all;
+    }
+
+    a{
+    text-decoration: none;
+      &:hover {
+        .slide-wrapper{
+          background: #FFFFFF;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          border-radius: 6px;
+          transition: 0.5s all;
+        }
+      }
+    }
+
+    .img-slider-wrapper {
+      height: 200px;
+      margin-bottom: 20px;
+
+      img {
+        height: auto;
+        width: auto;
+        margin: 0 auto;
+        max-height: 200px;
+      }
+    }
+  }
+
+  .js-slick-prev {
+    border-radius: 0 50px 50px 0;
+    left: 0;
+    &:after {
+      content: url(../images/slider-ar-l.svg);
+      left: -4px;
+    }
+  }
+
+  .js-slick-next {
+    border-radius: 50px 0 0 50px;
+    right: 0;
+    &:after {
+      content: url(../images/slider-ar-r.svg);
+      right: -4px;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    display: block;
+    height: 95px;
+    width: 45px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    color: transparent;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    background: #EFEFEF;
+
+    &:after {
+      height: 26px;
+      width: 13px;
+      position: relative;
+    }
+    &:focus, &:hover{
+      background: #ccc;
+    }
+  }
+
+  .js-slick-dots {
+    display: flex;
+    justify-content: center;
+    height: 12px;
+    li {
+      display: inline-block;
+      margin: 0 4px;
+      button {
+        height: 12px;
+        overflow: hidden;
+        width: 12px;
+        position: relative;
+        color: transparent;
+        &:after {
+          content: " ";
+          height: 12px;
+          width: 12px;
+          background: #000;
+          display: block;
+          border: 2px solid #222222;
+          box-sizing: border-box;
+          border-radius: 10px;
+          position: absolute;
+          top: 0;
+        }
+        &:hover, &:focus{
+          &:after {
+            background-color: #fff;
+          }
+        }
+      }
+      &.slick-active {
+        button {
+          &:after {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    .play-pause{
+      font-size: 0;
+      position: relative;
+      &:before{
+        content: "\f04c";
+        font-size: 16px;
+        font-family: $font-awes;
+        color: #000;
+        position: absolute;
+        left: -15px;
+        top: -5px;
+      }
+      &.pause{
+        &:before{
+          content: "\f04b";
+        }
+      }
+    }
+  }
+}

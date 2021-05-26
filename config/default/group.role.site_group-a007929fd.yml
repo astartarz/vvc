@@ -1,0 +1,17 @@
+uuid: f14dbeeb-49a0-4835-87ac-f983c7ebf80a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_group
+  enforced:
+    config:
+      - user.role.group_member
+id: site_group-a007929fd
+label: 'x. Group Member'
+weight: -6
+internal: true
+audience: outsider
+group_type: site_group
+permissions_ui: false
+permissions: {  }

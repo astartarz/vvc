@@ -1,0 +1,70 @@
+uuid: 2706324a-30a1-4302-b6a8-c8d4ff0ae4f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_contacts.field_sidebar_contacts
+    - field.field.paragraph.sidebar_contacts.field_title
+    - paragraphs.paragraphs_type.sidebar_contacts
+  module:
+    - entity_reference_revisions
+    - fences
+    - field_group
+third_party_settings:
+  field_group:
+    group_title:
+      children:
+        - field_title
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: article-title
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Title
+id: paragraph.sidebar_contacts.default
+targetEntityType: paragraph
+bundle: sidebar_contacts
+mode: default
+content:
+  field_sidebar_contacts:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,13 @@
+name: Custom Module
+description: "Starter custom module for this website."
+package: Custom
+
+type: module
+core: 8.x
+
+configure: custom_module.settings
+
+libraries:
+  - custom_module/global-styling
+  - custom_module/global-scripts
+  - custom_module/advance-link

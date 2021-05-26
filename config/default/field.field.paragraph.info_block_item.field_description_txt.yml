@@ -1,0 +1,19 @@
+uuid: 7a75fc5c-1212-4c0a-ad81-2d8d3a2ecae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_txt
+    - paragraphs.paragraphs_type.info_block_item
+id: paragraph.info_block_item.field_description_txt
+field_name: field_description_txt
+entity_type: paragraph
+bundle: info_block_item
+label: 'Thumbnail Caption'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,23 @@
+uuid: e688385a-0dc4-43b8-bd3f-dcdf2a260c1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: academic_interest
+label: 'Academic Interest'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'academic-interest/[term:name]'
+selection_criteria:
+  af8dcbc0-a517-41eb-9579-c66aac6c955d:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      interest: interest
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: af8dcbc0-a517-41eb-9579-c66aac6c955d
+selection_logic: and
+weight: -5
+relationships: {  }

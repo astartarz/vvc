@@ -1,0 +1,164 @@
+uuid: ddeb75ac-0a7c-4a49-af7b-8cf753e375d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_event_grid.field_link
+    - field.field.paragraph.featured_event_grid.field_node_ref
+    - field.field.paragraph.featured_event_grid.field_taxonomy
+    - field.field.paragraph.featured_event_grid.field_title
+    - field.field.paragraph.featured_event_grid.field_title_2
+    - field.field.paragraph.featured_event_grid.field_view_reference
+    - paragraphs.paragraphs_type.featured_event_grid
+  module:
+    - fences
+    - field_group
+    - link
+    - viewsreference
+third_party_settings:
+  field_group:
+    group_row:
+      children: {  }
+      parent_name: ''
+      weight: 5
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+    group_featured_event:
+      children:
+        - field_node_ref
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'col-md-6 featured-event'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Featured event'
+    group_featured_event_list:
+      children:
+        - field_view_reference
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-6 event-list'
+      label: 'Event list'
+    group_container:
+      children: {  }
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+id: paragraph.featured_event_grid.default
+targetEntityType: paragraph
+bundle: featured_event_grid
+mode: default
+content:
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_node_ref:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: featured_event
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_view_reference:
+    weight: 1
+    label: hidden
+    settings:
+      plugin_types:
+        default: default
+        block: block
+        page: 0
+        rest_export: 0
+        attachment: 0
+        entity_browser: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: viewsreference_formatter
+    region: content
+hidden:
+  field_taxonomy: true
+  field_title_2: true
+  search_api_excerpt: true

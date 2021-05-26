@@ -1,0 +1,28 @@
+uuid: ba3493ed-28b2-4e7e-83a6-ee5870ae014e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_image
+    - media.type.image
+    - node.type.article
+id: node.article.field_teaser_image
+field_name: field_teaser_image
+entity_type: node
+bundle: article
+label: 'Teaser Image'
+description: 'Used in <em>News Grid</em> and other paragraphs.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: 044e8d4f-94ea-43ff-865b-a45ecd9485c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_articles_banner_nodes
+    - node.type.article
+    - paragraphs.paragraphs_type.news_banner
+id: paragraph.news_banner.field_articles_banner_nodes
+field_name: field_articles_banner_nodes
+entity_type: paragraph
+bundle: news_banner
+label: Nodes
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

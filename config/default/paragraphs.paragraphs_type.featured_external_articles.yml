@@ -1,0 +1,10 @@
+uuid: 6b75cd90-fa17-4981-b460-ded5c48f3780
+langcode: en
+status: true
+dependencies: {  }
+id: featured_external_articles
+label: 'Featured External News'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

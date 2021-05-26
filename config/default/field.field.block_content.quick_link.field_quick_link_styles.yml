@@ -1,0 +1,100 @@
+uuid: 655d736e-a64e-468c-968f-f2ccc9ce8dde
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quick_link
+    - field.storage.block_content.field_quick_link_styles
+    - paragraphs.paragraphs_type.quick_link
+  module:
+    - entity_reference_revisions
+id: block_content.quick_link.field_quick_link_styles
+field_name: field_quick_link_styles
+entity_type: block_content
+bundle: quick_link
+label: 'Quick Link Styles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      quick_link: quick_link
+    target_bundles_drag_drop:
+      2_column_cta:
+        weight: 25
+        enabled: false
+      3_column_cta:
+        weight: 26
+        enabled: false
+      4_column_cta:
+        weight: 27
+        enabled: false
+      accordion:
+        weight: 28
+        enabled: false
+      accordion_item:
+        weight: 29
+        enabled: false
+      adjustable_media_and_content:
+        weight: 30
+        enabled: false
+      column_section:
+        weight: 31
+        enabled: false
+      flexible_bg_image_block:
+        weight: 32
+        enabled: false
+      flexible_bg_image_blocks:
+        weight: 33
+        enabled: false
+      flexible_cta_block:
+        weight: 34
+        enabled: false
+      flexible_cta_blocks:
+        weight: 35
+        enabled: false
+      full_width_image_section:
+        weight: 36
+        enabled: false
+      hero_banner:
+        weight: 37
+        enabled: false
+      hero_slide:
+        weight: 38
+        enabled: false
+      hero_slideshow:
+        weight: 39
+        enabled: false
+      interior_column_section:
+        weight: 40
+        enabled: false
+      interior_slideshow:
+        weight: 41
+        enabled: false
+      interior_slideshow_slide:
+        weight: 42
+        enabled: false
+      quick_link:
+        enabled: true
+        weight: 43
+      quick_link_minimal:
+        enabled: true
+        weight: 44
+      recent_articles:
+        weight: 45
+        enabled: false
+      recent_articles_upcoming_events:
+        weight: 46
+        enabled: false
+      upcoming_events:
+        weight: 47
+        enabled: false
+      wysiwyg:
+        weight: 48
+        enabled: false
+field_type: entity_reference_revisions

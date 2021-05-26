@@ -1,0 +1,39 @@
+uuid: 6c463257-9d0c-4a27-b2f7-5048bef3eb28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote.field_quote_author
+    - field.field.paragraph.quote.field_quote_text
+    - paragraphs.paragraphs_type.quote
+  module:
+    - fences
+id: paragraph.quote.default
+targetEntityType: paragraph
+bundle: quote
+mode: default
+content:
+  field_quote_author:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_quote_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: blockquote
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: basic_string
+    region: content
+hidden:
+  search_api_excerpt: true

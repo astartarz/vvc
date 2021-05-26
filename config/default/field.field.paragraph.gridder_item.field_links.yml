@@ -1,0 +1,23 @@
+uuid: d890ccda-0fa6-415b-983d-800b1631423a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_links
+    - paragraphs.paragraphs_type.gridder_item
+  module:
+    - link
+id: paragraph.gridder_item.field_links
+field_name: field_links
+entity_type: paragraph
+bundle: gridder_item
+label: Links
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

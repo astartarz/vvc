@@ -1,0 +1,21 @@
+uuid: e002e2c4-2814-4de1-bb2f-b8553b48b800
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_formatted
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+  module:
+    - text
+id: paragraph.adjustable_media_and_content.field_body_formatted
+field_name: field_body_formatted
+entity_type: paragraph
+bundle: adjustable_media_and_content
+label: 'x. Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

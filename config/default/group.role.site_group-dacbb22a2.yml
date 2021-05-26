@@ -1,0 +1,17 @@
+uuid: 232ea71f-7905-4f92-b156-0bf7325215e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_group
+  enforced:
+    config:
+      - user.role.article_publisher
+id: site_group-dacbb22a2
+label: 'Article Publisher'
+weight: -2
+internal: true
+audience: outsider
+group_type: site_group
+permissions_ui: false
+permissions: {  }

@@ -1,0 +1,30 @@
+.mb-event-calendar {
+  float: left;
+  display: inline-block;
+  ul.menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    li {
+      padding: 0 0 0 1px;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18.7rem;
+        height: 6rem;
+        background: $color-grey-xlt;
+        color: $color-body;
+        line-height: 1.8rem;
+        text-decoration: none;
+        font-weight: bold;
+        transition: $transition-short ease;
+        &:hover, &:focus, &.is-active {
+          background: $color-blue;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

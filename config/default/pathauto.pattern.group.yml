@@ -1,0 +1,23 @@
+uuid: fe97f439-de7e-4db8-9e50-21c8b6b06899
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - group
+id: group
+label: Group
+type: 'canonical_entities:group'
+pattern: 'group/[group:title]'
+selection_criteria:
+  bf4f20c8-d22d-4c4b-af23-9560dd1f936f:
+    id: 'entity_bundle:group'
+    bundles:
+      site_section: site_section
+    negate: false
+    context_mapping:
+      group: group
+    uuid: bf4f20c8-d22d-4c4b-af23-9560dd1f936f
+selection_logic: and
+weight: -5
+relationships: {  }

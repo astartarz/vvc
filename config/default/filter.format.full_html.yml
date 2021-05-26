@@ -1,0 +1,142 @@
+uuid: 2a1ce1a6-2b59-45f6-b0b1-439b194b6686
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full_width
+    - core.entity_view_mode.media.scale_width_300px
+    - core.entity_view_mode.media.scale_width_450px
+    - core.entity_view_mode.media.scale_width_600px
+  module:
+    - blazy
+    - ckeditor_media_embed
+    - editor
+    - entity_embed
+    - linkit
+    - media
+    - video_embed_wysiwyg
+    - wysiwyg_template_core
+_core:
+  default_config_hash: hewPmBgni9jlDK_IjLxUx1HsTbinK-hdl0lOwjbteIY
+name: 'Full HTML'
+format: full_html
+weight: -10
+filters:
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: -47
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: -46
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: -45
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: -44
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -43
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <drupal-entity data-align data-entity-type data-entity-uuid data-caption data-caption> <drupal-media data-align data-entity-type data-entity-uuid data-view-mode data-caption>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: -41
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: -49
+    settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -48
+    settings:
+      title: true
+  filter_ckeditor_media_embed:
+    id: filter_ckeditor_media_embed
+    provider: ckeditor_media_embed
+    status: true
+    weight: -50
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -39
+    settings:
+      filter_url_length: 72
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -37
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -40
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: -42
+    settings:
+      default_view_mode: default
+      allowed_media_types:
+        audio: audio
+        file: file
+        image: image
+        remote_video: remote_video
+      allowed_view_modes:
+        default: default
+        full_width: full_width
+        scale_width_300px: scale_width_300px
+        scale_width_450px: scale_width_450px
+        scale_width_600px: scale_width_600px
+  video_embed_wysiwyg:
+    id: video_embed_wysiwyg
+    provider: video_embed_wysiwyg
+    status: false
+    weight: -38
+    settings: {  }
+  filter_wysiwyg_cleanup:
+    id: filter_wysiwyg_cleanup
+    provider: wysiwyg_template_core
+    status: false
+    weight: -36
+    settings: {  }
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
+    status: false
+    weight: -35
+    settings:
+      filter_tags:
+        img: img
+        iframe: iframe
+      media_switch: ''
+      use_data_uri: '0'

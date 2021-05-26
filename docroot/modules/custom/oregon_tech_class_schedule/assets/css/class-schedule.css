@@ -1,0 +1,116 @@
+@keyframes animate-to-2 {
+  25%, 75% { transform: translateX(-1.5rem) scale(0.75); }
+  95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-3 {
+  25%, 75% { transform: translateX(1.5rem) scale(0.75); }
+  95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-1 {
+  25% { transform: translateX(-1.5rem) scale(0.75); }
+  50%, 75% { transform: translateX(-4.5rem) scale(0.6); }
+  95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-4 {
+  25% { transform: translateX(1.5rem) scale(0.75); }
+  50%, 75% { transform: translateX(4.5rem) scale(0.6); }
+  95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-0 {
+  25% { transform: translateX(-1.5rem) scale(0.75); }
+  50% { transform: translateX(-4.5rem) scale(0.6); }
+  75% { transform: translateX(-7.5rem) scale(0.5); }
+  95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-5 {
+  25% { transform: translateX(1.5rem) scale(0.75); }
+  50% { transform: translateX(4.5rem) scale(0.6); }
+  75% { transform: translateX(7.5rem) scale(0.5); }
+  95% { transform: translateX(0rem) scale(1); }
+}
+.loading-animation{
+  padding-top: 175px;
+  position: relative;
+}
+.loading-animation .blob {
+  width: 2rem;
+  height: 2rem;
+  background: rgba(0,55,103,1);
+  border-radius: 50%;
+  position: absolute;
+  left: calc(50% - 1rem);
+  top: calc(50% - 1rem);
+  box-shadow: 0 0 1rem rgba(0, 55, 103, 0.25);
+}
+
+.loading-animation .blob-2 { animation: animate-to-2 1.5s infinite; }
+.loading-animation .blob-3 { animation: animate-to-3 1.5s infinite; }
+.loading-animation .blob-1 { animation: animate-to-1 1.5s infinite; }
+.loading-animation .blob-4 { animation: animate-to-4 1.5s infinite; }
+.loading-animation .blob-0 { animation: animate-to-0 1.5s infinite; }
+.loading-animation .blob-5 { animation: animate-to-5 1.5s infinite; }
+
+
+.class-schedule-form{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.class-schedule-form .form-control{
+  font-size: 1.8rem;
+}
+.class-schedule-form .week-days .form-checkboxes {
+  display: flex;
+  flex-flow: row wrap;
+}
+.class-schedule-form .week-days .form-checkboxes > .form-item{
+  margin-right: 10px;
+}
+.class-schedule-form .week-days .form-control{
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin-right: .2rem;
+}
+.class-schedule-form .CourseName {
+  background-color: #eaf1f2 !important;
+}
+
+.class-schedule-form .CourseHeadingRow {
+  font-weight: bold;
+  text-align: left;
+  border-spacing: 1px;
+}
+
+.class-schedule-form .CourseTable{
+  margin-bottom: 15px;
+}
+
+.class-schedule-form .days-message{
+  color: #003767;
+  font-size: 1em;
+}
+
+.class-schedule-form .start-time legend{
+  color: #595959;
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0;
+  text-align: left;
+}
+.class-schedule-form .start-time .fieldset-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.class-schedule-form .start-time .fieldset-wrapper > .form-item{
+  flex-basis: 49%;
+  margin: 10px 0 15px;
+}

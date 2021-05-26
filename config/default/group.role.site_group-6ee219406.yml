@@ -1,0 +1,17 @@
+uuid: b095c606-1e1b-45eb-8a8e-524ae0914299
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_group
+  enforced:
+    config:
+      - user.role.event_publisher
+id: site_group-6ee219406
+label: 'Event Publisher'
+weight: -3
+internal: true
+audience: outsider
+group_type: site_group
+permissions_ui: false
+permissions: {  }

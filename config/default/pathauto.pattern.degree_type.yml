@@ -1,0 +1,24 @@
+uuid: beebe4a0-b662-4a20-bb5b-63c4ca63974e
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: degree_type
+label: 'Degree Type'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'degree-type/[term:name]'
+selection_criteria:
+  02c75bbf-b52b-4389-b4c3-469b143a1583:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      other_degree_options: other_degree_options
+      degree_type: degree_type
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 02c75bbf-b52b-4389-b4c3-469b143a1583
+selection_logic: and
+weight: -5
+relationships: {  }

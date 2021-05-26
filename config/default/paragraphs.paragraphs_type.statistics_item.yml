@@ -1,0 +1,10 @@
+uuid: bee0ddcd-4aed-4c04-8c68-e378b354dc72
+langcode: en
+status: true
+dependencies: {  }
+id: statistics_item
+label: 'Statistics Item'
+icon_uuid: null
+icon_default: null
+description: 'Used in <em>Statistics Section</em> paragraph.'
+behavior_plugins: {  }

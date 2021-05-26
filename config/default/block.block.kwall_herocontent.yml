@@ -1,0 +1,29 @@
+uuid: 03656ba1-aa96-49d0-98e0-0d3fe669ec01
+langcode: en
+status: false
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - kwall
+id: kwall_herocontent
+theme: kwall
+region: hero
+weight: -11
+provider: null
+plugin: 'entity_field:node:field_hero_content'
+settings:
+  id: 'entity_field:node:field_hero_content'
+  label: 'Hero Content'
+  provider: ctools_block
+  label_display: '0'
+  formatter:
+    label: hidden
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: default
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

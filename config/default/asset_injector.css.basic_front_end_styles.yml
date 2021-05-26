@@ -1,0 +1,12 @@
+uuid: 0136e652-503e-4841-8cb6-68750488483b
+langcode: en
+status: true
+dependencies: {  }
+id: basic_front_end_styles
+label: 'Basic Front End Styles'
+code: ".paragraph.paragraph--type--quicklink-bar > div > .field__item {\n  display: inline-block;\n  margin: 0 2rem;\n  text-align: center;\n}\n.view-stories .image-style-story-image-large {\n  max-width: 100%;\n  height: auto;\n}\n\nol ol, ol ul, ul ol, ul ul {\n    padding-bottom: 2rem;\n}\n.paragraph--type--apply-gridder .paragraph--type--gridder .gridder .gridder-show .gridder-expanded-content a.button {\n  font-size: 1.8rem;\n  color: #fff;\n  font-weight: bold;\n  padding: 10.5px 50px;\n}\n.paragraph--type--apply-gridder .paragraph--type--gridder .gridder .gridder-show .gridder-expanded-content a.button:hover, .paragraph--type--apply-gridder .paragraph--type--gridder .gridder .gridder-show .gridder-expanded-content a.button:focus {\n  color: #ffd24f;\n  box-shadow: 0 0 6px 0 rgba(0,0,0,0.20);\n}\n.paragraph--type--apply-gridder .paragraph--type--gridder .gridder .gridder-show .gridder-expanded-content a:after {\n  display: none;\n}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true

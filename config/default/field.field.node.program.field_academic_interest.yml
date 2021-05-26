@@ -1,0 +1,29 @@
+uuid: 3ef74b0e-f66f-4b1c-ab3e-60a77609ebe0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_academic_interest
+    - node.type.program
+    - taxonomy.vocabulary.interest
+id: node.program.field_academic_interest
+field_name: field_academic_interest
+entity_type: node
+bundle: program
+label: 'x. Academic Interest'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      interest: interest
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

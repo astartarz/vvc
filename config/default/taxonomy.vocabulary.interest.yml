@@ -1,0 +1,8 @@
+uuid: 3e780466-2b20-4453-8bce-ac814027f3fb
+langcode: en
+status: true
+dependencies: {  }
+name: 'x. Academic Interest'
+vid: interest
+description: 'Interests for Academic program categorization'
+weight: 0

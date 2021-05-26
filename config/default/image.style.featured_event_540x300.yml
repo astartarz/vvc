@@ -1,0 +1,17 @@
+uuid: b8bde1c6-2d64-4bbd-85ed-bb25302a10a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: featured_event_540x300
+label: 'Featured event (540x300)'
+effects:
+  cb0072a8-82ee-4e02-9e1c-f18f2db608bf:
+    uuid: cb0072a8-82ee-4e02-9e1c-f18f2db608bf
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 540
+      height: 300
+      crop_type: focal_point

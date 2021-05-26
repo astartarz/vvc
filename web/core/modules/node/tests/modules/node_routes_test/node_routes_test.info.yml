@@ -1,0 +1,7 @@
+type: module
+core: 8.x
+name: 'Node routes test'
+description: 'Module for testing routes.'
+package: Testing
+dependecies:
+  - node

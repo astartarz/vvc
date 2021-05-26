@@ -1,0 +1,3 @@
+{% set title = fields.title.content|striptags|trim|replace({'&amp;': '&', '&#039;': '\''}) %}
+
+{{ title }}

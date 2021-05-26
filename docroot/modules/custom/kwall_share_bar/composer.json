@@ -1,0 +1,21 @@
+{
+    "name": "drupal/kwall_share_bar",
+    "type": "drupal-module",
+    "authors": [
+        {
+            "name": "Ruslan Piskarov",
+            "email": "ruslan.piskarev@kwallcompany.com",
+            "role": "Kwall Developer",
+            "homepage": "https://www.kwallcompany.com"
+        }
+    ],
+    "description": "Provides a Share block on your site.",
+    "keywords": [
+        "Drupal"
+    ],
+    "license": "GPL-2.0+",
+    "homepage": "https://www.kwallcompany.com",
+    "minimum-stability": "dev",
+    "support": {},
+    "require": {}
+}

@@ -1,0 +1,10 @@
+uuid: 096ab0b3-d62a-4701-b6a8-17957b207d88
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.article_list
+label: 'Article List'
+targetEntityType: media
+cache: true

@@ -1,0 +1,53 @@
+.page-node-article {
+  .view-id-featured_image {
+    margin-bottom: 25px;
+    img {
+      height: auto;
+    }
+  }
+  .author-info {
+    .post-author {
+      margin-bottom: 40px;
+      .post-date {
+        font-family: $font-open;
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-black;
+        margin-bottom: 5px;
+        @media screen and #{$mobile} {
+          font-size: 16px;
+        }
+        &:before {
+          content: '\f133';
+          font-family: $font-awes;
+          color: $color-red;
+          display: inline-block;
+        }
+      }
+      .field--name-field-author-txt {
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+        font-family: $font-open;
+      }
+    }
+  }
+  .field--name-field-categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    .field__item {
+      margin-left: 5px;
+      margin-bottom: 5px;
+      a {
+        display: block;
+        background: $color-red;
+        padding: 2px 8px;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: $font-mont;
+      }
+    }
+  }
+}

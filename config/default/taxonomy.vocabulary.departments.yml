@@ -1,0 +1,8 @@
+uuid: deab0712-0975-4859-b8ba-adef853c28aa
+langcode: en
+status: true
+dependencies: {  }
+name: Departments
+vid: departments
+description: ''
+weight: 0

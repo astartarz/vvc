@@ -1,0 +1,151 @@
+input {
+  outline: none;
+  border-radius: 4px;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+   display: none !important;
+  }
+
+  &:not([type="radio"]):not([type="checkbox"]){
+    @include appearance(none !important);
+  }
+}
+
+
+// Style the input for the Demo page
+.hero-section {
+
+  .algolia-places {
+    top: 50px;
+    font-family: 'Open Sans', helvetica Neue;
+
+    &:before {
+      content:'Try it!';
+      position: absolute;
+      top: -44px;
+      left: 2px;
+      width: 100px;
+      height: 44px;
+      text-align: right;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 44px;
+      color: $powder-blue;
+      background: {
+        image: url($icon-arrow);
+        repeat: no-repeat;
+        position: bottom 12px left 24px;
+        size: 24px;
+      }
+    }
+
+    .hero-searchbar {
+      border: solid 1px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      color: #8f94ad;
+      font-family: "Raleway", Helvetica Neue, helvetica;
+      height: 56px;
+      padding-left: 16px;
+      padding-right: 48px;
+      border-radius: 4px;
+
+      @include appearance(none)
+    }
+
+    .ap-suggestion {
+      color: #262626;
+      text-align: left;
+    }
+
+    .ap-footer {
+      color: #797979;
+    }
+  }
+}
+
+#form-message-success{
+  font-size: 1.2em;
+  background-color: #D6EAC7;
+  padding: 30px;
+  text-align: center;
+  border-radius: 4px;
+  &.hide{
+    display: none;
+  }
+}
+
+#form-contact {
+  width: 800px;
+  margin: 0 auto;
+
+  &.hide{
+    display: none;
+  }
+
+  .control-label{
+    font-size: 1em;
+    margin-bottom: 4px;
+
+    &.required::after{
+      display: inline-block;
+      content: '*';
+      margin-left: 4px;
+      color: #E7486B;
+      vertical-align: baseline;;
+    }
+  }
+
+  textarea{
+    height: 190px;
+    resize: none;
+  }
+
+  .btn-cta {
+    margin-top: 40px;
+    width: 150px;
+  }
+
+  .row{
+    width: 100%;
+  }
+
+  > .col-6{
+    width: 50%;
+    float: left;
+
+    &:first-child{
+      padding-right: 40px;
+    }
+  }
+
+  .form-group{
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    .col-6{
+      width: 50%;
+      float: left;
+
+      &:first-child{
+        padding-right: 8px;
+      }
+    }
+  }
+
+  @media (max-width: $bp-medium) {
+    width: 100%;
+  }
+
+  @media (max-width: $bp-small) {
+    > .col-6 ,
+    > .col-6:first-child {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

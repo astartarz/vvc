@@ -1,0 +1,29 @@
+uuid: dce462e9-3a0d-4155-a064-46fbbc855ce7
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.push-navigation-toggle
+  module:
+    - block_class
+    - system
+  theme:
+    - vvc
+third_party_settings:
+  block_class:
+    classes: push-nav-menu
+id: vvc_pushnavigationtoggle
+theme: vvc
+region: header
+weight: -16
+provider: null
+plugin: 'system_menu_block:push-navigation-toggle'
+settings:
+  id: 'system_menu_block:push-navigation-toggle'
+  label: 'Push Navigation Toggle'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

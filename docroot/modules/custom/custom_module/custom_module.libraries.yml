@@ -1,0 +1,21 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      assets/css/custom-module-theme.css: {}
+
+global-scripts:
+  version: 1.x
+  js:
+    assets/js/custom-module.js: {}
+
+advance-link:
+  version: 1.x
+  css:
+    theme:
+      assets/css/advance-link.css: {}
+  js:
+    assets/js/advance-link.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

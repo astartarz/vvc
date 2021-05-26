@@ -1,0 +1,19 @@
+uuid: 43d916e1-299e-4824-81e9-a53b9f57660e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_txt
+    - node.type.story
+id: node.story.field_description_txt
+field_name: field_description_txt
+entity_type: node
+bundle: story
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

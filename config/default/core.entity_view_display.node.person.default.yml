@@ -1,0 +1,146 @@
+uuid: 9dc7b4ff-8f72-4092-a6ba-a92df341a1c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.field_bio
+    - field.field.node.person.field_captions_txt
+    - field.field.node.person.field_department
+    - field.field.node.person.field_departments
+    - field.field.node.person.field_education
+    - field.field.node.person.field_email
+    - field.field.node.person.field_fax
+    - field.field.node.person.field_image
+    - field.field.node.person.field_imported_image
+    - field.field.node.person.field_mailbox
+    - field.field.node.person.field_mailstop
+    - field.field.node.person.field_media
+    - field.field.node.person.field_meta_tags
+    - field.field.node.person.field_name
+    - field.field.node.person.field_office
+    - field.field.node.person.field_office_location
+    - field.field.node.person.field_person_hidden
+    - field.field.node.person.field_person_homepage
+    - field.field.node.person.field_person_is_staff
+    - field.field.node.person.field_person_is_student
+    - field.field.node.person.field_person_job
+    - field.field.node.person.field_person_office
+    - field.field.node.person.field_person_pidm
+    - field.field.node.person.field_person_supervisor_pidm
+    - field.field.node.person.field_person_types
+    - field.field.node.person.field_person_username
+    - field.field.node.person.field_person_website
+    - field.field.node.person.field_phone
+    - field.field.node.person.field_position
+    - field.field.node.person.field_sidebar_content
+    - field.field.node.person.field_teaser_description
+    - field.field.node.person.field_telephone_number
+    - node.type.person
+  module:
+    - fences
+    - options
+    - telephone
+    - user
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  field_captions_txt:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_departments:
+    weight: 6
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: entity_reference_label
+    region: content
+  field_email:
+    type: email_mailto
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_person_types:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_phone:
+    weight: 5
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_teaser_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  content_moderation_control: true
+  field_bio: true
+  field_department: true
+  field_education: true
+  field_fax: true
+  field_imported_image: true
+  field_mailbox: true
+  field_mailstop: true
+  field_media: true
+  field_meta_tags: true
+  field_name: true
+  field_office: true
+  field_office_location: true
+  field_person_hidden: true
+  field_person_homepage: true
+  field_person_is_staff: true
+  field_person_is_student: true
+  field_person_job: true
+  field_person_office: true
+  field_person_pidm: true
+  field_person_supervisor_pidm: true
+  field_person_username: true
+  field_person_website: true
+  field_position: true
+  field_sidebar_content: true
+  field_telephone_number: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

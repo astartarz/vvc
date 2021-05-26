@@ -1,0 +1,8 @@
+uuid: 369fb5ca-bcb7-4833-985b-0d2200e16033
+langcode: en
+status: true
+dependencies: {  }
+id: menu_custom_block
+label: 'Menu Custom Block'
+revision: 0
+description: 'Megamenu Custom Block'

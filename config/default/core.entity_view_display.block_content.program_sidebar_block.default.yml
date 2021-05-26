@@ -1,0 +1,113 @@
+uuid: e30ce124-0ddc-4118-80c7-ddf574b536ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.program_sidebar_block
+    - field.field.block_content.program_sidebar_block.field_apply_link
+    - field.field.block_content.program_sidebar_block.field_contact
+    - field.field.block_content.program_sidebar_block.field_options
+    - field.field.block_content.program_sidebar_block.field_paragraphs
+    - field.field.block_content.program_sidebar_block.field_request_link
+  module:
+    - entity_reference_revisions
+    - fences
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - field_apply_link
+        - field_request_link
+        - field_options
+        - field_contact
+        - field_paragraph
+        - field_paragraphs
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: program-sidebar
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+id: block_content.program_sidebar_block.default
+targetEntityType: block_content
+bundle: program_sidebar_block
+mode: default
+content:
+  field_apply_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 480
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: full-width
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_contact:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_options:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_request_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 480
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: full-width
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: link
+    region: content
+hidden:
+  langcode: true

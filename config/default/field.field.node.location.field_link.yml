@@ -1,0 +1,23 @@
+uuid: 5350a8ba-c349-4016-a4ad-5adcafc9a464
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.location
+  module:
+    - link
+id: node.location.field_link
+field_name: field_link
+entity_type: node
+bundle: location
+label: 'x. Virtual Tour'
+description: 'Use this to link to a virtual tour of this location.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

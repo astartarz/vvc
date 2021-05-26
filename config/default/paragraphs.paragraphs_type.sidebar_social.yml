@@ -1,0 +1,10 @@
+uuid: 384263c6-4d61-474b-ae9c-9fba690cbcd9
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_social
+label: 'Sidebar Social Links'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

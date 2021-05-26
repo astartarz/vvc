@@ -1,0 +1,78 @@
+uuid: d64cae9c-0842-488d-b8b8-56e1dc82ba4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.body
+    - field.field.node.program.field_academic_interest
+    - field.field.node.program.field_after_content
+    - field.field.node.program.field_certificate_ca_refs
+    - field.field.node.program.field_certificate_cp_refs
+    - field.field.node.program.field_content_bottom
+    - field.field.node.program.field_courses_wysiwyg
+    - field.field.node.program.field_degree
+    - field.field.node.program.field_degree_aa_refs
+    - field.field.node.program.field_degree_aat_refs
+    - field.field.node.program.field_degree_as_refs
+    - field.field.node.program.field_degree_ast_refs
+    - field.field.node.program.field_division
+    - field.field.node.program.field_faculty
+    - field.field.node.program.field_image
+    - field.field.node.program.field_interest_refs
+    - field.field.node.program.field_legacy_path
+    - field.field.node.program.field_meta_tags
+    - field.field.node.program.field_page_banner
+    - field.field.node.program.field_person_refs
+    - field.field.node.program.field_program_image
+    - field.field.node.program.field_sidebar_content
+    - field.field.node.program.field_teaser_description
+    - node.type.program
+  module:
+    - user
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_academic_interest: true
+  field_after_content: true
+  field_certificate_ca_refs: true
+  field_certificate_cp_refs: true
+  field_content_bottom: true
+  field_courses_wysiwyg: true
+  field_degree: true
+  field_degree_aa_refs: true
+  field_degree_aat_refs: true
+  field_degree_as_refs: true
+  field_degree_ast_refs: true
+  field_division: true
+  field_faculty: true
+  field_image: true
+  field_interest_refs: true
+  field_legacy_path: true
+  field_meta_tags: true
+  field_page_banner: true
+  field_person_refs: true
+  field_program_image: true
+  field_sidebar_content: true
+  field_teaser_description: true
+  langcode: true
+  search_api_excerpt: true

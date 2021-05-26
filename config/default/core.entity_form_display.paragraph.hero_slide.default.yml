@@ -1,0 +1,106 @@
+uuid: ea3583f3-dba2-4691-a538-0ee1f67825d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_slide.field_body_unformatted
+    - field.field.paragraph.hero_slide.field_image
+    - field.field.paragraph.hero_slide.field_links
+    - field.field.paragraph.hero_slide.field_mp4
+    - field.field.paragraph.hero_slide.field_show_logo
+    - field.field.paragraph.hero_slide.field_subtitle
+    - field.field.paragraph.hero_slide.field_title
+    - field.field.paragraph.hero_slide.field_webm
+    - paragraphs.paragraphs_type.hero_slide
+  module:
+    - field_group
+    - file
+    - media_library
+    - media_library_edit
+third_party_settings:
+  field_group:
+    group_display_options:
+      children:
+        - field_show_logo
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Display Options'
+    group_video:
+      children:
+        - field_mp4
+        - field_webm
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Background Video'
+id: paragraph.hero_slide.default
+targetEntityType: paragraph
+bundle: hero_slide
+mode: default
+content:
+  field_image:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
+    region: content
+  field_mp4:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_show_logo:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_webm:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+hidden:
+  created: true
+  field_body_unformatted: true
+  field_links: true
+  status: true
+  uid: true

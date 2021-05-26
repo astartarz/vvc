@@ -1,0 +1,28 @@
+id: vvc_page_migration
+label: Group Pages
+migration_group: default
+source:
+  plugin: csv
+  path: 'modules/custom/vvc_migration/assets/csv/urls.csv'
+  ids: [ url ]
+process:
+  type:
+    plugin: default_value
+    default_value: page
+  status:
+    plugin: default_value
+    default_value: 1
+  body:
+    plugin: group_page
+    source: url
+  field_legacy_path: url
+  moderation_state:
+    plugin: default_value
+    default_value: published
+destination:
+  plugin: 'entity:node'
+dependencies:
+  enforced:
+    module:
+      - vvc_migration
+migration_dependencies: {  }

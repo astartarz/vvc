@@ -1,0 +1,37 @@
+uuid: 44a01437-ef16-492a-bb44-68a99a864901
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.academics-menu
+  module:
+    - menu_block
+    - system
+  theme:
+    - vvc
+id: vvc_academicsmenu
+theme: vvc
+region: hero
+weight: -19
+provider: null
+plugin: 'menu_block:academics-menu'
+settings:
+  id: 'menu_block:academics-menu'
+  label: 'Academics Menu'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'academics-menu:'
+  suggestion: academics_menu
+  label_type: block
+  label_link: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/academics/1\r\n/academics/certificate\r\n/academics/graduate\r\n/academics/undergraduate"
+    negate: false
+    context_mapping: {  }

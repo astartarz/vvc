@@ -1,0 +1,17 @@
+uuid: 6ff48769-62ca-427b-941b-cd69e2171214
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: image_style_350x200
+label: 'x. Image Style (350x200)'
+effects:
+  b88c6780-7a64-4027-8423-a7df08bb8401:
+    uuid: b88c6780-7a64-4027-8423-a7df08bb8401
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 200
+      crop_type: focal_point

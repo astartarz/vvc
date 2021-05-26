@@ -1,0 +1,19 @@
+uuid: c22a8386-a69b-49bf-ba1b-0aee24d2d3f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_captions_txt
+    - node.type.person
+id: node.person.field_captions_txt
+field_name: field_captions_txt
+entity_type: node
+bundle: person
+label: 'Person Captions'
+description: 'e.x. "Class of 2020" or "Executive Assistant to the President"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

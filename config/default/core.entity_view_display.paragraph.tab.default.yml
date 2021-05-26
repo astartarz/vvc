@@ -1,0 +1,33 @@
+uuid: f9a91907-67e5-44de-bf39-cbcfc5fd5206
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab.field_body_formatted
+    - field.field.paragraph.tab.field_title
+    - paragraphs.paragraphs_type.tab
+  module:
+    - fences
+    - text
+id: paragraph.tab.default
+targetEntityType: paragraph
+bundle: tab
+mode: default
+content:
+  field_body_formatted:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+hidden:
+  field_title: true
+  search_api_excerpt: true

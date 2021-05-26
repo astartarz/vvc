@@ -1,0 +1,11 @@
+name: Reference Table Formatter
+description: Display fields on the target of a reference in a table.
+core_version_requirement: ^8.8 || ^9
+type: module
+test_dependencies:
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2020-11-08
+version: '8.x-1.1'
+project: 'reference_table_formatter'
+datestamp: 1604867798

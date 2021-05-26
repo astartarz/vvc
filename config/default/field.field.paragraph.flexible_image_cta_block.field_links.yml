@@ -1,0 +1,23 @@
+uuid: e0e1ede5-037f-4b49-b0d3-ca95ddc174c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_links
+    - paragraphs.paragraphs_type.flexible_image_cta_block
+  module:
+    - link
+id: paragraph.flexible_image_cta_block.field_links
+field_name: field_links
+entity_type: paragraph
+bundle: flexible_image_cta_block
+label: 'Block Links'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

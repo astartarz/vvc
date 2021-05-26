@@ -1,0 +1,55 @@
+entity.curator.collection:
+  path: '/admin/config/system/curator'
+  defaults:
+    _entity_list: 'curator'
+    _title: 'Curator configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.curator.add_form:
+  path: '/admin/config/system/curator/add'
+  defaults:
+    _entity_form: 'curator.add'
+    _title: 'Add Curator Feed'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.curator.edit_form:
+  path: '/admin/config/system/curator/{curator}'
+  defaults:
+    _entity_form: 'curator.edit'
+    _title: 'Edit curator feed'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.curator.delete_form:
+  path: '/admin/config/system/{curator}/delete'
+  defaults:
+    _entity_form: 'curator.delete'
+    _title: 'Delete curator feed'
+  requirements:
+    _permission: 'administer site configuration'
+
+curator.api_setting:
+  path: '/admin/config/system/curator/api-setting'
+  defaults:
+    _form: '\Drupal\curator\Form\CuratorSettingForm'
+    _title: 'Curator configuration screen'
+  requirements:
+    _permission: 'administer site configuration'
+
+curator.cron:
+  path: '/admin/config/system/curator/cron'
+  defaults:
+    _form: '\Drupal\curator\Form\CuratorCronForm'
+    _title: 'Cron Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+curator.external_cron:
+  path: '/curator/cron'
+  defaults:
+    _controller: '\Drupal\curator\Controller\ExternalCronController::run'
+    _title: 'External Cron'
+  requirements:
+    _permission: 'access content'

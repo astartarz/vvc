@@ -1,0 +1,32 @@
+uuid: b59da59d-b5e3-4e0b-96c3-eec3ad24cb07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.persons_section_taxonomy.field_taxonomy
+    - field.field.paragraph.persons_section_taxonomy.field_title
+    - field.field.paragraph.persons_section_taxonomy.field_view_reference
+    - paragraphs.paragraphs_type.persons_section_taxonomy
+id: paragraph.persons_section_taxonomy.default
+targetEntityType: paragraph
+bundle: persons_section_taxonomy
+mode: default
+content:
+  field_taxonomy:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_view_reference: true
+  status: true

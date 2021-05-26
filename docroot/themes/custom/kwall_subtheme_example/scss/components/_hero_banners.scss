@@ -1,0 +1,21 @@
+.layout-hero-content {
+  // For Home Page:
+
+  // For General Pages:
+  .hero-banner-img-section {
+    &.banner-short {
+      height: 250px;
+    }
+    &.banner-tall {
+      height: 400px;
+    }
+  }
+}
+
+.page-node-article .layout-hero-content {
+  .hero-banner-img-section {
+    &.banner-tall {
+      height: 600px;
+    }
+  }
+}

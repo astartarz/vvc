@@ -1,0 +1,13 @@
+# Set link on /admin/config page.
+custom_module.admin:
+  title: 'SITE custom module settings'
+  description: 'Example of how to make an admin settings page link.'
+  parent: system.admin_config_development
+  route_name: custom_module.settings
+  weight: 100
+
+custom_module.create_menu:
+  title: 'Create Global Navigation menu'
+  route_name: custom_module.create_menu
+  parent: system.admin_config_development
+  weight: 99

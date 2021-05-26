@@ -1,0 +1,30 @@
+uuid: f2775f60-f308-4f89-a1ad-a2557c514320
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.programs_gridder
+  module:
+    - system
+    - views
+  theme:
+    - vvc
+id: expanding_programs_gridder_block
+theme: vvc
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'views_block:programs_gridder-expanding_block'
+settings:
+  id: 'views_block:programs_gridder-expanding_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/6255\r\n/test-programs-gridder\r\n/test-programs-gridder/*"
+    negate: false
+    context_mapping: {  }

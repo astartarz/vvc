@@ -1,0 +1,109 @@
+uuid: ff83e92a-24e4-4d89-bd38-9d76ee62ca46
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mega_menu_block
+    - field.field.block_content.mega_menu_block.body
+    - field.field.block_content.mega_menu_block.field_cta
+    - field.field.block_content.mega_menu_block.field_media
+    - field.field.block_content.mega_menu_block.field_title
+    - image.style.mega_menu_thumbnail
+  module:
+    - fences
+    - field_group
+    - linked_field
+    - media
+    - text
+third_party_settings:
+  field_group:
+    group_title_and_caption:
+      children:
+        - field_title
+        - body
+      parent_name: group_container
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: col-md-6
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Title and Caption'
+    group_container:
+      children:
+        - field_media
+        - group_title_and_caption
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Container
+id: block_content.mega_menu_block.default
+targetEntityType: block_content
+bundle: mega_menu_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: mega_menu_thumbnail
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: col-md-6
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: media_thumbnail
+    region: content
+  field_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_cta
+        advanced: {  }
+        token: ''
+    type: string
+    region: content
+hidden:
+  field_cta: true
+  langcode: true

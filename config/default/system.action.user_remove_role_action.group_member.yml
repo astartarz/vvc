@@ -1,0 +1,14 @@
+uuid: 40fec23c-a9cf-41e1-9767-cb3c03befe2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.group_member
+  module:
+    - user
+id: user_remove_role_action.group_member
+label: 'Remove the Group Member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: group_member

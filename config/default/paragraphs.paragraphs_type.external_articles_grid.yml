@@ -1,0 +1,10 @@
+uuid: 6e1da0ff-9751-45e7-b5fb-778d7871360f
+langcode: en
+status: true
+dependencies: {  }
+id: external_articles_grid
+label: 'External News Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

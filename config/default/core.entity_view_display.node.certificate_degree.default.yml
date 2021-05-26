@@ -1,0 +1,66 @@
+uuid: 3d46f42c-9794-4d38-aeb1-f3502848c8ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.certificate_degree.body
+    - field.field.node.certificate_degree.field_certificate_degree_type
+    - field.field.node.certificate_degree.field_link
+    - node.type.certificate_degree
+  module:
+    - fences
+    - link
+    - text
+    - user
+id: node.certificate_degree.default
+targetEntityType: node
+bundle: certificate_degree
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_certificate_degree_type:
+    weight: 102
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_link:
+    weight: 103
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

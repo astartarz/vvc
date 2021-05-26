@@ -1,0 +1,161 @@
+.node--type-event {
+  .event {
+    margin-top: 20px;
+    @media #{$tablet-min}{
+      margin-bottom: 30px;
+    }
+
+    .event-info {
+      .date {
+        float: left;
+        margin-right: 40px;
+      }
+
+      .event-location {
+        font-size: 18px;
+
+        .label {
+          font-weight: normal;
+          margin-right: 5px;
+        }
+
+        .location {
+          .field--name-field-address {
+            .address {
+              br {
+                display: none;
+              }
+
+              .postal-code, .organization, .address-line1, .address-line2 {
+                &:after {
+                  content: ',';
+                  padding-left: 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .event-social {
+      margin-top: 20px;
+      @media #{$tablet-min}{
+        margin-top: 0;
+      }
+
+      .sharethis-wrapper {
+        display: inline-block;
+        span {
+          &:not(.st_sharethis_large) {
+            .stButton {
+              display: none !important;
+            }
+          }
+
+          &.st_fblike_large {
+            display: none;
+          }
+
+          &.st_sharethis_large {
+            .stButton {
+              display: flex !important;
+              float: left;
+              @media #{$tablet-min}{
+                float: right;
+              }
+
+              &:after {
+                content: 'share';
+                color: $color-orange;
+                margin-left: 5px;
+                font-size: 14px;
+                font-weight: bold;
+              }
+
+              .stLarge {
+                background-image: url(../images/share.png) !important;
+                background-position: initial;
+                opacity: initial;
+                background-repeat: no-repeat;
+                margin-right: 5px;
+                width: 15px;
+                height: 18px;
+              }
+            }
+          }
+        }
+      }
+      .field--name-field-add {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        float: left;
+        padding-right: 10px;
+        a {
+          text-decoration: none;
+          color: #e84708;
+          &.atcb-link {
+            font-weight: bold;
+            &::before {
+              font-family: $font-awesome;
+              content: "\f271";
+              padding-right: 8px;
+            }
+          }
+          &:not(.atcb-link) {
+            padding-left: 23px;
+          }
+        }
+      }
+    }
+  }
+
+  .field--name-field-event-featured-image {
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+      @media #{$tablet-min}{
+        object-fit: cover;
+      }
+    }
+  }
+  .price {
+    margin-top: -9px;
+  }
+  .field--name-field-price {
+    display: inline;
+  }
+
+  .field--name-field-intro1 {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    margin-bottom: 32px;
+  }
+
+  .field--name-field-event-category {
+    display: flex;
+    flex-flow: row wrap;
+
+    .field__label {
+      margin-right: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: $color-body;
+      padding: 5px 15px 5px 0;
+    }
+
+    .field__item {
+      padding: 5px 15px;
+      background: $color-grey-lt;
+      margin-right: 10px;
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        color: $color-orange;
+      }
+    }
+  }
+}

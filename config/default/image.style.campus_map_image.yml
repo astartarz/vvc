@@ -1,0 +1,17 @@
+uuid: 93ea08f2-bbc1-4e8e-8afe-aaa0e6dbefe1
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: campus_map_image
+label: 'x. Campus Map Image (240x180)'
+effects:
+  49029518-e20c-4765-894d-8bbd8fcd19bc:
+    uuid: 49029518-e20c-4765-894d-8bbd8fcd19bc
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 240
+      height: 180
+      crop_type: focal_point

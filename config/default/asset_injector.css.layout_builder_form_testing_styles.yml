@@ -1,0 +1,18 @@
+uuid: 03396278-d549-46ea-8a4f-ad09fcb3e8cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: layout_builder_form_testing_styles
+label: 'Layout Builder Form Testing Styles'
+code: "#layout-builder-modal .form-type-checkbox input, #layout-builder-modal .form-type-checkbox label {\r\n  display: inline-block;\r\n  vertical-align: middle;\r\n}\r\n#layout-builder-modal .paragraphs-dropbutton-wrapper {\r\n    padding: 0;\r\n}\r\n#layout-builder-modal form .field-add-more-submit {\r\n  margin: .5rem;\r\n  font-size: 1.4rem;\r\n}\r\n#layout-builder-modal input[type=\"submit\"] {\r\n  font-size: 1.6rem;\r\n}\r\n#layout-builder-modal input, #layout-builder-modal optgroup, #layout-builder-modal select {\r\n  font-size: 1.4rem;  \r\n}\r\n.block-layout-builder .paragraph {\r\n  margin-top: 0;\r\n}\r\n.block-layout-builder .paragraph.paragraph--type--wysiwyg p {\r\n  font-size: 1.6rem;\r\n  line-height: initial;\r\n}\r\n.page-node-type-layout-builder h1.page-title {\r\n  font-size: 4.6rem;\r\n}\r\n.page-node-type-layout-builder h2 {\r\n  font-size: 3.6rem;\r\n}\r\n.page-node-type-layout-builder .layout--twocol-section {\r\n  flex-wrap: nowrap;\r\n}\r\n.page-node-type-layout-builder .layout-container .layout-center {\r\n  padding-left: 10px;\r\n}\r\n.layout--twocol-section--67-33 .layout__region--second h2 {\r\n  font-size: 3.2rem;\r\n}\r\n.layout--twocol-section--67-33 .layout__region--second h3 {\r\n  font-size: 2.8rem;\r\n}\r\n.page-node-type-layout-builder .dialog-off-canvas-main-canvas > .container {\r\n  max-width: none;\r\n}\r\n.page-node-type-layout-builder .block-local-tasks-block, .page-node-type-layout-builder .block-system-breadcrumb-block, .page-node-type-layout-builder .block-page-title-block {\r\n  max-width: 1200px;\r\n  margin: 0 auto;\r\n}\r\n.layout {\r\n  max-width: 1200px;\r\n  margin: 0 auto;\r\n}\r\n.layout.full-width {\r\n  max-width: none;\r\n}\r\n.layout-builder-block.col-md-6, .block-layout-builder.col-md-6  {\r\n  display: inline-block;\r\n  vertical-align: top;\r\n  max-width: calc(50% - 20px);\r\n}\r\n.js .paragraph-type-title {\r\n  font-weight: bold;\r\n}"
+media: all
+preprocess: true
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      kwall_subtheme_example: kwall_subtheme_example
+    negate: false
+conditions_require_all: true

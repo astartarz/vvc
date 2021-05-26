@@ -1,0 +1,100 @@
+uuid: 375675ff-1064-496f-9c2b-539980a2ca9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_slide.field_body_unformatted
+    - field.field.paragraph.hero_slide.field_image
+    - field.field.paragraph.hero_slide.field_links
+    - field.field.paragraph.hero_slide.field_mp4
+    - field.field.paragraph.hero_slide.field_show_logo
+    - field.field.paragraph.hero_slide.field_subtitle
+    - field.field.paragraph.hero_slide.field_title
+    - field.field.paragraph.hero_slide.field_webm
+    - paragraphs.paragraphs_type.hero_slide
+  module:
+    - fences
+    - file
+    - link
+id: paragraph.hero_slide.default
+targetEntityType: paragraph
+bundle: hero_slide
+mode: default
+content:
+  field_body_unformatted:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_links:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: 'button button-hollow'
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: link
+    region: content
+  field_mp4:
+    type: file_url_plain
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_show_logo:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_webm:
+    type: file_url_plain
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

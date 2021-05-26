@@ -1,0 +1,19 @@
+uuid: 69345ac8-afe6-4182-94e8-eb6bfc615107
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_asides_txt
+    - node.type.interest
+id: node.interest.field_asides_txt
+field_name: field_asides_txt
+entity_type: node
+bundle: interest
+label: 'Career Facts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

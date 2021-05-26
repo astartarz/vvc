@@ -1,0 +1,28 @@
+uuid: 715bda4f-b360-4a73-b26b-ea3eb77a6b8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_refs
+    - node.type.person
+    - paragraphs.paragraphs_type.persons_section_refs
+id: paragraph.persons_section_refs.field_node_refs
+field_name: field_node_refs
+entity_type: paragraph
+bundle: persons_section_refs
+label: 'Node References'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

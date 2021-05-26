@@ -1,0 +1,29 @@
+uuid: 6610920d-3bbe-4574-b9a6-800430933d15
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.site_group
+id: site_group-group_editor
+label: 'Group Content Editor'
+weight: -10
+internal: false
+audience: member
+group_type: site_group
+permissions_ui: true
+permissions:
+  - 'access content overview'
+  - 'access group_menu overview'
+  - 'access group_node overview'
+  - 'create group_node:page entity'
+  - 'delete own group_node:page content'
+  - 'update any group_node:page content'
+  - 'update any group_node:page entity'
+  - 'update own group_node:page content'
+  - 'update own group_node:page entity'
+  - 'view group'
+  - 'view group_menu:menu content'
+  - 'view group_menu:menu entity'
+  - 'view group_node:page content'
+  - 'view group_node:page entity'
+  - 'view unpublished group_node:page entity'

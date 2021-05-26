@@ -1,0 +1,237 @@
+diff --git a/group.install b/group.install
+index 527e21b..da7bc2c 100644
+--- a/group.install
++++ b/group.install
+@@ -9,6 +9,7 @@
+ use Drupal\Core\Config\InstallStorage;
+ use Drupal\Core\Entity\EntityTypeListenerInterface;
+ use Drupal\Core\Entity\Sql\SqlContentEntityStorage;
++use Drupal\Core\Field\BaseFieldDefinition;
+ use Drupal\group\Entity\GroupContent;
+ use Drupal\group\Entity\Storage\GroupContentStorageSchema;
+ 
+diff --git a/group.module b/group.module
+index 24678e0..736b51a 100644
+--- a/group.module
++++ b/group.module
+@@ -214,12 +214,10 @@ function group_form_block_form_alter(&$form, FormStateInterface $form_state, $fo
+  * Implements hook_entity_delete().
+  */
+ function group_entity_delete(EntityInterface $entity) {
+-  if ($entity instanceof ContentEntityInterface) {
+-    if ($group_contents = GroupContent::loadByEntity($entity)) {
+-      /** @var \Drupal\group\Entity\GroupContent $group_content */
+-      foreach ($group_contents as $group_content) {
+-        $group_content->delete();
+-      }
++  if ($group_contents = GroupContent::loadByEntity($entity)) {
++    /** @var \Drupal\group\Entity\GroupContent $group_content */
++    foreach ($group_contents as $group_content) {
++      $group_content->delete();
+     }
+   }
+ }
+diff --git a/src/Entity/Group.php b/src/Entity/Group.php
+index fef2494..157cb08 100644
+--- a/src/Entity/Group.php
++++ b/src/Entity/Group.php
+@@ -2,12 +2,12 @@
+ 
+ namespace Drupal\group\Entity;
+ 
+-use Drupal\Core\Field\BaseFieldDefinition;
+ use Drupal\Core\Entity\ContentEntityBase;
+-use Drupal\Core\Entity\ContentEntityInterface;
+-use Drupal\Core\Entity\EntityTypeInterface;
+ use Drupal\Core\Entity\EntityChangedTrait;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityStorageInterface;
++use Drupal\Core\Entity\EntityTypeInterface;
++use Drupal\Core\Field\BaseFieldDefinition;
+ use Drupal\Core\Session\AccountInterface;
+ use Drupal\user\UserInterface;
+ 
+@@ -159,7 +159,7 @@ public function getGroupType() {
+   /**
+    * {@inheritdoc}
+    */
+-  public function addContent(ContentEntityInterface $entity, $plugin_id, $values = []) {
++  public function addContent(EntityInterface $entity, $plugin_id, $values = []) {
+     $storage = $this->groupContentStorage();
+     $group_content = $storage->createForEntityInGroup($entity, $this, $plugin_id, $values);
+     $storage->save($group_content);
+diff --git a/src/Entity/GroupContent.php b/src/Entity/GroupContent.php
+index 1cc71ae..bfa5a5f 100644
+--- a/src/Entity/GroupContent.php
++++ b/src/Entity/GroupContent.php
+@@ -4,8 +4,8 @@
+ 
+ use Drupal\Core\Cache\Cache;
+ use Drupal\Core\Entity\ContentEntityBase;
+-use Drupal\Core\Entity\ContentEntityInterface;
+ use Drupal\Core\Entity\EntityChangedTrait;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityStorageInterface;
+ use Drupal\Core\Entity\EntityTypeInterface;
+ use Drupal\Core\Field\BaseFieldDefinition;
+@@ -116,7 +116,7 @@ public static function loadByContentPluginId($plugin_id) {
+   /**
+    * {@inheritdoc}
+    */
+-  public static function loadByEntity(ContentEntityInterface $entity) {
++  public static function loadByEntity(EntityInterface $entity) {
+     /** @var \Drupal\group\Entity\Storage\GroupContentStorageInterface $storage */
+     $storage = \Drupal::entityTypeManager()->getStorage('group_content');
+     return $storage->loadByEntity($entity);
+@@ -320,9 +320,13 @@ public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
+ 
+     // Borrowed this logic from the Comment module.
+     // Warning! May change in the future: https://www.drupal.org/node/2346347
++    // The target type is set to a config entity to force a string field
++    // for the entity ID.
++    // @see https://www.drupal.org/node/1757452.
+     $fields['entity_id'] = BaseFieldDefinition::create('entity_reference')
+       ->setLabel(t('Content'))
+       ->setDescription(t('The entity to add to the group.'))
++      ->setSetting('target_type', 'group_type')
+       ->setDisplayOptions('form', [
+         'type' => 'entity_reference_autocomplete',
+         'weight' => 5,
+diff --git a/src/Entity/GroupContentInterface.php b/src/Entity/GroupContentInterface.php
+index 28965aa..f6dd83d 100644
+--- a/src/Entity/GroupContentInterface.php
++++ b/src/Entity/GroupContentInterface.php
+@@ -5,6 +5,7 @@
+ use Drupal\user\EntityOwnerInterface;
+ use Drupal\Core\Entity\ContentEntityInterface;
+ use Drupal\Core\Entity\EntityChangedInterface;
++use Drupal\Core\Entity\EntityInterface;
+ 
+ /**
+  * Provides an interface defining a Group content entity.
+@@ -55,12 +56,12 @@ public static function loadByContentPluginId($plugin_id);
+   /**
+    * Loads group content entities which reference a given entity.
+    *
+-   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
++   * @param \Drupal\Core\Entity\EntityInterface $entity
+    *   An entity which may be within one or more groups.
+    *
+    * @return \Drupal\group\Entity\GroupContentInterface[]
+    *   An array of group content entities which reference the given entity.
+    */
+-  public static function loadByEntity(ContentEntityInterface $entity);
++  public static function loadByEntity(EntityInterface $entity);
+ 
+ }
+diff --git a/src/Entity/GroupInterface.php b/src/Entity/GroupInterface.php
+index f6477fc..9e4be08 100644
+--- a/src/Entity/GroupInterface.php
++++ b/src/Entity/GroupInterface.php
+@@ -4,6 +4,7 @@
+ 
+ use Drupal\user\EntityOwnerInterface;
+ use Drupal\Core\Entity\ContentEntityInterface;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityChangedInterface;
+ use Drupal\Core\Session\AccountInterface;
+ use Drupal\user\UserInterface;
+@@ -33,7 +34,7 @@ public function getGroupType();
+   /**
+    * Adds a content entity as a group content entity.
+    *
+-   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
++   * @param \Drupal\Core\Entity\EntityInterface $entity
+    *   The content entity to add to the group.
+    * @param string $plugin_id
+    *   The ID of the content enabler plugin to add the entity with.
+@@ -41,7 +42,7 @@ public function getGroupType();
+    *   (optional) Extra values to add to the group content relationship. You
+    *   cannot overwrite the group ID (gid) or entity ID (entity_id).
+    */
+-  public function addContent(ContentEntityInterface $entity, $plugin_id, $values = []);
++  public function addContent(EntityInterface $entity, $plugin_id, $values = []);
+ 
+   /**
+    * Retrieves all GroupContent entities for the group.
+diff --git a/src/Entity/Storage/GroupContentStorage.php b/src/Entity/Storage/GroupContentStorage.php
+index bdd128c..10715f7 100644
+--- a/src/Entity/Storage/GroupContentStorage.php
++++ b/src/Entity/Storage/GroupContentStorage.php
+@@ -2,7 +2,7 @@
+ 
+ namespace Drupal\group\Entity\Storage;
+ 
+-use Drupal\Core\Entity\ContentEntityInterface;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityStorageException;
+ use Drupal\Core\Entity\Sql\SqlContentEntityStorage;
+ use Drupal\group\Entity\GroupInterface;
+@@ -25,7 +25,7 @@ class GroupContentStorage extends SqlContentEntityStorage implements GroupConten
+   /**
+    * {@inheritdoc}
+    */
+-  public function createForEntityInGroup(ContentEntityInterface $entity, GroupInterface $group, $plugin_id, $values = []) {
++  public function createForEntityInGroup(EntityInterface $entity, GroupInterface $group, $plugin_id, $values = []) {
+     // An unsaved entity cannot have any group content.
+     if ($entity->id() === NULL) {
+       throw new EntityStorageException("Cannot add an unsaved entity to a group.");
+@@ -85,7 +85,7 @@ public function loadByGroup(GroupInterface $group, $plugin_id = NULL, $filters =
+   /**
+    * {@inheritdoc}
+    */
+-  public function loadByEntity(ContentEntityInterface $entity) {
++  public function loadByEntity(EntityInterface $entity) {
+     // An unsaved entity cannot have any group content.
+     if ($entity->id() === NULL) {
+       throw new EntityStorageException("Cannot load GroupContent entities for an unsaved entity.");
+diff --git a/src/Entity/Storage/GroupContentStorageInterface.php b/src/Entity/Storage/GroupContentStorageInterface.php
+index f61001b..3f3a84b 100644
+--- a/src/Entity/Storage/GroupContentStorageInterface.php
++++ b/src/Entity/Storage/GroupContentStorageInterface.php
+@@ -2,8 +2,8 @@
+ 
+ namespace Drupal\group\Entity\Storage;
+ 
+-use Drupal\Core\Entity\ContentEntityInterface;
+ use Drupal\Core\Entity\ContentEntityStorageInterface;
++use Drupal\Core\Entity\EntityInterface;
+ use Drupal\group\Entity\GroupInterface;
+ 
+ /**
+@@ -14,8 +14,8 @@
+   /**
+    * Creates a GroupContent entity for placing a content entity in a group.
+    *
+-   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+-   *   The content entity to add to the group.
++   * @param \Drupal\Core\Entity\EntityInterface $entity
++   *   The entity to add to the group.
+    * @param \Drupal\group\Entity\GroupInterface $group
+    *   The group to add the content entity to.
+    * @param string $plugin_id
+@@ -26,7 +26,7 @@
+    * @return \Drupal\group\Entity\GroupContentInterface
+    *   A new GroupContent entity.
+    */
+-  public function createForEntityInGroup(ContentEntityInterface $entity, GroupInterface $group, $plugin_id, $values = []);
++  public function createForEntityInGroup(EntityInterface $entity, GroupInterface $group, $plugin_id, $values = []);
+ 
+   /**
+    * Retrieves all GroupContent entities for a group.
+@@ -47,13 +47,13 @@ public function loadByGroup(GroupInterface $group, $plugin_id = NULL, $filters =
+   /**
+    * Retrieves all GroupContent entities that represent a given entity.
+    *
+-   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
++   * @param \Drupal\Core\Entity\EntityInterface $entity
+    *   An entity which may be within one or more groups.
+    *
+    * @return \Drupal\group\Entity\GroupContentInterface[]
+    *   A list of GroupContent entities which refer to the given entity.
+    */
+-  public function loadByEntity(ContentEntityInterface $entity);
++  public function loadByEntity(EntityInterface $entity);
+ 
+   /**
+    * Retrieves all GroupContent entities by their responsible plugin ID.

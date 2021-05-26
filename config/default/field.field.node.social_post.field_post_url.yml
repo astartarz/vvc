@@ -1,0 +1,23 @@
+uuid: c14f77b1-3989-44a0-9b23-b8d4a708a8c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_post_url
+    - node.type.social_post
+  module:
+    - link
+id: node.social_post.field_post_url
+field_name: field_post_url
+entity_type: node
+bundle: social_post
+label: 'x. Post Url'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

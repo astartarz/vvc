@@ -1,0 +1,180 @@
+uuid: c2edd4e3-bd88-46c7-ac2a-08246ae700a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_bottom
+    - node.type.program
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.adjustable_media_and_content
+    - paragraphs.paragraphs_type.events_grid
+    - paragraphs.paragraphs_type.featured_event_grid
+    - paragraphs.paragraphs_type.flexible_cta_blocks
+    - paragraphs.paragraphs_type.flexible_image_cta_blocks
+    - paragraphs.paragraphs_type.full_width_image_section
+    - paragraphs.paragraphs_type.gridder
+    - paragraphs.paragraphs_type.persons_section_refs
+    - paragraphs.paragraphs_type.persons_section_taxonomy
+    - paragraphs.paragraphs_type.statistics
+    - paragraphs.paragraphs_type.stories
+    - paragraphs.paragraphs_type.tabs
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.program.field_content_bottom
+field_name: field_content_bottom
+entity_type: node
+bundle: program
+label: 'Full-Width Paragraphs'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      adjustable_media_and_content: adjustable_media_and_content
+      events_grid: events_grid
+      featured_event_grid: featured_event_grid
+      flexible_cta_blocks: flexible_cta_blocks
+      flexible_image_cta_blocks: flexible_image_cta_blocks
+      full_width_image_section: full_width_image_section
+      gridder: gridder
+      persons_section_refs: persons_section_refs
+      persons_section_taxonomy: persons_section_taxonomy
+      statistics: statistics
+      stories: stories
+      tabs: tabs
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      academic_tabs:
+        weight: -85
+        enabled: false
+      accordion:
+        enabled: true
+        weight: -84
+      accordion_item:
+        weight: -83
+        enabled: false
+      adjustable_media_and_content:
+        enabled: true
+        weight: -82
+      articles_grid:
+        weight: -67
+        enabled: false
+      contact:
+        weight: -66
+        enabled: false
+      events_grid:
+        enabled: true
+        weight: -81
+      external_articles_grid:
+        weight: -65
+        enabled: false
+      featured_event_grid:
+        enabled: true
+        weight: -80
+      featured_external_articles:
+        weight: -64
+        enabled: false
+      flexible_cta_block:
+        weight: -79
+        enabled: false
+      flexible_cta_blocks:
+        enabled: true
+        weight: -78
+      flexible_image_cta_block:
+        weight: -77
+        enabled: false
+      flexible_image_cta_blocks:
+        enabled: true
+        weight: -76
+      full_width_image_section:
+        enabled: true
+        weight: -75
+      gridder:
+        enabled: true
+        weight: -74
+      gridder_item:
+        weight: -63
+        enabled: false
+      hero_banner:
+        weight: -62
+        enabled: false
+      hero_banner_video_:
+        weight: -61
+        enabled: false
+      hero_slide:
+        weight: -60
+        enabled: false
+      hero_slideshow:
+        weight: -59
+        enabled: false
+      image_carousel:
+        weight: -58
+        enabled: false
+      image_carousel_item:
+        weight: -57
+        enabled: false
+      info_block:
+        weight: -56
+        enabled: false
+      info_block_item:
+        weight: -55
+        enabled: false
+      news_banner:
+        weight: -54
+        enabled: false
+      page_banner:
+        weight: -53
+        enabled: false
+      persons_section_refs:
+        enabled: true
+        weight: -73
+      persons_section_taxonomy:
+        enabled: true
+        weight: -72
+      quick_link:
+        weight: -52
+        enabled: false
+      quote:
+        weight: -51
+        enabled: false
+      sidebar_contacts:
+        weight: -50
+        enabled: false
+      sidebar_links:
+        weight: -49
+        enabled: false
+      sidebar_social:
+        weight: -48
+        enabled: false
+      social_grid:
+        weight: -47
+        enabled: false
+      statistics:
+        enabled: true
+        weight: -71
+      statistics_item:
+        weight: -46
+        enabled: false
+      stories:
+        enabled: true
+        weight: -70
+      tab:
+        weight: -45
+        enabled: false
+      tabs:
+        enabled: true
+        weight: -69
+      views:
+        weight: -44
+        enabled: false
+      wysiwyg:
+        enabled: true
+        weight: -68
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: fda080f0-f5cf-47ab-9787-474cf753ec41
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: Default
+description: ''
+source_type: ''
+module: null
+shared_configuration: null

@@ -1,0 +1,19 @@
+uuid: bdd0c915-1774-48f7-bdeb-c6e5452448fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_full_name
+    - node.type.social_post
+id: node.social_post.field_user_full_name
+field_name: field_user_full_name
+entity_type: node
+bundle: social_post
+label: 'x. Social user full name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

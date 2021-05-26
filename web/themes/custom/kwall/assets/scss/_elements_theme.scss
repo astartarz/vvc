@@ -1,0 +1,20 @@
+.embedded-entity {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.paragraph--type--column-section {
+  .col-md-7,
+  .col-md-6,
+  .col-md-4,
+  .col-md-3 {
+    .column-content {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

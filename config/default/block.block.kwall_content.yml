@@ -1,0 +1,22 @@
+uuid: e4d849e9-7963-4c3e-8ed2-c2f8490c5e67
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kwall
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: kwall_content
+theme: kwall
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

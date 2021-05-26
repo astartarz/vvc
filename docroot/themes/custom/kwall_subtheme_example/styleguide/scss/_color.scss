@@ -1,0 +1,249 @@
+/**
+ * @file
+ * Color
+ *
+ ****
+ *
+ * Color Page Styles
+ * Primary Colors
+ * Secondary Colors 
+ * Patterns
+ *
+ ****
+*/
+
+
+
+
+/****
+ *
+ * Color Page Styles
+ *
+ ****/
+.color-container {
+	margin-bottom: 20px;
+	> div {
+		font-size: 1.2rem;
+		height: 75px;
+		line-height: 1;
+		padding: 16px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.color-name {
+		color: #666;
+		font-size: 1.4rem;
+		font-weight: bold;
+		letter-spacing: 0.5;
+		line-height: 2;
+		margin: 0px;
+		padding: 0px;
+	}
+	.color-hex {
+		margin-top: 0px;
+		padding-top: 0px;
+		margin: 0px;
+		padding: 0px;
+		font-size: 1.1rem;
+		line-height: 12px;
+	}
+	
+	.color-light {
+	 	color: $color-body;
+	 	p {
+		 	color: $color-body
+	 	}
+	}
+	.color-dark {
+	 	color: #fff;
+	  p {
+	  	color: #fff;
+	  }
+	}
+	.color-inner {
+		position: relative;
+		//Accessibility blocks
+		&:after {
+			background-color: #fff;
+			bottom: 0;
+			color: $color-style-green;
+			content: "\f00c";
+			font-family: $font-awesome;
+			font-size: 1.2rem;
+			left: 0;
+			line-height: 1.3;
+			text-align: center;
+			padding: 1px 2px;
+			position: absolute;
+			width: 16px;
+		}
+		&:before {
+			background-color: #000;
+			bottom: 0;
+			color: $color-style-green;
+			content: "\f00c";
+			font-family: $font-awesome;
+			font-size: 1.2rem;
+			left: 16px;
+			line-height: 1.3;
+			text-align: center;
+			padding: 1px 2px;
+			position: absolute;
+			width: 16px;
+		}
+		&.access-white-pass {
+			&:after {
+				color: $color-style-green;
+				content: "\f00c";
+			}
+		}
+		&.access-white-fail {
+			&:after {
+				color: $color-style-red;
+				content: "\f00d";
+			}
+		}
+		&.access-black-pass {
+			&:before {
+				color: $color-style-green;
+				content: "\f00c";
+			}
+		}
+		&.access-black-fail {
+			&:before {
+				color: $color-style-red;
+				content: "\f00d";
+			}
+		}
+		
+		//Popup
+		.color-popup {
+			background-color: #fff;
+			box-shadow: 0 0 4px rgba(0,0,0,0.5);
+			color: $color-body;
+			font-size: 1.4rem;
+			line-height: 1;
+			opacity: 0;
+			padding: 10px;
+			position: absolute;
+			right: 0;
+			text-align: left;
+			text-transform: none;
+			top: 0;
+			transition: all 0.1s ease-in;
+			b {
+				text-transform: uppercase;
+			}
+		}
+		&:hover {
+			.color-popup {
+				opacity: 1;
+				right: 10px;
+				top: -60px;
+				@media #{$tablet-min} {
+					right: -20px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/****
+ *
+ * Primary Colors
+ *
+ ****/
+.color-blue {
+	background-color: $color-blue;
+}
+.color-green {
+	background-color: $color-green;
+}
+
+
+
+
+/****
+ *
+ * Secondary Colors
+ *
+ ****/
+/* secondary colors */
+.color-red {
+	background-color: $color-red;
+}
+.color-orange {
+	background-color: $color-orange;
+}
+.color-yellow {
+	background-color: $color-yellow;
+}
+
+
+
+
+/****
+ *
+ * Neutral Colors
+ *
+ ****/
+/* secondary colors */
+.color-grey-xlt {
+	background-color: $color-grey-xlt;
+}
+.color-grey-lt {
+	background-color: $color-grey-lt;
+}
+.color-grey {
+	background-color: $color-grey;
+}
+.color-grey-dk {
+	background-color: $color-grey-dk;
+}
+.color-black {
+	background-color: $color-black;
+}
+
+
+
+
+/****
+ *
+ * Patterns
+ *
+ ****/
+#patterns {
+	.color-item {
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+	
+		a {
+			display: none;
+			color: #333;
+			text-decoration: none;
+			background: $color-style-light-grey;
+			padding: 16px 8px;
+		}
+	
+		&:hover a {
+			display: block;
+			cursor: pointer;
+		}
+	}
+	.secondary0 {
+		min-height: 70px;
+		background-color: $color-style-light-grey;
+	
+		&.texture1 {
+			background-image: url(../images/texture.jpg);
+		}
+		&.pattern1 {
+			background-image: url(../images/pattern.jpg);
+		}
+	}
+}

@@ -1,0 +1,15 @@
+uuid: 3d34fffb-6ce0-4072-9c49-f9565a8e3d1d
+langcode: en
+status: true
+dependencies: {  }
+name: social_wall
+label: 'x. Social Wall (564*500)'
+effects:
+  2a36fe30-84c1-418f-aec2-ad96cdca3ed2:
+    uuid: 2a36fe30-84c1-418f-aec2-ad96cdca3ed2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 564
+      height: 500
+      anchor: center-top

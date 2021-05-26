@@ -1,0 +1,14 @@
+uuid: e6ecf4c4-266f-4be8-839e-199055219b44
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.nursing
+  module:
+    - user
+id: user_add_role_action.nursing
+label: 'Add the Nursing role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: nursing

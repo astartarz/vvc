@@ -1,0 +1,39 @@
+uuid: cec9e2e8-a900-4dfb-b77c-c2175c84ba47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gridder.field_gridder_items
+    - field.field.paragraph.gridder.field_title
+    - paragraphs.paragraphs_type.gridder
+  module:
+    - paragraphs
+id: paragraph.gridder.default
+targetEntityType: paragraph
+bundle: gridder
+mode: default
+content:
+  field_gridder_items:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: 'Gridder Item'
+      title_plural: 'Gridder Items'
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: gridder_item
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

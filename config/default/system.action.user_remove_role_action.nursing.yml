@@ -1,0 +1,14 @@
+uuid: 410f6bdb-36c1-4e61-a710-e463b22adfad
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.nursing
+  module:
+    - user
+id: user_remove_role_action.nursing
+label: 'Remove the Nursing role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: nursing
