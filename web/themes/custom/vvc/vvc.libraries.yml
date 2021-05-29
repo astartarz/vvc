@@ -12,6 +12,8 @@ js-scripts:
     https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.16/js/bootstrap-multiselect.min.js: { type: external, minified: true }
     assets/js/theme.js: {}
 
+
+
 header-scripts:
   header: true
   js:

@@ -18,7 +18,7 @@
   .hero-slide-wrap {
     height: inherit !important;
     &:after {
-     background: rgba(0, 0, 0, .56);
+      background: rgba(0, 0, 0, 0.36);
     }
     .hero-media-wrap {
       @media screen and #{$tablet} {
@@ -84,7 +84,7 @@
                 text-decoration: underline;
               }
               &:before {
-                content: '';
+                content: "";
                 width: 30px;
                 height: 2px;
                 margin-right: 20px;
@@ -148,7 +148,7 @@
     svg {
       width: 15px;
       height: 15px;
-      margin-top: .5px;
+      margin-top: 0.5px;
       display: block;
       cursor: pointer;
     }
@@ -164,7 +164,7 @@
       text-align: center;
       margin-top: -7px;
       &:after {
-        content: '\f053';
+        content: "\f053";
         font-family: $font-awes;
         background: $color-red;
         border: 2px solid $color-light-red;
@@ -191,7 +191,7 @@
         margin-right: 0;
       }
       &:after {
-        content: '\f054';
+        content: "\f054";
       }
     }
     .flex-control-paging {

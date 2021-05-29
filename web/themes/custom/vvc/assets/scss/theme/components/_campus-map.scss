@@ -53,6 +53,10 @@
   > .attachment {
     flex: 0 0 20%;
 
+    .geolocation-common-map-locations{
+      max-height: 650px;
+      overflow-y: scroll;
+    }
     .geolocation {
       .geolocation {
         background: $white;

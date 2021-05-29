@@ -27,4 +27,11 @@ jQuery(document).ready(function() {
     function(){
       jQuery(this).parent().closest('.paragraph--type--info-block-item').find('.field-caption').removeClass('active');
     });
+
+  setTimeout(function (){
+    var geoItem = jQuery('.geolocation-common-map-locations .geolocation .geolocation');
+    if(geoItem.length){
+      geoItem.first().trigger('click');
+    }
+  }, 1000);
 });
