@@ -1313,7 +1313,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"hero-slide-wrap {{ field_show_logo }}\">\r\n  <div class=\"hero-media-wrap\">\r\n    {{ field_mp4 }} {{ field_webm }}\r\n    <div class=\"hero-img\">{{ field_media_image }}</div>\r\n  </div>\r\n  <div class=\"hero-content-wrap\"> \r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <div class=\"logo-section\"><img src=\"/themes/custom/vvc/assets/images/slider-logo.png\" /></div>\r\n          <div class=\"info-section\">\r\n            {{ field_title }}\r\n            {{ field_subtitle }}\r\n            {{ field_body_unformatted }}\r\n            {{ field_links }}\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n<div class=\"hero-content-mobile\">\r\n</div>"
+            text: "<div class=\"hero-slide-wrap {{ field_show_logo }}\">\r\n  <div class=\"hero-media-wrap\">\r\n    {{ field_mp4 }} {{ field_webm }}\r\n    <div class=\"hero-img\">{{ field_media_image }}</div>\r\n  </div>\r\n  <div class=\"hero-content-wrap\"> \r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <div class=\"logo-section\"><img alt=\"slider-logo\" src=\"/themes/custom/vvc/assets/images/slider-logo.png\"  /></div>\r\n          <div class=\"info-section\">\r\n            {{ field_title }}\r\n            {{ field_subtitle }}\r\n            {{ field_body_unformatted }}\r\n            {{ field_links }}\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n<div class=\"hero-content-mobile\">\r\n</div>"
             make_link: false
             path: ''
             absolute: false

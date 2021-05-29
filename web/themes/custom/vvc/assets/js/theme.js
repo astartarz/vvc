@@ -525,5 +525,7 @@
     }, 100); // check every 100ms
 
       jQuery('.btn.btn-navbar.tb-megamenu-button').html('Info');
+      // Accessibility for Link without a text alternative for the home page
+      jQuery('.site-logo').attr('aria-label', 'site-logo');
   });
 })(jQuery, Drupal, drupalSettings, window);

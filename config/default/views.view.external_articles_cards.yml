@@ -330,7 +330,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"article-news-card\">\r\n<div class=\"news-img\">\r\n{{ field_teaser_image }}\r\n<div class=\"news-logo\">\r\n{% if 'vvng.com' in field_link|render|render %}\r\n<img src=\"/themes/custom/vvc/assets/images/vvng_logo.png\" />\r\n{% else %}\r\n<img src=\"/themes/custom/vvc/assets/images/vvdailypress_logo.png\" />\r\n{% endif %}\r\n</div>\r\n</div>\r\n<div class=\"news-title\">\r\n<a href=\"{{ field_link}}\" >{{ title }}</a>\r\n</div>\r\n<div class=\"news-detail\">\r\n<div class=\"post-link\">\r\n  <a href=\"{{ field_link}}\" class=\"read-more-link\" tabindex=\"-1\">Read More</a>\r\n</div>\r\n</div>\r\n</div>"
+            text: "<div class=\"article-news-card\">\r\n<div class=\"news-img\">\r\n{{ field_teaser_image }}\r\n<div class=\"news-logo\">\r\n{% if 'vvng.com' in field_link|render|render %}\r\n<img alt=\"logo-image\" src=\"/themes/custom/vvc/assets/images/vvng_logo.png\" />\r\n{% else %}\r\n<img alt=\"logo-image\" src=\"/themes/custom/vvc/assets/images/vvdailypress_logo.png\" />\r\n{% endif %}\r\n</div>\r\n</div>\r\n<div class=\"news-title\">\r\n<a href=\"{{ field_link}}\" >{{ title }}</a>\r\n</div>\r\n<div class=\"news-detail\">\r\n<div class=\"post-link\">\r\n  <a href=\"{{ field_link}}\" class=\"read-more-link\" tabindex=\"-1\">Read More</a>\r\n</div>\r\n</div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
