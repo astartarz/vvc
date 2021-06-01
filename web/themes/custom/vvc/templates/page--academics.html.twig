@@ -45,7 +45,7 @@
 #}
 
 {% if page.alerts %}
-  <div class="layout-alerts" role="region">
+  <div class="layout-alerts" role="region" aria-label="Alerts">
     {{ page.alerts }}
   </div>
 {% endif %}
@@ -69,14 +69,14 @@
 </header>
 
 {% if page.hero %}
-  <section class="layout-hero-content" role="region">
+  <section class="layout-hero-content" role="region" aria-label="Hero content">
     {{ page.hero }}
   </section>
 {% endif %}
 
 
 {% if page.content_top %}
-  <section class="layout-content-top" role="region">
+  <section class="layout-content-top" role="region" aria-label="Content top">
     <div class="container">
       <div class="row">
         <div class="col-md-12">{{ page.content_top }}</div>
@@ -120,7 +120,7 @@
 
 
 {% if page.content_bottom %}
-  <section class="layout-content-bottom" role="region">
+  <section class="layout-content-bottom" role="region" aria-label="Content bottom">
     {{ page.content_bottom }}
   </section>
 {% endif %}
@@ -138,7 +138,7 @@
 
 
 {% if page.footer_copyright %}
-  <section class="layout-footer-copyright" role="region">
+  <section class="layout-footer-copyright" role="region" aria-label="Copyright">
     <div class="container">
       <div class="row">
         <div class="col-md-12">{{ page.footer_copyright }}</div>
@@ -149,7 +149,7 @@
 
 
 {% if page.slide_in_navigation %}
-  <section class="layout-push-navigation" role="region">
+  <section class="layout-push-navigation" role="region" aria-label="Push navigation">
     <div class="push-nav-wrapper">{{ page.slide_in_navigation }}</div>
   </section>
 {% endif %}

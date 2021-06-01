@@ -51,13 +51,13 @@
              top: 64px;
             }
           }
-          svg{
+          svg, .fa, .fas, .far, .fal{
             right: 20px;
             transform: rotate(180deg);
           }
         }
 
-        svg {
+        svg, .fa, .fas, .far, .fal {
           position: absolute;
           right: 30px;
           transition: .3s;

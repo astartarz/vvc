@@ -46,12 +46,21 @@
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.
     #}
-    <a href="#main-content" class="visually-hidden focusable">
-      {{ 'Skip to main content'|t }}
-    </a>
+    <nav aria-label="skip link container">
+      <a href="#main-content" class="visually-hidden focusable" aria-label="skip to main content" accesskey="2">{{ 'Skip to main content'|t }}</a>
+    </nav>
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            var count = 1;
+            jQuery('#goog-gt-tt').each(function() {
+                $(this).attr('id', $(this).attr('id') + '-' + count);
+                count++;
+            });
+        });
+    </script>
   </body>
 </html>

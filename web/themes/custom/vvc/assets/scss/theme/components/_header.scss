@@ -49,13 +49,9 @@ header {
             display: none;
           }
 
-          svg {
+          span.fa, span.fas {
             width: 18px;
-            height: 23px;
 
-            path {
-              fill: $color-gold;
-            }
           }
 
           a {
@@ -210,6 +206,10 @@ header {
               border: 3px solid $color-red;
               padding: 3px 15px;
               margin: 5px 0;
+            }
+            &.fa, &.fas {
+              font: normal normal normal 14px/1 FontAwesome;
+              padding: 0;
             }
           }
 
@@ -843,13 +843,13 @@ header {
                 }
               }
 
-              > svg {
+              > span.fa {
                 top: 5px;
                 margin-right: -5px;
               }
             }
 
-            svg {
+            span.fa {
               transform: rotate(90deg);
               width: 20px;
               height: 30px;
@@ -858,14 +858,11 @@ header {
               transition: all 0.2s;
               cursor: pointer;
               opacity: 0;
-
-              path {
-                fill: $color-red;
-              }
+              color: $color-red
             }
 
             &.menu-opened {
-              > svg {
+              > span.fa {
                 transform: rotate(270deg);
                 transition: all 0.2s;
               }
@@ -1038,4 +1035,8 @@ header {
           }
         }*/
   }
+}
+
+div[id^="google_translate_element2"], div[id^="goog-gt-tt"] {
+  display: none!important;
 }

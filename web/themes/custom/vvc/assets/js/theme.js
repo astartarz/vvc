@@ -262,7 +262,7 @@
       // toggle menu
       $(".sidebar-menu-block ul")
         .once("sideSubMenu")
-        .on("click", "li.dropdown-item.expanded svg", function (e) {
+        .on("click", "li.dropdown-item.expanded span.fa", function (e) {
           e.preventDefault();
           if ($(this).parent().hasClass("active")) {
             $(this).parent().toggleClass("menu-closed");
@@ -444,7 +444,7 @@
      */
     $(document).on(
       "click",
-      ".slide-in-nav .push-nav-menu .expanded.dropdown-item svg",
+      ".slide-in-nav .push-nav-menu .expanded.dropdown-item span.fa",
       function (e) {
         $(this).parent().toggleClass("menu-opened");
         $(this).next().toggle();
@@ -524,8 +524,25 @@
       }
     }, 100); // check every 100ms
 
-      jQuery('.btn.btn-navbar.tb-megamenu-button').html('Info');
+
       // Accessibility for Link without a text alternative for the home page
-      jQuery('.site-logo').attr('aria-label', 'site-logo');
+      jQuery('.site-logo').attr('aria-label', 'Site logo');
+      jQuery('.tb-megamenu-button').html('Navbar button');
+      var count = 1;
+      jQuery('div[id^="tb-megamenu-column"], div[id^="google_translate_element2"], div[id*="targetLanguage"], #views-exposed-form-view-search-page-1, div[id^="block-exposedformview-searchpage-1-3"], ' +
+          '#edit-keywords--2, #edit-actions--2, #edit-submit-view-search--2, #block-vvc-mainnavigation-3,' +
+          '#block-vvc-mainnavigation-3-menu, #block-utilitymenumobile, #block-utilitymenumobile-menu, #system-breadcrumb, #goog-gt-tt').each(function() {
+          $(this).attr('id', $(this).attr('id') + '-' + count);
+          count++;
+      });
+      jQuery('label[for="edit-keywords--2"]').each(function() {
+          var id = $(this).next().attr('id');
+          $(this).attr('for', id);
+      });
+      jQuery('h2[id^="system-breadcrumb"], h2[id^="block-vvc-mainnavigation-3"], h2[id^="block-utilitymenumobile-menu"]').each(function() {
+          var id = $(this).attr('id');
+          $(this).parent().attr('aria-labelledby', id);
+      });
+
   });
 })(jQuery, Drupal, drupalSettings, window);
