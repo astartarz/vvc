@@ -140,7 +140,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if field_link|length > 0 %}\r\n<img src=\"/themes/custom/vvc/assets/images/vvdailypress_logo.png\" />\r\n<a href=\"{{ field_link }}\"> {{ title }} </a>\r\n{% else %}\r\n{{ title }}\r\n{% endif %}"
+            text: "{% if field_link|length > 0 %}\r\n<img src=\"/themes/custom/vvc/assets/images/vvdailypress_logo.png\" alt=\"daily-press-logo\" />\r\n<a href=\"{{ field_link }}\" alt=\"news-article-title\"> {{ title }} </a>\r\n{% else %}\r\n{{ title }}\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
