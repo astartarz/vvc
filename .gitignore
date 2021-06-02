@@ -22,5 +22,4 @@
 /.env
 
 # Ignore nodeJs directories.
-node_modules
 yarn.lock
