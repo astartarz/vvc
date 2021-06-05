@@ -543,6 +543,7 @@
           var id = $(this).attr('id');
           $(this).parent().attr('aria-labelledby', id);
       });
+      jQuery('.sharethis-wrapper .st_plusone_large #___plusone_0 iframe').attr('title', 'share this');
 
   });
 })(jQuery, Drupal, drupalSettings, window);

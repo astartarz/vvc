@@ -52,7 +52,7 @@
           {% if key matches '/^\\d+$/' %}
             <div class="slide-item">
               <div class="slide-image">
-                <img
+                <img alt="Slide image"
                   src="{{ file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri|image_style('carousel_image')) }}"/>
               </div>
               <div class="slide-content">
@@ -65,16 +65,16 @@
         {% endfor %}
       </div>
       <div class="slide-arrows">
-        <div class="slide-prev"><a href="#" class="prev">
-            <img src="{{ base_path ~ directory }}/assets/images/slide-arrow-left.svg"/></a></div>
-        <div class="slide-next"><a href="#" class="next">
-            <img src="{{ base_path ~ directory }}/assets/images/slide-arrow-right.svg"/></a></div>
+        <div class="slide-prev"><a href="#" class="prev" alt="prev">
+            <img alt="arrow left" src="{{ base_path ~ directory }}/assets/images/slide-arrow-left.svg"/></a></div>
+        <div class="slide-next"><a href="#" class="next" alt="next">
+            <img alt="arrow right" src="{{ base_path ~ directory }}/assets/images/slide-arrow-right.svg"/></a></div>
       </div>
       <div class="image-nav">
         {% for key, item in content.group_container.field_image_carousel_items if key|first != '#' %}
           {% if key matches '/^\\d+$/' %}
             <div class="nav-img">
-                <img src="{{ file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri|image_style('carousel_nav_97x54')) }}"/>
+                <img alt="carousel nav" src="{{ file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri|image_style('carousel_nav_97x54')) }}"/>
             </div>
           {% endif %}
         {% endfor %}
